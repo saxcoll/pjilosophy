@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f2ebe0" />
+    <meta
+      name="description"
+      content="A directed reading course in Western philosophy: the next assignment, the pages, and why they come now."
+    />
+    <title>pjilosophy — directed reading</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,0,700;8..60,1,400;8..60,1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Skip to reading</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#/" data-nav>
+          <span class="brand-mark" aria-hidden="true">Φ</span>
+          <span class="brand-text">
+            <span class="brand-name">pjilosophy</span>
+            <span class="brand-course" id="brand-course">Directed reading</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#/" data-nav id="nav-continue">Continue</a>
+          <a href="#/syllabus" data-nav id="nav-syllabus">Syllabus</a>
+          <a href="#/quizzes" data-nav id="nav-quizzes">Quizzes</a>
+          <a href="#/terms" data-nav id="nav-terms">Terms</a>
+        </nav>
+      </div>
+      <div
+        class="progress-rail"
+        role="progressbar"
+        aria-label="Course progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress-rail"
+      >
+        <span class="progress-rail-fill" id="progress-rail-fill"></span>
+      </div>
+    </header>
+    <main id="app" tabindex="-1">
+      <p class="loading-line">Laying out the reading list…</p>
+    </main>
+    <footer class="site-footer">
+      <p>
+        Progress stays in this browser. No account. Public-domain readings are
+        in the app. In-copyright works are cited, not hosted.
+      </p>
+    </footer>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

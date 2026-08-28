@@ -1,0 +1,63 @@
+{
+  "id": "pascal-pensees",
+  "title": "Pensées (selection: wretchedness, diversion, wager)",
+  "author": "Blaise Pascal",
+  "translator": "W. F. Trotter",
+  "language": "en",
+  "license": "public-domain",
+  "source": {
+    "name": "Project Gutenberg",
+    "url": "https://www.gutenberg.org/ebooks/18269",
+    "edition": "Trotter; PG #18269"
+  },
+  "attribution": "Blaise Pascal, Pensées (selection: wretchedness, diversion, wager), trans. W. F. Trotter. Public domain. Source: Project Gutenberg.",
+  "sections": [
+    {
+      "id": "wager",
+      "locator": "Pensées (Trotter numbering; wager cluster)",
+      "heading": "Wretchedness, diversion, and the wager",
+      "paragraphs": [
+        "[C] For a brilliant criticism of the errors of Descartes from a theological point of view the reader is referred to Three Reformers by Jacques Maritain (translation published by Sheed & Ward).",
+        "[D] An important modern theory of discontinuity, suggested partly by Pascal, is sketched in the collected fragments of Speculations by T. E. Hulme (Kegan Paul).",
+        "CONTENTS",
+        "Page",
+        "Introduction By T. S. Eliotvii",
+        "section",
+        "I. Thoughts On Mind And On Style1",
+        "II. The Misery Of Man Without God14",
+        "III. Of The Necessity Of The Wager52",
+        "IV. Of The Means Of Belief71",
+        "V. Justice And The Reason Of Effects83",
+        "VI. The Philosophers96",
+        "VII. Morality And Doctrine113",
+        "VIII. The Fundamentals Of The Christian Religion152",
+        "IX. Perpetuity163",
+        "X. Typology181",
+        "XI. The Prophecies198",
+        "XII. Proofs Of Jesus Christ222",
+        "XIII. The Miracles238",
+        "XIV. Appendix: Polemical Fragments257",
+        "Notes273",
+        "Index289",
+        "NOTE",
+        "Passages erased by Pascal are enclosed in square brackets, thus []. Words, added or corrected by the editor of the text, are similarly denoted, but are in italics.",
+        "It has been seen fit to transfer Fragment 514 of the French edition to the Notes. All subsequent Fragments have accordingly been renumbered.",
+        "SECTION I",
+        "THOUGHTS ON MIND AND ON STYLE",
+        "The difference between the mathematical and the intuitive mind.[1]—In the one the principles are palpable, but removed from ordinary use; so that for want of habit it is difficult to turn one's mind in that direction: but if one turns it thither ever so little, one sees the principles fully, and one must have a quite inaccurate mind who reasons wrongly from principles so plain that it is almost impossible they should escape notice.",
+        "But in the intuitive mind the principles are found in common use, and are before the eyes of everybody. One has only to look, and no effort is necessary; it is only a question of good eyesight, but it must be good, for the principles are so subtle and so numerous, that it is almost impossible but that some escape notice. Now the omission of one principle leads to error; thus one must have very clear sight to see all the principles, and in the next place an accurate mind not to draw false deductions from known principles.",
+        "All mathematicians would then be intuitive if they had clear sight, for they do not reason incorrectly from principles known to them; and intuitive minds would be mathematical if they could turn their eyes to the principles of mathematics to which they are unused.",
+        "The reason, therefore, that some intuitive minds are not mathematical is that they cannot at all turn their attention to the principles of mathematics. But the reason that mathematicians are not intuitive is that they do not see what is before them, and that, accustomed to the exact and plain principles of mathematics, and not reasoning till they have well inspected and arranged their principles, they are lost in matters of intuition where the principles do not allow of such arrangement. They are scarcely seen; they are felt rather than seen; there is the greatest difficulty in making them felt by those[Pg 2] who do not of themselves perceive them. These principles are so fine and so numerous that a very delicate and very clear sense is needed to perceive them, and to judge rightly and justly when they are perceived, without for the most part being able to demonstrate them in order as in mathematics; because the principles are not known to us in the same way, and because it would be an endless matter to undertake it. We must see the matter at once, at one glance, and not by a process of reasoning, at least to a certain degree. And thus it is rare that mathematicians are intuitive, and that men of intuition are mathematicians, because mathematicians wish to treat matters of intuition mathematically, and make themselves ridiculous, wishing to begin with definitions and then with axioms, which is not the way to proceed in this kind of reasoning. Not that the mind does not do so, but it does it tacitly, naturally, and without technical rules; for the expression of it is beyond all men, and only a few can feel it.",
+        "Intuitive minds, on the contrary, being thus accustomed to judge at a single glance, are so astonished when they are presented with propositions of which they understand nothing, and the way to which is through definitions and axioms so sterile, and which they are not accustomed to see thus in detail, that they are repelled and disheartened.",
+        "But dull minds are never either intuitive or mathematical.",
+        "Mathematicians who are only mathematicians have exact minds, provided all things are explained to them by means of definitions and axioms; otherwise they are inaccurate and insufferable, for they are only right when the principles are quite clear.",
+        "And men of intuition who are only intuitive cannot have the patience to reach to first principles of things speculative and conceptual, which they have never seen in the world, and which are altogether out of the common.",
+        "There are different kinds of right understanding;[2] some have right understanding in a certain order of things, and not in others, where they go astray. Some draw conclusions well from a few premises, and this displays an acute judgment.",
+        "Others draw conclusions well where there are many premises.",
+        "For example, the former easily learn hydrostatics, where the[Pg 3] premises are few, but the conclusions are so fine that only the greatest acuteness can reach them.",
+        "And in spite of that these persons would perhaps not be great mathematicians, because mathematics contain a great number of premises, and there is perhaps a kind of intellect that can search with ease a few premises to the bottom, and cannot in the least penetrate those matters in which there are many premises.",
+        "There are then two kinds of intellect: the one able to penetrate acutely and deeply into the conclusions of given premises, and this is the precise intellect; the other able to comprehend a great number of premises without confusing them, and this is the mathematical intellect. The one has force and exactness, the other comprehension. Now the one quality can exist without the other; the intellect can be strong and narrow, and can also be comprehensive and weak."
+      ]
+    }
+  ]
+}
