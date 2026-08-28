@@ -1,0 +1,262 @@
+"""Thinker names and ids attached to eras, units, and assignments."""
+
+
+def T(id_, name):
+    return {"id": id_, "name": name}
+
+
+NAMES = {
+    "thales": "Thales",
+    "anaximander": "Anaximander",
+    "anaximenes": "Anaximenes",
+    "xenophanes": "Xenophanes",
+    "heraclitus": "Heraclitus",
+    "parmenides": "Parmenides",
+    "zeno": "Zeno of Elea",
+    "empedocles": "Empedocles",
+    "anaxagoras": "Anaxagoras",
+    "leucippus": "Leucippus",
+    "democritus": "Democritus",
+    "burnet": "John Burnet",
+    "socrates": "Socrates",
+    "plato": "Plato",
+    "aristotle": "Aristotle",
+    "epicurus": "Epicurus",
+    "lucretius": "Lucretius",
+    "epictetus": "Epictetus",
+    "marcus-aurelius": "Marcus Aurelius",
+    "sextus-empiricus": "Sextus Empiricus",
+    "plotinus": "Plotinus",
+    "boethius": "Boethius",
+    "augustine": "Augustine of Hippo",
+    "anselm": "Anselm of Canterbury",
+    "gaunilo": "Gaunilo of Marmoutiers",
+    "averroes": "Averroes",
+    "maimonides": "Maimonides",
+    "aquinas": "Thomas Aquinas",
+    "bacon": "Francis Bacon",
+    "descartes": "René Descartes",
+    "spinoza": "Baruch Spinoza",
+    "pascal": "Blaise Pascal",
+    "leibniz": "Gottfried Wilhelm Leibniz",
+    "hobbes": "Thomas Hobbes",
+    "locke": "John Locke",
+    "berkeley": "George Berkeley",
+    "hume": "David Hume",
+    "rousseau": "Jean-Jacques Rousseau",
+    "adam-smith": "Adam Smith",
+    "kant": "Immanuel Kant",
+    "hegel": "G. W. F. Hegel",
+    "schopenhauer": "Arthur Schopenhauer",
+    "mill": "John Stuart Mill",
+    "kierkegaard": "Søren Kierkegaard",
+    "marx": "Karl Marx",
+    "engels": "Friedrich Engels",
+    "nietzsche": "Friedrich Nietzsche",
+    "peirce": "Charles Sanders Peirce",
+    "james": "William James",
+    "dewey": "John Dewey",
+    "du-bois": "W. E. B. Du Bois",
+    "moore": "G. E. Moore",
+    "russell": "Bertrand Russell",
+    "wittgenstein": "Ludwig Wittgenstein",
+    "heidegger": "Martin Heidegger",
+    "sartre": "Jean-Paul Sartre",
+    "quine": "W. V. O. Quine",
+    "anscombe": "G. E. M. Anscombe",
+    "rawls": "John Rawls",
+    "foucault": "Michel Foucault",
+    "murdoch": "Iris Murdoch",
+}
+
+
+def pack(ids):
+    return [T(i, NAMES[i]) for i in ids]
+
+
+ERA_THINKERS = {
+    "ancient-presocratic": [
+        "heraclitus",
+        "parmenides",
+        "thales",
+        "empedocles",
+        "democritus",
+    ],
+    "ancient-classical": ["socrates", "plato", "aristotle"],
+    "hellenistic": ["epicurus", "epictetus", "marcus-aurelius", "sextus-empiricus"],
+    "late-antiquity": ["plotinus", "augustine", "boethius"],
+    "medieval": ["anselm", "aquinas", "averroes", "maimonides"],
+    "early-modern": ["descartes", "spinoza", "leibniz", "bacon"],
+    "empiricism": ["hobbes", "locke", "berkeley", "hume"],
+    "enlightenment": ["rousseau", "kant", "adam-smith"],
+    "nineteenth": ["hegel", "mill", "kierkegaard", "marx", "nietzsche"],
+    "twentieth-pd": ["james", "du-bois", "russell", "wittgenstein"],
+    "present-day": ["wittgenstein", "heidegger", "sartre", "rawls", "foucault", "murdoch"],
+}
+
+UNIT_THINKERS = {
+    "myth-to-physis": ["thales", "anaximander", "anaximenes", "burnet"],
+    "logos-and-flux": ["xenophanes", "heraclitus"],
+    "being-and-eleatics": ["parmenides", "zeno"],
+    "saving-appearances": ["empedocles", "anaxagoras", "leucippus", "democritus"],
+    "socratic-method": ["socrates", "plato"],
+    "knowledge-and-virtue": ["plato", "socrates"],
+    "justice-and-city": ["plato"],
+    "aristotle-nature": ["aristotle"],
+    "aristotle-ethics-first-philosophy": ["aristotle"],
+    "epicurean-garden": ["epicurus", "lucretius"],
+    "stoic-discipline": ["epictetus", "marcus-aurelius"],
+    "living-without-assent": ["sextus-empiricus"],
+    "platonic-ascent": ["plotinus", "boethius"],
+    "augustine-inwardness": ["augustine"],
+    "faith-seeking-understanding": ["anselm", "gaunilo"],
+    "abrahamic-reason": ["averroes", "maimonides"],
+    "aquinas-ways-and-law": ["aquinas"],
+    "new-organon": ["bacon", "descartes"],
+    "descartes-meditations": ["descartes"],
+    "after-descartes": ["spinoza", "pascal", "leibniz"],
+    "political-bodies": ["hobbes", "locke"],
+    "ideas-and-qualities": ["locke", "berkeley"],
+    "hume-mitigated": ["hume"],
+    "freedom-and-sympathy": ["rousseau", "adam-smith"],
+    "kant-copernican": ["kant"],
+    "after-kant": ["hegel", "schopenhauer"],
+    "liberty-and-utility": ["mill"],
+    "existence-and-history": ["kierkegaard", "marx", "engels"],
+    "revaluation": ["nietzsche"],
+    "american-pragmatism": ["peirce", "james", "dewey", "du-bois"],
+    "analytic-turn": ["moore", "russell", "wittgenstein"],
+    "language-being-existence": ["wittgenstein", "heidegger", "sartre"],
+    "mind-language-science": ["quine", "anscombe"],
+    "ethics-politics-power": ["rawls", "foucault", "murdoch"],
+    "keep-going-maps": ["quine", "heidegger", "rawls"],
+}
+
+# assignment id -> (thinkerId or None, display author)
+ASSIGN = {
+    "burnet-introduction": ("burnet", "John Burnet"),
+    "milesian-school": ("thales", "John Burnet"),
+    "xenophanes-poets": ("xenophanes", "Xenophanes"),
+    "heraclitus-fragments": ("heraclitus", "Heraclitus"),
+    "parmenides-truth": ("parmenides", "Parmenides"),
+    "zeno-paradoxes": ("zeno", "Zeno of Elea"),
+    "empedocles-anaxagoras": ("empedocles", "Empedocles and Anaxagoras"),
+    "atomists-leucippus": ("democritus", "Leucippus and Democritus"),
+    "plato-euthyphro": ("plato", "Plato (Socrates as speaker)"),
+    "plato-apology": ("plato", "Plato (Socrates as speaker)"),
+    "plato-crito": ("plato", "Plato (Socrates as speaker)"),
+    "plato-meno-inquiry": ("plato", "Plato (Socrates as speaker)"),
+    "plato-meno-knowledge": ("plato", "Plato (Socrates as speaker)"),
+    "plato-republic-book-i": ("plato", "Plato"),
+    "plato-republic-soul-city": ("plato", "Plato"),
+    "plato-republic-cave": ("plato", "Plato"),
+    "aristotle-categories-substance": ("aristotle", "Aristotle"),
+    "aristotle-physics-nature": ("aristotle", "Aristotle"),
+    "aristotle-ne-happiness": ("aristotle", "Aristotle"),
+    "aristotle-ne-virtue": ("aristotle", "Aristotle"),
+    "aristotle-metaphysics-wisdom": ("aristotle", "Aristotle"),
+    "aristotle-posterior-analytics": ("aristotle", "Aristotle"),
+    "epicurus-menoeceus": ("epicurus", "Epicurus"),
+    "lucretius-atoms": ("lucretius", "Lucretius"),
+    "lucretius-death": ("lucretius", "Lucretius"),
+    "epictetus-enchiridion-i": ("epictetus", "Epictetus"),
+    "epictetus-enchiridion-ii": ("epictetus", "Epictetus"),
+    "marcus-meditations": ("marcus-aurelius", "Marcus Aurelius"),
+    "sextus-outlines-i": ("sextus-empiricus", "Sextus Empiricus"),
+    "plotinus-hypostases": ("plotinus", "Plotinus"),
+    "boethius-consolation": ("boethius", "Boethius"),
+    "augustine-confessions-evil": ("augustine", "Augustine of Hippo"),
+    "augustine-confessions-will": ("augustine", "Augustine of Hippo"),
+    "augustine-confessions-time": ("augustine", "Augustine of Hippo"),
+    "anselm-proslogion": ("anselm", "Anselm of Canterbury"),
+    "gaunilo-and-reply": ("anselm", "Gaunilo and Anselm"),
+    "averroes-decisive": ("averroes", "Averroes (Ibn Rushd)"),
+    "maimonides-guide": ("maimonides", "Maimonides"),
+    "aquinas-sacred-doctrine": ("aquinas", "Thomas Aquinas"),
+    "aquinas-five-ways": ("aquinas", "Thomas Aquinas"),
+    "aquinas-natural-law": ("aquinas", "Thomas Aquinas"),
+    "bacon-idols": ("bacon", "Francis Bacon"),
+    "descartes-discourse": ("descartes", "René Descartes"),
+    "descartes-meditations-1-2": ("descartes", "René Descartes"),
+    "descartes-meditations-3-4": ("descartes", "René Descartes"),
+    "descartes-meditations-5-6": ("descartes", "René Descartes"),
+    "spinoza-ethics-god": ("spinoza", "Baruch Spinoza"),
+    "pascal-pensees": ("pascal", "Blaise Pascal"),
+    "leibniz-monadology": ("leibniz", "Gottfried Wilhelm Leibniz"),
+    "hobbes-state-of-nature": ("hobbes", "Thomas Hobbes"),
+    "hobbes-sovereign": ("hobbes", "Thomas Hobbes"),
+    "locke-property": ("locke", "John Locke"),
+    "locke-no-innate": ("locke", "John Locke"),
+    "locke-qualities": ("locke", "John Locke"),
+    "berkeley-principles": ("berkeley", "George Berkeley"),
+    "hume-enquiry-ideas": ("hume", "David Hume"),
+    "hume-enquiry-causation": ("hume", "David Hume"),
+    "hume-enquiry-miracles": ("hume", "David Hume"),
+    "hume-treatise-identity": ("hume", "David Hume"),
+    "hume-dialogues-design": ("hume", "David Hume"),
+    "rousseau-inequality": ("rousseau", "Jean-Jacques Rousseau"),
+    "rousseau-contract-i": ("rousseau", "Jean-Jacques Rousseau"),
+    "rousseau-contract-ii": ("rousseau", "Jean-Jacques Rousseau"),
+    "smith-moral-sentiments": ("adam-smith", "Adam Smith"),
+    "kant-cpr-prefaces": ("kant", "Immanuel Kant"),
+    "kant-groundwork-i": ("kant", "Immanuel Kant"),
+    "kant-groundwork-ii": ("kant", "Immanuel Kant"),
+    "hegel-lordship": ("hegel", "G. W. F. Hegel"),
+    "schopenhauer-will": ("schopenhauer", "Arthur Schopenhauer"),
+    "mill-utilitarianism": ("mill", "John Stuart Mill"),
+    "mill-liberty-harm": ("mill", "John Stuart Mill"),
+    "mill-liberty-individuality": ("mill", "John Stuart Mill"),
+    "kierkegaard-fear": ("kierkegaard", "Søren Kierkegaard"),
+    "marx-manifesto": ("marx", "Karl Marx and Friedrich Engels"),
+    "nietzsche-genealogy-i": ("nietzsche", "Friedrich Nietzsche"),
+    "nietzsche-genealogy-ii": ("nietzsche", "Friedrich Nietzsche"),
+    "nietzsche-gay-science": ("nietzsche", "Friedrich Nietzsche"),
+    "peirce-ideas-clear": ("peirce", "Charles Sanders Peirce"),
+    "james-pragmatism": ("james", "William James"),
+    "james-will-to-believe": ("james", "William James"),
+    "dewey-reconstruction": ("dewey", "John Dewey"),
+    "dubois-souls": ("du-bois", "W. E. B. Du Bois"),
+    "moore-principia": ("moore", "G. E. Moore"),
+    "russell-problems-appearance": ("russell", "Bertrand Russell"),
+    "russell-problems-induction": ("russell", "Bertrand Russell"),
+    "tractatus-picture": ("wittgenstein", "Ludwig Wittgenstein"),
+    "tractatus-silence": ("wittgenstein", "Ludwig Wittgenstein"),
+    "wittgenstein-investigations": ("wittgenstein", "Ludwig Wittgenstein"),
+    "heidegger-being-time": ("heidegger", "Martin Heidegger"),
+    "sartre-existentialism": ("sartre", "Jean-Paul Sartre"),
+    "quine-two-dogmas": ("quine", "W. V. O. Quine"),
+    "anscombe-modern-moral": ("anscombe", "G. E. M. Anscombe"),
+    "rawls-justice": ("rawls", "John Rawls"),
+    "foucault-discipline": ("foucault", "Michel Foucault"),
+    "murdoch-sovereignty": ("murdoch", "Iris Murdoch"),
+    "map-analytic": (None, "Various authors"),
+    "map-continental-ethics": (None, "Various authors"),
+}
+
+
+def apply_thinkers(course: dict) -> list[str]:
+    errors = []
+    for era in course["eras"]:
+        ids = ERA_THINKERS.get(era["id"])
+        if not ids:
+            errors.append(f"era {era['id']} missing thinkers")
+        else:
+            era["thinkers"] = pack(ids)
+        for unit in era["units"]:
+            uids = UNIT_THINKERS.get(unit["id"])
+            if not uids:
+                errors.append(f"unit {unit['id']} missing thinkers")
+            else:
+                unit["thinkers"] = pack(uids)
+            for a in unit.get("assignments") or []:
+                spec = ASSIGN.get(a["id"])
+                if not spec:
+                    errors.append(f"assignment {a['id']} missing thinker map")
+                    continue
+                tid, author = spec
+                a["author"] = author
+                if tid:
+                    a["thinkerId"] = tid
+                else:
+                    a.pop("thinkerId", None)
+    return errors

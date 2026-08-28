@@ -3,6 +3,7 @@ const STUDENT_NAME = "Samuel";
 
 const COURSE_URLS = ["./content/course.json", "./course.json"];
 const GLOSSARY_URLS = ["./content/glossary.json", "./glossary.json"];
+const THINKER_URLS = ["./content/thinkers.json", "./thinkers.json"];
 
 const appEl = document.getElementById("app");
 const brandCourseEl = document.getElementById("brand-course");
@@ -22,22 +23,55 @@ let renderGen = 0;
 let quizSession = null;
 let glossary = { title: "Philosophical terms", intro: "", terms: [] };
 let glossaryUi = { query: "", eraId: "" };
+let thinkerIndex = [];
 const textCache = new Map();
 
 function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { completed: {}, notes: {}, scroll: {}, quizzes: {} };
+    if (!raw) return { completed: {}, notes: {}, scroll: {}, quizzes: {}, bookmarks: {} };
     const parsed = JSON.parse(raw);
     return {
       completed: parsed.completed && typeof parsed.completed === "object" ? parsed.completed : {},
       notes: parsed.notes && typeof parsed.notes === "object" ? parsed.notes : {},
       scroll: parsed.scroll && typeof parsed.scroll === "object" ? parsed.scroll : {},
       quizzes: parsed.quizzes && typeof parsed.quizzes === "object" ? parsed.quizzes : {},
+      bookmarks: parsed.bookmarks && typeof parsed.bookmarks === "object" ? parsed.bookmarks : {},
     };
   } catch {
-    return { completed: {}, notes: {}, scroll: {}, quizzes: {} };
+    return { completed: {}, notes: {}, scroll: {}, quizzes: {}, bookmarks: {} };
   }
+}
+
+function bookmarkFor(assignmentId) {
+  if (!assignmentId) return null;
+  const raw = progress.bookmarks?.[assignmentId];
+  if (!raw || typeof raw !== "object") return null;
+  const sectionId = text(raw.sectionId);
+  const paragraphIndex = Number(raw.paragraphIndex);
+  if (!sectionId || !Number.isInteger(paragraphIndex) || paragraphIndex < 0) return null;
+  return { sectionId, paragraphIndex, updatedAt: raw.updatedAt };
+}
+
+function setBookmark(assignmentId, sectionId, paragraphIndex) {
+  if (!assignmentId || !sectionId) return;
+  if (!progress.bookmarks || typeof progress.bookmarks !== "object") progress.bookmarks = {};
+  progress.bookmarks[assignmentId] = {
+    sectionId,
+    paragraphIndex,
+    updatedAt: new Date().toISOString(),
+  };
+  saveProgress();
+}
+
+function clearBookmark(assignmentId) {
+  if (!assignmentId || !progress.bookmarks) return;
+  delete progress.bookmarks[assignmentId];
+  saveProgress();
+}
+
+function bookmarkDomId(sectionId, paragraphIndex) {
+  return `line-${sectionId}-${paragraphIndex}`;
 }
 
 function saveProgress() {
@@ -154,14 +188,23 @@ function erasCompletedCount() {
 }
 
 function parseRoute() {
-  const hash = (location.hash || "#/").replace(/^#/, "") || "/";
-  const path = hash.startsWith("/") ? hash : `/${hash}`;
+  const raw = (location.hash || "#/").replace(/^#/, "") || "/";
+  const qIndex = raw.indexOf("?");
+  const pathOnly = qIndex >= 0 ? raw.slice(0, qIndex) : raw;
+  const query = new URLSearchParams(qIndex >= 0 ? raw.slice(qIndex + 1) : "");
+  const path = pathOnly.startsWith("/") ? pathOnly : `/${pathOnly}`;
   const parts = path.split("/").filter(Boolean);
   if (parts.length === 0) return { name: "home" };
   if (parts[0] === "syllabus") return { name: "syllabus" };
   if (parts[0] === "era" && parts[1]) return { name: "era", id: decodeURIComponent(parts[1]) };
   if (parts[0] === "read" && parts[1]) return { name: "read", id: decodeURIComponent(parts[1]) };
-  if (parts[0] === "text" && parts[1]) return { name: "text", id: decodeURIComponent(parts[1]) };
+  if (parts[0] === "text" && parts[1]) {
+    return {
+      name: "text",
+      id: decodeURIComponent(parts[1]),
+      fromStart: query.get("from") === "start",
+    };
+  }
   if (parts[0] === "quizzes") return { name: "quizzes" };
   if (parts[0] === "quiz" && parts[1]) return { name: "quiz", id: decodeURIComponent(parts[1]) };
   if (parts[0] === "recap" && parts[1]) return { name: "recap", id: decodeURIComponent(parts[1]) };
@@ -238,6 +281,16 @@ function assignmentHref(assignment) {
   if (!assignment?.id) return "#/";
   if (hasInAppText(assignment)) return `#/text/${encodeURIComponent(assignment.id)}`;
   return `#/read/${encodeURIComponent(assignment.id)}`;
+}
+
+function readCtaHtml(assignment) {
+  if (!hasInAppText(assignment)) return "";
+  const href = `#/text/${encodeURIComponent(assignment.id)}`;
+  if (bookmarkFor(assignment.id)) {
+    return `<a class="btn" href="${href}">Continue from your line</a>
+            <a class="btn btn-secondary" href="${href}?from=start">Start from the beginning</a>`;
+  }
+  return `<a class="btn" href="${href}">Read in the app</a>`;
 }
 
 function neighborHref(assignmentId) {
@@ -667,6 +720,222 @@ async function loadGlossary() {
   return loaded[0].data;
 }
 
+async function loadThinkers() {
+  for (const url of THINKER_URLS) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) continue;
+      const data = await res.json();
+      const list = Array.isArray(data)
+        ? data
+        : data && Array.isArray(data.thinkers)
+          ? data.thinkers
+          : [];
+      if (list.length) return list.filter((t) => t && (t.id || t.name));
+    } catch {
+      /* try the next path */
+    }
+  }
+  return [];
+}
+
+function thinkerCatalog() {
+  return Array.isArray(thinkerIndex) ? thinkerIndex : [];
+}
+
+function thinkerById(id) {
+  if (!id) return null;
+  return thinkerCatalog().find((t) => t && t.id === id) || null;
+}
+
+function normalizePersonName(name) {
+  return text(name)
+    .replace(/\(.*?\)/g, "")
+    .split(",")[0]
+    .trim();
+}
+
+function thinkerByName(name) {
+  const n = normalizePersonName(name).toLowerCase();
+  if (!n) return null;
+  const catalog = thinkerCatalog();
+  const exact = catalog.find((t) => text(t.name).toLowerCase() === n);
+  if (exact) return exact;
+  const last = n.split(/\s+/).filter(Boolean).pop();
+  if (last && last.length > 2) {
+    const byLast = catalog.find((t) => {
+      const parts = text(t.name).toLowerCase().split(/\s+/);
+      return parts[parts.length - 1] === last;
+    });
+    if (byLast) return byLast;
+  }
+  return (
+    catalog.find((t) => {
+      const tn = text(t.name).toLowerCase();
+      return tn.length > 3 && (n.includes(tn) || tn.includes(n));
+    }) || null
+  );
+}
+
+function asThinkerRecord(item) {
+  if (!item) return null;
+  if (typeof item === "string") {
+    return thinkerById(item) || thinkerByName(item) || { id: item, name: item };
+  }
+  if (typeof item === "object") {
+    const found = thinkerById(item.id) || thinkerByName(item.name);
+    return (
+      found || {
+        id: item.id,
+        name: text(item.name, item.id),
+        image: item.image,
+        imageCredit: item.imageCredit,
+      }
+    );
+  }
+  return null;
+}
+
+function uniqueThinkers(list) {
+  const seen = new Set();
+  const out = [];
+  for (const t of list) {
+    if (!t || !text(t.name, t.id)) continue;
+    const key = text(t.id) || text(t.name).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(t);
+  }
+  return out;
+}
+
+function resolveThinkers(source) {
+  if (!source || typeof source !== "object") return [];
+  const raw = [];
+  if (source.thinkerId) raw.push(source.thinkerId);
+  for (const id of listOf(source.thinkerIds)) raw.push(id);
+  if (Array.isArray(source.thinkers)) raw.push(...source.thinkers);
+  return uniqueThinkers(raw.map(asThinkerRecord));
+}
+
+function peopleFromAuthorString(author) {
+  const cleaned = normalizePersonName(author);
+  if (!cleaned) return [];
+  const parts = cleaned.split(/\s+(?:and|&)\s+/i).map((p) => p.trim()).filter(Boolean);
+  return uniqueThinkers(parts.map((name) => thinkerByName(name) || { name }));
+}
+
+function thinkersForAssignment(assignment, unit, era) {
+  let list = resolveThinkers(assignment);
+  if (!list.length && assignment) list = peopleFromAuthorString(assignment.author);
+  if (!list.length && unit) list = resolveThinkers(unit);
+  if (!list.length && era) list = resolveThinkers(era);
+  return list;
+}
+
+function thinkersForUnit(unit, era) {
+  let list = resolveThinkers(unit);
+  if (list.length) return list;
+  const derived = [];
+  for (const assignment of unit?.assignments || []) {
+    derived.push(...thinkersForAssignment(assignment, unit, era));
+  }
+  return uniqueThinkers(derived);
+}
+
+function thinkersForEra(era) {
+  let list = resolveThinkers(era);
+  if (list.length) return list.slice(0, 8);
+  const derived = [];
+  for (const unit of era?.units || []) {
+    derived.push(...thinkersForUnit(unit, era));
+  }
+  return uniqueThinkers(derived).slice(0, 8);
+}
+
+function thinkersForTerm(term) {
+  const aid = text(term && term.firstAppearsIn);
+  const found = aid ? readingById(aid) : null;
+  if (found) return thinkersForAssignment(found.assignment, found.unit, found.era).slice(0, 1);
+  const eraId = listOf(term && term.eraIds)[0];
+  const era = eraId ? eraById(eraId) : null;
+  return era ? thinkersForEra(era).slice(0, 1) : [];
+}
+
+function formatThinkerNames(people) {
+  const names = people.map((t) => text(t.name)).filter(Boolean);
+  if (!names.length) return "";
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} & ${names[1]}`;
+  return `${names.slice(0, -1).join(", ")} & ${names[names.length - 1]}`;
+}
+
+function portraitSrc(thinker) {
+  const path = text(thinker && thinker.image);
+  if (!path) return "";
+  const cleaned = path.replace(/^\.\//, "").replace(/^\/+/, "");
+  if (/^https?:/i.test(cleaned)) return "";
+  if (cleaned.startsWith("content/")) return `./${cleaned}`;
+  return `./content/${cleaned}`;
+}
+
+function portraitHtml(thinker, size) {
+  if (!thinker || !text(thinker.name, thinker.id)) return "";
+  const src = portraitSrc(thinker);
+  const credit = text(thinker.imageCredit);
+  const label = text(thinker.name, thinker.id);
+  const letter = label.charAt(0).toUpperCase();
+  const img = src
+    ? `<img class="portrait-img" src="${escapeHtml(src)}" alt="" width="96" height="96" loading="lazy" decoding="async"${credit ? ` title="${escapeHtml(credit)}"` : ""}>`
+    : "";
+  return `<span class="portrait portrait--${size || "md"}${src ? "" : " no-photo"}" role="img" aria-label="${escapeHtml(label)}">
+      <span class="portrait-fallback" aria-hidden="true">${escapeHtml(letter)}</span>
+      ${img}
+    </span>`;
+}
+
+function portraitStackHtml(people, size) {
+  if (!people.length) return "";
+  if (people.length === 1) return portraitHtml(people[0], size);
+  return `<span class="portrait-row">${people.map((t) => portraitHtml(t, size === "lg" ? "md" : "sm")).join("")}</span>`;
+}
+
+function thinkerBannerHtml(people, opts = {}) {
+  const names = formatThinkerNames(people);
+  const subtitle = text(opts.subtitle);
+  if (!names && !subtitle) return "";
+  const size = opts.size || "lg";
+  const nameTag = opts.nameTag || "p";
+  const subTag = opts.subTag || "p";
+  const subClass = opts.subClass || "thinker-sub";
+  const href = text(opts.href);
+  const credit =
+    size === "lg" && people.length === 1 && text(people[0] && people[0].imageCredit)
+      ? `<span class="portrait-credit">${escapeHtml(people[0].imageCredit)}</span>`
+      : "";
+  const linked = (inner) => (href ? `<a href="${escapeHtml(href)}">${inner}</a>` : inner);
+  const nameHtml = names ? `<${nameTag} class="thinker-name">${linked(escapeHtml(names))}</${nameTag}>` : "";
+  const subHtml = subtitle ? `<${subTag} class="${subClass}">${linked(escapeHtml(subtitle))}</${subTag}>` : "";
+  return `<div class="thinker-banner thinker-banner--${size}">
+      ${people.length ? portraitStackHtml(people, size) : ""}
+      <div class="thinker-banner-text">
+        ${nameHtml}
+        ${subHtml}
+        ${credit}
+      </div>
+    </div>`;
+}
+
+function sittingMeta(assignment) {
+  const bits = [];
+  if (text(assignment.work)) bits.push(text(assignment.work));
+  const pages = text(assignment.pages) || text(assignment.selection);
+  if (pages) bits.push(pages);
+  const time = minutesLabel(assignment.estimatedMinutes);
+  if (time) bits.push(time);
+  return bits;
+}
+
 function glossaryTerms() {
   return Array.isArray(glossary?.terms) ? glossary.terms.filter((t) => t && (t.id || t.term)) : [];
 }
@@ -720,7 +989,10 @@ function visibleTerms() {
 function definitionParagraphs(definition) {
   const raw = text(definition);
   if (!raw) return [];
-  return raw.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  return raw
+    .split(/\n{2,}/)
+    .map((p) => p.replace(/\s*\n\s*/g, " ").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
 }
 
 function termsSittingHtml(assignmentId) {
@@ -758,7 +1030,7 @@ async function render() {
     const html = await renderReader(route.id);
     if (gen !== renderGen) return;
     appEl.innerHTML = html;
-    restoreReaderPosition(route.id);
+    restoreReaderPosition(route.id, { fromStart: route.fromStart });
     return;
   }
 
@@ -819,8 +1091,10 @@ function renderHome() {
   }
 
   const a = next.assignment;
-  const bits = metaBits(a).map(escapeHtml).join(" · ");
+  const people = thinkersForAssignment(a, next.unit, next.era);
+  const bits = (people.length ? sittingMeta(a) : metaBits(a)).map(escapeHtml).join(" · ");
   const why = text(a.why);
+  const sittingTitle = text(a.title, text(a.work, "Untitled assignment"));
 
   return `
     <p class="kicker">${escapeHtml(text(info.subtitle, text(info.title)))}</p>
@@ -828,8 +1102,12 @@ function renderHome() {
     <p class="lede">${escapeHtml(text(info.method, "Read the assigned pages. Then go on."))}</p>
     ${stats}
     <article class="next-card">
-      <p class="here-label">Next reading</p>
-      <h2>${escapeHtml(text(a.title, text(a.work, "Untitled assignment")))}</h2>
+      <p class="here-label">${bookmarkFor(a.id) ? "Your line" : "Next reading"}</p>
+      ${
+        people.length
+          ? thinkerBannerHtml(people, { size: "lg", nameTag: "h2", subtitle: sittingTitle, subClass: "sitting-title" })
+          : `<h2>${escapeHtml(sittingTitle)}</h2>`
+      }
       <p class="meta-line">${bits}</p>
       ${why ? `<p class="why-excerpt">${escapeHtml(why)}</p>` : ""}
       ${
@@ -840,7 +1118,7 @@ function renderHome() {
       <p class="actions">
         ${
           hasInAppText(a)
-            ? `<a class="btn" href="#/text/${encodeURIComponent(a.id)}">Read in the app</a>
+            ? `${readCtaHtml(a)}
                <a class="btn-ghost btn" href="#/read/${encodeURIComponent(a.id)}">Assignment notes</a>`
             : `<a class="btn" href="#/read/${encodeURIComponent(a.id)}">Open the assignment</a>`
         }
@@ -904,13 +1182,14 @@ function renderAssignment(id) {
 
   const sourceBlock = hasInAppText(a)
     ? `<p class="source-open">
-        <a class="btn" href="#/text/${encodeURIComponent(a.id)}">Read in the app</a>
+        ${readCtaHtml(a)}
         ${
           available && href
             ? `<a class="btn btn-secondary" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">Another edition</a>`
             : ""
         }
-      </p>`
+      </p>
+      ${bookmarkFor(a.id) ? `<p class="muted">A paragraph is marked in this sitting. Open it to pick up there, or start from the beginning.</p>` : ""}`
     : bibliographic || !available
       ? `<section class="panel legal-note">
         <h2>Obtain this legally</h2>
@@ -931,6 +1210,9 @@ function renderAssignment(id) {
   const next = item.nextId
     ? `<a class="btn btn-secondary" href="${neighborHref(item.nextId)}" data-next>Next assignment</a>`
     : `<span></span>`;
+  const people = thinkersForAssignment(a, item.unit, item.era);
+  const sittingTitle = text(a.title, text(a.work, "Untitled"));
+  const headBits = (people.length ? sittingMeta(a) : metaBits(a)).map(escapeHtml).join(" · ");
 
   return `
     <nav class="crumb" aria-label="Breadcrumb">
@@ -942,11 +1224,15 @@ function renderAssignment(id) {
     </nav>
     <header class="assignment-head">
       <p class="kicker">${escapeHtml(kindLabel(a.kind))}${done ? " · complete" : ""}</p>
-      <h1>${escapeHtml(text(a.title, text(a.work, "Untitled")))}</h1>
-      <p class="meta-line">${metaBits(a).map(escapeHtml).join(" · ")}</p>
+      ${
+        people.length
+          ? thinkerBannerHtml(people, { size: "lg", nameTag: "h1", subtitle: sittingTitle, subClass: "sitting-title" })
+          : `<h1>${escapeHtml(sittingTitle)}</h1>`
+      }
+      <p class="meta-line">${headBits}</p>
     </header>
     <dl class="dl-meta">
-      ${text(a.author) ? `<dt>Author</dt><dd>${escapeHtml(a.author)}</dd>` : ""}
+      ${text(a.author) && !people.length ? `<dt>Author</dt><dd>${escapeHtml(a.author)}</dd>` : ""}
       ${text(a.work) ? `<dt>Work</dt><dd>${escapeHtml(a.work)}</dd>` : ""}
       ${translator ? `<dt>Translator</dt><dd>${escapeHtml(translator)}</dd>` : ""}
       ${text(a.selection) ? `<dt>Selection</dt><dd>${escapeHtml(a.selection)}</dd>` : ""}
@@ -1026,25 +1312,37 @@ async function renderReader(id) {
   const questions = listOf(a.questions);
   const why = text(a.why);
   const translator = text(doc.translator, text(a.translator));
+  const people = thinkersForAssignment(a, item.unit, item.era);
   const selection = text(a.text && a.text.locator, text(a.pages, text(a.selection)));
   const license = text(doc.license, "public-domain");
   const attribution = text(doc.attribution);
   const src = doc.source || {};
   const srcUrl = safeUrl(src.url);
 
+  const marked = bookmarkFor(a.id);
   const sectionHtml = sections
-    .map((sec) => {
-      const sid = text(sec && sec.id);
+    .map((sec, sIndex) => {
+      const sid = text(sec && sec.id) || `anon-${sIndex}`;
       const paras = listOf(sec && sec.paragraphs);
       const heading = text(sec && sec.heading);
       const loc = text(sec && sec.locator);
+      const paraHtml = paras
+        .map((paragraph, i) => {
+          const isMarked = marked && marked.sectionId === sid && marked.paragraphIndex === i;
+          return `<p class="reader-para${isMarked ? " is-bookmarked" : ""}" id="${escapeHtml(bookmarkDomId(sid, i))}" data-section-id="${escapeHtml(sid)}" data-para-index="${i}">
+            <button type="button" class="para-mark" data-bookmark-para aria-pressed="${isMarked ? "true" : "false"}" aria-label="${isMarked ? "Clear your line" : "Bookmark this paragraph"}" title="${isMarked ? "Clear your line" : "Mark this as your line"}">¶</button>
+            ${isMarked ? `<span class="para-ribbon">Your line</span>` : ""}
+            ${escapeHtml(paragraph)}
+          </p>`;
+        })
+        .join("");
       return `
         <section class="reader-section" id="sec-${escapeHtml(sid)}" data-section-id="${escapeHtml(sid)}">
           <div class="section-locator">
             ${loc ? `<span class="loc">${escapeHtml(loc)}</span>` : ""}
             ${heading ? `<h2>${escapeHtml(heading)}</h2>` : ""}
           </div>
-          ${paras.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+          ${paraHtml}
         </section>`;
     })
     .join("");
@@ -1078,6 +1376,10 @@ async function renderReader(id) {
       <div class="reader-main">
         <div class="reader-toolbar">
           <a class="btn btn-ghost" href="#/read/${encodeURIComponent(a.id)}">Assignment</a>
+          <p class="bookmark-status" id="bookmark-status" ${marked ? "" : "hidden"}>
+            Your line is marked.
+            <button type="button" class="btn btn-ghost" data-clear-bookmark>Clear</button>
+          </p>
           <p class="actions">
             ${
               usableQuiz(a.quiz)
@@ -1093,8 +1395,15 @@ async function renderReader(id) {
         <article class="reader-prose">
           <header>
             <p class="kicker">${escapeHtml(text(item.era.title))} · ${escapeHtml(kindLabel(a.kind))}${done ? " · complete" : ""}</p>
+            ${thinkerBannerHtml(people, { size: "lg", nameTag: "p" })}
             <h1 class="work-title">${escapeHtml(text(doc.title, text(a.work, a.title)))}</h1>
-            <p class="work-byline">${escapeHtml(text(doc.author, a.author))}${translator ? ` · tr. ${escapeHtml(translator)}` : ""}</p>
+            ${
+              people.length
+                ? translator
+                  ? `<p class="work-byline">tr. ${escapeHtml(translator)}</p>`
+                  : ""
+                : `<p class="work-byline">${escapeHtml(text(doc.author, a.author))}${translator ? ` · tr. ${escapeHtml(translator)}` : ""}</p>`
+            }
             <p class="work-assignment">${escapeHtml(selection)}</p>
           </header>
           ${sectionHtml || `<p class="muted">This file has no sections yet.</p>`}
@@ -1112,6 +1421,7 @@ async function renderReader(id) {
           </footer>
         </article>
         <div class="pager reader-pager">${prev}${next}</div>
+        <p class="kbd-hint">The ¶ in the margin marks your line. Press b for the paragraph in view. j / k move to the next or previous assignment.</p>
       </div>
       ${
         guideBits.length
@@ -1122,7 +1432,95 @@ async function renderReader(id) {
   `;
 }
 
-function restoreReaderPosition(assignmentId) {
+function nearestParagraphInView() {
+  const paras = [...document.querySelectorAll(".reader-para")];
+  if (!paras.length) return null;
+  const line = window.innerHeight * 0.28;
+  let chosen = paras[0];
+  for (const para of paras) {
+    const top = para.getBoundingClientRect().top;
+    if (top <= line) chosen = para;
+    else break;
+  }
+  return chosen;
+}
+
+function syncBookmarkUi(assignmentId) {
+  const marked = bookmarkFor(assignmentId);
+  document.querySelectorAll(".reader-para").forEach((para) => {
+    const sid = para.getAttribute("data-section-id");
+    const idx = Number(para.getAttribute("data-para-index"));
+    const on = Boolean(marked && marked.sectionId === sid && marked.paragraphIndex === idx);
+    para.classList.toggle("is-bookmarked", on);
+    const btn = para.querySelector("[data-bookmark-para]");
+    if (btn) {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.setAttribute("aria-label", on ? "Clear your line" : "Bookmark this paragraph");
+      btn.setAttribute("title", on ? "Clear your line" : "Mark this as your line");
+    }
+    let ribbon = para.querySelector(".para-ribbon");
+    if (on && !ribbon) {
+      ribbon = document.createElement("span");
+      ribbon.className = "para-ribbon";
+      ribbon.textContent = "Your line";
+      const mark = para.querySelector(".para-mark");
+      if (mark && mark.nextSibling) para.insertBefore(ribbon, mark.nextSibling);
+      else para.prepend(ribbon);
+    } else if (!on && ribbon) {
+      ribbon.remove();
+    }
+  });
+  const status = document.getElementById("bookmark-status");
+  if (status) status.hidden = !marked;
+}
+
+function toggleBookmarkAt(assignmentId, sectionId, paragraphIndex) {
+  const existing = bookmarkFor(assignmentId);
+  if (existing && existing.sectionId === sectionId && existing.paragraphIndex === paragraphIndex) {
+    clearBookmark(assignmentId);
+  } else {
+    setBookmark(assignmentId, sectionId, paragraphIndex);
+  }
+  syncBookmarkUi(assignmentId);
+}
+
+function restoreReaderPosition(assignmentId, opts = {}) {
+  const fromStart = Boolean(opts.fromStart);
+  if (fromStart) {
+    const item = readingById(assignmentId);
+    const start = text(item?.assignment?.text?.start);
+    const firstSection = document.querySelector(".reader-section");
+    const target = start
+      ? document.getElementById(`sec-${start}`) ||
+        document.querySelector(`.reader-section[data-section-id="${CSS.escape(start)}"]`)
+      : null;
+    if (target && firstSection && target !== firstSection) {
+      const y = target.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo(0, Math.max(0, y));
+    } else {
+      window.scrollTo(0, 0);
+    }
+    const clean = `#/text/${encodeURIComponent(assignmentId)}`;
+    if (location.hash !== clean) history.replaceState(null, "", `${location.pathname}${location.search}${clean}`);
+    return;
+  }
+
+  const marked = bookmarkFor(assignmentId);
+  if (marked) {
+    const el =
+      document.getElementById(bookmarkDomId(marked.sectionId, marked.paragraphIndex)) ||
+      document.querySelector(
+        `.reader-para[data-section-id="${CSS.escape(marked.sectionId)}"][data-para-index="${marked.paragraphIndex}"]`
+      );
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo(0, Math.max(0, y));
+      el.classList.add("just-restored");
+      window.setTimeout(() => el.classList.remove("just-restored"), 1600);
+      return;
+    }
+  }
+
   const saved = progress.scroll?.[assignmentId];
   if (typeof saved === "number" && saved > 40) {
     window.scrollTo(0, saved);
@@ -1133,7 +1531,7 @@ function restoreReaderPosition(assignmentId) {
   const firstSection = document.querySelector(".reader-section");
   const target = start
     ? document.getElementById(`sec-${start}`) ||
-      document.querySelector(`[data-section-id="${CSS.escape(start)}"]`)
+      document.querySelector(`.reader-section[data-section-id="${CSS.escape(start)}"]`)
     : null;
   if (target && firstSection && target !== firstSection) {
     const y = target.getBoundingClientRect().top + window.scrollY - 88;
@@ -1167,15 +1565,18 @@ function renderSyllabus() {
               if (!a?.id) return "";
               const done = isComplete(a.id);
               const currentClass = a.id === currentId ? " current" : "";
-              const bits = metaBits(a).slice(0, 3).map(escapeHtml).join(" · ");
+              const who = formatThinkerNames(thinkersForAssignment(a, unit, era));
+              const bits = sittingMeta(a).slice(0, 3).map(escapeHtml).join(" · ");
               const time = minutesLabel(a.estimatedMinutes);
               return `
                 <li>
                   <a class="${currentClass}" href="${assignmentHref(a)}" ${a.id === currentId ? 'aria-current="location"' : ""}>
                     <span class="mark ${done ? "done" : ""}" aria-hidden="true">${done ? "✓" : "○"}</span>
                     <span>
+                      ${who ? `<span class="asg-who">${escapeHtml(who)}</span>` : ""}
                       <span class="asg-title">${escapeHtml(text(a.title, text(a.work, "Untitled")))}</span>
                       <span class="kind-pill">${escapeHtml(kindLabel(a.kind))}</span>
+                      ${bookmarkFor(a.id) ? `<span class="line-mark" title="A line is marked">¶</span>` : ""}
                     </span>
                     <span class="asg-time">${escapeHtml(time)}</span>
                     <span class="asg-sub">${bits}</span>
@@ -1183,9 +1584,16 @@ function renderSyllabus() {
                 </li>`;
             })
             .join("");
+          const unitPeople = thinkersForUnit(unit, era);
           return `
             <div class="unit-block">
-              <h3 class="unit-title">${escapeHtml(text(unit.title, "Unit"))}</h3>
+              ${thinkerBannerHtml(unitPeople, {
+                size: "md",
+                nameTag: "p",
+                subtitle: text(unit.title, "Unit"),
+                subTag: "h3",
+                subClass: "unit-title",
+              })}
               ${
                 usableQuiz(unit.recapQuiz)
                   ? `<p class="era-intro-link"><a href="${recapHref(unit)}">Unit recap quiz</a> · ${escapeHtml(quizStatusLabel(quizIdFor(unit.recapQuiz, `${unit.id}-recap`)))}</p>`
@@ -1197,13 +1605,22 @@ function renderSyllabus() {
         .join("");
 
       const done = eraComplete(era);
+      const eraPeople = thinkersForEra(era);
+      const eraHref = `#/era/${encodeURIComponent(era.id)}`;
       return `
         <section class="era-block">
           <div class="era-head">
-            <h2><a href="#/era/${encodeURIComponent(era.id)}">${escapeHtml(text(era.title, "Era"))}</a></h2>
+            ${thinkerBannerHtml(eraPeople, {
+              size: "md",
+              nameTag: "p",
+              subtitle: text(era.title, "Era"),
+              subTag: "h2",
+              subClass: "era-title-sub",
+              href: eraHref,
+            })}
             <span class="era-years">${escapeHtml(text(era.years))}${done ? " · complete" : ""}</span>
           </div>
-          <p class="era-intro-link"><a href="#/era/${encodeURIComponent(era.id)}">Professor’s introduction</a></p>
+          <p class="era-intro-link"><a href="${eraHref}">Professor’s introduction</a></p>
           ${unitHtml}
         </section>`;
     })
@@ -1235,6 +1652,7 @@ function renderEra(id) {
   const firstInEra = readings.find((item) => item.era.id === era.id);
   const target = firstUnread || firstInEra;
   const done = eraComplete(era);
+  const eraPeople = thinkersForEra(era);
 
   return `
     <nav class="crumb" aria-label="Breadcrumb">
@@ -1243,7 +1661,16 @@ function renderEra(id) {
       <span>${escapeHtml(text(era.title, "Era"))}</span>
     </nav>
     <p class="kicker">${escapeHtml(text(era.years, "Era"))}${done ? " · complete" : ""}</p>
-    <h1 class="page-title">${escapeHtml(text(era.title, "Untitled era"))}</h1>
+    ${
+      eraPeople.length
+        ? thinkerBannerHtml(eraPeople, {
+            size: "lg",
+            nameTag: "h1",
+            subtitle: text(era.title, "Untitled era"),
+            subClass: "era-page-sub",
+          })
+        : `<h1 class="page-title">${escapeHtml(text(era.title, "Untitled era"))}</h1>`
+    }
     ${themes.length ? `<ul class="themes">${themes.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>` : ""}
     <div class="panel">
       <h2>Professor’s note</h2>
@@ -1341,6 +1768,7 @@ function renderTermEntry(id) {
   const see = listOf(term.seeAlso);
   const assignmentIds = [...new Set([text(term.firstAppearsIn), ...listOf(term.assignmentIds)].filter(Boolean))];
   const eraIds = listOf(term.eraIds);
+  const people = thinkersForTerm(term);
 
   const seeHtml = see.length
     ? `<p class="term-see">See also: ${see
@@ -1391,8 +1819,13 @@ function renderTermEntry(id) {
     </nav>
     <article class="term-entry">
       <p class="kicker">Definition</p>
-      <h1 class="page-title">${escapeHtml(text(term.term, term.id))}</h1>
-      ${aliases.length ? `<p class="term-aliases">${aliases.map((a) => escapeHtml(a)).join(" · ")}</p>` : ""}
+      <div class="term-entry-head">
+        ${people.length ? portraitHtml(people[0], "md") : ""}
+        <div>
+          <h1 class="page-title">${escapeHtml(text(term.term, term.id))}</h1>
+          ${aliases.length ? `<p class="term-aliases">${aliases.map((a) => escapeHtml(a)).join(" · ")}</p>` : ""}
+        </div>
+      </div>
       ${
         paras.length
           ? paras.map((p) => `<p class="term-def">${escapeHtml(p)}</p>`).join("")
@@ -1602,6 +2035,29 @@ function renderQuizResults(session) {
 }
 
 function onClick(event) {
+  const markBtn = event.target.closest("[data-bookmark-para]");
+  if (markBtn) {
+    event.preventDefault();
+    const para = markBtn.closest(".reader-para");
+    const route = parseRoute();
+    if (!para || route.name !== "text") return;
+    const sid = para.getAttribute("data-section-id");
+    const idx = Number(para.getAttribute("data-para-index"));
+    if (!sid || !Number.isInteger(idx)) return;
+    toggleBookmarkAt(route.id, sid, idx);
+    return;
+  }
+
+  const clearBtn = event.target.closest("[data-clear-bookmark]");
+  if (clearBtn) {
+    event.preventDefault();
+    const route = parseRoute();
+    if (route.name !== "text") return;
+    clearBookmark(route.id);
+    syncBookmarkUi(route.id);
+    return;
+  }
+
   const completeBtn = event.target.closest("[data-toggle-complete]");
   if (completeBtn) {
     snapshotScroll();
@@ -1725,7 +2181,18 @@ function isTypingTarget(el) {
 
 function onKeydown(event) {
   if (isTypingTarget(event.target)) return;
+  if (event.metaKey || event.ctrlKey || event.altKey) return;
   const route = parseRoute();
+  if (route.name === "text" && event.key.toLowerCase() === "b") {
+    event.preventDefault();
+    const para = nearestParagraphInView();
+    if (!para) return;
+    const sid = para.getAttribute("data-section-id");
+    const idx = Number(para.getAttribute("data-para-index"));
+    if (!sid || !Number.isInteger(idx)) return;
+    toggleBookmarkAt(route.id, sid, idx);
+    return;
+  }
   if (route.name !== "read" && route.name !== "text") return;
   const item = readingById(route.id);
   if (!item) return;
@@ -1745,6 +2212,11 @@ async function start() {
     } catch {
       glossary = { title: "Philosophical terms", intro: "", terms: [] };
     }
+    try {
+      thinkerIndex = await loadThinkers();
+    } catch {
+      thinkerIndex = [];
+    }
     const info = course.course || {};
     brandCourseEl.textContent = text(info.title, "Directed reading");
     document.title = `${text(info.title, "pjilosophy")} — directed reading`;
@@ -1760,6 +2232,17 @@ async function start() {
 appEl.addEventListener("click", onClick);
 appEl.addEventListener("input", onInput);
 appEl.addEventListener("submit", onSubmit);
+appEl.addEventListener(
+  "error",
+  (event) => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement) || !img.classList.contains("portrait-img")) return;
+    const wrap = img.closest(".portrait");
+    if (wrap) wrap.classList.add("no-photo");
+    img.remove();
+  },
+  true
+);
 window.addEventListener("hashchange", () => {
   render();
 });

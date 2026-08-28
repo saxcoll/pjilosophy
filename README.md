@@ -33,7 +33,7 @@ Home recommends the first unread assignment on that list.
 
 Public-domain texts live in `content/texts/<id>.json`. Assignments may point at them with a `text` object (`id`, `path`, optional `start` / `end`). The reader loads those files over relative URLs (`./content/texts/…`), so GitHub Pages under `/pjilosophy/` still works.
 
-Progress key: `pjilosophy.progress.v1` in `localStorage` (completion, notes, reader scroll, and quiz scores). Quizzes live on assignments as `quiz` and on units as `recapQuiz`; open **Quizzes** in the header. **Terms** is the course glossary (`content/glossary.json`).
+Progress key: `pjilosophy.progress.v1` in `localStorage` (completion, notes, reader scroll, quiz scores, and an explicit paragraph bookmark per assignment). In the reader, the ¶ in the margin (or `b`) marks your line; reopen to jump there. Quizzes live on assignments as `quiz` and on units as `recapQuiz`; open **Quizzes** in the header. **Terms** is the course glossary (`content/glossary.json`). Optional thinker portraits live in `content/thinkers.json` with files under `content/images/thinkers/`; each portrait needs an `imageCredit` (the UI shows it as a caption or tooltip).
 
 ## Layout
 
@@ -44,6 +44,8 @@ assets/styles.css
 assets/favicon.svg
 content/course.json     syllabus (source of truth when present)
 content/glossary.json   course glossary for the Terms tab
+content/thinkers.json   optional portraits and credits
+content/images/thinkers/ portrait files
 content/texts/          public-domain reading JSON
 course.json             fallback copy of the syllabus
 scripts/validate-course.py

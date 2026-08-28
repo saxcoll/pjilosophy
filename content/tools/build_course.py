@@ -21,6 +21,7 @@ from course_eras3 import (  # noqa: E402
 )
 from course_eras4 import era_empiricism, era_enlightenment  # noqa: E402
 from course_eras5 import era_nineteenth, era_present, era_twentieth_pd  # noqa: E402
+from course_thinkers import apply_thinkers  # noqa: E402
 from quizzes import all_quizzes, recap_quizzes  # noqa: E402
 
 
@@ -149,7 +150,8 @@ def main() -> int:
         ],
     }
     report = attach(course)
-    errors = validate_quizzes(course)
+    errors = apply_thinkers(course)
+    errors.extend(validate_quizzes(course))
     if report["missing_quiz"]:
         errors.append("assignments missing quiz: " + ", ".join(report["missing_quiz"]))
     if report["extra_quiz"]:

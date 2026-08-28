@@ -1,0 +1,462 @@
+{
+  "thinkers": [
+    {
+      "id": "thales",
+      "name": "Thales",
+      "sortName": "Thales",
+      "image": "images/thinkers/thales.jpg",
+      "imageCredit": "Wikimedia Commons — Illustrerad Verldshistoria band I Ill 107. Wilhelm Meyer. public-domain. https://commons.wikimedia.org/wiki/File%3AIllustrerad%20Verldshistoria%20band%20I%20Ill%20107.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "anaximander",
+      "name": "Anaximander",
+      "sortName": "Anaximander",
+      "image": "images/thinkers/anaximander.jpg",
+      "imageCredit": "Wikimedia Commons — Anaximander Mosaic. ancient Roman mosaic artist from the early third century AD. public-domain. https://commons.wikimedia.org/wiki/File%3AAnaximander%20Mosaic.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "anaximenes",
+      "name": "Anaximenes",
+      "sortName": "Anaximenes",
+      "image": "images/thinkers/anaximenes.jpg",
+      "imageCredit": "Wikimedia Commons — Anaximenes. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AAnaximenes.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "xenophanes",
+      "name": "Xenophanes",
+      "sortName": "Xenophanes",
+      "image": "images/thinkers/xenophanes.jpg",
+      "imageCredit": "Wikimedia Commons — Xenophanes in Thomas Stanley History of Philosophy. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AXenophanes%20in%20Thomas%20Stanley%20History%20of%20Philosophy.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "heraclitus",
+      "name": "Heraclitus",
+      "sortName": "Heraclitus",
+      "image": "images/thinkers/heraclitus.jpg",
+      "imageCredit": "Wikimedia Commons —  Heraclitustitle QS:P1476,en:\"Heraclitus\"label QS:Len,\"Heraclitus\". Johannes Moreelse. public-domain. https://commons.wikimedia.org/wiki/File%3AJohannes%20Moreelse%20-%20Heraclitus%20-%20Google%20Art%20Project.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "parmenides",
+      "name": "Parmenides",
+      "sortName": "Parmenides",
+      "image": "images/thinkers/parmenides.jpg",
+      "imageCredit": "Wikimedia Commons — Parmenides. Unknown. cc-by-sa. https://commons.wikimedia.org/wiki/File%3AParmenides.jpg",
+      "license": "cc-by-sa"
+    },
+    {
+      "id": "zeno",
+      "name": "Zeno of Elea",
+      "sortName": "Zeno",
+      "image": "images/thinkers/zeno.jpg",
+      "imageCredit": "Wikimedia Commons — Zeno of Elea Tibaldi or Carducci Escorial. Pellegrini Tiballdi. public-domain. https://commons.wikimedia.org/wiki/File%3AZeno%20of%20Elea%20Tibaldi%20or%20Carducci%20Escorial.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "empedocles",
+      "name": "Empedocles",
+      "sortName": "Empedocles",
+      "image": "images/thinkers/empedocles.jpg",
+      "imageCredit": "Wikimedia Commons — Empedocles in Thomas Stanley History of Philosophy. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AEmpedocles%20in%20Thomas%20Stanley%20History%20of%20Philosophy.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "anaxagoras",
+      "name": "Anaxagoras",
+      "sortName": "Anaxagoras",
+      "image": "images/thinkers/anaxagoras.jpg",
+      "imageCredit": "Wikimedia Commons — Anaxagoras Lebiedzki Rahl. \nEduard Lebiedzki, after a design by Carl Rahl. public-domain. https://commons.wikimedia.org/wiki/File%3AAnaxagoras%20Lebiedzki%20Rahl.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "democritus",
+      "name": "Democritus",
+      "sortName": "Democritus",
+      "image": "images/thinkers/democritus.jpg",
+      "imageCredit": "Wikimedia Commons — Democritus2. Unidentified engraver. public-domain. https://commons.wikimedia.org/wiki/File%3ADemocritus2.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "leucippus",
+      "name": "Leucippus",
+      "sortName": "Leucippus"
+    },
+    {
+      "id": "socrates",
+      "name": "Socrates",
+      "sortName": "Socrates",
+      "image": "images/thinkers/socrates.jpg",
+      "imageCredit": "Wikimedia Commons —  Socrateslabel QS:Len,\"Socrates\"label QS:Lfr,\"Socrate\"label QS:Lel,\"Σωκράτης\". \nCopy of Lysippos (?). public-domain. https://commons.wikimedia.org/wiki/File%3ASocrates%20Louvre.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "plato",
+      "name": "Plato",
+      "sortName": "Plato",
+      "image": "images/thinkers/plato.jpg",
+      "imageCredit": "Wikimedia Commons — Plato Silanion Musei Capitolini MC1377. Marie-Lan Nguyen\n. cc-by. https://commons.wikimedia.org/wiki/File%3APlato%20Silanion%20Musei%20Capitolini%20MC1377.jpg",
+      "license": "cc-by"
+    },
+    {
+      "id": "aristotle",
+      "name": "Aristotle",
+      "sortName": "Aristotle",
+      "image": "images/thinkers/aristotle.jpg",
+      "imageCredit": "Wikimedia Commons — Aristotle Altemps Inv8575. After Lysippos. public-domain. https://commons.wikimedia.org/wiki/File%3AAristotle%20Altemps%20Inv8575.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "epicurus",
+      "name": "Epicurus",
+      "sortName": "Epicurus",
+      "image": "images/thinkers/epicurus.jpg",
+      "imageCredit": "Wikimedia Commons — Epicurus Louvre. Unknown. cc-by-sa. https://commons.wikimedia.org/wiki/File%3AEpicurus%20Louvre.jpg",
+      "license": "cc-by-sa"
+    },
+    {
+      "id": "lucretius",
+      "name": "Lucretius",
+      "sortName": "Lucretius",
+      "image": "images/thinkers/lucretius.jpg",
+      "imageCredit": "Wikimedia Commons — Lucretius1. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3ALucretius1.png",
+      "license": "public-domain"
+    },
+    {
+      "id": "epictetus",
+      "name": "Epictetus",
+      "sortName": "Epictetus",
+      "image": "images/thinkers/epictetus.jpg",
+      "imageCredit": "Wikimedia Commons — Epictetus. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AEpictetus.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "marcus-aurelius",
+      "name": "Marcus Aurelius",
+      "sortName": "Marcus Aurelius",
+      "image": "images/thinkers/marcus-aurelius.jpg",
+      "imageCredit": "Wikimedia Commons — Marcus Aurelius Glyptothek Munich. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AMarcus%20Aurelius%20Glyptothek%20Munich.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "sextus-empiricus",
+      "name": "Sextus Empiricus",
+      "sortName": "Sextus Empiricus",
+      "image": "images/thinkers/sextus-empiricus.jpg",
+      "imageCredit": "Wikimedia Commons —  Sextus Empyricus. Gottlieb Friedrich Riedel. public-domain. https://commons.wikimedia.org/wiki/File%3ASextus%20Empiricus%20-%20engraving%20by%20G.%20F.%20Riedel%20-%201801.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "plotinus",
+      "name": "Plotinus",
+      "sortName": "Plotinus",
+      "image": "images/thinkers/plotinus.jpg",
+      "imageCredit": "Wikimedia Commons — Plotinus. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3APlotinus.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "boethius",
+      "name": "Boethius",
+      "sortName": "Boethius",
+      "image": "images/thinkers/boethius.jpg",
+      "imageCredit": "Wikimedia Commons — Boethius. User Ctac on ru.wikipedia. public-domain. https://commons.wikimedia.org/wiki/File%3ABoethius.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "augustine",
+      "name": "Augustine of Hippo",
+      "sortName": "Augustine",
+      "image": "images/thinkers/augustine.jpg",
+      "imageCredit": "Wikimedia Commons —  Saint Augustine Alternative title: Saint Augustin. Philippe de Champaigne. public-domain. https://commons.wikimedia.org/wiki/File%3ASaint%20Augustine%20by%20Philippe%20de%20Champaigne.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "anselm",
+      "name": "Anselm of Canterbury",
+      "sortName": "Anselm",
+      "image": "images/thinkers/anselm.jpg",
+      "imageCredit": "Wikimedia Commons — Anselm of Canterbury. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AAnselm%20of%20Canterbury.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "averroes",
+      "name": "Averroes",
+      "sortName": "Averroes",
+      "image": "images/thinkers/averroes.jpg",
+      "imageCredit": "Wikimedia Commons — Ibn rushd. Ferrari2012. public-domain. https://commons.wikimedia.org/wiki/File%3AIbn%20rushd.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "maimonides",
+      "name": "Maimonides",
+      "sortName": "Maimonides",
+      "image": "images/thinkers/maimonides.jpg",
+      "imageCredit": "Wikimedia Commons — Maimonides-2. Blaisio Ugolino. public-domain. https://commons.wikimedia.org/wiki/File%3AMaimonides-2.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "aquinas",
+      "name": "Thomas Aquinas",
+      "sortName": "Aquinas",
+      "image": "images/thinkers/aquinas.jpg",
+      "imageCredit": "Wikimedia Commons —  Saint Thomas Aquinas title QS:P1476,en:\"Saint Thomas Aquinas \"label QS:Len,\"Saint Thomas Aquinas \"label QS:Lde,\"Altar von San Domenico in Ascoli, Polyptychon, linke äußere Aufsatz. Carlo Crivelli. public-domain. https://commons.wikimedia.org/wiki/File%3ASt-thomas-aquinas.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "bacon",
+      "name": "Francis Bacon",
+      "sortName": "Bacon",
+      "image": "images/thinkers/bacon.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of Francis Bacon.label QS:Len,\"Portrait of Francis Bacon.\". Paul van Somer I / Formerly attributed to Frans Pourbus the Younger. public-domain. https://commons.wikimedia.org/wiki/File%3ASomer%20Francis%20Bacon.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "descartes",
+      "name": "René Descartes",
+      "sortName": "Descartes",
+      "image": "images/thinkers/descartes.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of the French philosopher and mathematician René Descartes (1596-1650) title QS:P1476,en:\"Portrait of the French philosopher and mathematician René Descartes (1596-1650) . After Frans Hals. public-domain. https://commons.wikimedia.org/wiki/File%3AFrans%20Hals%20-%20Portret%20van%20Ren%C3%A9%20Descartes.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "spinoza",
+      "name": "Baruch Spinoza",
+      "sortName": "Spinoza",
+      "image": "images/thinkers/spinoza.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of Benedictus de Spinoza (1632-1677)label QS:Lfr,\"Portrait de Benedictus de Spinoza (1632-1677)\"label QS:Len,\"Portrait of Benedictus de Spinoza (1632-1677)\"label QS:Lsl,\". \nanonymous . public-domain. https://commons.wikimedia.org/wiki/File%3ASpinoza.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "pascal",
+      "name": "Blaise Pascal",
+      "sortName": "Pascal",
+      "image": "images/thinkers/pascal.jpg",
+      "imageCredit": "Wikimedia Commons — Blaise Pascal 2. \nUnknown artistUnknown artist. public-domain. https://commons.wikimedia.org/wiki/File%3ABlaise%20Pascal%202.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "leibniz",
+      "name": "Gottfried Wilhelm Leibniz",
+      "sortName": "Leibniz",
+      "image": "images/thinkers/leibniz.jpg",
+      "imageCredit": "Wikimedia Commons — Portrait of Gottfried Leibniz (1646-1716), German philosopher. Christoph Bernhard Francke. public-domain. https://commons.wikimedia.org/wiki/File%3AGottfried%20Wilhelm%20Leibniz%2C%20Bernhard%20Christoph%20Francke.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "hobbes",
+      "name": "Thomas Hobbes",
+      "sortName": "Hobbes",
+      "image": "images/thinkers/hobbes.jpg",
+      "imageCredit": "Wikimedia Commons —  Thomas Hobbes (copy after an original of c.1669–1670) title QS:P1476,en:\"Thomas Hobbes (copy after an original of c.1669–1670) \"label QS:Len,\"Thomas Hobbes (copy after an original. John Michael Wright. public-domain. https://commons.wikimedia.org/wiki/File%3AThomas%20Hobbes%20%28portrait%29.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "locke",
+      "name": "John Locke",
+      "sortName": "Locke",
+      "image": "images/thinkers/locke.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of John Locke title QS:P1476,en:\"Portrait of John Locke \"label QS:Len,\"Portrait of John Locke \"label QS:Les,\"Retrato de John Locke\"label QS:Lru,\"Портрет Джона Локка\"label. Godfrey Kneller. public-domain. https://commons.wikimedia.org/wiki/File%3AJohnLocke.png",
+      "license": "public-domain"
+    },
+    {
+      "id": "berkeley",
+      "name": "George Berkeley",
+      "sortName": "Berkeley",
+      "image": "images/thinkers/berkeley.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of George Berkeley (1685-1753). John Smibert. public-domain. https://commons.wikimedia.org/wiki/File%3AGeorge%20Berkeley%20by%20John%20Smibert.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "hume",
+      "name": "David Hume",
+      "sortName": "Hume",
+      "image": "images/thinkers/hume.jpg",
+      "imageCredit": "Wikimedia Commons —  David Hume, 1711 - 1776. Historian and philosophertitle QS:P1476,en:\"David Hume, 1711 - 1776. Historian and philosopher\"label QS:Len,\"David Hume, 1711 - 1776. Historian and philos. Allan Ramsay. public-domain. https://commons.wikimedia.org/wiki/File%3AAllan%20Ramsay%20-%20David%20Hume%2C%201711%20-%201776.%20Historian%20and%20philosopher%20-%20Google%20Art%20Project.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "rousseau",
+      "name": "Jean-Jacques Rousseau",
+      "sortName": "Rousseau",
+      "image": "images/thinkers/rousseau.jpg",
+      "imageCredit": "Wikimedia Commons —  Portrait of Jean-Jacques Rousseau (1712–1778). Maurice Quentin de La Tour. public-domain. https://commons.wikimedia.org/wiki/File%3AJean-Jacques%20Rousseau%20%28painted%20portrait%29.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "adam-smith",
+      "name": "Adam Smith",
+      "sortName": "Smith",
+      "image": "images/thinkers/adam-smith.jpg",
+      "imageCredit": "Wikimedia Commons — AdamSmith. Etching created by Cadell and Davies (1811), John Horsburgh (1828) or R.C. Bell (1872).. public-domain. https://commons.wikimedia.org/wiki/File%3AAdamSmith.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "kant",
+      "name": "Immanuel Kant",
+      "sortName": "Kant",
+      "image": "images/thinkers/kant.jpg",
+      "imageCredit": "Wikimedia Commons —  Immanuel Kant (1724-1804). \nJohann Gottlieb Becker (1720-1782). public-domain. https://commons.wikimedia.org/wiki/File%3AImmanuel%20Kant%20-%20Gemaelde%201.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "hegel",
+      "name": "G. W. F. Hegel",
+      "sortName": "Hegel",
+      "image": "images/thinkers/hegel.jpg",
+      "imageCredit": "Wikimedia Commons —  German: Bildnis des Philosophen Georg Wilhelm Friedrich Hegel, Berlin 1831The Philosopher Georg Friedrich Wilhelm Hegeltitle QS:P1476,de:\"Bildnis des Philosophen Georg Wilhelm Fri. \nJakob Schlesinger (1792-1855). public-domain. https://commons.wikimedia.org/wiki/File%3AHegel%20portrait%20by%20Schlesinger%201831.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "schopenhauer",
+      "name": "Arthur Schopenhauer",
+      "sortName": "Schopenhauer",
+      "image": "images/thinkers/schopenhauer.jpg",
+      "imageCredit": "Wikimedia Commons —  Arthur Schopenhauer. \nJules Lunteschütz (1822–1893). public-domain. https://commons.wikimedia.org/wiki/File%3ASchopenhauer%20by%20Jules%20Luntesch%C3%BCtz.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "mill",
+      "name": "John Stuart Mill",
+      "sortName": "Mill",
+      "image": "images/thinkers/mill.jpg",
+      "imageCredit": "Wikimedia Commons — John Stuart Mill by London Stereoscopic Company, c1870. London Stereoscopic Company. public-domain. https://commons.wikimedia.org/wiki/File%3AJohn%20Stuart%20Mill%20by%20London%20Stereoscopic%20Company%2C%20c1870.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "kierkegaard",
+      "name": "Søren Kierkegaard",
+      "sortName": "Kierkegaard",
+      "image": "images/thinkers/kierkegaard.jpg",
+      "imageCredit": "Wikimedia Commons — Kierkegaard. Neils Christian Kierkegaard. public-domain. https://commons.wikimedia.org/wiki/File%3AKierkegaard.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "marx",
+      "name": "Karl Marx",
+      "sortName": "Marx",
+      "image": "images/thinkers/marx.jpg",
+      "imageCredit": "Wikimedia Commons — Karl Marx 001. John Jabez Edwin Mayall. public-domain. https://commons.wikimedia.org/wiki/File%3AKarl%20Marx%20001.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "engels",
+      "name": "Friedrich Engels",
+      "sortName": "Engels",
+      "image": "images/thinkers/engels.jpg",
+      "imageCredit": "Wikimedia Commons — Friedrich Engels portrait. William Hall (1826–ca. 1898). public-domain. https://commons.wikimedia.org/wiki/File%3AFriedrich%20Engels%20portrait.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "sortName": "Nietzsche",
+      "image": "images/thinkers/nietzsche.jpg",
+      "imageCredit": "Wikimedia Commons — Nietzsche187a. Friedrich Hermann Hartmann. public-domain. https://commons.wikimedia.org/wiki/File%3ANietzsche187a.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "peirce",
+      "name": "Charles Sanders Peirce",
+      "sortName": "Peirce",
+      "image": "images/thinkers/peirce.jpg",
+      "imageCredit": "Wikimedia Commons — Charles Sanders Peirce. Napoleon Sarony. public-domain. https://commons.wikimedia.org/wiki/File%3ACharles%20Sanders%20Peirce.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "james",
+      "name": "William James",
+      "sortName": "James",
+      "image": "images/thinkers/james.jpg",
+      "imageCredit": "Wikimedia Commons — William James b1842c. \nNotman Studios (photographer). public-domain. https://commons.wikimedia.org/wiki/File%3AWilliam%20James%20b1842c.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "dewey",
+      "name": "John Dewey",
+      "sortName": "Dewey",
+      "image": "images/thinkers/dewey.jpg",
+      "imageCredit": "Wikimedia Commons — John Dewey cph.3a51565. Underwood &amp; Underwood. public-domain. https://commons.wikimedia.org/wiki/File%3AJohn%20Dewey%20cph.3a51565.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "du-bois",
+      "name": "W. E. B. Du Bois",
+      "sortName": "Du Bois",
+      "image": "images/thinkers/du-bois.jpg",
+      "imageCredit": "Wikimedia Commons — WEB DuBois 1918. Cornelius Marion Battey. public-domain. https://commons.wikimedia.org/wiki/File%3AWEB%20DuBois%201918.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "moore",
+      "name": "G. E. Moore",
+      "sortName": "Moore",
+      "image": "images/thinkers/moore.jpg",
+      "imageCredit": "Wikimedia Commons — G. E. Moore c. 1903. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AG.%20E.%20Moore%20c.%201903.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "russell",
+      "name": "Bertrand Russell",
+      "sortName": "Russell",
+      "image": "images/thinkers/russell.jpg",
+      "imageCredit": "Wikimedia Commons — Bertrand Russell photo. Bassano Ltd. public-domain. https://commons.wikimedia.org/wiki/File%3ABertrand%20Russell%20photo.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "wittgenstein",
+      "name": "Ludwig Wittgenstein",
+      "sortName": "Wittgenstein",
+      "image": "images/thinkers/wittgenstein.jpg",
+      "imageCredit": "Wikimedia Commons — Ludwig Wittgenstein. Moritz Nähr. public-domain. https://commons.wikimedia.org/wiki/File%3ALudwig%20Wittgenstein.jpg",
+      "license": "public-domain"
+    },
+    {
+      "id": "burnet",
+      "name": "John Burnet",
+      "sortName": "Burnet"
+    },
+    {
+      "id": "gaunilo",
+      "name": "Gaunilo of Marmoutiers",
+      "sortName": "Gaunilo"
+    },
+    {
+      "id": "heidegger",
+      "name": "Martin Heidegger",
+      "sortName": "Heidegger"
+    },
+    {
+      "id": "sartre",
+      "name": "Jean-Paul Sartre",
+      "sortName": "Sartre"
+    },
+    {
+      "id": "quine",
+      "name": "W. V. O. Quine",
+      "sortName": "Quine"
+    },
+    {
+      "id": "anscombe",
+      "name": "G. E. M. Anscombe",
+      "sortName": "Anscombe"
+    },
+    {
+      "id": "rawls",
+      "name": "John Rawls",
+      "sortName": "Rawls"
+    },
+    {
+      "id": "foucault",
+      "name": "Michel Foucault",
+      "sortName": "Foucault"
+    },
+    {
+      "id": "murdoch",
+      "name": "Iris Murdoch",
+      "sortName": "Murdoch"
+    }
+  ]
+}

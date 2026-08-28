@@ -141,14 +141,15 @@
                     "explanation": "He is reconstructing a first attempt to name an underlying nature, not a lab result. Reading it as chemistry misses the philosophical move."
                   }
                 ]
-              }
+              },
+              "thinkerId": "burnet"
             },
             {
               "id": "milesian-school",
               "order": 2,
               "kind": "primary",
               "title": "Thales, Anaximander, Anaximenes",
-              "author": "John Burnet (presenting Milesian fragments)",
+              "author": "John Burnet",
               "work": "Early Greek Philosophy, ch. I",
               "translator": "Burnet’s English of the fragments and testimonies",
               "selection": "The Milesian School — Thales, Anaximander, Anaximenes",
@@ -266,7 +267,26 @@
                     "explanation": "The sitting asked you to hear a metaphysical decision: one nature of many things — not a weather report."
                   }
                 ]
-              }
+              },
+              "thinkerId": "thales"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "thales",
+              "name": "Thales"
+            },
+            {
+              "id": "anaximander",
+              "name": "Anaximander"
+            },
+            {
+              "id": "anaximenes",
+              "name": "Anaximenes"
+            },
+            {
+              "id": "burnet",
+              "name": "John Burnet"
             }
           ]
         },
@@ -281,7 +301,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Xenophanes against the poets",
-              "author": "Xenophanes (via Burnet)",
+              "author": "Xenophanes",
               "work": "Early Greek Philosophy, ch. II (Xenophanes)",
               "translator": "Burnet",
               "selection": "The Xenophanes pages in ‘Science and Religion’",
@@ -391,14 +411,15 @@
                     "explanation": "The sitting asked whether he replaces story-form or refuses it. The fragments strain against the poets’ narrative gods."
                   }
                 ]
-              }
+              },
+              "thinkerId": "xenophanes"
             },
             {
               "id": "heraclitus-fragments",
               "order": 2,
               "kind": "primary",
               "title": "Heraclitus: logos, strife, the river",
-              "author": "Heraclitus (via Burnet)",
+              "author": "Heraclitus",
               "work": "Fragments, in Early Greek Philosophy, ch. III",
               "translator": "John Burnet",
               "selection": "Selected fragments: B1, B2, B12, B50, B51, B80, B123, and the surrounding Burnet discussion",
@@ -533,7 +554,18 @@
                     "explanation": "The assignment’s own question: logos, measure, and strife drop out if you only say ‘everything changes.’"
                   }
                 ]
-              }
+              },
+              "thinkerId": "heraclitus"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "xenophanes",
+              "name": "Xenophanes"
+            },
+            {
+              "id": "heraclitus",
+              "name": "Heraclitus"
             }
           ]
         },
@@ -548,7 +580,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Parmenides: the way of truth",
-              "author": "Parmenides (via Burnet)",
+              "author": "Parmenides",
               "work": "Early Greek Philosophy, ch. IV",
               "translator": "John Burnet",
               "selection": "The Way of Truth (and Burnet’s brief frame); glance at the Way of Opinion so you see the contrast",
@@ -666,14 +698,15 @@
                     "explanation": "Do not reduce it to astronomy. Completeness is the metaphysical point Burnet’s sitting asked you to hear."
                   }
                 ]
-              }
+              },
+              "thinkerId": "parmenides"
             },
             {
               "id": "zeno-paradoxes",
               "order": 2,
               "kind": "primary",
               "title": "Zeno’s paradoxes of motion",
-              "author": "Zeno of Elea (via Burnet)",
+              "author": "Zeno of Elea",
               "work": "Early Greek Philosophy, ch. VIII",
               "translator": "John Burnet",
               "selection": "The younger Eleatics — Zeno on plurality and motion",
@@ -783,7 +816,18 @@
                     "explanation": "The younger Eleatics are defensive and refutative. Positive cosmology after Parmenides waits for the pluralists and atomists."
                   }
                 ]
-              }
+              },
+              "thinkerId": "zeno"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "parmenides",
+              "name": "Parmenides"
+            },
+            {
+              "id": "zeno",
+              "name": "Zeno of Elea"
             }
           ]
         },
@@ -798,7 +842,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Mixture, Love and Strife, Mind",
-              "author": "Empedocles and Anaxagoras (via Burnet)",
+              "author": "Empedocles and Anaxagoras",
               "work": "Early Greek Philosophy, chs. V–VI",
               "translator": "John Burnet",
               "selection": "Empedocles’ four roots and two forces; Anaxagoras on seeds and Nous — Burnet’s fragment selections, not every testimony",
@@ -916,14 +960,15 @@
                     "explanation": "They are the dynamics of the cycle, not extra stuff of the same type as earth or fire."
                   }
                 ]
-              }
+              },
+              "thinkerId": "empedocles"
             },
             {
               "id": "atomists-leucippus",
               "order": 2,
               "kind": "primary",
               "title": "Atoms and void",
-              "author": "Leucippus and Democritus (via Burnet)",
+              "author": "Leucippus and Democritus",
               "work": "Early Greek Philosophy, ch. IX",
               "translator": "John Burnet",
               "selection": "Leukippos/Democritus: atoms, void, and the denial of genuine coming-to-be",
@@ -1033,9 +1078,50 @@
                     "explanation": "The assignment asked what you would still not understand. Qualities, mind, and value are exactly the leftover problem this picture bequeaths."
                   }
                 ]
-              }
+              },
+              "thinkerId": "democritus"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "empedocles",
+              "name": "Empedocles"
+            },
+            {
+              "id": "anaxagoras",
+              "name": "Anaxagoras"
+            },
+            {
+              "id": "leucippus",
+              "name": "Leucippus"
+            },
+            {
+              "id": "democritus",
+              "name": "Democritus"
             }
           ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "heraclitus",
+          "name": "Heraclitus"
+        },
+        {
+          "id": "parmenides",
+          "name": "Parmenides"
+        },
+        {
+          "id": "thales",
+          "name": "Thales"
+        },
+        {
+          "id": "empedocles",
+          "name": "Empedocles"
+        },
+        {
+          "id": "democritus",
+          "name": "Democritus"
         }
       ]
     },
@@ -1064,7 +1150,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Euthyphro: piety and definition",
-              "author": "Plato",
+              "author": "Plato (Socrates as speaker)",
               "work": "Euthyphro",
               "translator": "Benjamin Jowett",
               "selection": "The whole dialogue",
@@ -1199,14 +1285,15 @@
                     "explanation": "Even a true coincidence of extension is not the form — the ‘why’ that makes pious things pious."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             },
             {
               "id": "plato-apology",
               "order": 2,
               "kind": "primary",
               "title": "Apology: philosophy on trial",
-              "author": "Plato",
+              "author": "Plato (Socrates as speaker)",
               "work": "Apology",
               "translator": "Benjamin Jowett",
               "selection": "The whole speech",
@@ -1341,14 +1428,15 @@
                     "explanation": "He distinguishes the long-standing prejudice from Meletus’s indictment. Mixing them is a common misreading."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             },
             {
               "id": "plato-crito",
               "order": 3,
               "kind": "primary",
               "title": "Crito: the laws and the just man",
-              "author": "Plato",
+              "author": "Plato (Socrates as speaker)",
               "work": "Crito",
               "translator": "Benjamin Jowett",
               "selection": "The whole dialogue",
@@ -1466,7 +1554,8 @@
                     "explanation": "Tacit consent by remaining is the controversial lemma. Naming it is part of reading, not a refusal to read."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             }
           ],
           "recapQuiz": {
@@ -1592,7 +1681,17 @@
                 "explanation": "He still claims things about death and justice. Ignorance is not nihilism."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "socrates",
+              "name": "Socrates"
+            },
+            {
+              "id": "plato",
+              "name": "Plato"
+            }
+          ]
         },
         {
           "id": "knowledge-and-virtue",
@@ -1605,7 +1704,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Meno: the paradox of inquiry and the slave",
-              "author": "Plato",
+              "author": "Plato (Socrates as speaker)",
               "work": "Meno",
               "translator": "Benjamin Jowett",
               "selection": "From the opening through the geometry lesson and the theory of recollection",
@@ -1723,14 +1822,15 @@
                     "explanation": "Same Socratic demand as Euthyphro: not a catalogue."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             },
             {
               "id": "plato-meno-knowledge",
               "order": 2,
               "kind": "primary",
               "title": "Meno: knowledge, true belief, and virtue",
-              "author": "Plato",
+              "author": "Plato (Socrates as speaker)",
               "work": "Meno",
               "translator": "Benjamin Jowett",
               "selection": "From after the recollection episode to the end",
@@ -1840,7 +1940,18 @@
                     "explanation": "Usefulness in a single action is not stability or understanding. That is why the statues need tethering."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "plato",
+              "name": "Plato"
+            },
+            {
+              "id": "socrates",
+              "name": "Socrates"
             }
           ]
         },
@@ -1990,7 +2101,8 @@
                     "explanation": "They are not yet Books IV and VII. The sitting said so."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             },
             {
               "id": "plato-republic-soul-city",
@@ -2144,7 +2256,8 @@
                     "explanation": "Wisdom, courage, moderation, justice — not modern economic metrics. Justice is the remaining structural virtue of each doing its work."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             },
             {
               "id": "plato-republic-cave",
@@ -2286,7 +2399,8 @@
                     "explanation": "The sitting asked whether it can be knowledge, politics, and conversion at once."
                   }
                 ]
-              }
+              },
+              "thinkerId": "plato"
             }
           ],
           "recapQuiz": {
@@ -2412,7 +2526,13 @@
                 "explanation": "Without Thrasymachus, Books IV and VII have no enemy."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "plato",
+              "name": "Plato"
+            }
+          ]
         },
         {
           "id": "aristotle-nature",
@@ -2535,7 +2655,8 @@
                     "explanation": "Socrates is primary substance. ‘Human’ is said of him. That is the reply to a certain Platonism."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
             },
             {
               "id": "aristotle-physics-nature",
@@ -2660,7 +2781,14 @@
                     "explanation": "You were told to hear it first in living things and artifacts, not to shout ‘physics refuted this’ before understanding the claim."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "aristotle",
+              "name": "Aristotle"
             }
           ]
         },
@@ -2810,7 +2938,8 @@
                     "explanation": "The architectonic opening: crafts nest; the highest end does not nest inside another."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
             },
             {
               "id": "aristotle-ne-virtue",
@@ -2927,7 +3056,8 @@
                     "explanation": "The sitting asked what is missing: habituation, the hexis. Knowledge without character is not yet virtue of character."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
             },
             {
               "id": "aristotle-metaphysics-wisdom",
@@ -3052,7 +3182,8 @@
                     "explanation": "Not a heap of homonyms. The Categories’ primary substance is still in the room."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
             },
             {
               "id": "aristotle-posterior-analytics",
@@ -3169,7 +3300,8 @@
                     "explanation": "That is exactly what I.1–3 refuse."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aristotle"
             }
           ],
           "recapQuiz": {
@@ -3295,7 +3427,27 @@
                 "explanation": "Primary substance is the particular. That decision still governs the metaphysics sitting."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "aristotle",
+              "name": "Aristotle"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "socrates",
+          "name": "Socrates"
+        },
+        {
+          "id": "plato",
+          "name": "Plato"
+        },
+        {
+          "id": "aristotle",
+          "name": "Aristotle"
         }
       ]
     },
@@ -3458,7 +3610,8 @@
                     "explanation": "Some pleasures bring greater pains. The classification of desires is the filter."
                   }
                 ]
-              }
+              },
+              "thinkerId": "epicurus"
             },
             {
               "id": "lucretius-atoms",
@@ -3583,7 +3736,8 @@
                     "explanation": "The sitting: a therapy of fear. Superstition is a mistaken physics."
                   }
                 ]
-              }
+              },
+              "thinkerId": "lucretius"
             },
             {
               "id": "lucretius-death",
@@ -3725,7 +3879,8 @@
                     "explanation": "That deprivation view is exactly what the no-subject argument is meant to undercut — or at least to recast."
                   }
                 ]
-              }
+              },
+              "thinkerId": "lucretius"
             }
           ],
           "recapQuiz": {
@@ -3851,7 +4006,17 @@
                 "explanation": "Book III’s seminar question. Recap it, don’t erase it."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "epicurus",
+              "name": "Epicurus"
+            },
+            {
+              "id": "lucretius",
+              "name": "Lucretius"
+            }
+          ]
         },
         {
           "id": "stoic-discipline",
@@ -3974,7 +4139,8 @@
                     "explanation": "Reputation is listed among things not up to us. The work is on the use of impressions."
                   }
                 ]
-              }
+              },
+              "thinkerId": "epictetus"
             },
             {
               "id": "epictetus-enchiridion-ii",
@@ -4099,7 +4265,8 @@
                     "explanation": "Body and death remain not up to you. The good is not the body’s immunity."
                   }
                 ]
-              }
+              },
+              "thinkerId": "epictetus"
             },
             {
               "id": "marcus-meditations",
@@ -4216,7 +4383,8 @@
                     "explanation": "They are spiritual exercises. The quiz checks whether you found the repeated moves, not a treatise’s lemmas."
                   }
                 ]
-              }
+              },
+              "thinkerId": "marcus-aurelius"
             }
           ],
           "recapQuiz": {
@@ -4342,7 +4510,17 @@
                 "explanation": "That is why the era ordered Garden then Porch."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "epictetus",
+              "name": "Epictetus"
+            },
+            {
+              "id": "marcus-aurelius",
+              "name": "Marcus Aurelius"
+            }
+          ]
         },
         {
           "id": "living-without-assent",
@@ -4490,9 +4668,34 @@
                     "explanation": "It is a method: tropes, criterion, and the promise of quiet."
                   }
                 ]
-              }
+              },
+              "thinkerId": "sextus-empiricus"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "sextus-empiricus",
+              "name": "Sextus Empiricus"
             }
           ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "epicurus",
+          "name": "Epicurus"
+        },
+        {
+          "id": "epictetus",
+          "name": "Epictetus"
+        },
+        {
+          "id": "marcus-aurelius",
+          "name": "Marcus Aurelius"
+        },
+        {
+          "id": "sextus-empiricus",
+          "name": "Sextus Empiricus"
         }
       ]
     },
@@ -4630,7 +4833,8 @@
                     "explanation": "Typical Plotinian line: matter as privation or last outflow, not a rival first principle. (Keep to the selected pages’ emphasis on hypostases.)"
                   }
                 ]
-              }
+              },
+              "thinkerId": "plotinus"
             },
             {
               "id": "boethius-consolation",
@@ -4755,7 +4959,18 @@
                     "explanation": "The assignment is the argument, not a proverb."
                   }
                 ]
-              }
+              },
+              "thinkerId": "boethius"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "plotinus",
+              "name": "Plotinus"
+            },
+            {
+              "id": "boethius",
+              "name": "Boethius"
             }
           ]
         },
@@ -4880,7 +5095,8 @@
                     "explanation": "That is Book VIII. VII is the intellectual problem of God and evil."
                   }
                 ]
-              }
+              },
+              "thinkerId": "augustine"
             },
             {
               "id": "augustine-confessions-will",
@@ -5005,7 +5221,8 @@
                     "explanation": "The book is not career advice. It is the failure of a divided will to close itself."
                   }
                 ]
-              }
+              },
+              "thinkerId": "augustine"
             },
             {
               "id": "augustine-confessions-time",
@@ -5122,7 +5339,8 @@
                     "explanation": "The contrast with divine eternity is the point of measuring our distension against what does not pass."
                   }
                 ]
-              }
+              },
+              "thinkerId": "augustine"
             }
           ],
           "recapQuiz": {
@@ -5248,7 +5466,27 @@
                 "explanation": "The unit sits after platonic ascent for that reason."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "augustine",
+              "name": "Augustine of Hippo"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "plotinus",
+          "name": "Plotinus"
+        },
+        {
+          "id": "augustine",
+          "name": "Augustine of Hippo"
+        },
+        {
+          "id": "boethius",
+          "name": "Boethius"
         }
       ]
     },
@@ -5386,7 +5624,8 @@
                     "explanation": "The Proslogion is fides quaerens intellectum: understanding sought from within faith, not a cold start from nowhere."
                   }
                 ]
-              }
+              },
+              "thinkerId": "anselm"
             },
             {
               "id": "gaunilo-and-reply",
@@ -5511,7 +5750,18 @@
                     "explanation": "He has read them. The objection is that the form proves too much."
                   }
                 ]
-              }
+              },
+              "thinkerId": "anselm"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "anselm",
+              "name": "Anselm of Canterbury"
+            },
+            {
+              "id": "gaunilo",
+              "name": "Gaunilo of Marmoutiers"
             }
           ]
         },
@@ -5636,14 +5886,15 @@
                     "explanation": "The point is differential address: demonstration is not for every audience."
                   }
                 ]
-              }
+              },
+              "thinkerId": "averroes"
             },
             {
               "id": "maimonides-guide",
               "order": 2,
               "kind": "primary",
               "title": "Maimonides: attributes and perplexity",
-              "author": "Moses Maimonides",
+              "author": "Maimonides",
               "work": "The Guide for the Perplexed",
               "translator": "M. Friedländer",
               "selection": "Introduction plus Part I, chapters 50–52 (attributes)",
@@ -5753,7 +6004,18 @@
                     "explanation": "The Guide’s pressure is that unexamined speech is a theological error."
                   }
                 ]
-              }
+              },
+              "thinkerId": "maimonides"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "averroes",
+              "name": "Averroes"
+            },
+            {
+              "id": "maimonides",
+              "name": "Maimonides"
             }
           ]
         },
@@ -5878,7 +6140,8 @@
                     "explanation": "Revelation is needed for an end that exceeds natural reason — that is the opening argument."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aquinas"
             },
             {
               "id": "aquinas-five-ways",
@@ -6020,7 +6283,8 @@
                     "explanation": "They start from the world (a posteriori), not from the concept of that-than-which."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aquinas"
             },
             {
               "id": "aquinas-natural-law",
@@ -6145,7 +6409,8 @@
                     "explanation": "q.94’s discussion of change and ignorance is part of the doctrine, not a later footnote."
                   }
                 ]
-              }
+              },
+              "thinkerId": "aquinas"
             }
           ],
           "recapQuiz": {
@@ -6271,7 +6536,31 @@
                 "explanation": "You need q.1 to know what q.2 is doing, and both to hear law as ordinance of reason."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "aquinas",
+              "name": "Thomas Aquinas"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "anselm",
+          "name": "Anselm of Canterbury"
+        },
+        {
+          "id": "aquinas",
+          "name": "Thomas Aquinas"
+        },
+        {
+          "id": "averroes",
+          "name": "Averroes"
+        },
+        {
+          "id": "maimonides",
+          "name": "Maimonides"
         }
       ]
     },
@@ -6409,7 +6698,8 @@
                     "explanation": "Novum Organum is a replacement organon. The idols explain why the old one fails."
                   }
                 ]
-              }
+              },
+              "thinkerId": "bacon"
             },
             {
               "id": "descartes-discourse",
@@ -6534,7 +6824,18 @@
                     "explanation": "The Discourse is a public narrative; the Meditations will slow the same moves down."
                   }
                 ]
-              }
+              },
+              "thinkerId": "descartes"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "bacon",
+              "name": "Francis Bacon"
+            },
+            {
+              "id": "descartes",
+              "name": "René Descartes"
             }
           ]
         },
@@ -6684,7 +6985,8 @@
                     "explanation": "The external world waits. II secures the ‘I’ and a first account of mind."
                   }
                 ]
-              }
+              },
+              "thinkerId": "descartes"
             },
             {
               "id": "descartes-meditations-3-4",
@@ -6801,7 +7103,8 @@
                     "explanation": "The divine guarantee is what makes C&D the rule of truth — that is the circularity worry you were asked to feel."
                   }
                 ]
-              }
+              },
+              "thinkerId": "descartes"
             },
             {
               "id": "descartes-meditations-5-6",
@@ -6926,7 +7229,8 @@
                     "explanation": "That is the modal argument for dualism. Keep it distinct from the union’s phenomenology."
                   }
                 ]
-              }
+              },
+              "thinkerId": "descartes"
             }
           ],
           "recapQuiz": {
@@ -7052,7 +7356,13 @@
                 "explanation": "Doubt is a filter, not a lifestyle. Hume will later refuse this rebuild."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "descartes",
+              "name": "René Descartes"
+            }
+          ]
         },
         {
           "id": "after-descartes",
@@ -7065,7 +7375,7 @@
               "order": 1,
               "kind": "primary",
               "title": "Ethics I: God or Nature",
-              "author": "Benedict de Spinoza",
+              "author": "Baruch Spinoza",
               "work": "Ethics",
               "translator": "R. H. M. Elwes",
               "selection": "Part I, through the appendix if your sitting includes it",
@@ -7175,7 +7485,8 @@
                     "explanation": "Will and intellect in God are not a king’s choices. That is the anti-creation-as-decree move."
                   }
                 ]
-              }
+              },
+              "thinkerId": "spinoza"
             },
             {
               "id": "pascal-pensees",
@@ -7292,14 +7603,15 @@
                     "explanation": "Custom, mass, and habituation are part of how one comes to believe — the fragment’s own continuation."
                   }
                 ]
-              }
+              },
+              "thinkerId": "pascal"
             },
             {
               "id": "leibniz-monadology",
               "order": 3,
               "kind": "primary",
               "title": "The Monadology",
-              "author": "G. W. Leibniz",
+              "author": "Gottfried Wilhelm Leibniz",
               "work": "Monadology",
               "translator": "Robert Latta",
               "selection": "The whole Monadology (short)",
@@ -7434,7 +7746,8 @@
                     "explanation": "‘Windowless’ is the technical refusal of influx."
                   }
                 ]
-              }
+              },
+              "thinkerId": "leibniz"
             }
           ],
           "recapQuiz": {
@@ -7560,7 +7873,39 @@
                 "explanation": "Hobbes and Locke come next as a different pressure: bodies, experience, politics."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "spinoza",
+              "name": "Baruch Spinoza"
+            },
+            {
+              "id": "pascal",
+              "name": "Blaise Pascal"
+            },
+            {
+              "id": "leibniz",
+              "name": "Gottfried Wilhelm Leibniz"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "descartes",
+          "name": "René Descartes"
+        },
+        {
+          "id": "spinoza",
+          "name": "Baruch Spinoza"
+        },
+        {
+          "id": "leibniz",
+          "name": "Gottfried Wilhelm Leibniz"
+        },
+        {
+          "id": "bacon",
+          "name": "Francis Bacon"
         }
       ]
     },
@@ -7723,7 +8068,8 @@
                     "explanation": "Where there is no common power, there is no law in the sense that makes injury a crime. That is Hobbes’s sting."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hobbes"
             },
             {
               "id": "hobbes-sovereign",
@@ -7848,7 +8194,8 @@
                     "explanation": "The sitting: what liberty remains. It is not a liberal bill of rights avant la lettre."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hobbes"
             },
             {
               "id": "locke-property",
@@ -7990,7 +8337,8 @@
                     "explanation": "Locke has a law of nature and property before the magistrate. That is the disagreement the unit is for."
                   }
                 ]
-              }
+              },
+              "thinkerId": "locke"
             }
           ],
           "recapQuiz": {
@@ -8116,7 +8464,17 @@
                 "explanation": "Keep the two political metaphysics distinct before Hume and Rousseau."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "hobbes",
+              "name": "Thomas Hobbes"
+            },
+            {
+              "id": "locke",
+              "name": "John Locke"
+            }
+          ]
         },
         {
           "id": "ideas-and-qualities",
@@ -8239,7 +8597,8 @@
                     "explanation": "That is the view I.2 is written against. God is known another way, later in the Essay."
                   }
                 ]
-              }
+              },
+              "thinkerId": "locke"
             },
             {
               "id": "locke-qualities",
@@ -8364,7 +8723,8 @@
                     "explanation": "The sitting: consciousness, not a hidden substance, as the person. Thought-experiments of transfer are the method."
                   }
                 ]
-              }
+              },
+              "thinkerId": "locke"
             },
             {
               "id": "berkeley-principles",
@@ -8506,7 +8866,8 @@
                     "explanation": "Divine perception (and the stability of laws) is how he avoids the ‘vanishing furniture’ joke."
                   }
                 ]
-              }
+              },
+              "thinkerId": "berkeley"
             }
           ],
           "recapQuiz": {
@@ -8632,7 +8993,17 @@
                 "explanation": "Hume is the next unit. Do not skip Berkeley as a joke."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "locke",
+              "name": "John Locke"
+            },
+            {
+              "id": "berkeley",
+              "name": "George Berkeley"
+            }
+          ]
         },
         {
           "id": "hume-mitigated",
@@ -8755,7 +9126,8 @@
                     "explanation": "The imagination compounds. The discipline is on simple ideas and empty terms."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hume"
             },
             {
               "id": "hume-enquiry-causation",
@@ -8897,7 +9269,8 @@
                     "explanation": "We cannot and should not. The point is what they are, not a ban."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hume"
             },
             {
               "id": "hume-enquiry-miracles",
@@ -9014,7 +9387,8 @@
                     "explanation": "The essay is about testimony, passion, and contrary miracles — not only §2."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hume"
             },
             {
               "id": "hume-treatise-identity",
@@ -9131,7 +9505,8 @@
                     "explanation": "It is a natural belief explained, not a relation of ideas."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hume"
             },
             {
               "id": "hume-dialogues-design",
@@ -9256,7 +9631,8 @@
                     "explanation": "LookFor was the argument’s limits, not a label."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hume"
             }
           ],
           "recapQuiz": {
@@ -9407,7 +9783,31 @@
                 "explanation": "The Copernican preface names that interruption."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "hume",
+              "name": "David Hume"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "hobbes",
+          "name": "Thomas Hobbes"
+        },
+        {
+          "id": "locke",
+          "name": "John Locke"
+        },
+        {
+          "id": "berkeley",
+          "name": "George Berkeley"
+        },
+        {
+          "id": "hume",
+          "name": "David Hume"
         }
       ]
     },
@@ -9545,7 +9945,8 @@
                     "explanation": "He says we must conjecture. The method is hypothetical history."
                   }
                 ]
-              }
+              },
+              "thinkerId": "rousseau"
             },
             {
               "id": "rousseau-contract-i",
@@ -9662,7 +10063,8 @@
                     "explanation": "He rejects force as right. That is the clearing for the compact."
                   }
                 ]
-              }
+              },
+              "thinkerId": "rousseau"
             },
             {
               "id": "rousseau-contract-ii",
@@ -9787,7 +10189,8 @@
                     "explanation": "II.7: take the paradox seriously. It is not a footnote about Lycurgus trivia."
                   }
                 ]
-              }
+              },
+              "thinkerId": "rousseau"
             },
             {
               "id": "smith-moral-sentiments",
@@ -9904,7 +10307,8 @@
                     "explanation": "TMS begins in sympathy. Do not import a cartoon ‘economic man’ into I.i."
                   }
                 ]
-              }
+              },
+              "thinkerId": "adam-smith"
             }
           ],
           "recapQuiz": {
@@ -10030,7 +10434,17 @@
                 "explanation": "Kant’s Groundwork will relocate duty. Smith and Rousseau are the social-sentimental and civic-republican foils."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "rousseau",
+              "name": "Jean-Jacques Rousseau"
+            },
+            {
+              "id": "adam-smith",
+              "name": "Adam Smith"
+            }
+          ]
         },
         {
           "id": "kant-copernican",
@@ -10178,7 +10592,8 @@
                     "explanation": "It is an analogy about who conforms to whom in cognition."
                   }
                 ]
-              }
+              },
+              "thinkerId": "kant"
             },
             {
               "id": "kant-groundwork-i",
@@ -10320,7 +10735,8 @@
                     "explanation": "Section I arrives at the CI from common moral cognition. Section II will unpack formulas."
                   }
                 ]
-              }
+              },
+              "thinkerId": "kant"
             },
             {
               "id": "kant-groundwork-ii",
@@ -10462,7 +10878,8 @@
                     "explanation": "That would be a hypothetical imperative of prudence, not a categorical one."
                   }
                 ]
-              }
+              },
+              "thinkerId": "kant"
             }
           ],
           "recapQuiz": {
@@ -10588,7 +11005,27 @@
                 "explanation": "That is why the era ordered Hume then Kant."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "kant",
+              "name": "Immanuel Kant"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "rousseau",
+          "name": "Jean-Jacques Rousseau"
+        },
+        {
+          "id": "kant",
+          "name": "Immanuel Kant"
+        },
+        {
+          "id": "adam-smith",
+          "name": "Adam Smith"
         }
       ]
     },
@@ -10726,7 +11163,8 @@
                     "explanation": "It is essentially social. That is the break with a lonely cogito as the whole story."
                   }
                 ]
-              }
+              },
+              "thinkerId": "hegel"
             },
             {
               "id": "schopenhauer-will",
@@ -10843,7 +11281,18 @@
                     "explanation": "The will as thing in itself is precisely not an object in the principle of sufficient reason’s net — that is the Kantian inheritance twisted."
                   }
                 ]
-              }
+              },
+              "thinkerId": "schopenhauer"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "hegel",
+              "name": "G. W. F. Hegel"
+            },
+            {
+              "id": "schopenhauer",
+              "name": "Arthur Schopenhauer"
             }
           ]
         },
@@ -10993,7 +11442,8 @@
                     "explanation": "The standard is the general happiness. Motive may still be local; that is a distinction Mill himself draws."
                   }
                 ]
-              }
+              },
+              "thinkerId": "mill"
             },
             {
               "id": "mill-liberty-harm",
@@ -11110,7 +11560,8 @@
                     "explanation": "The split self-regarding / other-regarding is the point of the principle — with all the difficulties you were asked to feel."
                   }
                 ]
-              }
+              },
+              "thinkerId": "mill"
             },
             {
               "id": "mill-liberty-individuality",
@@ -11227,7 +11678,8 @@
                     "explanation": "The harm principle still binds. Individuality is not a right to injure."
                   }
                 ]
-              }
+              },
+              "thinkerId": "mill"
             }
           ],
           "recapQuiz": {
@@ -11353,7 +11805,13 @@
                 "explanation": "The unit is a rival modern moral philosophy, not a footnote to the Groundwork."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "mill",
+              "name": "John Stuart Mill"
+            }
+          ]
         },
         {
           "id": "existence-and-history",
@@ -11476,7 +11934,8 @@
                     "explanation": "The whole point is the collision with the ethical universal."
                   }
                 ]
-              }
+              },
+              "thinkerId": "kierkegaard"
             },
             {
               "id": "marx-manifesto",
@@ -11618,7 +12077,22 @@
                     "explanation": "Political power is organized power of one class for oppressing another — in this text’s terms."
                   }
                 ]
-              }
+              },
+              "thinkerId": "marx"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "kierkegaard",
+              "name": "Søren Kierkegaard"
+            },
+            {
+              "id": "marx",
+              "name": "Karl Marx"
+            },
+            {
+              "id": "engels",
+              "name": "Friedrich Engels"
             }
           ]
         },
@@ -11743,7 +12217,8 @@
                     "explanation": "It is a typology of valuation (with a notorious closing on the ‘Redeemer’). Stay with the good/evil mechanism."
                   }
                 ]
-              }
+              },
+              "thinkerId": "nietzsche"
             },
             {
               "id": "nietzsche-genealogy-ii",
@@ -11860,7 +12335,8 @@
                     "explanation": "The whole essay is the history. That is the method you were assigned."
                   }
                 ]
-              }
+              },
+              "thinkerId": "nietzsche"
             },
             {
               "id": "nietzsche-gay-science",
@@ -11977,7 +12453,8 @@
                     "explanation": "It is aphoristic diagnosis. The quiz checks the event, not a table of categories."
                   }
                 ]
-              }
+              },
+              "thinkerId": "nietzsche"
             }
           ],
           "recapQuiz": {
@@ -12103,7 +12580,35 @@
                 "explanation": "The nineteenth century is several hammers, not one doctrine."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "nietzsche",
+              "name": "Friedrich Nietzsche"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "hegel",
+          "name": "G. W. F. Hegel"
+        },
+        {
+          "id": "mill",
+          "name": "John Stuart Mill"
+        },
+        {
+          "id": "kierkegaard",
+          "name": "Søren Kierkegaard"
+        },
+        {
+          "id": "marx",
+          "name": "Karl Marx"
+        },
+        {
+          "id": "nietzsche",
+          "name": "Friedrich Nietzsche"
         }
       ]
     },
@@ -12241,7 +12746,8 @@
                     "explanation": "Clarity in the third grade is those bearings. That is the paper’s point against Cartesian ‘clarity.’"
                   }
                 ]
-              }
+              },
+              "thinkerId": "peirce"
             },
             {
               "id": "james-pragmatism",
@@ -12358,7 +12864,8 @@
                     "explanation": "That is the method lecture. If two formulas make no difference in practice, the dispute is idle."
                   }
                 ]
-              }
+              },
+              "thinkerId": "james"
             },
             {
               "id": "james-will-to-believe",
@@ -12475,7 +12982,8 @@
                     "explanation": "Weather is not a genuine option of the religious/moral type the essay isolates."
                   }
                 ]
-              }
+              },
+              "thinkerId": "james"
             },
             {
               "id": "dewey-reconstruction",
@@ -12592,7 +13100,8 @@
                     "explanation": "He historicizes them as responses — then asks whether they still serve."
                   }
                 ]
-              }
+              },
+              "thinkerId": "dewey"
             },
             {
               "id": "dubois-souls",
@@ -12709,7 +13218,8 @@
                     "explanation": "The opening of the book is a world-historical claim about the twentieth century’s problem."
                   }
                 ]
-              }
+              },
+              "thinkerId": "du-bois"
             }
           ],
           "recapQuiz": {
@@ -12835,7 +13345,25 @@
                 "explanation": "The Veil is its own analysis. Do not reduce it to a pragmatist example."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "peirce",
+              "name": "Charles Sanders Peirce"
+            },
+            {
+              "id": "james",
+              "name": "William James"
+            },
+            {
+              "id": "dewey",
+              "name": "John Dewey"
+            },
+            {
+              "id": "du-bois",
+              "name": "W. E. B. Du Bois"
+            }
+          ]
         },
         {
           "id": "analytic-turn",
@@ -12958,7 +13486,8 @@
                     "explanation": "That would be a naturalistic identification of the kind he attacks."
                   }
                 ]
-              }
+              },
+              "thinkerId": "moore"
             },
             {
               "id": "russell-problems-appearance",
@@ -13075,7 +13604,8 @@
                     "explanation": "He is locating what is certain in perception so that physical objects can be inferred — a problem, not a dismissal."
                   }
                 ]
-              }
+              },
+              "thinkerId": "russell"
             },
             {
               "id": "russell-problems-induction",
@@ -13192,7 +13722,8 @@
                     "explanation": "If it were, it would not be the problem of philosophy it is."
                   }
                 ]
-              }
+              },
+              "thinkerId": "russell"
             },
             {
               "id": "tractatus-picture",
@@ -13309,7 +13840,8 @@
                     "explanation": "That is what the later assigned sitting on the unsayable will press. Early on, the picture is of sayable facts."
                   }
                 ]
-              }
+              },
+              "thinkerId": "wittgenstein"
             },
             {
               "id": "tractatus-silence",
@@ -13426,7 +13958,8 @@
                     "explanation": "God does not reveal himself in the world (6.432). Silence is the point."
                   }
                 ]
-              }
+              },
+              "thinkerId": "wittgenstein"
             }
           ],
           "recapQuiz": {
@@ -13552,7 +14085,39 @@
                 "explanation": "1922 is a door, not a wall — but the next door is in copyright."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "moore",
+              "name": "G. E. Moore"
+            },
+            {
+              "id": "russell",
+              "name": "Bertrand Russell"
+            },
+            {
+              "id": "wittgenstein",
+              "name": "Ludwig Wittgenstein"
+            }
+          ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "james",
+          "name": "William James"
+        },
+        {
+          "id": "du-bois",
+          "name": "W. E. B. Du Bois"
+        },
+        {
+          "id": "russell",
+          "name": "Bertrand Russell"
+        },
+        {
+          "id": "wittgenstein",
+          "name": "Ludwig Wittgenstein"
         }
       ]
     },
@@ -13708,7 +14273,8 @@
                     "explanation": "Ostension and naming as the whole story is what is under attack — the Tractatus’s picture of sense does not survive unchanged."
                   }
                 ]
-              }
+              },
+              "thinkerId": "wittgenstein"
             },
             {
               "id": "heidegger-being-time",
@@ -13842,7 +14408,8 @@
                     "explanation": "That confusion is exactly the forgetfulness the introduction diagnoses."
                   }
                 ]
-              }
+              },
+              "thinkerId": "heidegger"
             },
             {
               "id": "sartre-existentialism",
@@ -13976,7 +14543,8 @@
                     "explanation": "That was one of the seminar questions. The quiz only needs you to recognize the tension."
                   }
                 ]
-              }
+              },
+              "thinkerId": "sartre"
             }
           ],
           "recapQuiz": {
@@ -14102,7 +14670,21 @@
                 "explanation": "The recap is contrast, not a blend."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "wittgenstein",
+              "name": "Ludwig Wittgenstein"
+            },
+            {
+              "id": "heidegger",
+              "name": "Martin Heidegger"
+            },
+            {
+              "id": "sartre",
+              "name": "Jean-Paul Sartre"
+            }
+          ]
         },
         {
           "id": "mind-language-science",
@@ -14242,7 +14824,8 @@
                     "explanation": "If the cut goes, that Kantian architecture is among the casualties the assignment asked you to consider."
                   }
                 ]
-              }
+              },
+              "thinkerId": "quine"
             },
             {
               "id": "anscombe-modern-moral",
@@ -14376,7 +14959,18 @@
                     "explanation": "The assignment: what she wants us to stop doing in ethics class. Name the diagnosis."
                   }
                 ]
-              }
+              },
+              "thinkerId": "anscombe"
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "quine",
+              "name": "W. V. O. Quine"
+            },
+            {
+              "id": "anscombe",
+              "name": "G. E. M. Anscombe"
             }
           ]
         },
@@ -14518,7 +15112,8 @@
                     "explanation": "It is offered as a rival to utilitarianism: the parties would not choose to sacrifice the few as a mere sum."
                   }
                 ]
-              }
+              },
+              "thinkerId": "rawls"
             },
             {
               "id": "foucault-discipline",
@@ -14652,7 +15247,8 @@
                     "explanation": "Seminar question: theory of modernity vs overextended prison plan. Recognize the stakes."
                   }
                 ]
-              }
+              },
+              "thinkerId": "foucault"
             },
             {
               "id": "murdoch-sovereignty",
@@ -14786,7 +15382,8 @@
                     "explanation": "The whole essay is against that picture. Vision comes first."
                   }
                 ]
-              }
+              },
+              "thinkerId": "murdoch"
             }
           ],
           "recapQuiz": {
@@ -14912,7 +15509,21 @@
                 "explanation": "The assignments’ own seminar questions. The maps come next."
               }
             ]
-          }
+          },
+          "thinkers": [
+            {
+              "id": "rawls",
+              "name": "John Rawls"
+            },
+            {
+              "id": "foucault",
+              "name": "Michel Foucault"
+            },
+            {
+              "id": "murdoch",
+              "name": "Iris Murdoch"
+            }
+          ]
         },
         {
           "id": "keep-going-maps",
@@ -14925,7 +15536,7 @@
               "order": 1,
               "kind": "bibliographic",
               "title": "Map: analytic philosophy after Quine",
-              "author": "Various",
+              "author": "Various authors",
               "work": "A path, not one book",
               "translator": "",
               "selection": "Skim a handbook table of contents or SEP entries (not hosted) for: philosophy of language after Kripke; philosophy of mind (identity theory, functionalism, consciousness); epistemology after Gettier",
@@ -15059,7 +15670,7 @@
               "order": 2,
               "kind": "bibliographic",
               "title": "Map: continental, political, and moral continuations",
-              "author": "Various",
+              "author": "Various authors",
               "work": "A path, not one book",
               "translator": "",
               "selection": "Place: phenomenology after Heidegger (Merleau-Ponty, Levinas); critical theory (Habermas); feminist philosophy; philosophy of race after Du Bois; bioethics / mind as public issues",
@@ -15188,7 +15799,47 @@
                 ]
               }
             }
+          ],
+          "thinkers": [
+            {
+              "id": "quine",
+              "name": "W. V. O. Quine"
+            },
+            {
+              "id": "heidegger",
+              "name": "Martin Heidegger"
+            },
+            {
+              "id": "rawls",
+              "name": "John Rawls"
+            }
           ]
+        }
+      ],
+      "thinkers": [
+        {
+          "id": "wittgenstein",
+          "name": "Ludwig Wittgenstein"
+        },
+        {
+          "id": "heidegger",
+          "name": "Martin Heidegger"
+        },
+        {
+          "id": "sartre",
+          "name": "Jean-Paul Sartre"
+        },
+        {
+          "id": "rawls",
+          "name": "John Rawls"
+        },
+        {
+          "id": "foucault",
+          "name": "Michel Foucault"
+        },
+        {
+          "id": "murdoch",
+          "name": "Iris Murdoch"
         }
       ]
     }

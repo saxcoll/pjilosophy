@@ -1,6 +1,6 @@
 {
   "title": "Philosophical terms",
-  "intro": "This is a working vocabulary for this course, not a dictionary of all philosophy. Each entry is tuned to the sitting where Samuel should meet the word — the move in the assigned pages — and to later sittings that reuse or invert it. Read the text first; the gloss is a margin, not a substitute. In-copyright assignments are defined from the assignment’s framing, without quoting long prose.",
+  "intro": "A working vocabulary for this sequence — the words the sittings actually force — not a dictionary of all philosophy. Read the pages first; these are margins. Later thinkers reuse or invert an earlier word; the links are the point.",
   "terms": [
     {
       "id": "physis",
@@ -10,8 +10,8 @@
         "nature",
         "phusis"
       ],
-      "short": "Nature as what underlies change — not scenery, and not yet biology.",
-      "definition": "Greek physis is the early philosophers’ name for the world’s inner constitution: the stuff or process that makes coming-to-be intelligible. In Burnet’s sitting it marks the break from mythological explanation; the Milesians argue about water, the apeiron, and air because they are arguing about that constitution. Aristotle later tightens the word: nature is an inner principle of motion and rest, unlike an artifact whose principle is in the artisan. Keep both uses; do not collapse physis into ‘the outdoors.’",
+      "short": "Nature as what the world is made of, and how it moves — not the countryside.",
+      "definition": "The first philosophers used physis for the world’s inner constitution: the stuff or process that makes change intelligible. Milesians fight over water, the apeiron, and air because they are fighting over that. Aristotle later tightens it: nature is a principle of motion and rest in the thing itself, unlike an artifact whose principle is in the artisan.",
       "eraIds": [
         "ancient-presocratic",
         "ancient-classical"
@@ -40,8 +40,8 @@
         "ex nihilo nihil",
         "nothing comes from nothing"
       ],
-      "short": "Nothing comes to be from nothing, and nothing passes into nothing — the constraint that makes change a problem.",
-      "definition": "Already at work before Parmenides, this principle says generation and destruction cannot be a leap from or into sheer non-being. Milesians still tell process-stories under it; Parmenides uses it to threaten coming-to-be altogether; Empedocles, Anaxagoras, and the atomists save appearances by making ‘birth’ rearrangement. Lucretius will turn the same rule into a therapy of fear. It is both a logical ban and a physical claim: the course asks you not to pick one too quickly.",
+      "short": "Nothing comes from nothing — so ‘birth’ and ‘death’ have to be explained some other way.",
+      "definition": "Generation cannot be a leap out of sheer non-being, nor destruction a drop into it. Milesians still tell process-stories under that ban; Parmenides uses it to threaten coming-to-be altogether; the pluralists and atomists save the appearances by making birth a rearrangement. Lucretius later turns the same rule into a therapy of fear.",
       "eraIds": [
         "ancient-presocratic",
         "hellenistic"
@@ -72,8 +72,8 @@
         "the indefinite",
         "the unbounded"
       ],
-      "short": "Anaximander’s indefinite: an origin that is not itself one of the opposites it would have to explain.",
-      "definition": "If the source of things were water, or fire, or any familiar body, it could not fairly account for its rivals. The apeiron (the unbounded or indefinite) is a metaphysical step: a principle that is not a named element. It is more ambitious than Thales’ water precisely because it refuses to be one more thing in the inventory. Do not modernize it into ‘infinity’ as a number.",
+      "short": "Anaximander’s indefinite: an origin that is not one of the opposites it would have to explain.",
+      "definition": "If the source were water or fire, it could not fairly account for its rivals. The apeiron — the unbounded, the indefinite — is a principle that is not a named element. That is why it is more ambitious than Thales’ water. It is not ‘infinity’ as a number.",
       "eraIds": [
         "ancient-presocratic"
       ],
@@ -97,8 +97,8 @@
         "account",
         "measure"
       ],
-      "short": "The common account or measure of how things are — which people miss by living as if they had a private understanding.",
-      "definition": "In Heraclitus, logos is not ‘logic homework’ and not a private opinion you are entitled to. Fragments B1–B2 present it as the shared account of the world’s order, which ‘the many’ sleepwalk past. Speech, measure, and the way things are are allowed to sound together; ‘flux’ as a slogan drops the word and ruins the view. Later Stoicism will technicalize logos; this course first wants the Heraclitean pressure.",
+      "short": "The common account of how things are, which people miss by living as if they had a private one.",
+      "definition": "In Heraclitus, logos is speech, measure, and the world’s order sounding together — not homework in ‘logic,’ and not an opinion you are entitled to. The many sleepwalk past what is common. Drop the word and keep only ‘flux,’ and the view collapses.",
       "eraIds": [
         "ancient-presocratic"
       ],
@@ -123,8 +123,8 @@
         "war (Heraclitus)",
         "Love and Strife"
       ],
-      "short": "Conflict as how things hold together — even as justice — not a regrettable accident.",
-      "definition": "Heraclitus’s war/strife (B80 and kin) is constitutive: opposition is not a glitch in an otherwise peaceful cosmos. Empedocles later splits Love and Strife into moving causes of mixture and separation among ungenerated roots. In both sittings, ‘everything changes’ is the wrong paraphrase if it erases structured conflict. The word is not a celebration of violence for its own sake.",
+      "short": "Conflict as how things hold together, even as justice — not a glitch in an otherwise peaceful cosmos.",
+      "definition": "Heraclitus’s war is constitutive: opposition is the pattern, not an accident. Empedocles later splits Love and Strife into the moving causes of mixture and separation. ‘Everything changes’ is the wrong paraphrase if it erases structured conflict. Neither writer is celebrating violence for its own sake.",
       "eraIds": [
         "ancient-presocratic"
       ],
@@ -150,8 +150,8 @@
         "what is",
         "to on"
       ],
-      "short": "What is, as opposed to what is not — and the ban on making not-being a way of inquiry.",
-      "definition": "Parmenides’ way of truth: you cannot think or say what is not; coming-to-be would be a passage through not-being, so what is is ungenerated, imperishable, and not genuinely many as mortals say. Aristotle later studies being qua being, with ‘being’ said in many ways around a focus (substance). Heidegger will insist that being is not a being among beings. One word, three pressures; do not fuse them into a fog.",
+      "short": "What is, as opposed to what is not — and the refusal to make not-being a way of inquiry.",
+      "definition": "Parmenides: you cannot think or say what is not, so coming-to-be would be a passage through nothing, and what is is ungenerated and not many as mortals say. Aristotle studies being as being, said in many ways around substance. Heidegger insists that being is not a being among beings. One word, three pressures.",
       "eraIds": [
         "ancient-presocratic",
         "ancient-classical",
@@ -183,8 +183,8 @@
         "doxa",
         "seeming"
       ],
-      "short": "How things show up — mortal opinion, sense, or seeming — as opposed to what is, or to the object science names.",
-      "definition": "Parmenides contrasts the way of truth with mortal names and the deceptive cosmos of appearance. The atomists and pluralists then try to save appearances without violating ‘nothing from nothing.’ Russell’s table reopens the word: what you immediately see is not simply the public table. Heidegger will refuse to start with appearances as sense-data at all. Track which contrast a sitting is using.",
+      "short": "How things show up — opinion, sense, seeming — as against what is, or against the object science names.",
+      "definition": "Parmenides contrasts the way of truth with mortal names and a deceptive cosmos. Pluralists and atomists then try to save appearances without violating ‘nothing from nothing.’ Russell’s table reopens it: what you immediately see is not simply the public table. Watch which contrast a sitting is using.",
       "eraIds": [
         "ancient-presocratic",
         "twentieth-pd"
@@ -214,8 +214,8 @@
         "empty space",
         "to kenon"
       ],
-      "short": "Empty interval without which uncuttable bodies cannot move or rearrange.",
-      "definition": "Atomists (and Lucretius after them) need void because packed being cannot yield. Philosophically it is ‘what is not’ put to work — the Eleatic scandal made into a physics. Parmenides had banned not-being as a way of inquiry; the atomists answer by making emptiness a condition of motion, not a rival stuff. If there is no void, there is no Epicurean therapy either.",
+      "short": "Empty interval, without which uncuttable bodies cannot move.",
+      "definition": "Atomists need void because packed being cannot yield. It is ‘what is not’ put to work — the Eleatic scandal turned into a physics. Emptiness is a condition of motion, not a rival stuff. Without it there is no Epicurean consolation either.",
       "eraIds": [
         "ancient-presocratic",
         "hellenistic"
@@ -242,8 +242,8 @@
       "aliases": [
         "atoms and void"
       ],
-      "short": "Ungenerated, uncuttable beings differing by shape and arrangement, moving in void.",
-      "definition": "Leucippus and Democritus, as Burnet reconstructs them, treat atoms as little Parmenidean beings in the plural, with void for room to move. Qualities, life, and value are supposed to fall out of shape, order, and position — which is exactly what you would still not understand about an animal from a complete inventory. Lucretius later makes this picture a consolation: if thunder is atoms, it is not a judgment.",
+      "short": "Ungenerated, uncuttable beings, differing by shape and arrangement, moving in void.",
+      "definition": "Atoms are little Parmenidean beings in the plural, with empty space for room. Qualities, life, and value are supposed to fall out of shape, order, and position — which is exactly what you still would not understand about an animal from a complete inventory. Lucretius makes the picture a consolation: if thunder is atoms, it is not a judgment.",
       "eraIds": [
         "ancient-presocratic",
         "hellenistic"
@@ -273,7 +273,7 @@
         "intellect"
       ],
       "short": "Mind: Anaxagoras’s arranger of mixture, and later Aristotle’s grasp of first principles.",
-      "definition": "Anaxagoras introduces Nous because arrangement may require intelligence, not only stuff — Socrates’ later complaint is that the promise is not paid in the fragments’ mechanics. In the Posterior Analytics, nous (with induction in Aristotle’s sense) is how undemonstrated first principles are known: demonstration cannot go back forever. Two sittings, one transliteration; do not hear ‘mind’ as a Cartesian inner theatre.",
+      "definition": "Anaxagoras introduces Nous because order may require intelligence, not only stuff — the complaint is that the fragments never pay the promise. In the Posterior Analytics, nous is how undemonstrated first principles are known, because demonstration cannot go back forever. Do not hear a Cartesian inner theatre in either use.",
       "eraIds": [
         "ancient-presocratic",
         "ancient-classical"
@@ -303,7 +303,7 @@
         "Form"
       ],
       "short": "The one character by which pious things are pious — a definition, not a list of cases.",
-      "definition": "Socrates’ demand in the Euthyphro is for the form (eidos, idea) of piety: what it is, such that examples are examples of it. Lists and ‘what the gods love’ fail even if they happen to be extensionally correct, because they do not give the why. Plato later hypostasizes Forms as the Cave and the divided line require. Aristotle will refuse separate Forms while keeping form-in-matter as a cause. Meet the word first as a demand for definition.",
+      "definition": "Socrates wants the form of piety: what it is, such that examples are examples of it. ‘What the gods love’ can be true of all pious things and still fail, because it does not give the why. Plato later hypostasizes Forms; Aristotle keeps form-in-matter as a cause and refuses a separate heaven of them.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -333,7 +333,7 @@
         "what the gods love"
       ],
       "short": "Do the gods love the pious because it is pious, or is it pious because they love it?",
-      "definition": "If piety is only ‘what the gods love,’ their love looks arbitrary; if they love it because it is pious, piety is independent of their love. Euthyphro cannot hold both. The dialogue’s aporia is the lesson, not a lost last page. The structure will haunt later talk of command, law, and the good — including Anscombe’s diagnosis of a law-sense of ‘ought’ without a lawgiver.",
+      "definition": "If piety is only what the gods love, their love looks arbitrary. If they love it because it is pious, piety is independent of their love. Euthyphro cannot hold both. The same fork returns whenever someone tries to rest the good on a command.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -357,8 +357,8 @@
       "aliases": [
         "impasse"
       ],
-      "short": "Impasse: every offered definition collapses, and that failure is the result, not an accident.",
-      "definition": "Socratic dialogues often end without a positive formula. That is architectural: you have learned how a question must look, and that Euthyphro or Thrasymachus does not yet know. Republic I clears a site for Books IV and VII; it does not already give psychic justice. Do not treat aporia as Plato getting tired, and do not treat it as proof that nothing can be said.",
+      "short": "Impasse: the definitions fail, and that failure is the result, not an accident.",
+      "definition": "Socratic dialogues often end without a formula. You have learned how the question must look, and that Euthyphro or Thrasymachus does not yet know. Republic I clears a site for later books; it does not already give justice in the soul. Aporia is not Plato getting tired, and not a proof that nothing can be said.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -385,8 +385,8 @@
         "examined life",
         "I know that I do not know"
       ],
-      "short": "Knowing that one lacks the wisdom others pretend to — a method and a moral stance, not nihilism.",
-      "definition": "The oracle story frames examinations of politicians, poets, and craftsmen. Socrates still claims things about death, duty, and the god; he will not quit philosophizing to buy acquittal. Ignorance here is a discipline of testing, not a claim that nothing matters. Mix it up with total skepticism and you will misread both the Apology and later Pyrrhonism.",
+      "short": "Knowing that one lacks the wisdom others pretend to — a method and a stance, not nihilism.",
+      "definition": "The oracle frames the examinations of politicians, poets, and craftsmen. Socrates still claims things about death and duty; he will not quit philosophizing to buy acquittal. Mix this with total skepticism and you misread both the Apology and later Pyrrhonism.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -412,8 +412,8 @@
         "elenchus",
         "Hegelian dialectic"
       ],
-      "short": "The disciplined movement of question and answer — later, in Hegel, the movement of self-consciousness itself.",
-      "definition": "In Plato, dialectic is the highest segment of the divided line: intelligence of Forms, not merely mathematical thinking, and not eristic scoring. It begins as Socratic elenchus (testing a life in public). Hegel’s lordship/bondage sitting uses ‘dialectic’ for a necessary development: recognition cannot stay one-sided, work transforms the bondsman. Use the Plato sense until the Phenomenology sitting, then mark the shift.",
+      "short": "Disciplined question and answer — later, in Hegel, the movement of self-consciousness itself.",
+      "definition": "In Plato it is the highest stretch of the divided line: intelligence of Forms, not eristic scoring, beginning as public elenchus. Hegel uses the word for a necessary development: recognition cannot stay one-sided, and work transforms the bondsman. Mark the shift when you leave the Republic for the Phenomenology.",
       "eraIds": [
         "ancient-classical",
         "nineteenth"
@@ -444,7 +444,7 @@
         "recollection"
       ],
       "short": "Learning as recovering what the soul already knew — Plato’s bid to solve the paradox of inquiry.",
-      "definition": "Meno’s paradox: you cannot search for what you do not know, because you would not recognize it. Recollection (the slave-boy geometry) is the proposed solution. You may reject it; you may not skip the problem. Leading questions versus recollection is the sitting’s own question. It is not a theory of classroom memory tricks.",
+      "definition": "Meno’s paradox: you cannot search for what you do not know, because you would not recognize it. Recollection, staged in the slave-boy geometry, is the proposed solution. You may reject it; you may not skip the problem. Leading questions versus recollection is the live question.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -470,7 +470,7 @@
         "orthē doxa"
       ],
       "short": "Right belief that can guide action but runs away unless tethered by an account.",
-      "definition": "The Meno’s Daedalus-statues image: true opinion (orthē doxa) is not yet knowledge (epistēmē). Tethering is understanding why, not a mood of confidence. The political sting is that if virtue were knowledge there should be teachers, yet the great Athenians could not teach their sons. Usefulness in a single action is not stability.",
+      "definition": "The Meno’s statues of Daedalus: true opinion is not yet knowledge. Tethering is understanding why, not a mood of confidence. If virtue were knowledge there should be teachers, yet the great Athenians could not teach their sons. Usefulness in a single action is not stability.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -496,7 +496,7 @@
         "justice as fairness"
       ],
       "short": "From ‘another’s good’ and the tyrant’s happiness to a structural order of city and soul.",
-      "definition": "Republic I puts Thrasymachus on the table: justice as the advantage of the stronger, the unjust life as happier. Cephalus’s debts-and-truth and Polemarchus’s friends-and-enemies fail by counterexample. Books II–IV construct justice as each part doing its own work — in the city and analogically in the soul. The analogy may illustrate rather than prove; keep that worry. Later Rawls will reopen justice as fairness without Plato’s three classes.",
+      "definition": "Thrasymachus: justice as the advantage of the stronger. Cephalus and Polemarchus fail by counterexample. Plato then constructs justice as each part doing its own work, in the city and analogically in the soul — an analogy that may illustrate rather than prove. Rawls later reopens justice as fairness without the three classes.",
       "eraIds": [
         "ancient-classical",
         "present-day"
@@ -525,8 +525,8 @@
         "parts of the soul",
         "reason spirit appetite"
       ],
-      "short": "Reason, spirit, and appetite — each with work, analogically matching the city’s classes.",
-      "definition": "Republic IV’s constructive psychology: justice in a person is the same structural relation as in the city. Glaucon’s Gyges story had asked why be just if you can be undetected; psychic order is Socrates’ long answer. The city–soul analogy can smuggle; naming that is reading well. This is not yet a modern faculty psychology, and not yet Freud.",
+      "short": "Reason, spirit, and appetite, each with work, matching the city’s classes.",
+      "definition": "Justice in a person is the same structural relation as in the city. Gyges had asked why be just if you can be undetected; psychic order is the long answer. The city–soul analogy can smuggle. This is not a modern faculty psychology.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -551,7 +551,7 @@
         "the line"
       ],
       "short": "Four segments of cognition: images, sensibles, mathematical thought, dialectic of Forms.",
-      "definition": "Republic VI ranks the visible and the intelligible. You were asked for four segments with an example in each. It is epistemology in the service of the Good: the sun analogy says the Good makes knowable things knowable (and being ‘be’), rather than being one more object on the wall. The Cave then dramatizes the line as a turning, with a political cost of return.",
+      "definition": "The visible and the intelligible are ranked so the Good can be placed: not one more object, but what makes knowable things knowable. The Cave then dramatizes the line as a turning, with a political cost of return.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -577,8 +577,8 @@
         "the Good (Plato)",
         "sun analogy"
       ],
-      "short": "Source of knowability and being — analogically what the sun is to sight — not a pretty word for ‘enlightenment.’",
-      "definition": "The sun analogy and the Cave together claim that the Good is not one more Form among Forms in the way a large fire is one more visible. Education is turning the whole soul, and the philosopher is compelled back down. Murdoch will later recover a magnetic Good against a naked will; that is a cousin, not a copy. Do not reduce the Good to Thrasymachus’s advantage or to a utility sum.",
+      "short": "Source of knowability and being — analogically what the sun is to sight.",
+      "definition": "The Good is not one more Form the way a large fire is one more visible. Education turns the whole soul; the philosopher is compelled back down. Murdoch later recovers a magnetic Good against a naked will — a cousin, not a copy. It is not Thrasymachus’s advantage, and not a utility sum.",
       "eraIds": [
         "ancient-classical",
         "present-day"
@@ -607,7 +607,7 @@
         "allegory of the cave"
       ],
       "short": "Education as turning from shadows, and the political cost of going back down.",
-      "definition": "Prisoners take shadows for the world; release is painful; the sun is blinding; return is dangerous. The image is knowledge, politics, and conversion at once — the sitting asked whether it can be all three without confusion. It is not only an epistemology, and not a license to sneer at ‘the many’ without the duty of return. Pair it with the divided line rather than treating it as a detached allegory.",
+      "definition": "Prisoners take shadows for the world; release hurts; the sun blinds; return is dangerous. The image is knowledge, politics, and conversion at once. Pair it with the divided line rather than treating it as a detached allegory.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -632,8 +632,8 @@
         "substance",
         "primary substance"
       ],
-      "short": "This horse, this human: the particular as primary subject — later, Descartes’ two substances, Spinoza’s one.",
-      "definition": "In the Categories, primary substance is neither said of a subject nor in a subject; the species ‘human’ is secondary. That is already a reply to separate Forms. Metaphysics studies being qua being with substance as the focus of the many ways ‘being’ is said. Descartes then treats mind and body as really distinct substances; Spinoza allows only one substance, God-or-Nature. Same lemma, three ontologies — tag the sitting.",
+      "short": "This horse, this human: the particular as primary subject — later Descartes’ two substances, Spinoza’s one.",
+      "definition": "In the Categories, primary substance is neither said of a subject nor in a subject; ‘human’ is secondary. Metaphysics studies being with substance as the focus. Descartes then treats mind and body as really distinct; Spinoza allows only God-or-Nature. Same lemma, three ontologies.",
       "eraIds": [
         "ancient-classical",
         "early-modern"
@@ -668,7 +668,7 @@
         "final cause"
       ],
       "short": "Four answers to ‘why?’: material, formal, efficient, final — not four lab events.",
-      "definition": "Physics II: a house is bricks (material), the plan (formal), the builder (efficient), and shelter (final). Nature is an inner principle of motion and rest, unlike art. Final cause will offend a modern ear because it cites that-for-the-sake-of-which, not only pushes from behind; hear it first in living things and artifacts. Chance is not a fifth cause on a par with these. Form-in-matter is how Aristotle keeps change without Parmenides’ contradiction.",
+      "definition": "A house is bricks, the plan, the builder, and shelter. Nature is an inner principle of motion, unlike art. Final cause cites that-for-the-sake-of-which, not only pushes from behind; hear it first in living things. Form-in-matter is how Aristotle keeps change without Parmenides’ contradiction.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -693,8 +693,8 @@
         "happiness (Aristotle)",
         "flourishing"
       ],
-      "short": "A complete activity of the soul in accordance with virtue, over a complete life — not a mood.",
-      "definition": "Nicomachean Ethics I refuses pleasure, honor, and wealth as the highest good. Eudaimonia is often englished ‘happiness’ or ‘flourishing’; neither captures ‘activity + virtue + completeness of life.’ The function (ergon) argument: if a human has characteristic work, it concerns reason, and the good life is performing that work well. One swallow does not make a spring. Epicurus will offer a rival complete life without civic grandeur.",
+      "short": "Activity of the soul in accordance with virtue, over a complete life — not a mood called happiness.",
+      "definition": "Pleasure, honor, and wealth are refused as the highest good. ‘Flourishing’ is closer than ‘feeling happy,’ but the Greek still means a complete activity, not a score. The function argument ties this to reason done well. One swallow does not make a spring. Epicurus will offer a rival complete life without civic grandeur.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -722,7 +722,7 @@
         "characteristic work"
       ],
       "short": "Characteristic work: the human good is rational activity done well.",
-      "definition": "The function argument in NE I is a premise-by-premise stretch, not a slogan. You may reject the idea that a human has a function; you must first hear it as stated. It links eudaimonia to aretē: virtue is excellence at that work. It is not a job description for a city-state career, and not ‘reproduction only.’",
+      "definition": "If a human has a function, it concerns reason, and living well is performing that work excellently. You may reject the idea that we have a function; hear the argument first. It links eudaimonia to virtue as excellence at that work.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -747,7 +747,7 @@
         "excellence"
       ],
       "short": "Excellence: for Aristotle, a stable disposition formed by habituation, aiming at a mean relative to us.",
-      "definition": "Moral virtue is not a feeling and not a mere capacity. NE II: hexis, the mean as the phronimos would judge it, reason. Courage is not half-cowardice; mediocrity is the cartoon of the mean. Plato’s Meno asked whether virtue is knowledge and whether it can be taught; Aristotle answers with character. Anscombe will later demand a psychology of action before modern ‘ought’-talk — hexis is waiting there.",
+      "definition": "Moral virtue is not a feeling and not a mere capacity. Courage is not half-cowardice; mediocrity is the cartoon of the mean. Plato’s Meno asked whether virtue is knowledge; Aristotle answers with character. Anscombe later reaches back toward this psychology before modern ‘ought’-talk.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -777,7 +777,7 @@
         "habit (Aristotle)"
       ],
       "short": "A stable disposition of character — what habituation produces, and what knowing the mean still lacks.",
-      "definition": "You can know where the mean lies and still not be virtuous. Hexis is the missing piece: a second nature formed by repeated action, not a flash of insight. Feelings happen; virtue is how you are disposed toward them. This is the word Anscombe’s call for a philosophy of psychology is reaching back toward, without requiring you to quote her paper.",
+      "definition": "You can know where the mean lies and still not be virtuous. Hexis is second nature, formed by repeated action. Feelings happen; virtue is how you are disposed toward them.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -802,8 +802,8 @@
         "golden mean",
         "mesotes"
       ],
-      "short": "Hitting the mark relative to us, as the prudent person would define it — not a geometric midpoint.",
-      "definition": "Fear and anger have excess and defect; virtue is the right amount, toward the right people, at the right time. It is not ‘being moderate about everything,’ and not the same quantity for every body. Phronēsis is the eye that finds it. Cartoon mediocrity is the misreading NE II exists to kill.",
+      "short": "Hitting the mark relative to us, as the prudent person would judge — not a geometric midpoint.",
+      "definition": "Fear and anger have excess and defect; virtue is the right amount, toward the right people, at the right time. It is not ‘being moderate about everything,’ and not the same quantity for every body. Phronēsis is the eye that finds it.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -828,8 +828,8 @@
         "practical wisdom",
         "prudence (Aristotle)"
       ],
-      "short": "Practical wisdom: the reasoned capacity to hit the mean in action, not a separate textbook of rules.",
-      "definition": "The mean is ‘as the phronimos would define it’ because ethics is not geometry. Prudence here is excellence in deliberation about what is good for a human life, not cleverness at means to any end. Epicurus will call prudence more precious than philosophy for a different reason (choosing among pleasures). Do not confuse either with mere shrewdness.",
+      "short": "Practical wisdom: the reasoned capacity to hit the mean in action, not a separate rulebook.",
+      "definition": "The mean is ‘as the phronimos would define it’ because ethics is not geometry. Prudence here is excellence in deliberation about a human life, not cleverness at means to any end. Epicurus praises prudence for a different reason: choosing among pleasures.",
       "eraIds": [
         "ancient-classical",
         "hellenistic"
@@ -857,8 +857,8 @@
         "incontinence",
         "weakness of will"
       ],
-      "short": "Knowing the good and not doing it — the divided will’s ancestor, not yet Augustine’s two wills.",
-      "definition": "Aristotle treats incontinence as a real phenomenon against a hard Socratic ‘virtue is knowledge.’ Augustine’s Confessions VIII narrates a will that both wants and does not want conversion, without Manichaean two-natures. Epictetus would say the impression was assented to. The course uses the problem more than the Greek word in early sittings; keep it for the ethics/will arc.",
+      "short": "Knowing the good and not doing it — the ancestor of Augustine’s divided will.",
+      "definition": "Aristotle treats incontinence as real, against a hard Socratic ‘virtue is knowledge.’ Augustine narrates a will that both wants and does not want conversion, without two natures. Epictetus would say the impression was assented to.",
       "eraIds": [
         "ancient-classical",
         "late-antiquity"
@@ -888,7 +888,7 @@
         "pros hen"
       ],
       "short": "‘Being’ is said in many ways, but around a focus — as ‘healthy’ is said of urine, diet, and the body.",
-      "definition": "Metaphysics IV: not a heap of puns, and not a single univocal sense. Substance is the focus; other categories are because of it. This lets Aristotle study being qua being without treating ‘being’ as one more genus like animal. Homonymy at the opening of the Categories was already training for this. Quine will later attack a different cut (analytic/synthetic); do not confuse the tools.",
+      "definition": "Not a heap of puns, and not a single univocal sense. Substance is the focus; other categories are because of it. That lets Aristotle study being without treating ‘being’ as one more genus like animal.",
       "eraIds": [
         "ancient-classical"
       ],
@@ -915,7 +915,7 @@
         "scientia"
       ],
       "short": "A syllogism from true, primary, immediate premises that give the why — not any persuasive speech.",
-      "definition": "Posterior Analytics: scientific knowledge has a shape. If every premise needed demonstration, nothing would be known as science; first principles are known another way (nous / induction). Knowing that differs from knowing why. Averroes and Aquinas will reuse scientia and demonstration inside a revealed or legal frame. Hume will ask what is missing if the premises include the future resembling the past.",
+      "definition": "Scientific knowledge has a shape. If every premise needed demonstration, nothing would be known as science; first principles are known another way. Knowing that differs from knowing why. Averroes and Aquinas reuse the tool inside a revealed or legal frame. Hume will ask what happens if the premises include the future resembling the past.",
       "eraIds": [
         "ancient-classical",
         "medieval"
@@ -945,8 +945,8 @@
         "tranquility",
         "unperturbedness"
       ],
-      "short": "Unperturbedness: Epicurean freedom from empty fear and desire; also the Pyrrhonist’s promised quiet after suspension.",
-      "definition": "In the Letter to Menoeceus, ataraxia comes from classifying desires, limiting pain, and seeing that death is nothing to us — prudence, not the banquet. Sextus makes ataraxia the point of epochē, not a side effect the skeptic forgot to want. Same word, two therapies: one by a true physics, one by refusing dogma. Neither is a spa mood.",
+      "short": "Unperturbedness: Epicurean freedom from empty fear, and the Pyrrhonist’s quiet after suspension.",
+      "definition": "For Epicurus it comes from classifying desires and seeing that death is nothing to us — prudence, not the banquet. Sextus makes it the point of epochē, not a side effect. Same word, two therapies: one by a true physics, one by refusing dogma.",
       "eraIds": [
         "hellenistic"
       ],
@@ -975,7 +975,7 @@
         "unnatural desires"
       ],
       "short": "Wants with no natural limit, produced by false beliefs about what we need.",
-      "definition": "Epicurus’s classification: natural and necessary (hunger), natural but not necessary, and empty (crown, luxury without limit). Empty desires cannot be satisfied, so they cannot be the end. This is hedonism as a discipline against the many’s frenzy. Ataraxia is the stable result, not a new unlimited want called ‘peace.’",
+      "definition": "Hunger is natural and necessary; crowns and luxury without limit are empty and cannot be satisfied, so they cannot be the end. This is hedonism as a discipline against frenzy. Ataraxia is the stable result, not a new unlimited want called peace.",
       "eraIds": [
         "hellenistic"
       ],
@@ -999,8 +999,8 @@
         "symmetry argument",
         "no surviving subject"
       ],
-      "short": "When we exist, death is not present; when death is present, we do not — so no subject remains to be harmed.",
-      "definition": "The letter’s slogan; Lucretius III’s argument: the soul-compound dissolves, the time before birth is the analogue of the time after. A dualist must deny that the soul is bodily in Lucretius’s sense. The sitting asked whether this shows death is not bad, or only that post-mortem experience is impossible. Deprivation of future goods is the leftover objection.",
+      "short": "When we exist, death is not present; when death is present, we do not.",
+      "definition": "No subject remains to be harmed. Lucretius argues that the soul-compound dissolves, and offers the time before birth as analogue of the time after. A dualist must deny that the soul is bodily in that sense. Whether this shows death is not bad, or only that post-mortem experience is impossible, is the leftover question.",
       "eraIds": [
         "hellenistic"
       ],
@@ -1027,7 +1027,7 @@
         "eph’ hēmin"
       ],
       "short": "Judgment, impulse, desire — as opposed to body, property, reputation, and office.",
-      "definition": "Enchiridion’s first cut. Freedom is relocated inside assent; confusing the two classes is the source of disturbance. It is not a promise that the body will not be harmed, and not a claim that you can make other people’s opinions up to you. Roles (child, citizen) can still bind as duties without making outcomes yours to guarantee. Marcus applies the same cut in an emperor’s notebook.",
+      "definition": "Freedom sits inside assent. Confusing the two classes is the source of disturbance. It is not a promise that the body will not be harmed, and not a claim that you can make other people’s opinions yours to guarantee. Roles can still bind as duties without making outcomes yours.",
       "eraIds": [
         "hellenistic"
       ],
@@ -1055,7 +1055,7 @@
         "judgment (Stoic)"
       ],
       "short": "The free inner yes or no to an impression — where Stoic freedom actually sits.",
-      "definition": "A troubling appearance need not carry a judgment that the world is bad. Pause, test: is this up to me, and what has my judgment added? Passion follows a mistaken valuation of what is not up to us. Pyrrhonists withhold assent (epochē) for a different reason: equipollence, not a doctrine of the good. Descartes will later make assent (judgment) the site of error when will outruns intellect.",
+      "definition": "A troubling appearance need not carry the judgment that the world is bad. Pause and test: is this up to me, and what has my judgment added? Pyrrhonists withhold assent for a different reason: equipollence, not a doctrine of the good. Descartes later makes judgment the site of error when will outruns intellect.",
       "eraIds": [
         "hellenistic",
         "early-modern"
@@ -1085,7 +1085,7 @@
         "freedom from passion"
       ],
       "short": "Freedom from passions that rest on false valuations — not numbness, and not Epicurean ataraxia.",
-      "definition": "Stoic apatheia is the condition of a ruling faculty that does not treat externals as genuine goods or evils. Pathē are misguided impulses; eupatheiai (good affective states) can remain. The course’s handbooks relocate desire and aversion rather than promising a painless body. Do not confuse this with Sextus’s quiet after suspension, or with ‘apathy’ in English.",
+      "definition": "The ruling faculty does not treat externals as genuine goods or evils. Pathē are misguided impulses; good affective states can remain. The handbooks relocate desire rather than promising a painless body. English ‘apathy’ is a false friend.",
       "eraIds": [
         "hellenistic"
       ],
@@ -1111,8 +1111,8 @@
         "suspension of judgment",
         "epoche"
       ],
-      "short": "Suspension of judgment on non-evident matters — the Pyrrhonist’s act, not a secret dogma that nothing is known.",
-      "definition": "Outlines I: skepticism is an ability to oppose appearances so that equipollence appears, then epochē, then ataraxia. ‘Nothing is known’ would itself be a thesis. The skeptic lives by appearance (honey tastes sweet) without a criterion of the hidden. The old apraxia charge: can one act without belief? Sextus’s answer is life by the apparent. Hume’s mitigated skepticism walks out of the study; it is not this.",
+      "short": "Suspension of judgment on what is non-evident — the Pyrrhonist’s act, not a secret dogma that nothing is known.",
+      "definition": "Oppose appearances until they balance; then withhold assent; then quiet. ‘Nothing is known’ would itself be a thesis. The skeptic lives by how things appear — honey tastes sweet — without a criterion of the hidden. Hume’s custom is not this: he walks out of the study and infers.",
       "eraIds": [
         "hellenistic"
       ],
@@ -1138,8 +1138,8 @@
         "skepticism",
         "Pyrrhonian skepticism"
       ],
-      "short": "Skepticism as a practice of opposing appearances, aiming at quiet — distinct from Academic ‘nothing can be known.’",
-      "definition": "Sextus advertises an ability (dunamis), tropes, and a life without dogma about the non-evident. It differs from Descartes’ methodic doubt (an instrument for certainty) and from Hume’s custom (we must live by causal inference). If you flatten all three into ‘skepticism,’ the course’s sequence goes mute. The point is therapy, not a metaphysics of unreality.",
+      "short": "Skepticism as a practice of opposing appearances, aiming at quiet — not Academic ‘nothing can be known.’",
+      "definition": "It is an ability, not a metaphysics of unreality. It differs from Descartes’ doubt (an instrument for certainty) and from Hume’s custom (we must live by causal inference). Flatten all three into ‘skepticism’ and the sequence goes mute.",
       "eraIds": [
         "hellenistic"
       ],
@@ -1166,7 +1166,7 @@
         "the Good (Plotinus)"
       ],
       "short": "Beyond being and intellect: the source from which Intellect and Soul proceed without emptying it.",
-      "definition": "Plotinus’s first hypostasis is not a being among beings and not a committee of gods. Intellect is the realm of Forms, thinking and being together; Soul looks both toward Intellect and toward the sensible. The Cave’s ascent becomes ontological procession and conversion of attention. Matter, in the usual Plotinian line, is last outflow or privation, not a rival first principle equal to the One.",
+      "definition": "Plotinus’s first hypostasis is not a being among beings and not a committee of gods. Intellect is Forms as thinking and being together; Soul looks both toward Intellect and toward the sensible. The Cave’s ascent becomes procession and conversion of attention.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1191,8 +1191,8 @@
       "aliases": [
         "hypostases"
       ],
-      "short": "A standing level of reality in the Plotinian cascade: One, Intellect, Soul — not a fourth deity.",
-      "definition": "Hypostases are a metaphysics of procession, not a pantheon. The sitting’s question is how a unity can be the life of a many. Christian uses of the word (Trinity) are a later story this course does not assign here. Keep the Greek philosophical use for Enneads selected pages.",
+      "short": "A standing level of reality in Plotinus: One, Intellect, Soul — not a fourth deity.",
+      "definition": "Hypostases are a metaphysics of procession, not a pantheon. The question is how a unity can be the life of a many. Christian uses of the word for the Trinity are a later story.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1216,8 +1216,8 @@
         "divine light",
         "Platonist books"
       ],
-      "short": "The mind’s seeing as lit from above — Platonist help toward an incorporeal God, short of the will’s healing.",
-      "definition": "Augustine’s Book VII credits ‘Platonist’ books with an incorporeal God and evil as privation; they do not deliver the Incarnation or a converted will. Plotinus’s conversion of attention toward Intellect is the pagan cousin. The course uses illumination as the inwardness theme, not as a full medieval theory of divine light in every act of knowing. Book VIII then shows what more information cannot do.",
+      "short": "The mind’s seeing as lit from above — Platonist help toward an incorporeal God, short of a healed will.",
+      "definition": "Augustine credits Platonist books with an incorporeal God and evil as privation; they do not deliver the Incarnation or conversion. Plotinus’s turn toward Intellect is the pagan cousin. Book VIII then shows what more information cannot do.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1245,7 +1245,7 @@
         "Fortuna"
       ],
       "short": "The wheel of external goods — as opposed to a good that cannot be taken.",
-      "definition": "Boethius’s Lady Philosophy diagnoses exile as a confusion about what is truly his. Wealth, office, fame, and pleasure fail of self-sufficiency; beatitude is located in the highest good / God. Lucretius would say the identification of the good with God is the remaining superstition. The consolation is an argument about where the good sits, not a proverb that everything happens for the best.",
+      "definition": "Boethius’s Philosophy diagnoses exile as a confusion about what is truly his. Wealth, office, and fame fail of self-sufficiency; beatitude is located in the highest good. The consolation is that argument, not a proverb that everything happens for the best.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1268,8 +1268,8 @@
       "aliases": [
         "summum bonum"
       ],
-      "short": "That for the sake of which other goods are sought — complete, in Boethius identified with God.",
-      "definition": "Aristotle’s architectonic opening already sought a complete, self-sufficient end (eudaimonia). Boethius III inventories false goods and turns to the highest good. Kant will refuse happiness as the unqualified good and name a good will instead. Mill will name utility. Keep the slot, and track what fills it.",
+      "short": "That for the sake of which other goods are sought — complete; in Boethius, identified with God.",
+      "definition": "Aristotle already sought a complete, self-sufficient end. Boethius inventories false goods and turns to God. Kant refuses happiness as the unqualified good and names a good will. Mill names utility. Keep the slot, and track what fills it.",
       "eraIds": [
         "ancient-classical",
         "late-antiquity",
@@ -1300,8 +1300,8 @@
       "aliases": [
         "privatio boni"
       ],
-      "short": "Evil is a lack of good in a will or nature that, as being, still comes from God — not a rival substance.",
-      "definition": "Confessions VII against Manichaean dualism: if God is the source of all that is, evil cannot be a co-eternal stuff. Calling cruelty a privation blocks a two-god cosmology; it does not yet explain why evil weighs on a life — that leftover is why Book VIII must narrate the will. Plotinus’s matter-as-privation is in the background. Do not hear ‘nothing’ as a joke that suffering is unreal.",
+      "short": "Evil as a lack of good in something that, as being, still comes from God — not a rival substance.",
+      "definition": "If God is the source of all that is, evil cannot be a co-eternal stuff. Calling cruelty a privation blocks a two-god cosmology; it does not yet explain why evil weighs on a life. That leftover is why the will must be narrated. ‘Nothing’ is not a joke that suffering is unreal.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1327,8 +1327,8 @@
         "voluntas",
         "free will"
       ],
-      "short": "The power to consent or refuse — Augustine’s drama; later Kant’s practical reason, Schopenhauer’s blind striving, Murdoch’s target.",
-      "definition": "Confessions VIII: a will that cannot will itself whole; habit as a chain; grace and example enter the story. Descartes locates error in the will’s outrunning intellect. Kant’s good will is good without qualification. Schopenhauer names Will as thing-in-itself, not a moral chooser. Murdoch attacks the naked will as the whole of morals. One English word; do not import Kant into Hippo, or Schopenhauer into the Groundwork.",
+      "short": "The power to consent or refuse — Augustine’s drama; later Kant’s practical reason, Schopenhauer’s blind striving.",
+      "definition": "Augustine: a will that cannot will itself whole, habit as a chain, grace in the story. Descartes locates error in the will’s overreach. Kant’s good will is good without qualification. Schopenhauer names Will as thing-in-itself, not a moral chooser. Murdoch attacks the naked will as the whole of morals. One English word; do not import Kant into Hippo.",
       "eraIds": [
         "late-antiquity",
         "early-modern",
@@ -1366,7 +1366,7 @@
         "two wills"
       ],
       "short": "One agent both wanting and not wanting the same conversion — not a second nature as the Manichees claimed.",
-      "definition": "Augustine’s analysis of inner conflict without dualist metaphysics. Knowing the good is not doing it; habit (consuetudo) binds. The garden scene is philosophically the claim that more information cannot close the will. Compare akrasia and Stoic assent, but do not reduce the narration to a theorem. Two wills here are not two gods.",
+      "definition": "Inner conflict without dualist metaphysics. Knowing the good is not doing it; habit binds. The garden scene claims that more information cannot close the will. Two wills here are not two gods.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1392,8 +1392,8 @@
         "time (Augustine)",
         "threefold present"
       ],
-      "short": "Time as a distension of the soul: memory, attention, expectation holding past, present, and future.",
-      "definition": "Confessions XI: we speak of past and future, yet the past is no longer and the future is not yet — so where is time? The constructive suggestion is a threefold present in the soul, measured (the psalm) as the soul’s own stretch. God is not in time the way we are, only longer. If time is in the soul, the sitting asked whether there is time without a created mind.",
+      "short": "Time as a stretch of the soul: memory, attention, expectation holding past, present, and future.",
+      "definition": "We speak of past and future, yet the past is no longer and the future is not yet — so where is time? Augustine’s suggestion is a threefold present in the soul, measured as the soul’s own distension. God is not in time the way we are, only longer.",
       "eraIds": [
         "late-antiquity"
       ],
@@ -1417,7 +1417,7 @@
         "faith seeking understanding"
       ],
       "short": "Faith seeking understanding — Anselm’s frame, not a replacement of faith by proof.",
-      "definition": "The Proslogion argues from within belief: ‘that than which nothing greater can be thought’ is prayed, then thought. The ontological argument is a clarification and a spiritual exercise as much as a proof. Gaunilo’s island tests whether the formula is unique. Aquinas will later set this style of a priori argument aside in ST I q.2 and start from the world.",
+      "definition": "The Proslogion argues from within belief: ‘that than which nothing greater can be thought’ is prayed, then thought. The argument is clarification and spiritual exercise as much as proof. Aquinas will later set this a priori style aside and start from the world.",
       "eraIds": [
         "medieval"
       ],
@@ -1442,7 +1442,7 @@
         "that than which nothing greater"
       ],
       "short": "From the concept of that than which nothing greater can be thought, to extra-mental existence.",
-      "definition": "Anselm: existence in reality is greater than existence in the understanding alone, so the greatest conceivable cannot be only in the intellect. Gaunilo’s lost island asks whether the form proves too much. Descartes Meditation V retries from essence (a mountain’s valley). Aquinas does not use this as his Five Ways. Kant will later diagnose existence as not a real predicate — a sitting this course reaches only as background to the Copernican critique of metaphysics.",
+      "definition": "Existence in reality is greater than existence in the understanding alone, so the greatest conceivable cannot be only in the intellect. Gaunilo’s lost island asks whether the form proves too much. Descartes retries from essence. Aquinas does not use this as his Five Ways.",
       "eraIds": [
         "medieval",
         "early-modern"
@@ -1471,7 +1471,7 @@
         "apophatic theology"
       ],
       "short": "A discipline of what we may not say of God — names as negations or relations, to protect simplicity.",
-      "definition": "Maimonides’ assigned stretch of the Guide blocks univocal positive attributes that would make God composite or like creatures. If ‘knows’ meant the same in God and in us, we would have imported creaturely structure. Averroes, nearby, ranks methods of address (rhetoric, dialectic, demonstration) rather than emptying speech. Negative theology can still be a kind of knowledge, or a rule for silence — that was the seminar question.",
+      "definition": "Maimonides blocks univocal positive attributes that would make God composite or like creatures. If ‘knows’ meant the same in God and in us, we would have imported creaturely structure. Whether this is still knowledge of God, or a rule for silence, is the live question.",
       "eraIds": [
         "medieval"
       ],
@@ -1496,8 +1496,8 @@
         "analogy of being",
         "equivocal names of God"
       ],
-      "short": "God-talk that is neither univocal (same sense as of creatures) nor a sheer pun — the medieval alternative to silence or idolatry.",
-      "definition": "After Maimonides’ pressure on attributes, Aquinas (and the broader medieval conversation this unit prepares) treats names of God as analogical: ordered to one focus, not identical in meaning with creaturely uses. The course’s Maimonides sitting is the problem; Aquinas’s sacred doctrine and ways assume you can still say ‘God’ after the Five Ways’ ‘this we call God.’ Pair with Aristotle’s focal meaning of being, without claiming they are the same theory.",
+      "short": "God-talk that is neither univocal with creatures nor a sheer pun.",
+      "definition": "After the pressure on attributes, names of God can be ordered to one focus without identical meaning. Aristotle’s focal meaning of being is a cousin, not the same theory. Aquinas’s ‘this we call God’ at the end of a Way assumes some such speech is still possible.",
       "eraIds": [
         "medieval"
       ],
@@ -1524,8 +1524,8 @@
       "aliases": [
         "simplicity of God"
       ],
-      "short": "God is not composed of parts, matter, or really distinct attributes in the way creatures are.",
-      "definition": "Positive univocal attributes threaten this. Maimonides’ attribute-discipline and Aquinas’s ways (a first source, not yet the Trinity) both orbit simplicity. Anselm’s ‘greater’ must be rewritten if greatness would add a part. Spinoza will later radicalize related pressures into one substance with infinite attributes — a different conclusion from the same allergy to composition.",
+      "short": "God is not composed of parts, matter, or really distinct attributes the way creatures are.",
+      "definition": "Positive univocal attributes threaten this. Maimonides’ discipline and Aquinas’s ways both orbit simplicity. Spinoza later radicalizes related pressures into one substance with infinite attributes — a different conclusion from the same allergy to composition.",
       "eraIds": [
         "medieval",
         "early-modern"
@@ -1553,8 +1553,8 @@
         "sacra doctrina",
         "theology as science"
       ],
-      "short": "Theology as a science that receives its principles from revelation, as subaltern sciences receive theirs from a higher science.",
-      "definition": "ST I q.1: article-form (objections, sed contra, corpus, replies). Philosophy can demonstrate some preambles and serve; it does not replace the higher light. If the principles are revealed, the sitting asked in what sense this is still scientia. Averroes agrees that demonstration has a role and disagrees about who may allegorize the Law. q.1 is the relation of two lights before q.2’s ways.",
+      "short": "Theology as a science that receives its principles from revelation, as subaltern sciences receive theirs from a higher one.",
+      "definition": "Philosophy can demonstrate some preambles and serve; it does not replace the higher light. If the principles are revealed, in what sense is this still scientia? That is q.1’s question, before q.2’s ways.",
       "eraIds": [
         "medieval"
       ],
@@ -1579,8 +1579,8 @@
         "quinque viae",
         "first mover"
       ],
-      "short": "Five a posteriori paths from features of the world to a first that all call God — not five ontological arguments.",
-      "definition": "Motion, causation, contingency, degrees, governance: each way has a middle term and a terminus of explanation. ‘And this we call God’ names; it does not yet deliver the Trinity. The ontological argument is set aside. A student who says ‘science refuted the first way’ without stating the first way has skipped the sitting. These are not Anselm restated five times.",
+      "short": "Five paths from features of the world to a first that all call God — not five ontological arguments.",
+      "definition": "Motion, causation, contingency, degrees, governance: each way has a middle term and a terminus of explanation. ‘And this we call God’ names; it does not yet deliver the Trinity. A student who says science refuted the first way without stating the first way has skipped the argument.",
       "eraIds": [
         "medieval"
       ],
@@ -1604,8 +1604,8 @@
       "aliases": [
         "lex naturalis"
       ],
-      "short": "Participation of the eternal law in the rational creature: good is to be done and pursued, evil avoided.",
-      "definition": "ST I–II q.90: law is an ordinance of reason for the common good, by one who has care of the community, promulgated. q.94: first precept of practical reason, specified via natural inclinations (life, knowledge, social life). Passion, vice, and custom can obscure particular conclusions. ‘Good is to be done’ is not a tautology, a mere feeling, or a tyrant’s command — the sitting asked which. Human law can fail as law when it misses reason or the common good.",
+      "short": "The rational creature’s share in eternal law: good is to be done and pursued, evil avoided.",
+      "definition": "Law is an ordinance of reason for the common good, by one who has care of the community, promulgated. The first precept of practical reason is specified through natural inclinations — life, knowledge, social life. Passion and custom can obscure particular conclusions. Human law fails as law when it misses reason or the common good.",
       "eraIds": [
         "medieval"
       ],
@@ -1630,7 +1630,7 @@
         "lex aeterna"
       ],
       "short": "God’s governance of creation — the highest in Aquinas’s hierarchy of eternal, natural, human, and divine law.",
-      "definition": "Natural law is the rational creature’s share in that governance; human law is particular determination; divine law is revealed. The four notes of law in q.90 still apply analogically. This is not Hobbes’s command of a mortal god, and not Rousseau’s general will, though both later sit in the ‘what makes law law’ slot. Keep the hierarchy so ‘natural law’ does not float free.",
+      "definition": "Natural law is our share in that governance; human law is particular determination; divine law is revealed. This is not Hobbes’s command of a mortal god, and not Rousseau’s general will, though both later occupy the ‘what makes law law’ slot.",
       "eraIds": [
         "medieval"
       ],
@@ -1654,7 +1654,7 @@
         "idola"
       ],
       "short": "Tribe, cave, marketplace, theatre: systematic prejudices that block a new induction.",
-      "definition": "Bacon’s Novum Organum I diagnoses before it methodizes. Tribe (human nature’s distortions), cave (the individual’s den), marketplace (words that muddle even sincere speakers), theatre (received philosophical systems). Quoting a famous name instead of looking is a Theatre-and-Marketplace compound. The remedy is a temperament and a discipline of natural histories, not scholastic disputation as organon.",
+      "definition": "Bacon diagnoses before he methodizes. The tribe is human nature’s distortions; the cave, the individual’s den; the marketplace, words that muddle even sincere speakers; the theatre, received systems. Quoting a famous name instead of looking is Theatre and Marketplace compounded.",
       "eraIds": [
         "early-modern"
       ],
@@ -1677,8 +1677,8 @@
       "aliases": [
         "rules of method"
       ],
-      "short": "Descartes’ rules: evidence, division, order, complete enumerations — plus a provisional morale while the house is down.",
-      "definition": "Discourse Parts 2–3: method is a discipline of belief, not a biography of a stove. Provisional morality is a scaffold for living during renovation, not the later metaphysics. Meditation I then slows doubt into an instrument. Bacon wanted a new organon against idols; Descartes wants certainty. Peirce will later call Cartesian ‘clarity’ a failed method of fixing belief. Keep ‘method’ tagged to the sitting.",
+      "short": "Descartes’ rules — evidence, division, order, complete enumerations — plus a provisional morale while the house is down.",
+      "definition": "Method is a discipline of belief, not a biography of a stove. Provisional morality is a scaffold for living during renovation, not the later metaphysics. Bacon wanted a new organon against idols; Descartes wants certainty. Peirce will later call Cartesian ‘clarity’ a failed way of fixing belief.",
       "eraIds": [
         "early-modern"
       ],
@@ -1706,7 +1706,7 @@
         "hyperbolic doubt"
       ],
       "short": "Withdrawing assent from all that can be doubted — an instrument for certainty, not a lifestyle.",
-      "definition": "Dreaming undermines sensory belief; the deceiver threatens even mathematics. What survives is the thinking I. This is not Pyrrhonian epochē (quiet without a rebuild) and not Hume’s custom (we cannot stop inferring). Doubt is a filter. By the end of Meditation II, other bodies are not yet proved. Living as a skeptic would miss the assignment.",
+      "definition": "Dreaming undermines sensory belief; a deceiver threatens even mathematics. What survives is the thinking I. This is not Pyrrhonian quiet without a rebuild, and not Hume’s custom. By the end of Meditation II, other bodies are not yet proved.",
       "eraIds": [
         "early-modern"
       ],
@@ -1731,8 +1731,8 @@
         "I think, I am",
         "thinking thing"
       ],
-      "short": "I am, I exist — even if deceived, I who am deceived must be. Thought is what I cannot separate from myself here.",
-      "definition": "Discourse sketches it; Meditations II slows it. As Descartes presents it, it is not an inference from a general premise (‘everything that thinks exists’). At this stage I am a thinking thing; the wax shows intellect’s grasp of body still inside a thin ontology. Hegel will refuse a lonely cogito by making self-consciousness social from the start. ‘Cogito ergo sum’ as a slogan skips the doubt that gives it sense.",
+      "short": "I am, I exist: even if I am deceived, I who am deceived must be.",
+      "definition": "As Descartes presents it, this is not an inference from ‘everything that thinks exists.’ At this stage I am a thinking thing; the wax shows intellect’s grasp of body still inside a thin ontology. Hegel will refuse a lonely cogito by making self-consciousness social from the start.",
       "eraIds": [
         "early-modern"
       ],
@@ -1760,7 +1760,7 @@
         "clarity and distinctness"
       ],
       "short": "The mark of truth — once God is no deceiver. The circle: that guarantee seems to use the mark it certifies.",
-      "definition": "Meditation III’s causal argument for God, IV’s account of error (will outrunning intellect), and the rule of C&D stand together. The Cartesian circle is the worry that clear and distinct perceptions are reliable only if God exists, while God’s existence is proved by such perceptions. A finite mind’s idea of the infinite is the engine of III. Do not treat C&D as a mood of confidence.",
+      "definition": "Meditation III’s causal argument for God, IV’s account of error, and the rule of clear and distinct perception stand together. The worry is that such perceptions are reliable only if God exists, while God’s existence is proved by them. A finite mind’s idea of the infinite is the engine of III.",
       "eraIds": [
         "early-modern"
       ],
@@ -1786,7 +1786,7 @@
         "Cartesian circle"
       ],
       "short": "The apparent loop: God’s veracity certifies clear and distinct perception, which was used to prove God.",
-      "definition": "State it in one careful sentence — that was the sitting. Whether Descartes has a way out (memory of C&D, analytic interpretation, etc.) is secondary to feeling why the rebuild of knowledge needs a non-deceiving God at all. Meditation IV’s theodicy of error (misuse of freedom) is part of the same architecture, not a side essay.",
+      "definition": "Whether Descartes has a way out is secondary to seeing why the rebuild of knowledge needs a non-deceiving God at all. Meditation IV’s theodicy of error — the will outrunning the intellect — belongs to the same architecture.",
       "eraIds": [
         "early-modern"
       ],
@@ -1810,8 +1810,8 @@
         "mind-body dualism",
         "real distinction"
       ],
-      "short": "Mind and body are really distinct — clearly conceivable apart — yet I am also a union that senses.",
-      "definition": "Meditation VI: God’s power to bring about what is clearly conceived; matter as extension (weight and color not intrinsic); bodies exist; the leftover problem is the living composite. ‘Only mind’ and ‘only machine’ are both slogans that miss VI. Hobbes will start from bodies; Locke from ideas; Ryle and later mind-map sittings will refuse the ghost. The wax already hinted that body is known by the mind.",
+      "short": "Mind and body are really distinct, clearly conceivable apart — yet I am also a union that senses.",
+      "definition": "God can bring about what is clearly conceived; matter is extension; bodies exist; the leftover problem is the living composite. ‘Only mind’ and ‘only machine’ both miss Meditation VI. Hobbes will start from bodies; Locke from ideas.",
       "eraIds": [
         "early-modern"
       ],
@@ -1837,8 +1837,8 @@
       "aliases": [
         "res extensa"
       ],
-      "short": "The essence of matter for Descartes: spatial spread — excluding weight and color as intrinsic.",
-      "definition": "Meditation V–VI: the piece of wax’s sensory qualities change; what remains is grasped by intellect as extended, flexible, changeable. Physics becomes geometry of extension, which is why secondary qualities will later become a problem for Locke and Berkeley. Spinoza and Leibniz will not leave matter as a second substance beside mind in Descartes’ way.",
+      "short": "The essence of matter for Descartes: spatial spread, excluding weight and color as intrinsic.",
+      "definition": "The wax’s sensory qualities change; what remains is grasped by intellect as extended, flexible, changeable. Physics becomes a geometry of extension, which is why secondary qualities later become a problem for Locke and Berkeley.",
       "eraIds": [
         "early-modern"
       ],
@@ -1862,8 +1862,8 @@
       "aliases": [
         "modus"
       ],
-      "short": "What is in another and conceived through another — a finite thing, on Spinoza’s account, not a rival substance.",
-      "definition": "Ethics I: substance is in itself and conceived through itself; there is only one, God-or-Nature, with infinite attributes. Finite things are modes. Descartes’ created substances are refused. Leibniz will multiply windowless substances instead. ‘Mode’ in Locke (a complex idea) is a different technical use — do not import it here.",
+      "short": "What is in another and conceived through another — a finite thing, for Spinoza, not a rival substance.",
+      "definition": "Substance is in itself and conceived through itself; there is only one, God-or-Nature. Finite things are modes. Descartes’ created substances are refused. Leibniz will multiply windowless substances instead.",
       "eraIds": [
         "early-modern"
       ],
@@ -1888,8 +1888,8 @@
       "aliases": [
         "attributum"
       ],
-      "short": "What the intellect perceives of substance as constituting its essence — for Spinoza, thought and extension among infinitely many.",
-      "definition": "Ethics I’s definitions make attributes how we conceive the one substance, not parts glued on. Descartes had two created-substance essences; Spinoza has one substance infinitely attributed. Maimonides had already worried that creaturely attributes fracture God. Keep the Ethics definition for the Spinoza sitting.",
+      "short": "What intellect perceives of substance as constituting its essence — for Spinoza, thought and extension among infinitely many.",
+      "definition": "Attributes are how we conceive the one substance, not parts glued on. Descartes had two created-substance essences; Spinoza has one substance infinitely attributed. Maimonides had already worried that creaturely attributes fracture God.",
       "eraIds": [
         "early-modern"
       ],
@@ -1916,7 +1916,7 @@
         "one substance"
       ],
       "short": "God or Nature: one substance, no lawgiving will that might have done otherwise.",
-      "definition": "Part I’s necessity: everything follows from the divine nature; ‘could have been otherwise’ is a defect of imagination. Final causes are refused (appendix). This is neither cartoon pantheism nor cartoon atheism if you stay with the definitions. Prayer, miracle, and a king-like free will do not survive. Conatus (striving to persevere) will be how modes live this necessity — named more fully later in the Ethics than in the assigned Part I, but already implied.",
+      "definition": "Everything follows from the divine nature; ‘could have been otherwise’ is a defect of imagination. Final causes are refused. Prayer, miracle, and a king-like free will do not survive. Conatus is how modes live this necessity.",
       "eraIds": [
         "early-modern"
       ],
@@ -1942,8 +1942,8 @@
         "striving",
         "perseverance in being"
       ],
-      "short": "The striving of each thing to persevere in its being — Spinoza’s physics of affect, already prepared by Part I’s necessity.",
-      "definition": "The assigned sitting is Ethics I (substance, attribute, mode, the denial of a royal will). Conatus is the word the system uses for how modes exist in that necessity: not a Cartesian free will, not an Epicurean ataraxia project. Schopenhauer’s Will is a later, darker cousin (thing-in-itself as striving). Use conatus when you need the Spinozist name for endeavor; do not paste later parts of the Ethics into the app.",
+      "short": "Each thing’s striving to persevere in its being — Spinoza’s physics of affect under necessity.",
+      "definition": "Not a Cartesian free will, and not an Epicurean ataraxia project. Modes exist by endeavoring. Schopenhauer’s Will is a later, darker cousin: thing-in-itself as striving.",
       "eraIds": [
         "early-modern"
       ],
@@ -1967,8 +1967,8 @@
       "aliases": [
         "Pascal’s Wager"
       ],
-      "short": "Under uncertainty, the expected value of living as if God exists dominates, given infinite gain — not a fifth Way.",
-      "definition": "Pascal’s fragment is a practical argument, inside humility about the God of the philosophers versus Abraham. Custom, mass, and habituation are how one comes to believe; the Wager does not replace a life. It does not claim to demonstrate God as a triangle is demonstrated. James’s will-to-believe will later fence a similar permission to live, forced, momentous options.",
+      "short": "Under uncertainty, living as if God exists dominates if the gain is infinite — not a fifth Way.",
+      "definition": "Pascal’s fragment is a practical argument, inside humility about the God of the philosophers versus Abraham. Custom and habituation are how one comes to believe; the Wager does not replace a life. It does not demonstrate God as a triangle is demonstrated.",
       "eraIds": [
         "early-modern"
       ],
@@ -1991,8 +1991,8 @@
       "aliases": [
         "windowless monad"
       ],
-      "short": "A simple, windowless substance whose inner states unfold from its complete concept — perception and appetition, not parts.",
-      "definition": "No genuine influx of accidents from outside. Not all monads are minds like ours (perception vs apperception). Pre-established harmony is how mind and body agree without pushing. This answers Spinoza’s one substance by multiplying simples, and Descartes’ union without occasionalist miracles at every turn. ‘Best of possible worlds’ is an optimization theodicy, not a cheer, and not a claim that monads have physical windows.",
+      "short": "A simple, windowless substance whose inner states unfold from its complete concept.",
+      "definition": "No genuine influx of accidents from outside. Not all monads are minds like ours. Pre-established harmony is how mind and body agree without pushing. This answers Spinoza’s one substance by multiplying simples, and Descartes’ union without occasionalist miracles at every turn.",
       "eraIds": [
         "early-modern"
       ],
@@ -2017,7 +2017,7 @@
         "harmonie préétablie"
       ],
       "short": "Created substances’ programs correspond from the start — no influx, no constant divine patching.",
-      "definition": "Leibniz’s alternative to Descartes’ union problem and to occasionalism: mind and body (and monads generally) agree because God chose a world of corresponding unfolding, not because thought is a product of shove. It is a metaphysical thesis about causation among substances, not a claim that life feels harmonious. Pair with ‘windowless.’",
+      "definition": "Mind and body agree because God chose a world of corresponding unfolding, not because thought is a product of shove. It is a thesis about causation among substances, not a claim that life feels harmonious.",
       "eraIds": [
         "early-modern"
       ],
@@ -2042,7 +2042,7 @@
         "natural condition"
       ],
       "short": "The human condition without a common power — Hobbes’s war from equality; Locke’s already lawful condition with property.",
-      "definition": "Hobbes: equality of vulnerability plus the right of nature makes preemption rational; injustice as crime waits on a sword. Locke: a law of nature and labor-property before the magistrate; government is a trust. Rousseau’s Discourse conjectures a different natural independence (pity, limited needs). None of these is a camping trip or a documented ethnography. Ask each sitting whether you are reading history, thought experiment, or warning.",
+      "definition": "Hobbes: equality of vulnerability plus the right of nature makes preemption rational. Locke: a law of nature and labor-property before the magistrate. Rousseau conjectures a different natural independence. None of these is a camping trip. Ask whether you are reading history, thought experiment, or warning.",
       "eraIds": [
         "empiricism",
         "enlightenment"
@@ -2071,8 +2071,8 @@
         "jus naturale",
         "law of nature (Hobbes)"
       ],
-      "short": "Hobbes: liberty to use power for life. Distinct from a law of nature (a precept: seek peace).",
-      "definition": "Leviathan 14: right is liberty; law binds. The first laws of nature: seek peace; be willing to lay down right when others do. Covenants without the sword are words. Locke’s ‘law of nature’ is already moral-theological in a way Hobbes’s rational precepts are not. Do not swap the vocabularies.",
+      "short": "Hobbes: liberty to use power for life — distinct from a law of nature, which is a precept: seek peace.",
+      "definition": "Right is liberty; law binds. The first laws: seek peace, and be willing to lay down right when others do. Covenants without the sword are words. Locke’s ‘law of nature’ is already moral-theological in a way Hobbes’s rational precepts are not.",
       "eraIds": [
         "empiricism"
       ],
@@ -2097,8 +2097,8 @@
         "artificial person",
         "representation (Hobbes)"
       ],
-      "short": "Each makes the sovereign the bearer of their person — a real unity, not a mere crowd. The acts are yours.",
-      "definition": "Leviathan 17–18: representation, artificial person, subjects who cannot accuse the sovereign of injustice in the covenant’s terms. Liberty remaining is mainly the silence of the law plus defense of life (ch. 21). Locke’s trust can be withdrawn when power exceeds right; that is a different political metaphysics. ‘Might makes right’ without authorization misses Hobbes’s legal move.",
+      "short": "Each makes the sovereign the bearer of their person — a real unity, not a mere crowd.",
+      "definition": "The sovereign’s acts are yours. Subjects cannot accuse that person of injustice in the covenant’s terms. Liberty remaining is mainly the silence of the law plus defense of life. Locke’s trust can be withdrawn when power exceeds right — a different metaphysics.",
       "eraIds": [
         "empiricism"
       ],
@@ -2123,8 +2123,8 @@
         "labor theory of property",
         "enough and as good"
       ],
-      "short": "Locke’s title to property: mixing labor with the common, within spoilage and (until money) ‘enough and as good.’",
-      "definition": "Second Treatise ch. 5. Money relaxes the original limits by consent to unequal possession. Political society is by consent, not Hobbesian authorization that cannot be withdrawn; tyranny is power beyond trust (ch. 19). This is not ‘whatever I touch is mine,’ and not Filmer’s inheritance from Adam without labor.",
+      "short": "Locke’s title to property: mixing labor with the common, within spoilage and ‘enough and as good.’",
+      "definition": "Money relaxes the original limits by consent to unequal possession. Political society is by consent, not Hobbesian authorization that cannot be withdrawn. This is not ‘whatever I touch is mine.’",
       "eraIds": [
         "empiricism"
       ],
@@ -2149,8 +2149,8 @@
         "white paper",
         "tabula rasa"
       ],
-      "short": "Principles or ideas stamped on the mind from birth — Locke’s target: no universal consent, teaching explains the appearance.",
-      "definition": "Essay I.2: even universal consent would not prove innateness; children and the untaught lack the supposed maxims. ‘White paper’ does not mean no faculties. A disposition to form an idea is not the idea. Descartes’ innate idea of God is in the dock. Morality without innate practical principles is the sitting’s sting, later filled by sensation, reflection, and (for Kant) a different a priori.",
+      "short": "Principles stamped on the mind from birth — Locke’s target: teaching explains the appearance of them.",
+      "definition": "Even universal consent would not prove innateness; children lack the supposed maxims. ‘White paper’ does not mean no faculties. A disposition to form an idea is not the idea. Descartes’ innate idea of God is in the dock.",
       "eraIds": [
         "empiricism"
       ],
@@ -2174,8 +2174,8 @@
       "aliases": [
         "ideas of sensation and reflection"
       ],
-      "short": "Whatever is the object of the understanding when a person thinks — from sensation and reflection, not Plato’s Form.",
-      "definition": "Essay II.1: two fountains. Simple ideas are not made by us at will. This is not eidos. Berkeley will make ideas (plus spirits) the whole furniture of unthinking things; Hume will split impression and idea by force and liveliness and copy. When the course says ‘idea,’ check whether you are in Republic VI or in the Essay. Plato’s ‘idea’ is under eidos.",
+      "short": "Whatever is before the mind when a person thinks — from sensation and reflection, not Plato’s Form.",
+      "definition": "Simple ideas are not made by us at will. Berkeley will make ideas plus spirits the furniture of unthinking things; Hume will split impression and idea by force and liveliness. When the course says ‘idea,’ check whether you are in Republic VI or in the Essay.",
       "eraIds": [
         "empiricism"
       ],
@@ -2203,8 +2203,8 @@
       "aliases": [
         "primary and secondary qualities"
       ],
-      "short": "Bulk, figure, motion, number, solidity — inseparable from body, resembling our ideas of them (on Locke’s telling).",
-      "definition": "Essay II.8. Secondary qualities are powers to produce sensations (color, taste) that do not resemble those ideas in the object as yellow is in the idea. Descartes had already made extension the essence of matter. Berkeley will deny the material substratum supposed to hold the powers. A common mistake is to think Locke says objects do not cause color-experience.",
+      "short": "Bulk, figure, motion, number, solidity — inseparable from body, resembling our ideas of them, on Locke’s telling.",
+      "definition": "Secondary qualities are powers to produce sensations that do not resemble those ideas in the object as yellow is in the idea. Descartes had already made extension the essence of matter. Berkeley will deny the material substratum supposed to hold the powers.",
       "eraIds": [
         "empiricism"
       ],
@@ -2231,7 +2231,7 @@
         "color as power"
       ],
       "short": "Powers in bodies to produce sensations — real as powers, not ‘in the object’ as the idea of yellow is yellow.",
-      "definition": "Color is not nothing, and not a miniature yellow painted on the corpuscle. The resemblance problem (does the idea copy the quality?) is already visible and will feed Berkeley and Hume. If you ask whether the world is colorless when unobserved, you are at Locke’s edge; Berkeley answers by dropping matter.",
+      "definition": "Color is not nothing, and not a miniature yellow painted on the corpuscle. The resemblance problem is already visible and will feed Berkeley and Hume. Whether the world is colorless unobserved is Locke’s edge; Berkeley answers by dropping matter.",
       "eraIds": [
         "empiricism"
       ],
@@ -2257,7 +2257,7 @@
         "immaterialism"
       ],
       "short": "For unthinking things, to be is to be perceived — matter as inert substratum does no work.",
-      "definition": "Berkeley’s Principles: an apple is a collection of ideas; abstract general ideas (a triangle neither equilateral nor scalene) are a fiction. This is not solipsism: spirits and God sustain the order of ideas (laws of nature as patterns). The vanishing-furniture joke ignores divine perception. He is abolishing a philosopher’s extra object, not the world of common life.",
+      "definition": "An apple is a collection of ideas; a triangle that is neither equilateral nor scalene is a fiction. This is not solipsism: spirits and God sustain the order of ideas. The vanishing-furniture joke ignores divine perception. Berkeley abolishes a philosopher’s extra object, not the world of common life.",
       "eraIds": [
         "empiricism"
       ],
@@ -2282,7 +2282,7 @@
         "perceptions of the mind"
       ],
       "short": "The lively perception — sensation or feeling — of which simple ideas are copies.",
-      "definition": "Hume’s copy principle: where an alleged idea has no impression, suspect a confusion. The missing shade of blue is the famous apparent exception; note it, don’t let it erase the rule. ‘Power,’ ‘necessary connexion,’ and a simple self will be run through this test. Locke’s ‘idea’ covered both; Hume splits force and liveliness.",
+      "definition": "Where an alleged idea has no impression, suspect a confusion. The missing shade of blue is the famous apparent exception; note it, don’t let it erase the rule. ‘Power,’ ‘necessary connexion,’ and a simple self will be run through this test.",
       "eraIds": [
         "empiricism"
       ],
@@ -2308,8 +2308,8 @@
       "aliases": [
         "Hume’s copy principle"
       ],
-      "short": "Simple ideas are copies of impressions — a meaning-test for philosophical terms.",
-      "definition": "Enquiry §2. Complex ideas may be compounded; the discipline is on empty terms. This prepares causation: hunt the impression of necessity. It is not a proof of the Forms, and not Berkeley’s esse est percipi restated without change. Peirce’s pragmatic maxim is a later, different meaning-test (conceivable practical effects).",
+      "short": "Simple ideas are copies of impressions — Hume’s meaning-test for philosophical terms.",
+      "definition": "Complex ideas may be compounded; the discipline is on empty terms. This prepares causation: hunt the impression of necessity. Peirce’s pragmatic maxim is a later, different test: conceivable practical effects.",
       "eraIds": [
         "empiricism"
       ],
@@ -2334,8 +2334,8 @@
         "matters of fact",
         "Hume’s fork"
       ],
-      "short": "Demonstrative, intuition-or-demonstration truths (geometry, arithmetic) — as opposed to matters of fact.",
-      "definition": "Enquiry §4: the contrary of a matter of fact is still conceivable. Causal claims about the unobserved are matters of fact, founded on cause and effect, and the inference from observed to unobserved is not itself a demonstration. Kant will rename a nearby cut analytic/synthetic and a priori/a posteriori, then relocate necessity. Quine will attack the analytic/synthetic dogma.",
+      "short": "Demonstrative truths (geometry, arithmetic) — as opposed to matters of fact, whose contraries remain conceivable.",
+      "definition": "Causal claims about the unobserved are matters of fact, and the inference from observed to unobserved is not itself a demonstration. Kant will rename a nearby cut analytic/synthetic and a priori/a posteriori. Quine will attack the analytic/synthetic dogma.",
       "eraIds": [
         "empiricism"
       ],
@@ -2361,8 +2361,8 @@
         "cause and effect",
         "constant conjunction"
       ],
-      "short": "Not insight into a glue in objects: constant conjunction plus the mind’s determination — custom as the guide of life.",
-      "definition": "Enquiry §§4–5, 7. Hume does not tell you to stop inferring; he tells you what the inference is. Two definitions of cause (regularity vs inward determination). Kant’s Copernican preface names this interruption of dogmatic metaphysics. Pre-established harmony and occasionalism were earlier answers to mind-body causation; Hume changes the subject to what we can mean.",
+      "short": "Not insight into a glue in objects: constant conjunction plus the mind’s determination.",
+      "definition": "Hume does not tell you to stop inferring; he tells you what the inference is. Custom is the guide of life. Kant’s Copernican preface names this interruption of dogmatic metaphysics. Pre-established harmony was an earlier answer to a different causal problem.",
       "eraIds": [
         "empiricism",
         "enlightenment"
@@ -2390,8 +2390,8 @@
       "aliases": [
         "habit (Hume)"
       ],
-      "short": "The instinctive principle by which we infer from past to future — Hume’s replacement for a demonstration of induction.",
-      "definition": "Mitigated skepticism: limit inquiry to what custom and experience support, without Pyrrhonian refusal to live. Mill will later fear the ‘despotism of custom’ in a political sense — a different word-use. Hume’s custom is why science still works after necessity is relocated to the mind’s feeling. It is not a new proof that the future must resemble the past.",
+      "short": "The instinct by which we infer from past to future — Hume’s replacement for a demonstration of induction.",
+      "definition": "Limit inquiry to what custom and experience support, without Pyrrhonian refusal to live. Science still works after necessity is relocated to the mind’s feeling — not because we have pierced essences. Mill’s ‘despotism of custom’ is a different, political use of the word.",
       "eraIds": [
         "empiricism"
       ],
@@ -2417,8 +2417,8 @@
         "necessary connection",
         "power (Hume)"
       ],
-      "short": "The impression we actually have: a feeling of determination after custom, projected onto the world — not a perceived power in objects.",
-      "definition": "Enquiry §7. We do not see the glue. If necessity is in the mind, science still works because custom is reliable enough for life, not because we have pierced essences. Kant will try to save necessity by making it a condition of possible experience. Do not say Hume ‘denies causation’ if you mean he denies this idea of secret power.",
+      "short": "The impression we actually have: a feeling of determination after custom, projected onto the world.",
+      "definition": "We do not see the glue. If necessity is in the mind, science still works because custom is reliable enough for life. Kant will try to save necessity as a condition of possible experience. Hume does not ‘deny causation’ if that means denying this idea of secret power.",
       "eraIds": [
         "empiricism"
       ],
@@ -2443,7 +2443,7 @@
         "problem of induction"
       ],
       "short": "The inference from ‘this has happened’ to ‘it will’ — not a theorem of experience, and not a demonstration.",
-      "definition": "Hume poses the problem; Russell’s Problems chapter names a principle of induction we cannot prove from experience and cannot do without. It is a postulate of knowledge, not a confession that we should stop expecting sunrise. Aristotle’s ‘induction’ toward first principles is a different technical use (epagōgē). Gettier cases later worry knowledge’s analysis, not this future-regarding gap.",
+      "definition": "Hume poses the problem; Russell names a principle we cannot prove from experience and cannot do without. It is a postulate of knowledge, not a confession that we should stop expecting sunrise. Aristotle’s induction toward first principles is a different tool.",
       "eraIds": [
         "empiricism",
         "twentieth-pd"
@@ -2470,8 +2470,8 @@
       "aliases": [
         "laws of nature (Hume §10)"
       ],
-      "short": "A violation of the laws of nature (as uniform experience establishes them) — Hume’s evidential bar for testimony.",
-      "definition": "Enquiry §10 is a rule of evidence, not a laboratory disproof of every report: testimony is insufficient unless its falsehood would be more miraculous than the fact. It is not the copy principle alone. Do not substitute ‘any surprise.’ Spinoza had already made miracles unintelligible inside necessary Nature; Hume weighs witnesses.",
+      "short": "A violation of the laws of nature as uniform experience establishes them — Hume’s bar for testimony.",
+      "definition": "Testimony is insufficient unless its falsehood would be more miraculous than the fact. This is a rule of evidence, not a laboratory disproof of every report, and not ‘any surprise.’ Spinoza had already made miracles unintelligible inside necessary Nature.",
       "eraIds": [
         "empiricism"
       ],
@@ -2496,8 +2496,8 @@
         "self",
         "identity of persons"
       ],
-      "short": "What makes a person the same over time — Locke: consciousness (forensic); Hume: a bundle and a fiction of the imagination.",
-      "definition": "Essay II.27: sameness of consciousness for reward and punishment, not a hidden soul-substance as such. Treatise I.4.6: no constant impression of self; resembling perceptions are mistaken for one object; memory helps the fiction. If there is no self, who is worried? — the sitting’s question. Du Bois’s double-consciousness will later split the first person under a veil; that is another structure, not Hume’s theatre.",
+      "short": "What makes a person the same over time — Locke: consciousness; Hume: a bundle and a fiction of imagination.",
+      "definition": "Locke’s person is forensic, for reward and punishment, not a hidden soul-substance as such. Hume finds no constant impression of self; resembling perceptions are mistaken for one object. Du Bois later splits the first person under a veil — another structure, not Hume’s theatre.",
       "eraIds": [
         "empiricism",
         "twentieth-pd"
@@ -2528,7 +2528,7 @@
         "bundle of perceptions"
       ],
       "short": "The mind as particular perceptions — no simple continuing self distinct from them.",
-      "definition": "Hume’s report of introspection plus an account of why we feign identity. It is not a joke that ‘no one is home,’ and not yet a moral theory of agency (later books of the Treatise). Locke’s forensic person is a rival picture, not a substance Hume failed to find. Russell’s sense-data are a twentieth-century cousin of ‘what we are directly acquainted with,’ not Hume’s full bundle thesis.",
+      "definition": "Hume reports introspection and explains why we feign identity. It is not a joke that no one is home. Locke’s forensic person is a rival picture, not a substance Hume failed to find.",
       "eraIds": [
         "empiricism"
       ],
@@ -2554,7 +2554,7 @@
         "teleological argument"
       ],
       "short": "From order in nature, analogically, to a mind like an artisan — underdetermined, says Philo.",
-      "definition": "Cleanthes infers a designer proportioned to the effect; Philo multiplies analogies and lets evil constrain what we may infer. The Dialogues do not simply ‘prove atheism’; they limit natural religion. This is not Anselm, not the Five Ways’ first mover as Aquinas frames it, and not Hume §10. After Parts X–XI, what remains of a particular picture of the author is the question.",
+      "definition": "Cleanthes infers a designer proportioned to the effect; Philo multiplies analogies and lets evil constrain what we may infer. The Dialogues do not simply prove atheism; they limit natural religion. This is not Anselm, and not Aquinas’s first mover.",
       "eraIds": [
         "empiricism"
       ],
@@ -2577,8 +2577,8 @@
       "aliases": [
         "amour de soi"
       ],
-      "short": "Comparative self-love that needs others’ eyes — a social passion, not mere self-preservation (amour de soi).",
-      "definition": "Discourse on Inequality: natural man has limited needs and pity; moral inequality is largely historical. Amour-propre arrives with socialization. Hobbes’s war is refused at the root as original fact. This is conjecture, not a field report on one tribe. Smith’s sympathy will start moral life in spectatorship from another angle.",
+      "short": "Comparative self-love that needs others’ eyes — not mere self-preservation (amour de soi).",
+      "definition": "Natural man, in Rousseau’s conjecture, has limited needs and pity; moral inequality is largely historical. Amour-propre arrives with socialization. Hobbes’s war is refused as original fact. This is not a field report on one tribe.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2602,8 +2602,8 @@
       "aliases": [
         "volonté générale"
       ],
-      "short": "The common interest the compact creates — not a poll of private appetites (the will of all).",
-      "definition": "Social Contract I–II: legitimacy, not force as right; alienation to the whole is supposed to produce a moral/collective body. Sovereignty is inalienable exercise of that will; government is not the same thing. ‘Forced to be free’ is a theory of education into citizenship, or a threat — the sitting asked you to hear the paradox. The lawgiver cannot be an ordinary authority because the people that needs forming cannot yet originate its laws.",
+      "short": "The common interest the compact creates — not a poll of private appetites.",
+      "definition": "Legitimacy, not force as right. Alienation to the whole is supposed to produce a moral body whose will you obey as your own. Sovereignty is that will’s exercise; government is not the same thing. ‘Forced to be free’ is education into citizenship, or a threat — hear the paradox.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2629,7 +2629,7 @@
         "volonté de tous"
       ],
       "short": "The sum of particular wills — factions and private interest, which the general will is not.",
-      "definition": "Contract II.3: mixing these two is the usual misreading. A vote can express the will of all and miss the common interest. This is not Mill’s harm principle, and not a utilitarian sum, though all three concern ‘many persons.’ Keep Rousseau’s distinction tight before you compare.",
+      "definition": "A vote can express the will of all and miss the common interest. Mixing the two is the usual misreading. This is not Mill’s harm principle, and not a utilitarian sum, though all three concern many persons.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2653,8 +2653,8 @@
         "fellow-feeling",
         "propriety (Smith)"
       ],
-      "short": "Fellow-feeling produced by imagining ourselves in another’s situation — Smith’s basis of moral sentiment, not pity only.",
-      "definition": "TMS I.i: propriety as correspondence of sentiment; the impartial spectator grows from this social mirroring. It is not Hobbesian glory, not a complete utilitarian calculus, and not Kant’s law. Kant will say sentiment of propriety is not yet duty. Do not import a cartoon ‘economic man’ from the Wealth of Nations into this opening.",
+      "short": "Fellow-feeling produced by imagining ourselves in another’s situation — Smith’s basis of moral sentiment.",
+      "definition": "Propriety is correspondence of sentiment; the impartial spectator grows from this mirroring. It is not pity only, not Hobbesian glory, and not Kant’s law. Do not import a cartoon ‘economic man’ from the Wealth of Nations into this opening.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2677,8 +2677,8 @@
       "aliases": [
         "spectator (Smith)"
       ],
-      "short": "The internalized gaze by which we judge our own passions — grown from ordinary spectatorship, not a transcendental deduction.",
-      "definition": "Smith’s device for how morality can be more than my clique’s taste. The sitting asked whether it can ever be more than a culture’s average gaze. It is a cousin of later ‘original position’ only in being a point of view; Rawls’s veil is a thought experiment for principles of justice, not a theory of moral sentiment. Keep the genealogies apart.",
+      "short": "The internalized gaze by which we judge our own passions — grown from ordinary spectatorship.",
+      "definition": "Smith’s device for how morality can be more than a clique’s taste. Whether it can ever be more than a culture’s average gaze is the live question. Rawls’s veil is a cousin only in being a point of view; it is not a theory of moral sentiment.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2703,7 +2703,7 @@
         "Copernican revolution (Kant)"
       ],
       "short": "Objects conform to our way of knowing — rather than the mind copying things in themselves.",
-      "definition": "Critique of Pure Reason prefaces: a research program for how a priori knowledge of objects is possible. Space, time, categories are on the subject’s side; knowledge is of appearances; room is made for faith regarding what cannot be known theoretically. Hume interrupted dogmatic necessity; Kant relocates it. The analogy is not ‘astronomy replaces epistemology,’ and not a weather report.",
+      "definition": "A research program for how a priori knowledge of objects is possible. Space, time, and the categories are on the subject’s side; knowledge is of appearances; room is made for faith regarding what cannot be known theoretically. Hume interrupted dogmatic necessity; Kant relocates it.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2729,8 +2729,8 @@
         "a posteriori",
         "synthetic a priori"
       ],
-      "short": "Independent of this or that experience — not ‘innate’ in Locke’s sense, and not ‘analytic’ automatically.",
-      "definition": "Kant’s four boxes: analytic/synthetic × a priori/a posteriori. The famous problem is the synthetic a priori (how metaphysics and, for him, mathematics/physics as he understands them are possible). Hume’s relations of ideas vs matters of fact is the provocation, not a side remark. Quine’s holism will later threaten the analytic/synthetic cut that helps keep the boxes tidy. ‘A priori’ is not a compliment meaning ‘obvious.’",
+      "short": "Independent of this or that experience — not ‘innate’ in Locke’s sense, and not automatically analytic.",
+      "definition": "Kant’s four boxes: analytic/synthetic crossed with a priori/a posteriori. The famous problem is the synthetic a priori. Hume’s fork is the provocation. Quine’s holism later threatens the analytic/synthetic cut that keeps the boxes tidy. ‘A priori’ is not a compliment meaning ‘obvious.’",
       "eraIds": [
         "enlightenment"
       ],
@@ -2756,8 +2756,8 @@
         "analyticity",
         "analytic synthetic distinction"
       ],
-      "short": "Predicate contained in the subject vs adding to it — Kant’s cut; Quine’s first dogma.",
-      "definition": "Kant needs the cut (plus a priori/a posteriori) to pose the synthetic a priori. Quine’s ‘Two Dogmas’ argues that synonymy, definition, and necessity circle rather than ground analyticity, and that reductionism (each sentence to a sensory range) is the second dogma. If the cut goes, Kant’s architecture is among the casualties the assignment asked you to consider. Hume’s fork is an ancestor, not the same tool.",
+      "short": "Predicate contained in the subject versus adding to it — Kant’s cut; Quine’s first dogma.",
+      "definition": "Kant needs the cut to pose the synthetic a priori. Quine argues that synonymy, definition, and necessity circle rather than ground analyticity, and that reductionism is a second dogma. If the cut goes, Kant’s architecture is among the casualties. Hume’s fork is an ancestor, not the same tool.",
       "eraIds": [
         "enlightenment",
         "present-day"
@@ -2786,7 +2786,7 @@
         "phenomena"
       ],
       "short": "Appearance as object of possible experience — what we can know, for Kant, as opposed to the thing in itself.",
-      "definition": "The Copernican limit: knowledge is of phenomena. Schopenhauer will call the world as representation this side, then name Will as thing-in-itself (against a strict Kantian ban on naming it). Husserlian ‘phenomenology’ in the keep-going map is a later method, not Kant’s pair. Keep ‘phenomenon’ tagged to the first Critique sitting unless a later assignment says otherwise.",
+      "definition": "Knowledge is of phenomena. Schopenhauer calls this side the world as representation, then names Will as thing-in-itself. Later ‘phenomenology’ on the keep-going map is a different method. Keep the word tagged to the first Critique unless a later sitting says otherwise.",
       "eraIds": [
         "enlightenment",
         "nineteenth"
@@ -2816,7 +2816,7 @@
         "things in themselves"
       ],
       "short": "The thing in itself, thinkable as a limit — not knowable as an object given to us.",
-      "definition": "Kant: denying knowledge of noumena makes room for faith (and for freedom as practical). Schopenhauer claims to name the noumenon Will — the sitting asked whether that violates Kant’s ban or only relabels it. Noumenon is not Russell’s sense-datum, not Plato’s Form, and not Heidegger’s being. Two-aspect vs two-object readings of Kant are allowed as caution; the course’s prefaces are the program, not the whole Analytic.",
+      "definition": "Denying knowledge of noumena makes room for faith, and for freedom as practical. Schopenhauer claims to name the noumenon Will — whether that violates Kant’s ban is the question. Noumenon is not Russell’s sense-datum, not Plato’s Form, and not Heidegger’s being.",
       "eraIds": [
         "enlightenment",
         "nineteenth"
@@ -2843,8 +2843,8 @@
       "aliases": [
         "unqualified good"
       ],
-      "short": "The only thing good without qualification — even if it achieves nothing. Talents can be bad without it.",
-      "definition": "Groundwork I, against gifts of nature and fortune, and against happiness as the unqualified good (Aristotle’s eudaimonia is in the dock as a rival highest good). Moral worth attaches to action from duty, not merely in accordance with duty (the honest shopkeeper). A person who enjoys helping can still act from duty; the analysis isolates the motive. This is not Schopenhauer’s Will.",
+      "short": "The only thing good without qualification — even if it achieves nothing.",
+      "definition": "Talents and gifts of fortune can be bad without it. Happiness is refused as the unqualified good. Moral worth attaches to action from duty, not merely in accordance with duty. A person who enjoys helping can still act from duty; the analysis isolates the motive. This is not Schopenhauer’s Will.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2870,8 +2870,8 @@
         "imperative of skill",
         "counsel of prudence"
       ],
-      "short": "A means-end rule: if you will the end, you ought to will the means — conditional on an end you already have.",
-      "definition": "Groundwork II’s grammar: the moral law is not hypothetical. Prudence (how to be happy) is hypothetical. Technical imperatives (if you want a house, use bricks) likewise. Confusing these with the categorical imperative is the usual classroom muddle. Mill’s utility will look, to a Kantian, like a vast hypothetical of happiness.",
+      "short": "A means–end rule: if you will the end, you ought to will the means.",
+      "definition": "The moral law is not hypothetical. Prudence — how to be happy — is. Technical imperatives likewise. Confusing these with the categorical imperative is the usual muddle. Mill’s utility looks, to a Kantian, like a vast hypothetical of happiness.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2897,8 +2897,8 @@
         "universal law",
         "formula of humanity"
       ],
-      "short": "Unconditional: act only on a maxim you can will as universal law — and treat humanity always as an end, never merely as a means.",
-      "definition": "Section I arrives at universal law from common moral cognition; Section II unpacks formulas (law, humanity, autonomy/kingdom of ends) as supposedly equivalent accents. False promising is the mere-means test. It is not advice about what typically produces happiness. Kierkegaard’s Abraham will collide with this universal; Anscombe will later say a law-sense of ‘ought’ without a lawgiver is a surviving fragment. Hear Kant first as he states it.",
+      "short": "Unconditional: act only on a maxim you can will as universal law, and treat humanity always as an end.",
+      "definition": "Section I arrives at universal law from common moral cognition; Section II unpacks formulas as supposedly equivalent accents. False promising is the mere-means test. It is not advice about what typically produces happiness. Kierkegaard’s Abraham will collide with this universal.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2925,7 +2925,7 @@
         "humanity as an end"
       ],
       "short": "Treat humanity in yourself and others always as an end, never merely as a means.",
-      "definition": "Not a ban on all cooperation (using someone’s skills with their possible consent is not ‘mere’ means). A lying promise uses another’s agency as a tool. Whether this formula is a different insight from universal law or the same law in another accent was the sitting’s question. Rawls’s persons in the original position inherit a Kantian insistence on not sacrificing some as a mere sum.",
+      "definition": "Not a ban on all cooperation: using someone’s skills with their possible consent is not ‘mere’ means. A lying promise uses another’s agency as a tool. Whether this is a different insight from universal law, or the same law in another accent, is the question.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2949,8 +2949,8 @@
       "aliases": [
         "self-legislation"
       ],
-      "short": "The will’s property of being a law to itself — as opposed to heteronomy (law from an object of desire or an alien authority).",
-      "definition": "Groundwork II’s third formula gathers legislators in a kingdom of ends. This is not ‘doing whatever you feel,’ and not Rousseau’s general will (though Kant admired a related republican freedom). Political autonomy talk in later maps is a descendant, not the Groundwork’s definition. Heteronomy includes both appetite and a merely external command as the source of the principle.",
+      "short": "The will’s property of being a law to itself — as opposed to heteronomy.",
+      "definition": "Not ‘doing whatever you feel.’ Legislators gathered in a kingdom of ends. Political autonomy talk later is a descendant, not this definition. Heteronomy includes both appetite and a merely external command as the source of the principle.",
       "eraIds": [
         "enlightenment"
       ],
@@ -2975,8 +2975,8 @@
       "aliases": [
         "heteronomous will"
       ],
-      "short": "The will’s principle taken from something other than its own law — inclination, expected happiness, or external authority as such.",
-      "definition": "The contrast that makes autonomy sharp. A hypothetical imperative is heteronomous in Kant’s sense when it borrows its law from an object. Divine-command ethics, if the law is merely another’s will, is heteronomy — which is why the Euthyphro problem still matters, and why Anscombe will say a modern ‘ought’ looks like a law without a lawgiver. Not a slur meaning ‘immature.’",
+      "short": "The will’s principle taken from something other than its own law — inclination, expected happiness, or alien authority.",
+      "definition": "A hypothetical imperative is heteronomous when it borrows its law from an object. Divine command, if the law is merely another’s will, is heteronomy — which is why the Euthyphro problem still matters, and why Anscombe will say a modern ‘ought’ looks like a law without a lawgiver.",
       "eraIds": [
         "enlightenment"
       ],
@@ -3002,7 +3002,7 @@
         "lordship and bondage"
       ],
       "short": "Self-consciousness that needs another: each wants to be acknowledged as not a mere thing.",
-      "definition": "Hegel’s lordship/bondage: the struggle, the unequal roles, the lord’s unstable dependence on a reduced other, the bondsman’s work as the engine of a new self. Independent self-consciousness is not achieved by ignoring others — a break with a lonely cogito. Later political philosophy (maps: recognition, domination, gender, race) uses the word in related but not identical ways. Stay with the Phenomenology sitting first.",
+      "definition": "The struggle, the unequal roles, the lord’s unstable dependence on a reduced other, the bondsman’s work as the engine of a new self. Independent self-consciousness is not achieved by ignoring others — a break with a lonely cogito. Later political uses of ‘recognition’ are related, not identical.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3029,7 +3029,7 @@
         "the world is my idea"
       ],
       "short": "‘The world is my idea’: object for a subject — Kant’s phenomena radicalized.",
-      "definition": "World as Will and Representation Book I: the world as representation. Book II: Will as the inner, thing-in-itself, blind striving; intellect is its instrument. This is not Locke’s ‘idea,’ not the Tractatus’s logical picture, and not a claim that only I exist in Berkeley’s theistic sense. Suffering follows if will is endless. Ethics would be denial or aesthetic quiet, if your sitting reached that far.",
+      "definition": "Then Will as the inner, thing-in-itself, blind striving; intellect is its instrument. This is not Locke’s idea, not the Tractatus’s logical picture, and not Berkeley’s theistic immaterialism. Suffering follows if will is endless.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3055,8 +3055,8 @@
         "greatest happiness principle",
         "utilitarianism"
       ],
-      "short": "The standard of right: happiness as pleasure and absence of pain of all concerned — with a distinction of higher and lower pleasures.",
-      "definition": "Mill, Utilitarianism ch. 2: not a cartoon of swine; quality is identified by competent judges who know both kinds. Better Socrates dissatisfied than a fool satisfied. The standard is the general happiness, not a private clique; motive may still be local. Kant sees a hypothetical imperative of happiness; Mill sees a rival first word for ethics. Harm and individuality later show how utility is supposed to protect liberty, not crush the eccentric.",
+      "short": "The standard of right: happiness as pleasure and absence of pain of all concerned, with higher and lower kinds.",
+      "definition": "Not a cartoon of swine. Quality is identified by competent judges who know both kinds. The standard is the general happiness, not a private clique. Kant sees a hypothetical of happiness; Mill sees a rival first word for ethics.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3084,7 +3084,7 @@
         "quality of pleasure"
       ],
       "short": "Pleasures of a kind competent judges prefer — Mill’s test of quality, not intensity alone.",
-      "definition": "The ranking is comparative verdict, not a priestly list. A common misreading is that Mill simply asserts poetry is nicer. Whether competent judges smuggle a non-utilitarian ranking of lives was the seminar question. This is how he answers ‘utilitarianism is a doctrine worthy of swine.’",
+      "definition": "The ranking is comparative verdict, not a priestly list. Whether competent judges smuggle a non-utilitarian ranking of lives is the live question. This is how Mill answers ‘a doctrine worthy of swine.’",
       "eraIds": [
         "nineteenth"
       ],
@@ -3107,8 +3107,8 @@
       "aliases": [
         "principle of liberty"
       ],
-      "short": "The only rightful purpose for coercing a member of a civilized community, against their will, is to prevent harm to others.",
-      "definition": "On Liberty I: not offense, not paternalism for adults as such. Chapter II defends free discussion (silencing robs the human race whether the opinion is true or false). ‘Harm’ may expand on demand — that was a lookFor worry. Self-regarding faults are not crimes. Individuality (ch. III) then says why liberty is a social good, not only non-interference with trade.",
+      "short": "Power may be exercised over a member of a civilized community, against their will, only to prevent harm to others.",
+      "definition": "Not offense, not paternalism for adults as such. Silencing an opinion robs the human race whether the opinion is true or false. ‘Harm’ may expand on demand. Self-regarding faults are not crimes. Individuality then says why liberty is a social good, not only non-interference with trade.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3134,7 +3134,7 @@
         "experiments in living"
       ],
       "short": "Experiments in living as an ingredient of well-being and progress — against the despotism of custom.",
-      "definition": "On Liberty III: eccentricity is not automatically virtue; frozen types block the competition of ways of life. A utilitarian who crushes the eccentric for majority happiness has failed Mill’s own chapter. Rousseau’s general will may look hostile to being unlike others — another seminar contrast. The harm principle still binds: individuality is not a right to injure.",
+      "definition": "Eccentricity is not automatically virtue; frozen types block the competition of ways of life. A utilitarian who crushes the eccentric for majority happiness has failed Mill’s own chapter. The harm principle still binds: individuality is not a right to injure.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3161,7 +3161,7 @@
         "existence (Kierkegaard)"
       ],
       "short": "Abraham’s relation to Isaac cannot be justified in universal ethical language — a private absolute duty to God.",
-      "definition": "Fear and Trembling: the knight of faith vs the tragic hero who remains in the ethical. Silence matters because language is the ethical’s medium. This refuses Hegelian mediation and collides with Kantian universal law. Distinguishable from a murderer only by an inner we cannot see — the sitting’s own terror. It is not a permission to murder for convenience.",
+      "definition": "The knight of faith versus the tragic hero who remains in the ethical. Silence matters because language is the ethical’s medium. This refuses Hegelian mediation and collides with Kantian universal law. Distinguishable from a murderer only by an inner we cannot see — that is the terror.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3184,8 +3184,8 @@
       "aliases": [
         "bourgeoisie and proletariat"
       ],
-      "short": "The Manifesto’s structure of history: oppressor and oppressed, simplified in modernity into bourgeoisie and proletariat.",
-      "definition": "The bourgeoisie is revolutionary: it constantly revolutionizes production and produces its own grave-diggers. Communism in §II targets bourgeois property as class property, not every personal appropriation as such (the pamphlet’s rhetoric). Political power is organized power of one class. Hegel’s bondsman-labor becomes world-historical. Whether this is moral condemnation, prediction, or both was the question.",
+      "short": "The Manifesto’s structure of history: oppressor and oppressed, simplified into bourgeoisie and proletariat.",
+      "definition": "The bourgeoisie constantly revolutionizes production and produces its own grave-diggers. Communism targets bourgeois property as class property, not every personal appropriation. Political power is organized power of one class. Hegel’s bondsman-labor becomes world-historical.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3209,8 +3209,8 @@
       "aliases": [
         "ruling ideas"
       ],
-      "short": "The ruling ideas of an age as the ideas of the ruling class — consciousness shaped by material relations, not a free-floating ‘worldview.’",
-      "definition": "The Manifesto’s assigned chapters give you class struggle and bourgeois revolution more than a treatise called Ideology. Use the word as that pamphlet frames inverted justification: legal and religious ideas that present particular interests as universal. The 1845 German Ideology is not hosted and not assigned; do not paste it. Species-being is the neighboring anthropology of productive life under alienation.",
+      "short": "The ruling ideas of an age as the ideas of the ruling class — consciousness shaped by material relations.",
+      "definition": "Legal and religious ideas that present particular interests as universal. The German Ideology is not assigned; stay with the pamphlet’s frame. Species-being is the neighboring anthropology of productive life.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3234,8 +3234,8 @@
         "Gattungswesen",
         "species being"
       ],
-      "short": "Humanity as productive, social life — the anthropology behind abolishing bourgeois property, named in writings this course does not host.",
-      "definition": "The Manifesto sitting is class struggle and a program; ‘species-being’ (Gattungswesen) is the 1844 word for what wage-labor alienates. Include it as the implied humanism of unalienated production, not as a quotation from an unassigned manuscript. A materialist (the assignment’s own question to Sartre) will say this is what existentialist freedom misses: conditions, class, metabolism with nature.",
+      "short": "Humanity as productive, social life — the anthropology behind abolishing bourgeois property.",
+      "definition": "The phrase is from writings this course does not host; the Manifesto sitting is class struggle and a program. Use it for what wage-labor is said to alienate. A materialist will tell Sartre this is what existentialist freedom misses: conditions, class, metabolism with nature.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3259,8 +3259,8 @@
       "aliases": [
         "slave revolt in morals"
       ],
-      "short": "A history of morals that explains values by their descent — not a proof that they are false, and not a timeline of Nietzsche’s life.",
-      "definition": "Genealogy I: good/bad vs good/evil; ressentiment as creative. Essay II: memory of the will, debt, bad conscience as internalized cruelty. If the genealogy is true, does it refute the values or only explain them? Foucault’s Panopticism is a later genealogical sitting applied to prisons. This is not Aristotle’s genus-and-species, and not a family tree of concepts.",
+      "short": "A history of morals that explains values by their descent — not a proof that they are false.",
+      "definition": "Good/bad versus good/evil; ressentiment as creative; bad conscience as internalized cruelty. If the genealogy is true, does it refute the values or only explain them? Foucault later applies a genealogical sitting to prisons. This is not Aristotle’s genus-and-species.",
       "eraIds": [
         "nineteenth",
         "present-day"
@@ -3291,7 +3291,7 @@
         "good and evil vs good and bad"
       ],
       "short": "Creative revenge in valuation: the weak invert noble good/bad into good/evil that brands the strong as evil.",
-      "definition": "Essay I: two pairs of terms. Mixing good/bad with good/evil is the usual error. Ressentiment is not a mere complaint; it produces a new table of values. Mill’s competent judges, in this story, would need locating — that was a seminar question. Not a medical diagnosis, and not ‘resentment’ as a passing mood.",
+      "definition": "Two pairs of terms; mixing them is the usual error. Ressentiment is not a mere complaint; it produces a new table of values. Not a medical diagnosis, and not resentment as a passing mood.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3315,8 +3315,8 @@
         "guilt (Nietzsche)",
         "internalization"
       ],
-      "short": "Instincts that cannot discharge outwardly turn inward — interiority as a historical product, with guilt as a debt-story.",
-      "definition": "Genealogy II: the promise-making animal needed a memory made of pain; then internalization. Guilt as creditor–debtor, not a timeless fact of reason. Augustine’s divided will can be redescribed in this vocabulary without reducing Hippo to a footnote. The sovereign individual (who may promise) is an achievement, not a given. This is not Freud’s term, even if it rhymes.",
+      "short": "Instincts that cannot discharge outwardly turn inward — interiority as a historical product.",
+      "definition": "The promise-making animal needed a memory made of pain; then internalization. Guilt as a creditor–debtor story, not a timeless fact of reason. The sovereign individual who may promise is an achievement, not a given.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3340,8 +3340,8 @@
       "aliases": [
         "Wille zur Macht"
       ],
-      "short": "The genealogical name for life as interpretive force and command — not a cartoon of domination for its own sake, and not Kant’s good will.",
-      "definition": "The assigned Genealogy and Gay Science sittings teach revaluation, ressentiment, and the death of God more than a treatise titled Will to Power (which this course does not assign as a book). Hear will to power as the psychology of valuation those essays imply: values are instituted, not found as Plato’s Good or Mill’s pleasant. Do not quote later compiled notebooks; stay with the sitting’s moves.",
+      "short": "Life as interpretive force and command — not a cartoon of domination, and not Kant’s good will.",
+      "definition": "The assigned Genealogy and Gay Science teach revaluation and the death of God more than a compiled notebook titled Will to Power. Hear it as the psychology of valuation those essays imply: values are instituted, not found as Plato’s Good.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3370,7 +3370,7 @@
         "madman (Gay Science)"
       ],
       "short": "The Christian-Platonic horizon of meaning has collapsed — an event in us whose consequences are not yet absorbed.",
-      "definition": "Gay Science: the madman announces unreadiness, not a meteorological report and not only a jab at priests. What values and sciences still presuppose the dead God? Recurrence (if in your stretch) is an ethical test, not an astrophysics paper. Hume §10 is a different argument. The Tractatus’s silence and Murdoch’s Good are later, rival responses to a thinned sky.",
+      "definition": "The madman announces unreadiness, not a weather report and not only a jab at priests. What values and sciences still presuppose the dead God? Hume on miracles is a different argument. The Tractatus’s silence and Murdoch’s Good are later, rival responses to a thinned sky.",
       "eraIds": [
         "nineteenth"
       ],
@@ -3395,8 +3395,8 @@
         "pragmaticism",
         "conceivable practical effects"
       ],
-      "short": "The meaning of a conception lies in the practical effects we conceive the object of the conception to have.",
-      "definition": "Peirce: belief is a habit of action; doubt irritates; inquiry settles. Hardness is a conception of would-be interactions, not a Cartesian inner glow. This does not yet say ‘true means useful this afternoon.’ James will shift toward cash-value and truth that happens to an idea. Descartes’ clear-and-distinct fails this test if it has no conceivable bearings.",
+      "short": "The meaning of a conception lies in the practical effects we conceive the object to have.",
+      "definition": "Belief is a habit of action; doubt irritates; inquiry settles. Hardness is a conception of would-be interactions, not a Cartesian inner glow. This does not yet say ‘true means useful this afternoon.’ Descartes’ clear-and-distinct fails the test if it has no conceivable bearings.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3422,8 +3422,8 @@
         "cash-value",
         "truth happens"
       ],
-      "short": "As this course uses it: an idea’s truth as what can be assimilated, corroborated, lived — not the later positivist slogan ‘meaning is the method of verification’ as a hosted text.",
-      "definition": "James: truth happens to an idea; it is verified in leading and working, fenced by other truths and the long run. Peirce’s maxim is the ancestor (effects, not private comfort). The Tractatus pictures possible states of affairs (truth-conditions), which is a different tool. Logical positivism’s verification principle is a map-item, not an assigned essay. Do not parody James as ‘whatever pleases me is true.’",
+      "short": "An idea’s truth as what can be assimilated, corroborated, lived — not the later positivist slogan as a hosted text.",
+      "definition": "James: truth happens to an idea; it is verified in leading and working, fenced by other truths and the long run. Peirce’s maxim is the ancestor. The Tractatus pictures possible states of affairs — a different tool. Do not parody James as ‘whatever pleases me is true.’",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3451,8 +3451,8 @@
         "genuine option",
         "living forced momentous"
       ],
-      "short": "When an option is living, forced, and momentous, and intellect cannot decide, it can be lawful to will a belief that runs ahead of proof.",
-      "definition": "James against Clifford’s ‘always wait.’ Friendship and religion are the examples, not next week’s weather. Waiting is already a bet. It is not a license for wishful meteorology, and it sits in tension with Peirce’s method of science. Pascal’s Wager is a cousin under uncertainty, not a demonstration.",
+      "short": "When an option is living, forced, and momentous, and intellect cannot decide, it can be lawful to believe ahead of proof.",
+      "definition": "James against Clifford’s ‘always wait.’ Friendship and religion are the examples, not next week’s weather. Waiting is already a bet. It sits in tension with Peirce’s method of science. Pascal’s Wager is a cousin under uncertainty.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3476,8 +3476,8 @@
       "aliases": [
         "experimental intelligence"
       ],
-      "short": "Shift philosophy from a museum of ultimate being toward experimental, social intelligence dealing with present problems.",
-      "definition": "Reconstruction in Philosophy: inherited problems are historically rooted in clashes of custom and new knowledge, then asked whether they still serve. Spectator theories of knowing vs doing are the dualism to undo. This is relocation of philosophy’s office, not a denial of science. Kant’s a priori looks different if origins are this worldly. Du Bois next in the unit is not an illustration of Dewey; the Veil is its own analysis.",
+      "short": "Shift philosophy from a museum of ultimate being toward experimental, social intelligence.",
+      "definition": "Inherited problems are historically rooted in clashes of custom and new knowledge, then asked whether they still serve. Spectator theories of knowing versus doing are the dualism to undo. This is relocation of philosophy’s office, not a denial of science.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3501,8 +3501,8 @@
         "two-ness",
         "twoness"
       ],
-      "short": "The sense of always looking at oneself through the eyes of a white world — two-ness of American and Negro, not ‘low self-esteem.’",
-      "definition": "Du Bois: a structure of self-knowledge under domination. The Veil splits worlds of meaning and recognition. It complicates Locke’s and Hume’s first-person self. Whether it is only a wound or also a way of knowing what the veil hides from others was the sitting’s question. Do not reduce it to a pragmatist example of James’s will to believe.",
+      "short": "The sense of always looking at oneself through the eyes of a white world — two-ness, not low self-esteem.",
+      "definition": "A structure of self-knowledge under domination. The Veil splits worlds of meaning and recognition. It complicates Locke’s and Hume’s first-person self. Whether it is only a wound, or also a way of knowing what the veil hides from others, is the question.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3526,8 +3526,8 @@
       "aliases": [
         "color-line"
       ],
-      "short": "The barrier that splits worlds of seeing and being seen — lived segregation of experience, not a fashion.",
-      "definition": "Souls of Black Folk uses the image as analysis. Emancipation’s aftermath frames the philosophical problem of the color-line as a world-historical structure, not a failure of individual manners. Distinct from Rawls’s veil of ignorance (a device for choosing principles) and from Kant’s veil of perception talk. Same English word, different tools.",
+      "short": "The barrier that splits worlds of seeing and being seen — lived segregation of experience.",
+      "definition": "Du Bois uses the image as analysis. The color-line is a world-historical structure, not a failure of manners. Distinct from Rawls’s veil of ignorance, a device for choosing principles. Same English word, different tools.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3550,8 +3550,8 @@
       "aliases": [
         "good as simple"
       ],
-      "short": "Identifying good with some natural property (pleasure, fitness…) — for Moore, a failed analysis of a simple non-natural property.",
-      "definition": "Principia Ethica opening: good is simple and indefinable; ‘good = X’ remains an open question. It does not mean ‘never mention nature’ in ethics. Mill’s ‘pleasure is good’ would be tautological if it were an analysis, which Moore denies it successfully is. Anscombe will later want a psychology of action rather than Moore’s property — another sitting.",
+      "short": "Identifying good with some natural property — for Moore, a failed analysis of a simple non-natural property.",
+      "definition": "Good is simple and indefinable; ‘good = pleasure’ remains an open question. It does not mean never mention nature in ethics. Mill’s ‘pleasure is good’ would be tautological if it were an analysis, which Moore denies it successfully is.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3576,7 +3576,7 @@
         "open question"
       ],
       "short": "For any proposed ‘good = X,’ it remains an intelligible question whether X is good — so the analysis fails.",
-      "definition": "Moore’s test of definitions. You may reject it as a linguistic habit; you must state it. It is meant to show that good is not identical with a natural or metaphysical stand-in. Pair with the naturalistic fallacy; they are the same campaign. Not a proof that ethics is impossible.",
+      "definition": "Moore’s test of definitions. You may reject it as a linguistic habit; you must state it. Pair it with the naturalistic fallacy; they are the same campaign. Not a proof that ethics is impossible.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3599,8 +3599,8 @@
         "sense data",
         "sensibilia"
       ],
-      "short": "The color-patch, hardness, etc., immediately present in experience — what Russell says we are acquainted with, not yet the public table.",
-      "definition": "Problems of Philosophy: appearance vs the physicist’s object. Idealism is a live option he will not simply swallow. Knowledge by description then bridges to other minds and to physics. This is not Berkeley’s whole ontology (spirits + God), and not Kant’s phenomenon as a structured object of possible experience. Heidegger will refuse this starting point.",
+      "short": "The color-patch, hardness, and so on immediately present — what Russell says we are acquainted with, not yet the public table.",
+      "definition": "Appearance versus the physicist’s object. Idealism is a live option he will not simply swallow. Knowledge by description then bridges to other minds and to physics. This is not Berkeley’s whole ontology, and not Kant’s structured phenomenon.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3625,8 +3625,8 @@
       "aliases": [
         "acquainted with"
       ],
-      "short": "Direct presentation — sense-data, perhaps oneself — as opposed to knowledge by description of what we are not directly given.",
-      "definition": "Russell’s bridge out of the table problem. Logically proper names, in his apparatus, would attach to what we are acquainted with; ordinary names work by descriptions. The course’s sitting is the table and then induction; On Denoting is not assigned. Use these terms as the Problems chapters frame reaching the not-immediately-given.",
+      "short": "Direct presentation — sense-data, perhaps oneself — as opposed to knowledge by description of what we are not given.",
+      "definition": "Russell’s way out of the table problem. Logically proper names would attach to what we are acquainted with; ordinary names work by descriptions. On Denoting is not assigned; use the Problems chapters’ frame.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3650,8 +3650,8 @@
       "aliases": [
         "description (Russell)"
       ],
-      "short": "Knowing an object as ‘the so-and-so’ when we are not acquainted with it — Russell’s route to physics and other minds.",
-      "definition": "Without this, sense-data trap you in a private show. Definite descriptions (‘the table that causes these data’) do the work. It is a hypothesis about how science and common sense get beyond appearance, not a refutation of Berkeley by force. Distinct from Plato’s tethering of true opinion, though both concern how thought reaches beyond the given.",
+      "short": "Knowing an object as ‘the so-and-so’ when we are not acquainted with it.",
+      "definition": "Without this, sense-data trap you in a private show. Definite descriptions do the work of reaching the table and other minds. It is a hypothesis about how science gets beyond appearance, not a refutation of Berkeley by force.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3675,8 +3675,8 @@
       "aliases": [
         "the so-and-so"
       ],
-      "short": "A phrase of the form ‘the F’ — how we talk about what we are not acquainted with, in Russell’s Problems apparatus.",
-      "definition": "The assigned chapters use description to reach the table and other minds; they are not the 1905 paper. A definite description picks uniquely (or fails) rather than naming by baptism. Logically proper names would be the other pole (direct tags on the given). Kripke’s later causal-historical names are a map-item, not this sitting.",
+      "short": "A phrase of the form ‘the F’ — how we talk about what we are not acquainted with.",
+      "definition": "It picks uniquely, or fails, rather than naming by baptism. Ordinary names, for this Russell, are truncated descriptions. Kripke’s later causal-historical names are a map-item, not this sitting.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3700,7 +3700,7 @@
         "logically proper names"
       ],
       "short": "A name whose meaning is the object of acquaintance — not an ordinary proper name that works by descriptions.",
-      "definition": "In the Russell of this course, ordinary names (‘Bismarck,’ ‘the table’) are truncated descriptions; a logically proper name would require direct presentation. This is how he tries to keep contact with reality without claiming we are acquainted with physical objects. Wittgenstein’s later language-games will loosen naming as the whole story of meaning.",
+      "definition": "Ordinary names are truncated descriptions; a logically proper name would require direct presentation. That is how Russell tries to keep contact with reality without claiming we are acquainted with physical objects. Later Wittgenstein loosens naming as the whole story of meaning.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3726,7 +3726,7 @@
         "logical form"
       ],
       "short": "A proposition shares logical form with a possible state of affairs — it shows how things stand if true.",
-      "definition": "Tractatus 1–4: the world is the totality of facts, not of things. Sense is a possible situation, not a psychological association. Logical form cannot be said in the same way; it shows. Ethics and the mystical are not additional facts among facts — that is the later assigned silence. PI §§1–43 will attack naming and picturing as the whole of meaning.",
+      "definition": "The world is the totality of facts, not of things. Sense is a possible situation, not a psychological association. Logical form cannot be said in the same way; it shows. Ethics and the mystical are not additional facts among facts.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3753,7 +3753,7 @@
         "whereof one cannot speak"
       ],
       "short": "What can be shown cannot be said — logical form, ethics, the mystical; the book itself is a ladder to throw away.",
-      "definition": "Tractatus 6–7: elucidations to be discarded once one has seen the world rightly. Proposition 7 is a rule, not a poetic sigh. God does not reveal himself in the world as a fact. If the book is nonsense by its own light, why read it? — the sitting’s question. A second Wittgenstein will change pictures and the dream of a final silence.",
+      "definition": "Elucidations to be discarded once one has seen the world rightly. Proposition 7 is a rule, not a poetic sigh. If the book is nonsense by its own light, why read it? A second Wittgenstein will change pictures and the dream of a final silence.",
       "eraIds": [
         "twentieth-pd"
       ],
@@ -3778,8 +3778,8 @@
       "aliases": [
         "language game"
       ],
-      "short": "A comparison: looking at primitive practices of using words to loosen the grip of one picture — not a theory of everything.",
-      "definition": "PI §§1–43 (bibliographic): the shopkeeper and five red apples crack ‘words as names of objects.’ Meaning as use is mastery of a technique in a practice, not ‘words mean whatever I like.’ Ostensive definition cannot be the whole story. This is the repudiation of the Tractatus picture theory from inside the same life, without requiring long quotation of the English translation.",
+      "short": "A comparison: looking at primitive practices of using words, to loosen the grip of one picture.",
+      "definition": "The shopkeeper and the five red apples crack ‘words as names of objects.’ Meaning as use is mastery of a technique in a practice, not ‘words mean whatever I like.’ This repudiates the Tractatus picture theory without being a theory of everything.",
       "eraIds": [
         "present-day"
       ],
@@ -3804,7 +3804,7 @@
         "meaning is use"
       ],
       "short": "Understanding a word is often knowing how to go on in a practice — not always having a mental picture of an object.",
-      "definition": "The Augustinian picture (word → object) is the target of the assigned sections. Use is public technique, with criteria; it is not a private pointing that needs no public check, and not a slogan that anything I say is correct. Family resemblance then warns against one hidden essence behind all uses of ‘game.’",
+      "definition": "The Augustinian picture (word to object) is the target. Use is public technique, with criteria; it is not a private pointing that needs no public check. Family resemblance then warns against one hidden essence behind all uses of ‘game.’",
       "eraIds": [
         "present-day"
       ],
@@ -3829,7 +3829,7 @@
         "family resemblances"
       ],
       "short": "A warning against assuming one essence hidden behind all uses of a word — not a biological taxonomy of concepts.",
-      "definition": "The assignment asked whether this is a theory of concepts or a warning against theories of concepts. The safer reading of §§1–43 is the warning. Overlapping similarities (games) replace a single Form of Game. It is not a return to Plato’s eidos, and not a proof that philosophy is over.",
+      "definition": "Overlapping similarities (games) replace a single Form of Game. Safer as a warning against theories of concepts than as a new theory of concepts. It is not a return to Plato’s eidos.",
       "eraIds": [
         "present-day"
       ],
@@ -3853,7 +3853,7 @@
         "being-there"
       ],
       "short": "The entity we are, whose being is an issue for it — the one that understands being, not a Cartesian subject with properties first.",
-      "definition": "Being and Time Introduction §§1–4 (bibliographic): the forgotten question is being; Dasein is the being that can ask it. Existence here is ours, not a list of attributes of a thing. Russell’s table would look different if the first question were being, not sense-data. Read only the assigned sections in a legal copy; this gloss follows that framing, not a paraphrase of later chapters.",
+      "definition": "The forgotten question is being; Dasein is the being that can ask it. Existence here is ours, not a list of attributes of a thing. Russell’s table would look different if the first question were being, not sense-data. The assigned move is the Introduction, not the whole book.",
       "eraIds": [
         "present-day"
       ],
@@ -3878,8 +3878,8 @@
       "aliases": [
         "being is not a being"
       ],
-      "short": "Being is not a being among beings — pointing to God, nature, or the subject does not answer ‘what it means to be.’",
-      "definition": "The introduction’s diagnosis of forgetfulness. Method and subject-matter: fundamental ontology via the being that asks. This is not a mineral in an inventory, not Parmenides’ sphere as cosmology only, and not Kant’s noumenon. The German/English book is in copyright; study the assigned move, not a scan.",
+      "short": "Being is not a being among beings — pointing to God, nature, or the subject does not answer what it means to be.",
+      "definition": "Forgetfulness of that difference is the diagnosis. Method and subject-matter: ontology via the being that asks. This is not a mineral in an inventory, not Parmenides’ sphere as cosmology only, and not Kant’s noumenon.",
       "eraIds": [
         "present-day"
       ],
@@ -3904,8 +3904,8 @@
         "existentialism",
         "no given human nature"
       ],
-      "short": "There is no maker’s blueprint or given human nature that tells you in advance what you ought to be.",
-      "definition": "Sartre’s lecture (bibliographic): in choosing, you choose an image of the human, hence anguish; offered as a humanism against quietism. ‘Choosing for all’ may smuggle a Kantian universal without the moral law — a seminar tension. A materialist asks what conditions this freedom misses. Bad faith names the flight from that burden. Do not quote the lecture at length here.",
+      "short": "There is no maker’s blueprint that tells you in advance what you ought to be.",
+      "definition": "In choosing, you choose an image of the human, hence anguish; offered as a humanism against quietism. ‘Choosing for all’ may smuggle a Kantian universal without the moral law. A materialist asks what conditions this freedom misses.",
       "eraIds": [
         "present-day"
       ],
@@ -3931,8 +3931,8 @@
         "mauvaise foi",
         "quietism (Sartre’s charge)"
       ],
-      "short": "Fleeing the burden of having to invent oneself — the lecture’s quietism charge turned inside out; not a synonym for lying.",
-      "definition": "Existentialism Is a Humanism stresses anguish, abandonment, despair as technical, and answers the charge that existentialism excuses doing nothing. Bad faith (mauvaise foi) is the fuller name in works this course does not assign; use it as the assigned lecture frames self-excuse: citing a ready-made nature, or treating oneself as a thing. Distinct from Nietzschean bad conscience (internalized cruelty).",
+      "short": "Fleeing the burden of having to invent oneself — self-excuse, not a synonym for lying.",
+      "definition": "The lecture stresses anguish and answers the charge that existentialism excuses doing nothing. Bad faith names citing a ready-made nature, or treating oneself as a thing. Distinct from Nietzschean bad conscience, which is internalized cruelty.",
       "eraIds": [
         "present-day"
       ],
@@ -3956,8 +3956,8 @@
       "aliases": [
         "Two Dogmas of Empiricism"
       ],
-      "short": "The analytic/synthetic distinction, and reductionism of each statement to a sensory confirming range.",
-      "definition": "Quine’s essay (bibliographic): synonymy does not easily save analyticity (circle of definition and necessity). The web of belief: statements meet experience as a corporate body; any statement can be held true if we adjust elsewhere. Holism is a picture of science, not automatically Pyrrhonism. Kant’s synthetic a priori is among the stakes. Do not quote long stretches.",
+      "short": "The analytic/synthetic distinction, and reduction of each statement to a sensory confirming range.",
+      "definition": "Synonymy does not easily save analyticity: definition and necessity circle. Statements meet experience as a corporate body; any statement can be held true if we adjust elsewhere. Holism is a picture of science, not automatically Pyrrhonism. Kant’s synthetic a priori is among the stakes.",
       "eraIds": [
         "present-day"
       ],
@@ -3982,7 +3982,7 @@
         "confirmation holism"
       ],
       "short": "Experience judges a corporate body of statements — revision can strike anywhere if we make enough adjustments.",
-      "definition": "The constructive half of Quine’s attack on the two dogmas. It is not ‘anything goes,’ and not a claim that science never revises protocol sentences only. Contrast Aristotle’s demonstration from first principles and Hume’s sentence-level copy test. The assignment asked: skepticism, or a picture of science?",
+      "definition": "Not ‘anything goes,’ and not a claim that science never revises. Contrast Aristotle’s demonstration from first principles and Hume’s sentence-level copy test. The question is whether this is skepticism or a picture of science.",
       "eraIds": [
         "present-day"
       ],
@@ -4008,7 +4008,7 @@
         "law-sense of ought"
       ],
       "short": "A law-sense leftover from a divine-law ethics, now without a lawgiver — incoherent as modern moral philosophy uses it.",
-      "definition": "‘Modern Moral Philosophy’ (bibliographic): lay ethics aside until we have an adequate philosophy of psychology (intention, action). She targets both thin duty-talk and a certain consequentialism. Aristotle’s hexis is in the offing, not a slogan ‘be like Aristotle.’ This does not refute every sentence of the Groundwork; it diagnoses a classroom ‘ought.’ Get a legal copy of the paper.",
+      "definition": "Anscombe wants ethics laid aside until we have an adequate philosophy of psychology. She targets both thin duty-talk and a certain consequentialism. Aristotle’s hexis is in the offing, not a slogan ‘be like Aristotle.’ This does not refute every sentence of the Groundwork; it diagnoses a classroom ‘ought.’",
       "eraIds": [
         "present-day"
       ],
@@ -4034,7 +4034,7 @@
         "justice as fairness"
       ],
       "short": "A point of view, not a place: parties behind a veil of ignorance choose principles for the basic structure.",
-      "definition": "Theory of Justice assigned sections (bibliographic): justice as fairness, a Kantian procedure with economic content, rival to utilitarianism. The veil screens morally irrelevant bargaining advantages. Two principles in order: equal basic liberties; then inequalities to the greatest benefit of the least advantaged (difference principle) with fair equality of opportunity. Not Hobbes’s war, not a 1776 assembly, not maximax for the talented.",
+      "definition": "Justice as fairness: a Kantian procedure with economic content, rival to utilitarianism. The veil screens morally irrelevant bargaining advantages. Two principles in order: equal basic liberties, then inequalities to the greatest benefit of the least advantaged. Not Hobbes’s war, not a 1776 assembly.",
       "eraIds": [
         "present-day"
       ],
@@ -4060,7 +4060,7 @@
         "veil of ignorance"
       ],
       "short": "The screen in the original position: no knowledge of one’s class, talents, or conception of the good as a bargaining chip.",
-      "definition": "A device for fairness, not Du Bois’s Veil of lived split worlds. Whether it is a moral insight or an economic thought experiment was a seminar question. Mill’s harm principle may already include some liberties the first principle lists — another contrast. Do not quote Rawls at length.",
+      "definition": "A device for fairness, not Du Bois’s Veil of lived split worlds. Whether it is a moral insight or an economic thought experiment is the question. Mill’s harm principle may already include some liberties the first principle lists.",
       "eraIds": [
         "present-day"
       ],
@@ -4084,8 +4084,8 @@
       "aliases": [
         "greatest benefit of the least advantaged"
       ],
-      "short": "Social and economic inequalities are just only if they most benefit the least advantaged — not simple equality, not maximax for the gifted.",
-      "definition": "Second principle, after the priority of equal basic liberties and fair equality of opportunity. Inequalities can be just if they raise the worst off compared with a more equal scheme. Utilitarian sacrifice of the few as a mere sum is what the parties would not choose. Foucault’s question: what if the parties are already disciplinary subjects?",
+      "short": "Social and economic inequalities are just only if they most benefit the least advantaged.",
+      "definition": "Not simple equality, not maximax for the gifted. Inequalities can be just if they raise the worst off compared with a more equal scheme. Utilitarian sacrifice of the few as a mere sum is what the parties would not choose.",
       "eraIds": [
         "present-day"
       ],
@@ -4110,7 +4110,7 @@
         "Panopticon"
       ],
       "short": "Perpetual possible visibility as a diagram of modern power — producing self-discipline, not only forbidding acts.",
-      "definition": "Foucault’s ‘Panopticism’ chapter (bibliographic): Bentham’s plan becomes a figure of schools, barracks, prisons. Power is productive, capillary — unlike Hobbes’s spectacular sword. Genealogy after Nietzsche, applied to institutions. A fair worry: prison plan overextended into a theory of modernity. No long quotation of Sheridan’s English.",
+      "definition": "Bentham’s plan becomes a figure of schools, barracks, prisons. Power is productive and capillary, unlike Hobbes’s spectacular sword. A fair worry: a prison plan overextended into a theory of modernity.",
       "eraIds": [
         "present-day"
       ],
@@ -4136,7 +4136,7 @@
         "disciplinary power"
       ],
       "short": "Power that makes subjects, visibilities, and what counts as knowable — not only a sovereign’s right to say no.",
-      "definition": "The assigned chapter’s productive power and internalized gaze are the course’s handle; ‘pouvoir-savoir’ as a slogan is the same move. Distinct from Hobbesian authorization and from Rawls’s principles chosen by unsituated parties. Study the diagram, not a biography. Do not paste copyrighted prose.",
+      "definition": "The assigned chapter’s productive power and internalized gaze are the handle. Distinct from Hobbesian authorization and from Rawls’s principles chosen by unsituated parties. Study the diagram, not a biography.",
       "eraIds": [
         "present-day"
       ],
@@ -4162,7 +4162,7 @@
         "moral vision"
       ],
       "short": "Moral activity as a just and loving gaze that can change what is there to be seen — without a new public act.",
-      "definition": "The Sovereignty of Good (bibliographic): against existentialist/Kantian will as the whole of morals. The mother-in-law example (in the essay) is the tool: unselfing. The Good is magnetic, not chosen like a brand. Cousin of the Cave, not a copy; cousin of Smith’s spectator, not a sentiment theory. Legal copy only; this gloss follows the assignment’s framing.",
+      "definition": "Against existentialist or Kantian will as the whole of morals. Unselfing is the work. The Good is magnetic, not chosen like a brand. A cousin of the Cave, not a copy; a cousin of Smith’s spectator, not a sentiment theory.",
       "eraIds": [
         "present-day"
       ],
@@ -4188,7 +4188,7 @@
         "sovereignty of good"
       ],
       "short": "A transcendent, magnetic orientation of the soul — Platonic without cheap mysticism, against a naked will.",
-      "definition": "Late-century reply to Sartre and to a certain analytic thinness. Not Mill’s competent judges’ ranking, not the difference principle, not Nietzsche’s death of God as the last word. Whether this is the Cave you already had or a new use of it was the seminar question. Moore’s simple ‘good’ is a different, thinner object. No long quotation.",
+      "definition": "Murdoch’s reply to Sartre and to a certain analytic thinness. Not Mill’s competent judges, not the difference principle, not Nietzsche’s death of God as the last word. Moore’s simple ‘good’ is a different, thinner object. Whether this is the Cave you already had, or a new use of it, is the question.",
       "eraIds": [
         "present-day"
       ],
@@ -4215,7 +4215,7 @@
         "JTB"
       ],
       "short": "Justified true belief is not sufficient for knowledge — cases where luck breaks the analysis.",
-      "definition": "The analytic map sitting: not a hosted paper (Gettier is in copyright). Pin the problem: justification vs knowledge, after Plato’s Meno already distinguished true opinion from knowledge. It is not a proof that no one knows anything. Name a legal next text; do not paste the article into the app.",
+      "definition": "The map pin: justification versus knowledge, after Plato’s Meno already distinguished true opinion from knowledge. It is not a proof that no one knows anything. Name a legal next text; do not paste the article into the app.",
       "eraIds": [
         "present-day"
       ],

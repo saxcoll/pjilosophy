@@ -7,6 +7,8 @@ Canonical files:
 - `content/course.json` — source of truth for the sequence
 - `content/texts/*.json` — hosted public-domain readings
 - `content/glossary.json` — philosophical terms for the glossary tab
+- `content/thinkers.json` — names, ids, and portrait credits
+- `content/images/thinkers/` — hosted public-domain / CC portraits
 - `course.json` (repo root) — copy of the syllabus for the static app fallback
 
 Do not duplicate copyrighted prose. Bibliographic assignments have no `text` object.
@@ -42,6 +44,7 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 | `years` | string | Human range, e.g. `c. 600–450 BCE`. |
 | `intro` | string | 1–3 paragraph lecture. |
 | `themes` | string[] | Short tags. |
+| `thinkers` | `{id, name}[]` | Philosophers this era studies. Primary first. Ids match `content/thinkers.json`. |
 | `units` | Unit[] | |
 
 ### `Unit`
@@ -52,6 +55,7 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 | `order` | number | Order inside the era. |
 | `title` | string | |
 | `professorNote` | string | Why this unit exists; how it prepares the next. |
+| `thinkers` | `{id, name}[]` | Philosophers this unit studies. If the unit is named around one person, that person is first. |
 | `assignments` | Assignment[] | |
 | `recapQuiz` | Quiz \| omitted | On units with 3+ assignments: 4–6 questions spanning the unit. |
 
@@ -63,7 +67,8 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 | `order` | number | Order inside the unit. |
 | `kind` | string | `primary` \| `secondary` \| `bibliographic` |
 | `title` | string | Assignment title (what to do now). |
-| `author`, `work` | string | |
+| `author`, `work` | string | Display name of the writer (not empty). Dialogues may read e.g. `Plato (Socrates as speaker)`. |
+| `thinkerId` | string \| omitted | Matches a thinker `id` (and portrait) in `content/thinkers.json`. |
 | `translator` | string | English translator of the hosted or cited edition. |
 | `selection` | string | What part of the work. |
 | `pages` | string | Human locator: Stephanus, Bekker, Ak, chapters, Gutenberg paragraphs. |
@@ -259,7 +264,7 @@ Source of truth for the glossary tab. The app should load **`./content/glossary.
 | `sortKey` | string | Alphabetical sort (usually the `id`, or a phrase without a leading “the”). |
 | `aliases` | string[] | Other names to search or show (`happiness (Aristotle)`, `flourishing`). May be empty. |
 | `short` | string | One sentence for list/scan — the margin gloss. **Required.** |
-| `definition` | string | 2–6 sentences. Precise professor voice. English, with Greek/Latin when it matters. |
+| `definition` | string | 2–4 sentences. Precise seminar voice. English, with Greek/Latin when it matters. |
 | `eraIds` | string[] | Actual `era.id` values from `course.json` (e.g. `ancient-classical`). A term may belong to more than one era if it evolves. |
 | `unitIds` | string[] | Actual `unit.id` values. |
 | `assignmentIds` | string[] | Actual `assignment.id` values where the word is load-bearing. |
@@ -267,4 +272,28 @@ Source of truth for the glossary tab. The app should load **`./content/glossary.
 | `firstAppearsIn` | string | Assignment id where Samuel should meet the word. Must be one of `assignmentIds`. |
 
 This is a working vocabulary for the 11-era course, not a general philosophy dictionary. Bibliographic / in-copyright sittings are defined from the assignment’s framing; do not quote long in-copyright prose in `short` or `definition`.
+
+---
+
+## Thinkers and portraits (`content/thinkers.json`)
+
+Catalog of philosophers the syllabus names. The app should load **`./content/thinkers.json`**. Image paths are relative to `content/` (for example `images/thinkers/plato.jpg` → `./content/images/thinkers/plato.jpg`). Files live in `content/images/thinkers/`. Only public-domain or Wikimedia CC BY / CC BY-SA images are stored.
+
+```text
+{
+  thinkers: [ { id, name, sortName, image?, imageCredit?, license? }, ... ]
+}
+```
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `id` | string | Kebab-case. Same ids as `era.thinkers[].id`, `unit.thinkers[].id`, and `assignment.thinkerId`. |
+| `name` | string | Display name. |
+| `sortName` | string | Sort key (usually surname, or the one-word name). |
+| `image` | string \| omitted | Path relative to `content/`, when a free portrait is hosted. |
+| `imageCredit` | string \| omitted | Title, artist or photographer, license, Wikimedia page URL. |
+| `license` | string \| omitted | `public-domain` \| `cc-by` \| `cc-by-sa`. |
+
+Eras and units list the thinkers they study so the UI can show names (and portraits) prominently. Primary thinker first.
+
 

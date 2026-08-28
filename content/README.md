@@ -9,6 +9,8 @@ This folder is the **syllabus and reading corpus** for the Western philosophy st
 | `course.json` | Full course: eras → units → assignments. **Source of truth.** |
 | `texts/*.json` | Public-domain English texts for in-app reading. |
 | `glossary.json` | Working vocabulary for the glossary tab. Load `./content/glossary.json`. |
+| `thinkers.json` | Thinker names and portrait credits. Load `./content/thinkers.json`. |
+| `images/thinkers/` | Hosted portraits (`./content/images/thinkers/<id>.jpg`). |
 | `schema.md` | Field-by-field contract. |
 
 The static app also keeps a copy of the syllabus at the repo root (`/course.json`) as a fallback. Edit **`content/course.json`** first, then copy it to the root.
