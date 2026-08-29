@@ -5,7 +5,24 @@
     "subtitle": "What to read next, from the Pre-Socratics to now",
     "description": "A professor-designed sequence of exact sittings: the pages that teach the move, why they come now, what to look for, and the questions that make the next text possible. Primary texts are the course. Public-domain English translations are hosted in the app; in-copyright works are assigned as bibliographic readings you obtain legally.",
     "audience": "Self-taught student; no prior philosophy required",
-    "estimatedHours": 125,
+    "estimatedHours": 135,
+    "tracks": [
+      {
+        "id": "science-epistemology",
+        "title": "Philosophy of Science & Epistemology",
+        "subtitle": "From method and skepticism to falsification, paradigms, and the web of belief",
+        "intro": "This thread is not a second syllabus. It is the spine of method that the chronological course already teaches, pulled into one path so you can watch a problem stay alive. Descartes makes method a sequence you can follow, and certainty a residue after doubt. Hume then shows that the glue of causal science is custom, not insight: induction has no demonstration. Kant answers by relocating necessity — objects conform to our way of knowing; the synthetic a priori is how a science of nature remains possible after Hume.\n\nThe twentieth century does not settle that inheritance. Popper’s English Logic of Scientific Discovery (1959; German 1934) replaces verification with falsifiability as a demarcation of science from metaphysics and from mere confirmation. Quine’s ‘Two Dogmas’ (1951) is dated earlier than that English Popper: it attacks the analytic/synthetic cut Kant needed and replaces sentence-by-sentence empiricism with a web of belief. Kuhn’s Structure (1962) then describes sciences as historical communities under paradigms, with revolutions that are not Popperian conjecture-and-refutation as a calendar of progress. Read the track as classical → Popper → Quine → Kuhn: demarcation first, then holism, then paradigms. The dates overlap; the pedagogy does not.",
+        "assignmentIds": [
+          "descartes-discourse",
+          "descartes-meditations-1-2",
+          "hume-enquiry-causation",
+          "kant-cpr-prefaces",
+          "popper-lsd",
+          "quine-two-dogmas",
+          "kuhn-ssr"
+        ]
+      }
+    ],
     "method": "Read in order. Home always names the next unread assignment; do not skip ahead to the famous title. Each sitting is 20–90 minutes unless the text itself refuses to be cut. Read the assigned pages, not the surrounding commentary, unless the assignment is marked secondary.\n\nKeep a notebook. For every sitting, write (1) the claim in one or two sentences without jargon, (2) the best objection you can find in the text or invent honestly, and (3) one question you could not settle. Those three lines are the course’s memory.\n\nWhen a reading is hosted in the app, read it there. The outbound URL is the bibliographic record and a backup. When an assignment is bibliographic, get a library or purchased copy. Do not use a pirated scan. Later units assume earlier ones: Hume will not make sense if you have only a rumor of Descartes; Kant will not make sense if Hume is a rumor; the twentieth century will not make sense if Kant is a rumor.\n\nYou are not collecting opinions. You are learning a set of moves — how a question is posed, how an argument is forced, and how a later writer inherits a problem. If a sitting feels too short, reread it. If it feels too long, slow down; the split assignments exist so you never have to swallow a system in one evening.\n\nAfter each sitting, take the quiz. It is not a trap; it is the seminar’s check that you caught the move. Missed items point you back into the pages, not to a summary."
   },
   "eras": [
@@ -142,7 +159,9 @@
                   }
                 ]
               },
-              "thinkerId": "burnet"
+              "thinkerId": "burnet",
+              "difficulty": 1,
+              "wordCount": 15482
             },
             {
               "id": "milesian-school",
@@ -268,7 +287,9 @@
                   }
                 ]
               },
-              "thinkerId": "thales"
+              "thinkerId": "thales",
+              "difficulty": 1,
+              "wordCount": 171
             }
           ],
           "thinkers": [
@@ -412,7 +433,9 @@
                   }
                 ]
               },
-              "thinkerId": "xenophanes"
+              "thinkerId": "xenophanes",
+              "difficulty": 1,
+              "wordCount": 13221
             },
             {
               "id": "heraclitus-fragments",
@@ -555,7 +578,9 @@
                   }
                 ]
               },
-              "thinkerId": "heraclitus"
+              "thinkerId": "heraclitus",
+              "difficulty": 2,
+              "wordCount": 6258
             }
           ],
           "thinkers": [
@@ -699,7 +724,9 @@
                   }
                 ]
               },
-              "thinkerId": "parmenides"
+              "thinkerId": "parmenides",
+              "difficulty": 3,
+              "wordCount": 12163
             },
             {
               "id": "zeno-paradoxes",
@@ -817,7 +844,9 @@
                   }
                 ]
               },
-              "thinkerId": "zeno"
+              "thinkerId": "zeno",
+              "difficulty": 2,
+              "wordCount": 8154
             }
           ],
           "thinkers": [
@@ -961,7 +990,9 @@
                   }
                 ]
               },
-              "thinkerId": "empedocles"
+              "thinkerId": "empedocles",
+              "difficulty": 2,
+              "wordCount": 16729
             },
             {
               "id": "atomists-leucippus",
@@ -1079,7 +1110,9 @@
                   }
                 ]
               },
-              "thinkerId": "democritus"
+              "thinkerId": "democritus",
+              "difficulty": 2,
+              "wordCount": 11296
             }
           ],
           "thinkers": [
@@ -1286,7 +1319,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 1,
+              "wordCount": 9331
             },
             {
               "id": "plato-apology",
@@ -1429,7 +1464,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 1,
+              "wordCount": 16206
             },
             {
               "id": "plato-crito",
@@ -1555,7 +1592,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 1,
+              "wordCount": 6701
             }
           ],
           "recapQuiz": {
@@ -1823,7 +1862,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 2,
+              "wordCount": 22301
             },
             {
               "id": "plato-meno-knowledge",
@@ -1941,7 +1982,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 2,
+              "wordCount": 22301
             }
           ],
           "thinkers": [
@@ -2102,7 +2145,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 2,
+              "wordCount": 4112
             },
             {
               "id": "plato-republic-soul-city",
@@ -2257,7 +2302,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 2,
+              "wordCount": 13295
             },
             {
               "id": "plato-republic-cave",
@@ -2400,7 +2447,9 @@
                   }
                 ]
               },
-              "thinkerId": "plato"
+              "thinkerId": "plato",
+              "difficulty": 2,
+              "wordCount": 10937
             }
           ],
           "recapQuiz": {
@@ -2656,7 +2705,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 2,
+              "wordCount": 14593
             },
             {
               "id": "aristotle-physics-nature",
@@ -2782,7 +2833,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 2,
+              "wordCount": 77371
             }
           ],
           "thinkers": [
@@ -2939,7 +2992,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 2,
+              "wordCount": 8362
             },
             {
               "id": "aristotle-ne-virtue",
@@ -3057,7 +3112,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 2,
+              "wordCount": 67485
             },
             {
               "id": "aristotle-metaphysics-wisdom",
@@ -3183,7 +3240,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 3,
+              "wordCount": 111904
             },
             {
               "id": "aristotle-posterior-analytics",
@@ -3301,7 +3360,9 @@
                   }
                 ]
               },
-              "thinkerId": "aristotle"
+              "thinkerId": "aristotle",
+              "difficulty": 3,
+              "wordCount": 10461
             }
           ],
           "recapQuiz": {
@@ -3611,7 +3672,9 @@
                   }
                 ]
               },
-              "thinkerId": "epicurus"
+              "thinkerId": "epicurus",
+              "difficulty": 1,
+              "wordCount": 1907
             },
             {
               "id": "lucretius-atoms",
@@ -3737,7 +3800,9 @@
                   }
                 ]
               },
-              "thinkerId": "lucretius"
+              "thinkerId": "lucretius",
+              "difficulty": 2,
+              "wordCount": 34
             },
             {
               "id": "lucretius-death",
@@ -3880,7 +3945,9 @@
                   }
                 ]
               },
-              "thinkerId": "lucretius"
+              "thinkerId": "lucretius",
+              "difficulty": 1,
+              "wordCount": 73780
             }
           ],
           "recapQuiz": {
@@ -4140,7 +4207,9 @@
                   }
                 ]
               },
-              "thinkerId": "epictetus"
+              "thinkerId": "epictetus",
+              "difficulty": 1,
+              "wordCount": 11192
             },
             {
               "id": "epictetus-enchiridion-ii",
@@ -4266,7 +4335,9 @@
                   }
                 ]
               },
-              "thinkerId": "epictetus"
+              "thinkerId": "epictetus",
+              "difficulty": 1,
+              "wordCount": 11192
             },
             {
               "id": "marcus-meditations",
@@ -4384,7 +4455,9 @@
                   }
                 ]
               },
-              "thinkerId": "marcus-aurelius"
+              "thinkerId": "marcus-aurelius",
+              "difficulty": 1,
+              "wordCount": 1438
             }
           ],
           "recapQuiz": {
@@ -4669,7 +4742,9 @@
                   }
                 ]
               },
-              "thinkerId": "sextus-empiricus"
+              "thinkerId": "sextus-empiricus",
+              "difficulty": 2,
+              "wordCount": 45976
             }
           ],
           "thinkers": [
@@ -4834,7 +4909,9 @@
                   }
                 ]
               },
-              "thinkerId": "plotinus"
+              "thinkerId": "plotinus",
+              "difficulty": 3,
+              "wordCount": 256
             },
             {
               "id": "boethius-consolation",
@@ -4960,7 +5037,9 @@
                   }
                 ]
               },
-              "thinkerId": "boethius"
+              "thinkerId": "boethius",
+              "difficulty": 2,
+              "wordCount": 1145
             }
           ],
           "thinkers": [
@@ -5096,7 +5175,9 @@
                   }
                 ]
               },
-              "thinkerId": "augustine"
+              "thinkerId": "augustine",
+              "difficulty": 2,
+              "wordCount": 8411
             },
             {
               "id": "augustine-confessions-will",
@@ -5222,7 +5303,9 @@
                   }
                 ]
               },
-              "thinkerId": "augustine"
+              "thinkerId": "augustine",
+              "difficulty": 2,
+              "wordCount": 24825
             },
             {
               "id": "augustine-confessions-time",
@@ -5340,7 +5423,9 @@
                   }
                 ]
               },
-              "thinkerId": "augustine"
+              "thinkerId": "augustine",
+              "difficulty": 2,
+              "wordCount": 20593
             }
           ],
           "recapQuiz": {
@@ -5625,7 +5710,9 @@
                   }
                 ]
               },
-              "thinkerId": "anselm"
+              "thinkerId": "anselm",
+              "difficulty": 2,
+              "wordCount": 4403
             },
             {
               "id": "gaunilo-and-reply",
@@ -5751,7 +5838,9 @@
                   }
                 ]
               },
-              "thinkerId": "anselm"
+              "thinkerId": "anselm",
+              "difficulty": 2,
+              "wordCount": 8937
             }
           ],
           "thinkers": [
@@ -5887,7 +5976,9 @@
                   }
                 ]
               },
-              "thinkerId": "averroes"
+              "thinkerId": "averroes",
+              "difficulty": 2,
+              "wordCount": 50944
             },
             {
               "id": "maimonides-guide",
@@ -6005,7 +6096,9 @@
                   }
                 ]
               },
-              "thinkerId": "maimonides"
+              "thinkerId": "maimonides",
+              "difficulty": 2,
+              "wordCount": 25417
             }
           ],
           "thinkers": [
@@ -6141,7 +6234,9 @@
                   }
                 ]
               },
-              "thinkerId": "aquinas"
+              "thinkerId": "aquinas",
+              "difficulty": 2,
+              "wordCount": 5979
             },
             {
               "id": "aquinas-five-ways",
@@ -6284,7 +6379,9 @@
                   }
                 ]
               },
-              "thinkerId": "aquinas"
+              "thinkerId": "aquinas",
+              "difficulty": 2,
+              "wordCount": 2929
             },
             {
               "id": "aquinas-natural-law",
@@ -6410,7 +6507,9 @@
                   }
                 ]
               },
-              "thinkerId": "aquinas"
+              "thinkerId": "aquinas",
+              "difficulty": 2,
+              "wordCount": 7117
             }
           ],
           "recapQuiz": {
@@ -6699,7 +6798,9 @@
                   }
                 ]
               },
-              "thinkerId": "bacon"
+              "thinkerId": "bacon",
+              "difficulty": 1,
+              "wordCount": 9027
             },
             {
               "id": "descartes-discourse",
@@ -6825,7 +6926,12 @@
                   }
                 ]
               },
-              "thinkerId": "descartes"
+              "thinkerId": "descartes",
+              "difficulty": 1,
+              "wordCount": 23778,
+              "trackIds": [
+                "science-epistemology"
+              ]
             }
           ],
           "thinkers": [
@@ -6986,7 +7092,12 @@
                   }
                 ]
               },
-              "thinkerId": "descartes"
+              "thinkerId": "descartes",
+              "difficulty": 2,
+              "wordCount": 3296,
+              "trackIds": [
+                "science-epistemology"
+              ]
             },
             {
               "id": "descartes-meditations-3-4",
@@ -7104,7 +7215,9 @@
                   }
                 ]
               },
-              "thinkerId": "descartes"
+              "thinkerId": "descartes",
+              "difficulty": 2,
+              "wordCount": 9021
             },
             {
               "id": "descartes-meditations-5-6",
@@ -7230,7 +7343,9 @@
                   }
                 ]
               },
-              "thinkerId": "descartes"
+              "thinkerId": "descartes",
+              "difficulty": 2,
+              "wordCount": 9778
             }
           ],
           "recapQuiz": {
@@ -7486,7 +7601,9 @@
                   }
                 ]
               },
-              "thinkerId": "spinoza"
+              "thinkerId": "spinoza",
+              "difficulty": 3,
+              "wordCount": 6921
             },
             {
               "id": "pascal-pensees",
@@ -7604,7 +7721,9 @@
                   }
                 ]
               },
-              "thinkerId": "pascal"
+              "thinkerId": "pascal",
+              "difficulty": 2,
+              "wordCount": 1045
             },
             {
               "id": "leibniz-monadology",
@@ -7747,7 +7866,9 @@
                   }
                 ]
               },
-              "thinkerId": "leibniz"
+              "thinkerId": "leibniz",
+              "difficulty": 3,
+              "wordCount": 6780
             }
           ],
           "recapQuiz": {
@@ -8069,7 +8190,9 @@
                   }
                 ]
               },
-              "thinkerId": "hobbes"
+              "thinkerId": "hobbes",
+              "difficulty": 1,
+              "wordCount": 503
             },
             {
               "id": "hobbes-sovereign",
@@ -8195,7 +8318,9 @@
                   }
                 ]
               },
-              "thinkerId": "hobbes"
+              "thinkerId": "hobbes",
+              "difficulty": 2,
+              "wordCount": 1135
             },
             {
               "id": "locke-property",
@@ -8338,7 +8463,9 @@
                   }
                 ]
               },
-              "thinkerId": "locke"
+              "thinkerId": "locke",
+              "difficulty": 2,
+              "wordCount": 27821
             }
           ],
           "recapQuiz": {
@@ -8598,7 +8725,9 @@
                   }
                 ]
               },
-              "thinkerId": "locke"
+              "thinkerId": "locke",
+              "difficulty": 2,
+              "wordCount": 23
             },
             {
               "id": "locke-qualities",
@@ -8724,7 +8853,9 @@
                   }
                 ]
               },
-              "thinkerId": "locke"
+              "thinkerId": "locke",
+              "difficulty": 2,
+              "wordCount": 185
             },
             {
               "id": "berkeley-principles",
@@ -8867,7 +8998,9 @@
                   }
                 ]
               },
-              "thinkerId": "berkeley"
+              "thinkerId": "berkeley",
+              "difficulty": 2,
+              "wordCount": 12736
             }
           ],
           "recapQuiz": {
@@ -9127,7 +9260,9 @@
                   }
                 ]
               },
-              "thinkerId": "hume"
+              "thinkerId": "hume",
+              "difficulty": 2,
+              "wordCount": 9374
             },
             {
               "id": "hume-enquiry-causation",
@@ -9270,7 +9405,12 @@
                   }
                 ]
               },
-              "thinkerId": "hume"
+              "thinkerId": "hume",
+              "difficulty": 2,
+              "wordCount": 11440,
+              "trackIds": [
+                "science-epistemology"
+              ]
             },
             {
               "id": "hume-enquiry-miracles",
@@ -9388,7 +9528,9 @@
                   }
                 ]
               },
-              "thinkerId": "hume"
+              "thinkerId": "hume",
+              "difficulty": 2,
+              "wordCount": 12380
             },
             {
               "id": "hume-treatise-identity",
@@ -9506,7 +9648,9 @@
                   }
                 ]
               },
-              "thinkerId": "hume"
+              "thinkerId": "hume",
+              "difficulty": 3,
+              "wordCount": 453
             },
             {
               "id": "hume-dialogues-design",
@@ -9632,7 +9776,9 @@
                   }
                 ]
               },
-              "thinkerId": "hume"
+              "thinkerId": "hume",
+              "difficulty": 2,
+              "wordCount": 28791
             }
           ],
           "recapQuiz": {
@@ -9946,7 +10092,9 @@
                   }
                 ]
               },
-              "thinkerId": "rousseau"
+              "thinkerId": "rousseau",
+              "difficulty": 2,
+              "wordCount": 2027
             },
             {
               "id": "rousseau-contract-i",
@@ -10064,7 +10212,9 @@
                   }
                 ]
               },
-              "thinkerId": "rousseau"
+              "thinkerId": "rousseau",
+              "difficulty": 2,
+              "wordCount": 673
             },
             {
               "id": "rousseau-contract-ii",
@@ -10190,7 +10340,9 @@
                   }
                 ]
               },
-              "thinkerId": "rousseau"
+              "thinkerId": "rousseau",
+              "difficulty": 2,
+              "wordCount": 118614
             },
             {
               "id": "smith-moral-sentiments",
@@ -10308,7 +10460,9 @@
                   }
                 ]
               },
-              "thinkerId": "adam-smith"
+              "thinkerId": "adam-smith",
+              "difficulty": 2,
+              "wordCount": 905
             }
           ],
           "recapQuiz": {
@@ -10593,7 +10747,12 @@
                   }
                 ]
               },
-              "thinkerId": "kant"
+              "thinkerId": "kant",
+              "difficulty": 3,
+              "wordCount": 13226,
+              "trackIds": [
+                "science-epistemology"
+              ]
             },
             {
               "id": "kant-groundwork-i",
@@ -10736,7 +10895,9 @@
                   }
                 ]
               },
-              "thinkerId": "kant"
+              "thinkerId": "kant",
+              "difficulty": 2,
+              "wordCount": 12
             },
             {
               "id": "kant-groundwork-ii",
@@ -10879,7 +11040,9 @@
                   }
                 ]
               },
-              "thinkerId": "kant"
+              "thinkerId": "kant",
+              "difficulty": 3,
+              "wordCount": 50
             }
           ],
           "recapQuiz": {
@@ -11164,7 +11327,9 @@
                   }
                 ]
               },
-              "thinkerId": "hegel"
+              "thinkerId": "hegel",
+              "difficulty": 3,
+              "wordCount": 3905
             },
             {
               "id": "schopenhauer-will",
@@ -11282,7 +11447,9 @@
                   }
                 ]
               },
-              "thinkerId": "schopenhauer"
+              "thinkerId": "schopenhauer",
+              "difficulty": 2,
+              "wordCount": 191799
             }
           ],
           "thinkers": [
@@ -11443,7 +11610,9 @@
                   }
                 ]
               },
-              "thinkerId": "mill"
+              "thinkerId": "mill",
+              "difficulty": 1,
+              "wordCount": 27584
             },
             {
               "id": "mill-liberty-harm",
@@ -11561,7 +11730,9 @@
                   }
                 ]
               },
-              "thinkerId": "mill"
+              "thinkerId": "mill",
+              "difficulty": 1,
+              "wordCount": 22471
             },
             {
               "id": "mill-liberty-individuality",
@@ -11679,7 +11850,9 @@
                   }
                 ]
               },
-              "thinkerId": "mill"
+              "thinkerId": "mill",
+              "difficulty": 1,
+              "wordCount": 22931
             }
           ],
           "recapQuiz": {
@@ -11935,7 +12108,9 @@
                   }
                 ]
               },
-              "thinkerId": "kierkegaard"
+              "thinkerId": "kierkegaard",
+              "difficulty": 2,
+              "wordCount": 84282
             },
             {
               "id": "marx-manifesto",
@@ -12078,7 +12253,9 @@
                   }
                 ]
               },
-              "thinkerId": "marx"
+              "thinkerId": "marx",
+              "difficulty": 1,
+              "wordCount": 7524
             }
           ],
           "thinkers": [
@@ -12218,7 +12395,9 @@
                   }
                 ]
               },
-              "thinkerId": "nietzsche"
+              "thinkerId": "nietzsche",
+              "difficulty": 2,
+              "wordCount": 32438
             },
             {
               "id": "nietzsche-genealogy-ii",
@@ -12336,7 +12515,9 @@
                   }
                 ]
               },
-              "thinkerId": "nietzsche"
+              "thinkerId": "nietzsche",
+              "difficulty": 2,
+              "wordCount": 6046
             },
             {
               "id": "nietzsche-gay-science",
@@ -12454,7 +12635,9 @@
                   }
                 ]
               },
-              "thinkerId": "nietzsche"
+              "thinkerId": "nietzsche",
+              "difficulty": 2,
+              "wordCount": 2991
             }
           ],
           "recapQuiz": {
@@ -12747,7 +12930,9 @@
                   }
                 ]
               },
-              "thinkerId": "peirce"
+              "thinkerId": "peirce",
+              "difficulty": 2,
+              "wordCount": 8528
             },
             {
               "id": "james-pragmatism",
@@ -12865,7 +13050,9 @@
                   }
                 ]
               },
-              "thinkerId": "james"
+              "thinkerId": "james",
+              "difficulty": 1,
+              "wordCount": 52004
             },
             {
               "id": "james-will-to-believe",
@@ -12983,7 +13170,9 @@
                   }
                 ]
               },
-              "thinkerId": "james"
+              "thinkerId": "james",
+              "difficulty": 1,
+              "wordCount": 5603
             },
             {
               "id": "dewey-reconstruction",
@@ -13101,7 +13290,9 @@
                   }
                 ]
               },
-              "thinkerId": "dewey"
+              "thinkerId": "dewey",
+              "difficulty": 2,
+              "wordCount": 50255
             },
             {
               "id": "dubois-souls",
@@ -13219,7 +13410,9 @@
                   }
                 ]
               },
-              "thinkerId": "du-bois"
+              "thinkerId": "du-bois",
+              "difficulty": 1,
+              "wordCount": 68892
             }
           ],
           "recapQuiz": {
@@ -13487,7 +13680,9 @@
                   }
                 ]
               },
-              "thinkerId": "moore"
+              "thinkerId": "moore",
+              "difficulty": 2,
+              "wordCount": 2271
             },
             {
               "id": "russell-problems-appearance",
@@ -13605,7 +13800,9 @@
                   }
                 ]
               },
-              "thinkerId": "russell"
+              "thinkerId": "russell",
+              "difficulty": 1,
+              "wordCount": 6613
             },
             {
               "id": "russell-problems-induction",
@@ -13723,7 +13920,9 @@
                   }
                 ]
               },
-              "thinkerId": "russell"
+              "thinkerId": "russell",
+              "difficulty": 2,
+              "wordCount": 8492
             },
             {
               "id": "tractatus-picture",
@@ -13841,7 +14040,9 @@
                   }
                 ]
               },
-              "thinkerId": "wittgenstein"
+              "thinkerId": "wittgenstein",
+              "difficulty": 3,
+              "wordCount": 632
             },
             {
               "id": "tractatus-silence",
@@ -13959,7 +14160,8 @@
                   }
                 ]
               },
-              "thinkerId": "wittgenstein"
+              "thinkerId": "wittgenstein",
+              "difficulty": 3
             }
           ],
           "recapQuiz": {
@@ -14126,10 +14328,12 @@
       "order": 11,
       "title": "How to keep going",
       "years": "1922–present",
-      "intro": "The rest of the century is still in copyright in the United States. You will read it as a student reads assigned chapters: legally, with a physical or licensed copy. The assignments below are exact. They complete the spine: language after the Tractatus, being and existence, the analytic/continental split, justice, power, and inner moral vision. Two final maps tell you how the living debates are clustered so you are not abandoned in 1922.",
+      "intro": "The rest of the century is still in copyright in the United States. You will read it as a student reads assigned chapters: legally, with a physical or licensed copy. The assignments below are exact. They complete the spine: language after the Tractatus, Husserl’s phenomenological turn, being and existence, scientific method after the empiricists (Popper, Quine, Kuhn), then intention, justice, power, and inner moral vision. Two final maps tell you how the living debates are clustered so you are not abandoned in 1922.",
       "themes": [
         "language",
+        "phenomenology",
         "existence",
+        "science",
         "justice",
         "power",
         "mind"
@@ -14138,8 +14342,8 @@
         {
           "id": "language-being-existence",
           "order": 1,
-          "title": "Language, being, existence",
-          "professorNote": "Three in-copyright landmarks. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
+          "title": "Language after the Tractatus",
+          "professorNote": "One in-copyright landmark. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
           "assignments": [
             {
               "id": "wittgenstein-investigations",
@@ -14165,7 +14369,7 @@
               "prerequisites": [
                 "tractatus-silence"
               ],
-              "nextHint": "Heidegger: the question of being, which the Tractatus treated as something to be silent about — or as nonsense.",
+              "nextHint": "Husserl: phenomenology against psychologism, then intentionality — the method Heidegger will inherit and refuse.",
               "source": {
                 "name": "Library or licensed edition",
                 "url": "https://search.worldcat.org/search?q=Philosophical+Investigations+Wittgenstein",
@@ -14274,11 +14478,708 @@
                   }
                 ]
               },
-              "thinkerId": "wittgenstein"
+              "thinkerId": "wittgenstein",
+              "difficulty": 2
+            }
+          ],
+          "thinkers": [
+            {
+              "id": "wittgenstein",
+              "name": "Ludwig Wittgenstein"
+            }
+          ]
+        },
+        {
+          "id": "husserl",
+          "order": 2,
+          "title": "Husserl",
+          "professorNote": "Four bibliographic sittings, not the Nachlass. English translations of the Logical Investigations (Findlay, 1970) and Ideas I (Kersten; Dahlstrom) are in copyright. Boyce Gibson’s Ideas (1931) is not public domain in the US until 2027 — do not use a scan as a free text. Obtain licensed copies. Locators are Investigation numbers and Ideas section numbers so you can find the pages in any standard edition.",
+          "assignments": [
+            {
+              "id": "husserl-psychologism",
+              "order": 1,
+              "kind": "bibliographic",
+              "title": "Logical Investigations: against psychologism",
+              "author": "Edmund Husserl",
+              "work": "Logical Investigations",
+              "translator": "J. N. Findlay (standard English; in copyright). Moran’s Routledge reprint of Findlay is a common library copy.",
+              "selection": "Prolegomena to Pure Logic, §§1–8, 17–23, 32–39",
+              "pages": "LI vol. I, Prolegomena §§1–8 (logic as science vs technology), §§17–23 (psychologism), §§32–39 (skeptical consequences / relativism). German 1900; Findlay 1970 is in copyright.",
+              "estimatedMinutes": 55,
+              "why": "Why phenomenology at all: if logical laws were only empirical regularities of how we happen to think, validity would collapse into anthropology. Husserl’s Prolegomena attacks psychologism so that philosophy can be a rigorous a priori science of essences, not a chapter of psychology. This is the crisis sitting. Do not paste Findlay into notes you share; name the argument.",
+              "lookFor": [
+                "What psychologism is (logic as a natural science of mental events)",
+                "Why it is said to collapse into relativism or skepticism about validity",
+                "Logic as an ideal science of meanings, not a technology of how we infer"
+              ],
+              "questions": [
+                "If contradiction were only a habit of our species, what would ‘invalid’ still mean?",
+                "How is this different from Hume’s custom, or from Mill’s associationism, as a ground of logic?"
+              ],
+              "prerequisites": [
+                "wittgenstein-investigations"
+              ],
+              "nextHint": "Investigation V: consciousness as consciousness-of.",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=Logical+Investigations+Husserl+Findlay",
+                "locator": "Prolegomena §§1–8, 17–23, 32–39",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Findlay, Logical Investigations, vol. I (Routledge; Moran ed. common)",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work. Findlay (1970) is not public domain. Do not host or download unauthorized scans."
+              },
+              "quiz": {
+                "id": "husserl-psychologism-quiz",
+                "title": "After the Prolegomena (psychologism)",
+                "intro": "Logic as an ideal science, not a chapter of psychology.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "Psychologism, as Husserl attacks it in the Prolegomena, treats logical laws as",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "eternal Forms in a third realm that psychology cannot touch"
+                      },
+                      {
+                        "id": "b",
+                        "text": "empirical regularities of how minds happen to think — a chapter of natural science"
+                      },
+                      {
+                        "id": "c",
+                        "text": "rules of etiquette for seminars"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Kant’s categorical imperative restated"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: logic as a natural science of mental events. That is the target."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "If logical laws were only species-typical habits of inference, then",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "mathematics would be easier"
+                      },
+                      {
+                        "id": "b",
+                        "text": "validity would relativize: another species could ‘think’ otherwise and contradiction would lose its normative force"
+                      },
+                      {
+                        "id": "c",
+                        "text": "Husserl would have nothing to say against Mill"
+                      },
+                      {
+                        "id": "d",
+                        "text": "the Tractatus picture theory would be proved"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The skeptical/relativist consequence is why the sitting is a crisis, not a taste in method."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "true-false",
+                    "prompt": "Husserl wants philosophy to be a rigorous a priori science of essences rather than a natural science of mental events.",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "true",
+                    "explanation": "That is the constructive claim of the Prolegomena sitting, against psychologism."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "multiple-choice",
+                    "prompt": "This assignment is bibliographic because",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "Husserl never wrote the Prolegomena"
+                      },
+                      {
+                        "id": "b",
+                        "text": "Findlay’s English (1970) is in copyright — obtain a legal copy; do not treat a scan as a hosted text"
+                      },
+                      {
+                        "id": "c",
+                        "text": "German 1900 is still in copyright worldwide"
+                      },
+                      {
+                        "id": "d",
+                        "text": "the sections do not exist"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The unit note: Findlay is not PD. The quiz checks the argument, not a pasted translation."
+                  }
+                ]
+              },
+              "thinkerId": "husserl",
+              "difficulty": 3
             },
             {
-              "id": "heidegger-being-time",
+              "id": "husserl-intentionality",
               "order": 2,
+              "kind": "bibliographic",
+              "title": "Logical Investigations: intentionality",
+              "author": "Edmund Husserl",
+              "work": "Logical Investigations",
+              "translator": "J. N. Findlay (in copyright)",
+              "selection": "Investigation V, §§9–21 (intentional experiences and their ‘contents’)",
+              "pages": "LI Investigation V §§9–21. Standard Findlay/Moran numbering.",
+              "estimatedMinutes": 60,
+              "why": "Consciousness is consciousness-of: directedness is primitive, not a sealed inner theatre that later gets related to objects. An object can be intended even when it does not exist as a real thing in nature. This is Brentano tightened, and it is the spine of phenomenology. It is not Descartes’ thinking thing inspecting little pictures. Licensed Findlay only.",
+              "lookFor": [
+                "Act vs object — that aboutness is not a real relation to a real existent",
+                "Why ‘idea’ here is not a copy in the mind",
+                "Empty intending vs fulfillment, if your pages reach that contrast"
+              ],
+              "questions": [
+                "How is this not the cogito as a substance first, with objects inferred later?",
+                "What would a psychologistic reading of ‘idea’ miss in Investigation V?"
+              ],
+              "prerequisites": [
+                "husserl-psychologism"
+              ],
+              "nextHint": "Ideas I: natural attitude, epoché, noesis–noema.",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=Logical+Investigations+Husserl+Findlay",
+                "locator": "Investigation V §§9–21",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Findlay, Logical Investigations, vol. II",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work. Same copyright warning as the Prolegomena sitting."
+              },
+              "quiz": {
+                "id": "husserl-intentionality-quiz",
+                "title": "After Logical Investigations V (intentionality)",
+                "intro": "Consciousness as consciousness-of.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "Intentionality in Investigation V means that",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "we always intend to be logical"
+                      },
+                      {
+                        "id": "b",
+                        "text": "every act of consciousness is consciousness of something — directedness is primitive, not a sealed inner theatre"
+                      },
+                      {
+                        "id": "c",
+                        "text": "objects must exist in nature whenever we think of them"
+                      },
+                      {
+                        "id": "d",
+                        "text": "ideas are little pictures that copy outer things"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: aboutness as primitive. That is the spine of the sitting."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "An intentional object, on this account,",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "must be a real thing in the inventory of nature"
+                      },
+                      {
+                        "id": "b",
+                        "text": "can be intended even when it does not exist as a real thing — aboutness is not a real relation to a real existent"
+                      },
+                      {
+                        "id": "c",
+                        "text": "is identical with a brain state as physics starts"
+                      },
+                      {
+                        "id": "d",
+                        "text": "is what Kant called a noumenon"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "That is how this is not a copy-theory of ideas."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "true-false",
+                    "prompt": "Husserl’s ‘idea’ in this sitting is a little picture in the mind that copies an outer object.",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "false",
+                    "explanation": "LookFor: ‘idea’ is not a copy in the mind. A psychologistic reading of ‘idea’ is what Investigation V refuses."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "multiple-choice",
+                    "prompt": "A Cartesian misreading of this sitting would be to treat",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "aboutness as primitive"
+                      },
+                      {
+                        "id": "b",
+                        "text": "the thinking thing as first, with objects inferred later from inner pictures"
+                      },
+                      {
+                        "id": "c",
+                        "text": "empty intending as a technical contrast"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Findlay as public domain"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The seminar question: how this is not the cogito as a substance first."
+                  }
+                ]
+              },
+              "thinkerId": "husserl",
+              "difficulty": 3
+            },
+            {
+              "id": "husserl-ideas-reduction",
+              "order": 3,
+              "kind": "bibliographic",
+              "title": "Ideas I: epoché, reduction, noesis–noema",
+              "author": "Edmund Husserl",
+              "work": "Ideas Pertaining to a Pure Phenomenology and to a Phenomenological Philosophy, First Book",
+              "translator": "F. Kersten or D. O. Dahlstrom (licensed English). W. R. Boyce Gibson (1931) remains in copyright in the US until 2027 — not a free text.",
+              "selection": "Ideas I §§27–32 (natural attitude and epoché), §§33–46 (phenomenological residuum), §§84–96 (noesis and noema)",
+              "pages": "Hua III / Ideas I §§27–32, 33–46, 84–96. Use Kersten (Nijhoff/Springer) or Dahlstrom (Hackett) section numbers; they track the German.",
+              "estimatedMinutes": 70,
+              "why": "The natural attitude’s general thesis: the world is simply there. The epoché suspends that thesis without a skeptical denial that the world exists. Noesis is the act-side; noema is the intended as such — not a little object in the head. This is not Pyrrhonian epochē (quiet without a rebuild) and not Cartesian doubt as a hunt for a thinking substance. Obtain Kersten or Dahlstrom legally. Do not ingest Gibson.",
+              "lookFor": [
+                "The natural attitude as default thesis, not a theory you adopted",
+                "What the epoché puts out of play — and what it does not conclude",
+                "Noema as the object-as-meant, distinct from a mental picture"
+              ],
+              "questions": [
+                "How does this epoché differ from Meditation I?",
+                "If the noema is not in the head, what is it?"
+              ],
+              "prerequisites": [
+                "husserl-intentionality"
+              ],
+              "nextHint": "The residual consciousness, and the door to Heidegger.",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=Ideas+Pertaining+to+a+Pure+Phenomenology+Husserl+Kersten",
+                "locator": "Ideas I §§27–32, 33–46, 84–96",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Kersten or Dahlstrom, Ideas I",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work. Gibson 1931 is still in US copyright until 2027. Do not treat a Gibson scan as public-domain English."
+              },
+              "quiz": {
+                "id": "husserl-ideas-reduction-quiz",
+                "title": "After Ideas I (epoché and noema)",
+                "intro": "Natural attitude, reduction, noesis–noema.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "The natural attitude, in the assigned Ideas I sections, is",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "a skeptical theory that the world might not exist"
+                      },
+                      {
+                        "id": "b",
+                        "text": "the default general thesis that the world is simply there — not a theory you adopted"
+                      },
+                      {
+                        "id": "c",
+                        "text": "Kant’s Copernican turn under another name"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Pyrrhonian quiet"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: default thesis, not a theory. The epoché will suspend that thesis."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "The phenomenological epoché",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "proves that the world does not exist"
+                      },
+                      {
+                        "id": "b",
+                        "text": "suspends the general thesis of the world’s existence without a skeptical denial that the world is"
+                      },
+                      {
+                        "id": "c",
+                        "text": "is identical with Sextus’s epochē as a way of life"
+                      },
+                      {
+                        "id": "d",
+                        "text": "is Meditation I’s deceiver hypothesis restated"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "Not Pyrrhonian suspension, not Cartesian doubt as a hunt for a thinking substance."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "multiple-choice",
+                    "prompt": "Noesis and noema name",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "two substances, mind and body"
+                      },
+                      {
+                        "id": "b",
+                        "text": "the act-side and the intended-as-such — the noema is not a little object in the head"
+                      },
+                      {
+                        "id": "c",
+                        "text": "Popper’s basic statements"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Sartre’s anguish and despair"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: object-as-meant, distinct from a mental picture."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "true-false",
+                    "prompt": "Boyce Gibson’s 1931 Ideas is hosted in this app as public-domain English.",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "false",
+                    "explanation": "Gibson remains in US copyright until 2027. Kersten or Dahlstrom, legally obtained."
+                  }
+                ]
+              },
+              "thinkerId": "husserl",
+              "difficulty": 3
+            },
+            {
+              "id": "husserl-transcendental",
+              "order": 4,
+              "kind": "bibliographic",
+              "title": "Ideas I: residual consciousness, and the door to Heidegger",
+              "author": "Edmund Husserl",
+              "work": "Ideas I",
+              "translator": "Kersten or Dahlstrom (in copyright)",
+              "selection": "Ideas I §§49–50 (the ‘annihilation of the world’ and absolute consciousness as residue)",
+              "pages": "Ideas I §§49–50. Same editions as the previous sitting.",
+              "estimatedMinutes": 45,
+              "why": "Husserl claims a residuum of consciousness even if the world’s existence is cancelled as a thesis — not that you should believe you are dreaming. Heidegger’s next sitting will refuse this starting point: Dasein is already in-the-world, not a leftover spectator. Read Husserl’s claim first so Being and Time’s Introduction is a disagreement, not a fog. You need not read the Crisis here (Carr’s English is in copyright; Lebenswelt is a later sitting).",
+              "lookFor": [
+                "What ‘absolute’ consciousness is being claimed in §§49–50",
+                "What is not being claimed (that the world is a dream, or that physics is false)",
+                "The hinge: transcendental ego as first vs being-in-the-world as first"
+              ],
+              "questions": [
+                "Is this Descartes rebuilt with better vocabulary?",
+                "What would have to change for being-in-the-world to be methodologically first?"
+              ],
+              "prerequisites": [
+                "husserl-ideas-reduction"
+              ],
+              "nextHint": "Heidegger: the question of being, which Husserl’s residue does not yet ask as fundamental ontology.",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=Ideas+for+a+Pure+Phenomenology+Husserl+Dahlstrom",
+                "locator": "Ideas I §§49–50",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Kersten or Dahlstrom, Ideas I",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work."
+              },
+              "quiz": {
+                "id": "husserl-transcendental-quiz",
+                "title": "After Ideas I §§49–50",
+                "intro": "Residual consciousness, and the door to Heidegger.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "The ‘annihilation of the world’ thought in §§49–50 claims",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "that you should believe you are dreaming"
+                      },
+                      {
+                        "id": "b",
+                        "text": "a residuum of consciousness even if the world’s existence is cancelled as a thesis — not that physics is a fiction you must live"
+                      },
+                      {
+                        "id": "c",
+                        "text": "that Dasein is the first word of method"
+                      },
+                      {
+                        "id": "d",
+                        "text": "that Findlay translated Ideas I"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: what is not being claimed (the world as a dream). The residue is methodological."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "Heidegger’s next sitting will refuse",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "the question of being"
+                      },
+                      {
+                        "id": "b",
+                        "text": "starting from a residual transcendental spectator rather than being-in-the-world"
+                      },
+                      {
+                        "id": "c",
+                        "text": "all phenomenology"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Russell’s table as a pedagogical example"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The hinge of this sitting: read Husserl’s claim so the Introduction to Being and Time is a disagreement."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "true-false",
+                    "prompt": "This assignment required you to read Husserl’s Crisis of European Sciences (Lebenswelt).",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "false",
+                    "explanation": "The sitting said you need not read the Crisis here. Carr’s English is in copyright; Lebenswelt is a later sitting."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "multiple-choice",
+                    "prompt": "A fair question the assignment left open is whether this residue is",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "a proof of God"
+                      },
+                      {
+                        "id": "b",
+                        "text": "Descartes rebuilt with better vocabulary — a thinking thing first, world later"
+                      },
+                      {
+                        "id": "c",
+                        "text": "identical with Hume’s custom"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Quine’s web of belief"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "That was a seminar question. The quiz only needs you to recognize the tension."
+                  }
+                ]
+              },
+              "thinkerId": "husserl",
+              "difficulty": 3
+            }
+          ],
+          "recapQuiz": {
+            "id": "husserl-recap",
+            "title": "Husserl: recap",
+            "intro": "Psychologism, intentionality, epoché, residue — four moves, not one slogan.",
+            "questions": [
+              {
+                "id": "q1",
+                "type": "multiple-choice",
+                "prompt": "The Prolegomena sitting attacks psychologism because if logic were only how we happen to think, then",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "mathematics would be easier"
+                  },
+                  {
+                    "id": "b",
+                    "text": "validity would lose its normative force and relativize to a species’ habits"
+                  },
+                  {
+                    "id": "c",
+                    "text": "Heidegger would already have been answered"
+                  },
+                  {
+                    "id": "d",
+                    "text": "Findlay would be public domain"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Crisis of validity, not a taste in psychology."
+              },
+              {
+                "id": "q2",
+                "type": "multiple-choice",
+                "prompt": "Intentionality in Investigation V is",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "a plan to be good"
+                  },
+                  {
+                    "id": "b",
+                    "text": "consciousness as consciousness-of — aboutness primitive, even when the object does not exist as a real thing"
+                  },
+                  {
+                    "id": "c",
+                    "text": "a copy-theory of ideas"
+                  },
+                  {
+                    "id": "d",
+                    "text": "the cogito as a substance first"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "The unit’s second move. Not Descartes’ inner pictures."
+              },
+              {
+                "id": "q3",
+                "type": "multiple-choice",
+                "prompt": "The epoché in Ideas I",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "is Sextus’s way of life under another name"
+                  },
+                  {
+                    "id": "b",
+                    "text": "suspends the natural attitude’s general thesis without a skeptical denial of the world"
+                  },
+                  {
+                    "id": "c",
+                    "text": "proves the world is a dream"
+                  },
+                  {
+                    "id": "d",
+                    "text": "is identical with Meditation I"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Third sitting. Noesis/noema then name act and intended-as-such."
+              },
+              {
+                "id": "q4",
+                "type": "true-false",
+                "prompt": "§§49–50 require you to live as if physics were false.",
+                "options": [
+                  {
+                    "id": "true",
+                    "text": "True"
+                  },
+                  {
+                    "id": "false",
+                    "text": "False"
+                  }
+                ],
+                "correct": "false",
+                "explanation": "Residue of consciousness as thesis-cancelled, not a lifestyle of dreaming. Heidegger will refuse the spectator start."
+              },
+              {
+                "id": "q5",
+                "type": "multiple-choice",
+                "prompt": "The unit’s hinge into Heidegger is that",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "they share a publisher"
+                  },
+                  {
+                    "id": "b",
+                    "text": "Husserl’s residual consciousness is a starting point Being and Time will not take — Dasein is already in-the-world"
+                  },
+                  {
+                    "id": "c",
+                    "text": "both reject all phenomenology"
+                  },
+                  {
+                    "id": "d",
+                    "text": "Gibson 1931 is hosted here"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Read Husserl first so the Introduction is a disagreement."
+              }
+            ]
+          },
+          "thinkers": [
+            {
+              "id": "husserl",
+              "name": "Edmund Husserl"
+            }
+          ]
+        },
+        {
+          "id": "being-and-existence",
+          "order": 3,
+          "title": "Being and existence",
+          "professorNote": "Two in-copyright landmarks after Husserl. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
+          "assignments": [
+            {
+              "id": "heidegger-being-time",
+              "order": 1,
               "kind": "bibliographic",
               "title": "Being and Time, Introduction §§1–4",
               "author": "Martin Heidegger",
@@ -14287,18 +15188,18 @@
               "selection": "Introduction, §§1–4 (the question of being; Dasein as the being that asks)",
               "pages": "SZ Introduction §§1–4 (German 1927; English 1962 is in copyright)",
               "estimatedMinutes": 70,
-              "why": "The question of being has been forgotten. The being who can ask it is Dasein — existence as ours, not a Cartesian subject with properties. The German original’s US status is not a free pass to host an English translation: Macquarrie (1962) is in copyright, and URAA complications attend the German. Obtain a legal copy. Read only the Introduction’s first four sections; that is the question, not the whole book.",
+              "why": "The question of being has been forgotten. The being who can ask it is Dasein — existence as ours, not a Cartesian subject with properties. You have just seen Husserl’s residual consciousness; this sitting refuses that starting point. The German original’s US status is not a free pass to host an English translation: Macquarrie (1962) is in copyright, and URAA complications attend the German. Obtain a legal copy. Read only the Introduction’s first four sections; that is the question, not the whole book.",
               "lookFor": [
                 "Why ‘being’ is not a being among beings",
                 "Dasein as the entity that understands being",
-                "What is being refused in the Cartesian starting point"
+                "What is being refused in the Cartesian — and Husserlian spectator — starting point"
               ],
               "questions": [
                 "Is this a new method, or a new subject-matter?",
                 "How would Russell’s table look if the first question were being, not sense-data?"
               ],
               "prerequisites": [
-                "wittgenstein-investigations"
+                "husserl-transcendental"
               ],
               "nextHint": "Sartre: existence precedes essence, in public prose.",
               "source": {
@@ -14409,11 +15310,12 @@
                   }
                 ]
               },
-              "thinkerId": "heidegger"
+              "thinkerId": "heidegger",
+              "difficulty": 3
             },
             {
               "id": "sartre-existentialism",
-              "order": 3,
+              "order": 2,
               "kind": "bibliographic",
               "title": "Existentialism Is a Humanism",
               "author": "Jean-Paul Sartre",
@@ -14435,7 +15337,7 @@
               "prerequisites": [
                 "heidegger-being-time"
               ],
-              "nextHint": "Analytic mid-century: Quine against two dogmas; Anscombe against a certain modern moral philosophy.",
+              "nextHint": "Popper: falsifiability as demarcation — then Quine’s web, then Kuhn’s paradigms. Dates overlap; read them in that order.",
               "source": {
                 "name": "Library or licensed edition",
                 "url": "https://search.worldcat.org/search?q=Existentialism+is+a+Humanism+Sartre",
@@ -14544,138 +15446,11 @@
                   }
                 ]
               },
-              "thinkerId": "sartre"
+              "thinkerId": "sartre",
+              "difficulty": 1
             }
           ],
-          "recapQuiz": {
-            "id": "language-being-existence-recap",
-            "title": "Language, being, existence: recap",
-            "intro": "Three in-copyright landmarks: use, Dasein, existence preceding essence.",
-            "questions": [
-              {
-                "id": "q1",
-                "type": "multiple-choice",
-                "prompt": "PI §§1–43 attack the idea that",
-                "options": [
-                  {
-                    "id": "a",
-                    "text": "grocers exist"
-                  },
-                  {
-                    "id": "b",
-                    "text": "meaning is primarily naming objects by ostension, as in a certain Augustinian picture"
-                  },
-                  {
-                    "id": "c",
-                    "text": "family resemblance is a warning"
-                  },
-                  {
-                    "id": "d",
-                    "text": "language-games are comparisons"
-                  }
-                ],
-                "correct": "b",
-                "explanation": "Use, techniques, and games loosen the Tractatus’s picture of sense."
-              },
-              {
-                "id": "q2",
-                "type": "multiple-choice",
-                "prompt": "Heidegger’s introduction claims that the question of being",
-                "options": [
-                  {
-                    "id": "a",
-                    "text": "is answered by listing beings"
-                  },
-                  {
-                    "id": "b",
-                    "text": "has been forgotten, and must be asked via Dasein — not a Cartesian subject with properties first"
-                  },
-                  {
-                    "id": "c",
-                    "text": "is Russell’s table"
-                  },
-                  {
-                    "id": "d",
-                    "text": "is Mill’s harm principle"
-                  }
-                ],
-                "correct": "b",
-                "explanation": "Being is not a being. That was the lookFor."
-              },
-              {
-                "id": "q3",
-                "type": "multiple-choice",
-                "prompt": "Sartre’s lecture claims that without a given human essence",
-                "options": [
-                  {
-                    "id": "a",
-                    "text": "one may do nothing"
-                  },
-                  {
-                    "id": "b",
-                    "text": "one still must choose an image of the human, as a humanism against quietism"
-                  },
-                  {
-                    "id": "c",
-                    "text": "Kant’s law is a blueprint of the species"
-                  },
-                  {
-                    "id": "d",
-                    "text": "Heidegger is a grocer"
-                  }
-                ],
-                "correct": "b",
-                "explanation": "Anguish is technical. The unit’s three moves are not one doctrine."
-              },
-              {
-                "id": "q4",
-                "type": "true-false",
-                "prompt": "These three assignments may be replaced by internet paraphrases for the quiz’s purposes.",
-                "options": [
-                  {
-                    "id": "true",
-                    "text": "True"
-                  },
-                  {
-                    "id": "false",
-                    "text": "False"
-                  }
-                ],
-                "correct": "false",
-                "explanation": "The unit note: the quiz checks whether you found the assigned move in a legal copy."
-              },
-              {
-                "id": "q5",
-                "type": "multiple-choice",
-                "prompt": "A tension among the three is that",
-                "options": [
-                  {
-                    "id": "a",
-                    "text": "they share a publisher"
-                  },
-                  {
-                    "id": "b",
-                    "text": "Wittgenstein loosens pictures of meaning, Heidegger asks being, Sartre universalizes a choice — they do not automatically agree"
-                  },
-                  {
-                    "id": "c",
-                    "text": "they all accept the Tractatus ladder as a method of living"
-                  },
-                  {
-                    "id": "d",
-                    "text": "they all start from sense-data"
-                  }
-                ],
-                "correct": "b",
-                "explanation": "The recap is contrast, not a blend."
-              }
-            ]
-          },
           "thinkers": [
-            {
-              "id": "wittgenstein",
-              "name": "Ludwig Wittgenstein"
-            },
             {
               "id": "heidegger",
               "name": "Martin Heidegger"
@@ -14687,14 +15462,153 @@
           ]
         },
         {
-          "id": "mind-language-science",
-          "order": 2,
-          "title": "Analytic shocks: language, science, intention",
-          "professorNote": "Two essays that reorganized the field. Read them as assigned chapters, not as internet paraphrases.",
+          "id": "scientific-method",
+          "order": 4,
+          "title": "Scientific method after the empiricists",
+          "professorNote": "Popper, Quine, Kuhn as one unit so the syllabus names the three. Dates overlap: Logik der Forschung 1934 / English LSD 1959; Quine 1951; Kuhn 1962. Pedagogy is demarcation (Popper) → web of belief (Quine) → paradigms (Kuhn), not a calendar. All three sittings are bibliographic. The classical setup (Descartes’ method, Hume’s custom, Kant’s Copernican turn) is already behind you; this unit is the 20th-century method thread. Quizzes check the assigned move, not biographies.",
           "assignments": [
             {
-              "id": "quine-two-dogmas",
+              "id": "popper-lsd",
               "order": 1,
+              "kind": "bibliographic",
+              "title": "Popper: Logic of Scientific Discovery — demarcation and falsifiability",
+              "author": "Karl Popper",
+              "work": "The Logic of Scientific Discovery",
+              "translator": "Popper’s own English (Hutchinson 1959 / Routledge reprints; in copyright)",
+              "selection": "Preface to the First English Edition (1959); Chapter I, ‘A Survey of Some Fundamental Problems’ (induction, deduction, the problem of demarcation, falsifiability as criterion — commonly §§1–6 of that chapter); Chapter IV, ‘Falsifiability’",
+              "pages": "LSD (Routledge/Hutchinson): 1959 Preface; Ch. I; Ch. IV. German Logik der Forschung (1934) is not a free-English pass.",
+              "estimatedMinutes": 70,
+              "why": "Verification cannot demarcate science: existential reports and metaphysics can both wait on confirming instances. Popper’s proposal is falsifiability: a scientific theory forbids something; a basic statement can clash with it. This is a criterion of demarcation, not a proof that scientists are saints of conjecture-and-refutation, and not Hume solved by a slogan. Hume’s problem of induction is restated, then refused as a demand for justification of the unjustifiable. Get a legal English copy.",
+              "lookFor": [
+                "The problem of demarcation — science vs metaphysics vs pseudo-science — as Popper poses it in Ch. I",
+                "Why confirming instances do not do the work verificationism wanted",
+                "Falsifiability in Ch. IV: what a theory must risk, and what ‘ad hoc’ immunization is"
+              ],
+              "questions": [
+                "Does a falsifiability criterion describe how science proceeds, or how it ought to be marked off?",
+                "What happens to Hume’s custom if science is conjecture and attempted refutation rather than justified induction?"
+              ],
+              "prerequisites": [
+                "sartre-existentialism"
+              ],
+              "nextHint": "Quine: the analytic/synthetic cut and the web of belief (1951 — dated before English LSD, read after Popper for this unit).",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=The+Logic+of+Scientific+Discovery+Popper",
+                "locator": "LSD 1959 Preface; Ch. I; Ch. IV",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Popper, The Logic of Scientific Discovery (Routledge)",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work. Do not host or download unauthorized scans of the English."
+              },
+              "quiz": {
+                "id": "popper-lsd-quiz",
+                "title": "After Logic of Scientific Discovery (assigned chapters)",
+                "intro": "Demarcation and falsifiability — not a biography of Popper.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "The problem of demarcation, as posed in the assigned Chapter I, is how to",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "prove that induction is certain"
+                      },
+                      {
+                        "id": "b",
+                        "text": "mark off science from metaphysics and from merely confirming story-telling — not how to justify induction as Hume demanded"
+                      },
+                      {
+                        "id": "c",
+                        "text": "define ‘paradigm’"
+                      },
+                      {
+                        "id": "d",
+                        "text": "save Kant’s analytic/synthetic cut"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: demarcation. Induction is restated, then refused as a demand for the unjustifiable."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "Falsifiability, in the assigned sense, means that a scientific theory",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "has already been shown false"
+                      },
+                      {
+                        "id": "b",
+                        "text": "must risk clash with some possible basic statement — it forbids something, rather than waiting on confirming instances"
+                      },
+                      {
+                        "id": "c",
+                        "text": "is analytic"
+                      },
+                      {
+                        "id": "d",
+                        "text": "is whatever a community currently teaches"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "Chapter IV: what a theory must risk. Verification by accumulation of positives is what is being replaced."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "true-false",
+                    "prompt": "Popper’s criterion is offered as a proof that working scientists never protect a theory by ad hoc moves.",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "false",
+                    "explanation": "Immunization is named as a danger. The sitting is a criterion of demarcation, not a hagiography of lab practice."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "multiple-choice",
+                    "prompt": "Relative to Hume’s custom, this sitting",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "supplies the missing demonstration of induction"
+                      },
+                      {
+                        "id": "b",
+                        "text": "refuses the demand to justify induction and relocates science as conjecture and attempted refutation"
+                      },
+                      {
+                        "id": "c",
+                        "text": "agrees that causation is only a feeling and stops"
+                      },
+                      {
+                        "id": "d",
+                        "text": "is identical with Quine’s web"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The seminar question: what happens to Hume if science is not justified induction."
+                  }
+                ]
+              },
+              "thinkerId": "popper",
+              "difficulty": 3,
+              "trackIds": [
+                "science-epistemology"
+              ]
+            },
+            {
+              "id": "quine-two-dogmas",
+              "order": 2,
               "kind": "bibliographic",
               "title": "Quine: Two Dogmas of Empiricism",
               "author": "W. V. O. Quine",
@@ -14703,7 +15617,7 @@
               "selection": "The whole essay (it is the assignment)",
               "pages": "From a Philosophical Review reprint or From a Logical Point of View — licensed copy",
               "estimatedMinutes": 55,
-              "why": "The analytic/synthetic distinction and reductionism are dogmas. Meaning holism: statements meet the tribunal of experience as a corporate body. Empiricism after Hume and Carnap has to live without a sharp language/world split at the sentence level. Do not quote long stretches into notes you share; understand the two dogmas and the holism claim.",
+              "why": "The analytic/synthetic distinction and reductionism are dogmas. Meaning holism: statements meet the tribunal of experience as a corporate body. Empiricism after Hume and Carnap has to live without a sharp language/world split at the sentence level. Read after Popper in this unit so the contrast is live: Popper still needs a sharp clash with basic statements; Quine’s web makes revision strike anywhere, including logic. Do not quote long stretches into notes you share; understand the two dogmas and the holism claim.",
               "lookFor": [
                 "What the two dogmas are",
                 "Why synonymy does not easily save analyticity",
@@ -14711,12 +15625,12 @@
               ],
               "questions": [
                 "What happens to Kant’s synthetic a priori if there is no analytic/synthetic cut?",
-                "Is holism a skepticism, or a picture of science?"
+                "Is holism a skepticism, or a picture of science — and how does it sit with Popper’s demarcation?"
               ],
               "prerequisites": [
-                "sartre-existentialism"
+                "popper-lsd"
               ],
-              "nextHint": "Anscombe: intention, and modern moral philosophy’s vocabulary problem.",
+              "nextHint": "Kuhn: paradigms, normal science, revolutions.",
               "source": {
                 "name": "Library or licensed edition",
                 "url": "https://search.worldcat.org/search?q=Two+Dogmas+of+Empiricism+Quine",
@@ -14825,11 +15739,300 @@
                   }
                 ]
               },
-              "thinkerId": "quine"
+              "thinkerId": "quine",
+              "difficulty": 3,
+              "trackIds": [
+                "science-epistemology"
+              ]
             },
             {
+              "id": "kuhn-ssr",
+              "order": 3,
+              "kind": "bibliographic",
+              "title": "Kuhn: Structure of Scientific Revolutions — paradigms and revolutions",
+              "author": "Thomas S. Kuhn",
+              "work": "The Structure of Scientific Revolutions",
+              "translator": "n/a (English original, 1962; 1970 postscript if your copy has it, optional)",
+              "selection": "Chapters I–III (A Role for History; The Route to Normal Science; The Nature of Normal Science) and Chapters IX–X (The Nature and Necessity of Scientific Revolutions; Revolutions as Changes of World View)",
+              "pages": "SSR (Chicago): chs. I–III and IX–X. Anomaly and crisis are fuller in VI–VIII if you read on; this sitting is paradigm + revolution.",
+              "estimatedMinutes": 75,
+              "why": "Science as a historical community: a paradigm trains what counts as a puzzle; normal science is puzzle-solving, not perpetual falsification hunts. Revolutions are changes of world-view, not cumulative replacement of one true theory by a closer one. Incommensurability is the sting: rival paradigms may not share a neutral observation language. Popper’s demarcation and Quine’s web are both in the room. Get a legal Chicago copy. Do not paste chapters into the app.",
+              "lookFor": [
+                "Paradigm as exemplar and as disciplinary matrix — enough to see that it is not a synonym for ‘theory’",
+                "Normal science as puzzle-solving under a paradigm, not a string of attempted revolutions",
+                "What a revolution changes, on chs. IX–X, including the claim about progress"
+              ],
+              "questions": [
+                "Is this compatible with Popper’s picture, or a rival description of the same history?",
+                "If paradigms are incommensurable, what is the tribunal of experience Quine described?"
+              ],
+              "prerequisites": [
+                "quine-two-dogmas"
+              ],
+              "nextHint": "Anscombe: intention, and modern moral philosophy’s vocabulary problem.",
+              "source": {
+                "name": "Library or licensed edition",
+                "url": "https://search.worldcat.org/search?q=The+Structure+of+Scientific+Revolutions+Kuhn",
+                "locator": "SSR chs. I–III, IX–X",
+                "license": "in-copyright",
+                "available": false,
+                "edition": "Kuhn, The Structure of Scientific Revolutions (University of Chicago Press)",
+                "note": "Get a printed or licensed library copy. Do not use a pirated PDF. This course does not host the work. Do not host unauthorized scans of the English."
+              },
+              "quiz": {
+                "id": "kuhn-ssr-quiz",
+                "title": "After Structure of Scientific Revolutions (assigned chapters)",
+                "intro": "Paradigms, normal science, revolutions.",
+                "questions": [
+                  {
+                    "id": "q1",
+                    "type": "multiple-choice",
+                    "prompt": "A paradigm in the assigned chapters is best taken as",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "a synonym for any true theory"
+                      },
+                      {
+                        "id": "b",
+                        "text": "the exemplary achievement that trains what counts as a puzzle — not merely a list of propositions"
+                      },
+                      {
+                        "id": "c",
+                        "text": "Popper’s basic statement"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Husserl’s noema"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: not a synonym for ‘theory.’ Exemplar and disciplinary training."
+                  },
+                  {
+                    "id": "q2",
+                    "type": "multiple-choice",
+                    "prompt": "Normal science, as Kuhn describes it in I–III, is",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "a string of attempted revolutions"
+                      },
+                      {
+                        "id": "b",
+                        "text": "puzzle-solving under a paradigm — not perpetual falsification hunts as the daily business"
+                      },
+                      {
+                        "id": "c",
+                        "text": "the same as Quine’s web of belief"
+                      },
+                      {
+                        "id": "d",
+                        "text": "Bacon’s idols"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "The contrast with a naive Popperian calendar of conjecture-and-refutation is the point of grouping this unit."
+                  },
+                  {
+                    "id": "q3",
+                    "type": "multiple-choice",
+                    "prompt": "Chapters IX–X claim that scientific revolutions",
+                    "options": [
+                      {
+                        "id": "a",
+                        "text": "are only better measurements of the same world under one language"
+                      },
+                      {
+                        "id": "b",
+                        "text": "are changes of world-view, not merely cumulative replacement of one true theory by a closer one"
+                      },
+                      {
+                        "id": "c",
+                        "text": "never happen"
+                      },
+                      {
+                        "id": "d",
+                        "text": "are identical with Hume’s custom"
+                      }
+                    ],
+                    "correct": "b",
+                    "explanation": "LookFor: what a revolution changes, including the claim about progress."
+                  },
+                  {
+                    "id": "q4",
+                    "type": "true-false",
+                    "prompt": "Incommensurability, as this sitting uses it, means that rival paradigms always share a fully neutral observation language.",
+                    "options": [
+                      {
+                        "id": "true",
+                        "text": "True"
+                      },
+                      {
+                        "id": "false",
+                        "text": "False"
+                      }
+                    ],
+                    "correct": "false",
+                    "explanation": "The sting is that they may not. That is how Kuhn sits uneasily with both Popper’s clash and Quine’s tribunal."
+                  }
+                ]
+              },
+              "thinkerId": "kuhn",
+              "difficulty": 2,
+              "trackIds": [
+                "science-epistemology"
+              ]
+            }
+          ],
+          "recapQuiz": {
+            "id": "scientific-method-recap",
+            "title": "Scientific method: recap",
+            "intro": "Falsification, web of belief, paradigms — three tools, not one calendar.",
+            "questions": [
+              {
+                "id": "q1",
+                "type": "multiple-choice",
+                "prompt": "Popper’s assigned chapters replace verification, as a demarcation of science, with",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "induction made certain"
+                  },
+                  {
+                    "id": "b",
+                    "text": "falsifiability: a theory must risk clash with some possible basic statement"
+                  },
+                  {
+                    "id": "c",
+                    "text": "whatever a paradigm currently teaches"
+                  },
+                  {
+                    "id": "d",
+                    "text": "the analytic/synthetic cut"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Ch. I and IV. Confirming instances are not enough."
+              },
+              {
+                "id": "q2",
+                "type": "multiple-choice",
+                "prompt": "Quine’s two dogmas are",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "falsification and paradigms"
+                  },
+                  {
+                    "id": "b",
+                    "text": "the analytic/synthetic distinction and reductionism of each statement to a sensory range"
+                  },
+                  {
+                    "id": "c",
+                    "text": "normal science and revolution"
+                  },
+                  {
+                    "id": "d",
+                    "text": "epoché and noema"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Without naming the dogmas, the web has nothing to replace."
+              },
+              {
+                "id": "q3",
+                "type": "multiple-choice",
+                "prompt": "Kuhn’s normal science is",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "perpetual revolution"
+                  },
+                  {
+                    "id": "b",
+                    "text": "puzzle-solving under a paradigm, not a daily hunt for falsifying instances as the whole business"
+                  },
+                  {
+                    "id": "c",
+                    "text": "identical with Hume’s custom"
+                  },
+                  {
+                    "id": "d",
+                    "text": "Kant’s Copernican turn"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "Chs. I–III. Revolutions then change world-views (IX–X), not mere cumulative approach to one language."
+              },
+              {
+                "id": "q4",
+                "type": "true-false",
+                "prompt": "The unit’s pedagogical order (Popper → Quine → Kuhn) is the same as the calendar of first publication in English.",
+                "options": [
+                  {
+                    "id": "true",
+                    "text": "True"
+                  },
+                  {
+                    "id": "false",
+                    "text": "False"
+                  }
+                ],
+                "correct": "false",
+                "explanation": "Quine 1951 is before English LSD 1959. The professorNote: dates overlap; demarcation, then holism, then paradigms."
+              },
+              {
+                "id": "q5",
+                "type": "multiple-choice",
+                "prompt": "A tension among the three is that",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "they share a publisher"
+                  },
+                  {
+                    "id": "b",
+                    "text": "Popper wants a sharp clash with basic statements, Quine lets revision strike anywhere, Kuhn describes communities under incommensurable paradigms"
+                  },
+                  {
+                    "id": "c",
+                    "text": "they all accept verificationism"
+                  },
+                  {
+                    "id": "d",
+                    "text": "they all start from sense-data as Russell’s table"
+                  }
+                ],
+                "correct": "b",
+                "explanation": "The recap is contrast, not a blend."
+              }
+            ]
+          },
+          "thinkers": [
+            {
+              "id": "popper",
+              "name": "Karl Popper"
+            },
+            {
+              "id": "quine",
+              "name": "W. V. O. Quine"
+            },
+            {
+              "id": "kuhn",
+              "name": "Thomas S. Kuhn"
+            }
+          ]
+        },
+        {
+          "id": "mind-language-science",
+          "order": 5,
+          "title": "Intention and ‘ought’",
+          "professorNote": "Anscombe after the science unit. The 1958 paper is the assignment; obtain it legally.",
+          "assignments": [
+            {
               "id": "anscombe-modern-moral",
-              "order": 2,
+              "order": 1,
               "kind": "bibliographic",
               "title": "Anscombe: Modern Moral Philosophy (and a look at Intention §§1–5 if you have it)",
               "author": "G. E. M. Anscombe",
@@ -14849,7 +16052,7 @@
                 "How would Aristotle’s hexis fit her demand for a psychology?"
               ],
               "prerequisites": [
-                "quine-two-dogmas"
+                "kuhn-ssr"
               ],
               "nextHint": "Justice, power, and the sovereignty of good — still bibliographic.",
               "source": {
@@ -14960,14 +16163,11 @@
                   }
                 ]
               },
-              "thinkerId": "anscombe"
+              "thinkerId": "anscombe",
+              "difficulty": 2
             }
           ],
           "thinkers": [
-            {
-              "id": "quine",
-              "name": "W. V. O. Quine"
-            },
             {
               "id": "anscombe",
               "name": "G. E. M. Anscombe"
@@ -14976,7 +16176,7 @@
         },
         {
           "id": "ethics-politics-power",
-          "order": 3,
+          "order": 6,
           "title": "Justice, power, the good",
           "professorNote": "Three different late-century ways of doing moral and political philosophy. None replaces the others.",
           "assignments": [
@@ -15113,7 +16313,8 @@
                   }
                 ]
               },
-              "thinkerId": "rawls"
+              "thinkerId": "rawls",
+              "difficulty": 2
             },
             {
               "id": "foucault-discipline",
@@ -15248,7 +16449,8 @@
                   }
                 ]
               },
-              "thinkerId": "foucault"
+              "thinkerId": "foucault",
+              "difficulty": 2
             },
             {
               "id": "murdoch-sovereignty",
@@ -15383,7 +16585,8 @@
                   }
                 ]
               },
-              "thinkerId": "murdoch"
+              "thinkerId": "murdoch",
+              "difficulty": 2
             }
           ],
           "recapQuiz": {
@@ -15527,7 +16730,7 @@
         },
         {
           "id": "keep-going-maps",
-          "order": 4,
+          "order": 7,
           "title": "Maps for the living debates",
           "professorNote": "These are bibliographic assignments without a single book: they tell you how to continue. The quiz checks that you can place a problem in a family.",
           "assignments": [
@@ -15663,7 +16866,8 @@
                     "explanation": "The assignment forbade that. The quiz is whether you can name legal next texts and locate problems."
                   }
                 ]
-              }
+              },
+              "difficulty": 2
             },
             {
               "id": "map-continental-ethics",
@@ -15673,10 +16877,10 @@
               "author": "Various authors",
               "work": "A path, not one book",
               "translator": "",
-              "selection": "Place: phenomenology after Heidegger (Merleau-Ponty, Levinas); critical theory (Habermas); feminist philosophy; philosophy of race after Du Bois; bioethics / mind as public issues",
+              "selection": "Place: phenomenology after Husserl (Merleau-Ponty, Levinas); critical theory (Habermas); feminist philosophy; philosophy of race after Du Bois; bioethics / mind as public issues",
               "pages": "Library and SEP; no pirated books",
               "estimatedMinutes": 40,
-              "why": "The other half of ‘how to keep going’: phenomenology of the body; ethics of the other; discourse and democracy; feminist critiques of the ‘neutral’ subject you met from Descartes to Rawls; philosophy of race as continuation of Du Bois, not an optional module. Again: a one-page map, three legal starting points. You have finished the guided sequence when you can assign yourself the next sitting.",
+              "why": "The other half of ‘how to keep going’: phenomenology of the body after Husserl; ethics of the other; discourse and democracy; feminist critiques of the ‘neutral’ subject you met from Descartes to Rawls; philosophy of race as continuation of Du Bois, not an optional module. Again: a one-page map, three legal starting points. You have finished the guided sequence when you can assign yourself the next sitting.",
               "lookFor": [
                 "One phenomenological problem that is not ‘Heidegger said being’",
                 "One political problem after Rawls/Foucault (recognition, domination, gender, race)",
@@ -15797,7 +17001,8 @@
                     "explanation": "The last nextHint: there is a next reading you can now choose with judgment."
                   }
                 ]
-              }
+              },
+              "difficulty": 2
             }
           ],
           "thinkers": [
@@ -15822,12 +17027,28 @@
           "name": "Ludwig Wittgenstein"
         },
         {
+          "id": "husserl",
+          "name": "Edmund Husserl"
+        },
+        {
           "id": "heidegger",
           "name": "Martin Heidegger"
         },
         {
           "id": "sartre",
           "name": "Jean-Paul Sartre"
+        },
+        {
+          "id": "popper",
+          "name": "Karl Popper"
+        },
+        {
+          "id": "quine",
+          "name": "W. V. O. Quine"
+        },
+        {
+          "id": "kuhn",
+          "name": "Thomas S. Kuhn"
         },
         {
           "id": "rawls",

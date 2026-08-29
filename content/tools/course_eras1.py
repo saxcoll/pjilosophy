@@ -14,7 +14,36 @@ def course_meta():
             "in-copyright works are assigned as bibliographic readings you obtain legally."
         ),
         "audience": "Self-taught student; no prior philosophy required",
-        "estimatedHours": 125,
+        "estimatedHours": 135,
+        "tracks": [
+            {
+                "id": "science-epistemology",
+                "title": "Philosophy of Science & Epistemology",
+                "subtitle": "From method and skepticism to falsification, paradigms, and the web of belief",
+                "intro": (
+                    "This thread is not a second syllabus. It is the spine of method that the chronological course already teaches, "
+                    "pulled into one path so you can watch a problem stay alive. Descartes makes method a sequence you can follow, "
+                    "and certainty a residue after doubt. Hume then shows that the glue of causal science is custom, not insight: "
+                    "induction has no demonstration. Kant answers by relocating necessity — objects conform to our way of knowing; "
+                    "the synthetic a priori is how a science of nature remains possible after Hume.\n\n"
+                    "The twentieth century does not settle that inheritance. Popper’s English Logic of Scientific Discovery (1959; German 1934) "
+                    "replaces verification with falsifiability as a demarcation of science from metaphysics and from mere confirmation. "
+                    "Quine’s ‘Two Dogmas’ (1951) is dated earlier than that English Popper: it attacks the analytic/synthetic cut Kant needed "
+                    "and replaces sentence-by-sentence empiricism with a web of belief. Kuhn’s Structure (1962) then describes sciences as "
+                    "historical communities under paradigms, with revolutions that are not Popperian conjecture-and-refutation as a calendar of progress. "
+                    "Read the track as classical → Popper → Quine → Kuhn: demarcation first, then holism, then paradigms. The dates overlap; the pedagogy does not."
+                ),
+                "assignmentIds": [
+                    "descartes-discourse",
+                    "descartes-meditations-1-2",
+                    "hume-enquiry-causation",
+                    "kant-cpr-prefaces",
+                    "popper-lsd",
+                    "quine-two-dogmas",
+                    "kuhn-ssr",
+                ],
+            }
+        ],
         "method": (
             "Read in order. Home always names the next unread assignment; do not skip ahead to the famous title. "
             "Each sitting is 20–90 minutes unless the text itself refuses to be cut. Read the assigned pages, "

@@ -33,9 +33,17 @@
         <nav class="site-nav" aria-label="Primary">
           <a href="#/" data-nav id="nav-continue">Continue</a>
           <a href="#/syllabus" data-nav id="nav-syllabus">Syllabus</a>
+          <a href="#/tracks" data-nav id="nav-tracks">Tracks</a>
           <a href="#/quizzes" data-nav id="nav-quizzes">Quizzes</a>
           <a href="#/terms" data-nav id="nav-terms">Terms</a>
         </nav>
+        <details class="export-menu" id="export-menu">
+          <summary>Export notes</summary>
+          <div class="export-menu-panel" role="menu">
+            <button type="button" data-export="md">Markdown</button>
+            <button type="button" data-export="json">JSON</button>
+          </div>
+        </details>
       </div>
       <div
         class="progress-rail"

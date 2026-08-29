@@ -19,7 +19,7 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 
 ```text
 {
-  course: { id, title, subtitle, description, audience, estimatedHours, method },
+  course: { id, title, subtitle, description, audience, estimatedHours, method, tracks? },
   eras: [ Era, ... ]
 }
 ```
@@ -33,6 +33,20 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 | `audience` | string | Who the sequence is for. |
 | `estimatedHours` | number | Whole-course estimate. |
 | `method` | string | 2–4 paragraphs: how to use the course. |
+| `tracks` | Track[] \| omitted | Optional thematic threads that reuse existing assignment ids in a different order. |
+
+### `Track`
+
+A first-class path across eras. The chronological syllabus stays the source of reading order; a track is a professor-designed subset.
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `id` | string | Unique kebab-case. This course includes `science-epistemology`. |
+| `title`, `subtitle` | string | Shown if the UI lists tracks. |
+| `intro` | string | Why the thread exists; how earlier sittings set up later ones. |
+| `assignmentIds` | string[] | Existing assignment ids, in pedagogical order for this thread. Do not duplicate sittings; point at ids already in an era. |
+
+Assignments listed here are also tagged `trackIds` on the assignment object.
 
 ### `Era`
 
@@ -73,6 +87,9 @@ Do not duplicate copyrighted prose. Bibliographic assignments have no `text` obj
 | `selection` | string | What part of the work. |
 | `pages` | string | Human locator: Stephanus, Bekker, Ak, chapters, Gutenberg paragraphs. |
 | `estimatedMinutes` | number | Sitting length. |
+| `wordCount` | number \| omitted | Words in the **assigned** hosted English (honor `text.start` / `text.end`). Present on public-domain in-app readings when countable. **Omit** rather than invent a fake precise number. Bibliographic / in-copyright sittings usually omit this. |
+| `difficulty` | number | Integer **1**, **2**, or **3**. **1** accessible (e.g. Plato’s *Apology*, *Crito*, a short Mill selection). **2** intermediate (e.g. Hume *Enquiry* chunks, Descartes *Meditations*, Aristotle *NE* I). **3** advanced (e.g. Spinoza *Ethics*, Kant *Critique of Pure Reason*, Aristotle *Metaphysics*, Hegel, Tractatus density). Required on every assignment. |
+| `trackIds` | string[] \| omitted | Ids of `course.tracks` this sitting belongs to (e.g. `["science-epistemology"]`). Omitted when the sitting is not on a track. |
 | `why` | string | Why these pages, why now. |
 | `lookFor` | string[] | 2–4 reading cues. |
 | `questions` | string[] | 2–4 questions. |

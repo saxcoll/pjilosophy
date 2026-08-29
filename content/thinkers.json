@@ -414,6 +414,14 @@
       "license": "public-domain"
     },
     {
+      "id": "husserl",
+      "name": "Edmund Husserl",
+      "sortName": "Husserl",
+      "image": "images/thinkers/husserl.jpg",
+      "imageCredit": "Wikimedia Commons — Edmund Husserl 1900. Unknown. public-domain. https://commons.wikimedia.org/wiki/File%3AEdmund%20Husserl%201900.jpg",
+      "license": "public-domain"
+    },
+    {
       "id": "burnet",
       "name": "John Burnet",
       "sortName": "Burnet"
@@ -434,9 +442,19 @@
       "sortName": "Sartre"
     },
     {
+      "id": "popper",
+      "name": "Karl Popper",
+      "sortName": "Popper"
+    },
+    {
       "id": "quine",
       "name": "W. V. O. Quine",
       "sortName": "Quine"
+    },
+    {
+      "id": "kuhn",
+      "name": "Thomas S. Kuhn",
+      "sortName": "Kuhn"
     },
     {
       "id": "anscombe",

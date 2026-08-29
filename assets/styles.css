@@ -115,7 +115,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem 1rem;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -553,6 +554,152 @@ a:hover {
   text-transform: uppercase;
   color: var(--ink-muted);
   vertical-align: 0.15em;
+}
+
+.reading-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.7rem;
+  margin: 0.35rem 0 0.15rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.reading-tags.is-tagged .word-count {
+  color: var(--ink);
+}
+
+.diff-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+}
+
+.diff-n {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.diff-pill[data-diff="1"] .diff-n {
+  color: var(--sage);
+}
+
+.diff-pill[data-diff="2"] .diff-n {
+  color: var(--gold);
+}
+
+.diff-pill[data-diff="3"] .diff-n {
+  color: var(--crimson);
+}
+
+.asg-sub .reading-tags {
+  display: inline-flex;
+  margin: 0.2rem 0 0;
+}
+
+.track-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--crimson) 35%, var(--rule));
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--crimson);
+  text-decoration: none;
+  vertical-align: 0.12em;
+}
+
+.track-badge:hover {
+  background: var(--crimson-soft);
+}
+
+.track-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 1.4rem 0 1.8rem;
+}
+
+.track-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+
+.track-card h2 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+}
+
+.track-card h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.track-card h2 a:hover {
+  color: var(--crimson);
+}
+
+.export-menu {
+  position: relative;
+  font-size: 0.88rem;
+}
+
+.export-menu summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  color: var(--ink-muted);
+}
+
+.export-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.export-menu summary:hover,
+.export-menu[open] summary {
+  color: var(--ink);
+  background: var(--paper-inset);
+}
+
+.export-menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.25rem);
+  z-index: 12;
+  min-width: 10rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.export-menu-panel button {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  padding: 0.4rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.export-menu-panel button:hover {
+  background: var(--paper-inset);
 }
 
 .dl-meta {
@@ -1058,21 +1205,28 @@ body.reader-mode #app {
 
 .reader-para {
   position: relative;
-  padding-left: 2.2rem;
+  padding-left: 5.4rem;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 960px) {
   .reader-para {
-    margin-left: -2.2rem;
+    margin-left: -5.4rem;
   }
 }
 
-.para-mark {
+.para-gutter {
   position: absolute;
   left: 0;
   top: 0.05em;
-  width: 2.1rem;
-  height: 2.1rem;
+  display: flex;
+  gap: 0.08rem;
+}
+
+.para-mark,
+.para-hi,
+.para-note-btn {
+  width: 1.7rem;
+  height: 1.7rem;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1080,35 +1234,138 @@ body.reader-mode #app {
   background: transparent;
   color: var(--ink-faint);
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1;
   cursor: pointer;
   opacity: 0;
 }
 
 .para-mark:hover,
-.para-mark:focus-visible {
+.para-hi:hover,
+.para-note-btn:hover,
+.para-mark:focus-visible,
+.para-hi:focus-visible,
+.para-note-btn:focus-visible {
   color: var(--crimson);
   background: var(--paper-inset);
 }
 
 .reader-para:hover .para-mark,
+.reader-para:hover .para-hi,
+.reader-para:hover .para-note-btn,
 .reader-para:focus-within .para-mark,
+.reader-para:focus-within .para-hi,
+.reader-para:focus-within .para-note-btn,
 .para-mark:focus-visible,
-.reader-para.is-bookmarked .para-mark {
+.para-hi:focus-visible,
+.para-note-btn:focus-visible,
+.reader-para.is-bookmarked .para-mark,
+.reader-para.is-highlighted .para-hi,
+.reader-para.has-note .para-note-btn {
   opacity: 1;
 }
 
 @media (hover: none) {
-  .para-mark {
-    opacity: 0.4;
+  .para-mark,
+  .para-hi,
+  .para-note-btn {
+    opacity: 0.45;
   }
 }
 
 .reader-para.is-bookmarked {
   box-shadow: inset 3px 0 0 var(--gold);
-  background: color-mix(in srgb, var(--gold-soft) 70%, transparent);
+  background: color-mix(in srgb, var(--gold-soft) 55%, transparent);
   border-radius: 0 4px 4px 0;
+}
+
+.reader-para.is-highlighted .para-body {
+  background: color-mix(in srgb, var(--gold) 16%, var(--paper-raised));
+  box-decoration-break: clone;
+  padding: 0.12em 0.28em;
+  border-radius: 2px;
+}
+
+.reader-para.has-note .para-note-btn {
+  color: var(--crimson);
+}
+
+.para-body {
+  margin: 0;
+}
+
+.para-note-wrap {
+  margin: 0.45rem 0 0.2rem;
+}
+
+.para-note-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.para-note {
+  width: 100%;
+  min-height: 4.5rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: inherit;
+  resize: vertical;
+}
+
+.reader-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sitting-notes-panel {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.sitting-notes-panel h2 {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.sitting-note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitting-note-jump {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 0.35rem 0;
+  cursor: pointer;
+}
+
+.sitting-note-jump:hover {
+  color: var(--crimson);
 }
 
 .para-ribbon {

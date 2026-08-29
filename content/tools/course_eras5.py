@@ -658,16 +658,17 @@ def era_present():
         "years": "1922–present",
         "intro": (
             "The rest of the century is still in copyright in the United States. You will read it as a student reads assigned chapters: legally, with a physical or licensed copy. "
-            "The assignments below are exact. They complete the spine: language after the Tractatus, being and existence, the analytic/continental split, justice, power, and inner moral vision. "
+            "The assignments below are exact. They complete the spine: language after the Tractatus, Husserl’s phenomenological turn, being and existence, "
+            "scientific method after the empiricists (Popper, Quine, Kuhn), then intention, justice, power, and inner moral vision. "
             "Two final maps tell you how the living debates are clustered so you are not abandoned in 1922."
         ),
-        "themes": ["language", "existence", "justice", "power", "mind"],
+        "themes": ["language", "phenomenology", "existence", "science", "justice", "power", "mind"],
         "units": [
             {
                 "id": "language-being-existence",
                 "order": 1,
-                "title": "Language, being, existence",
-                "professorNote": "Three in-copyright landmarks. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
+                "title": "Language after the Tractatus",
+                "professorNote": "One in-copyright landmark. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
                 "assignments": [
                     A(
                         "wittgenstein-investigations",
@@ -692,7 +693,7 @@ def era_present():
                             "Is family resemblance a theory of concepts, or a warning against theories of concepts?",
                         ],
                         ["tractatus-silence"],
-                        "Heidegger: the question of being, which the Tractatus treated as something to be silent about — or as nonsense.",
+                        "Husserl: phenomenology against psychologism, then intentionality — the method Heidegger will inherit and refuse.",
                         bib(
                             "PI §§1–43",
                             "Anscombe translation; any standard bilingual edition",
@@ -700,9 +701,159 @@ def era_present():
                             "https://search.worldcat.org/search?q=Philosophical+Investigations+Wittgenstein",
                         ),
                     ),
+                ],
+            },
+            {
+                "id": "husserl",
+                "order": 2,
+                "title": "Husserl",
+                "professorNote": (
+                    "Four bibliographic sittings, not the Nachlass. English translations of the Logical Investigations (Findlay, 1970) and Ideas I "
+                    "(Kersten; Dahlstrom) are in copyright. Boyce Gibson’s Ideas (1931) is not public domain in the US until 2027 — do not use a scan as a free text. "
+                    "Obtain licensed copies. Locators are Investigation numbers and Ideas section numbers so you can find the pages in any standard edition."
+                ),
+                "assignments": [
+                    A(
+                        "husserl-psychologism",
+                        1,
+                        "bibliographic",
+                        "Logical Investigations: against psychologism",
+                        "Edmund Husserl",
+                        "Logical Investigations",
+                        "J. N. Findlay (standard English; in copyright). Moran’s Routledge reprint of Findlay is a common library copy.",
+                        "Prolegomena to Pure Logic, §§1–8, 17–23, 32–39",
+                        "LI vol. I, Prolegomena §§1–8 (logic as science vs technology), §§17–23 (psychologism), §§32–39 (skeptical consequences / relativism). German 1900; Findlay 1970 is in copyright.",
+                        55,
+                        "Why phenomenology at all: if logical laws were only empirical regularities of how we happen to think, validity would collapse into anthropology. "
+                        "Husserl’s Prolegomena attacks psychologism so that philosophy can be a rigorous a priori science of essences, not a chapter of psychology. "
+                        "This is the crisis sitting. Do not paste Findlay into notes you share; name the argument.",
+                        [
+                            "What psychologism is (logic as a natural science of mental events)",
+                            "Why it is said to collapse into relativism or skepticism about validity",
+                            "Logic as an ideal science of meanings, not a technology of how we infer",
+                        ],
+                        [
+                            "If contradiction were only a habit of our species, what would ‘invalid’ still mean?",
+                            "How is this different from Hume’s custom, or from Mill’s associationism, as a ground of logic?",
+                        ],
+                        ["wittgenstein-investigations"],
+                        "Investigation V: consciousness as consciousness-of.",
+                        bib(
+                            "Prolegomena §§1–8, 17–23, 32–39",
+                            "Findlay, Logical Investigations, vol. I (Routledge; Moran ed. common)",
+                            note_lib
+                            + " Findlay (1970) is not public domain. Do not host or download unauthorized scans.",
+                            "https://search.worldcat.org/search?q=Logical+Investigations+Husserl+Findlay",
+                        ),
+                    ),
+                    A(
+                        "husserl-intentionality",
+                        2,
+                        "bibliographic",
+                        "Logical Investigations: intentionality",
+                        "Edmund Husserl",
+                        "Logical Investigations",
+                        "J. N. Findlay (in copyright)",
+                        "Investigation V, §§9–21 (intentional experiences and their ‘contents’)",
+                        "LI Investigation V §§9–21. Standard Findlay/Moran numbering.",
+                        60,
+                        "Consciousness is consciousness-of: directedness is primitive, not a sealed inner theatre that later gets related to objects. "
+                        "An object can be intended even when it does not exist as a real thing in nature. This is Brentano tightened, and it is the spine of phenomenology. "
+                        "It is not Descartes’ thinking thing inspecting little pictures. Licensed Findlay only.",
+                        [
+                            "Act vs object — that aboutness is not a real relation to a real existent",
+                            "Why ‘idea’ here is not a copy in the mind",
+                            "Empty intending vs fulfillment, if your pages reach that contrast",
+                        ],
+                        [
+                            "How is this not the cogito as a substance first, with objects inferred later?",
+                            "What would a psychologistic reading of ‘idea’ miss in Investigation V?",
+                        ],
+                        ["husserl-psychologism"],
+                        "Ideas I: natural attitude, epoché, noesis–noema.",
+                        bib(
+                            "Investigation V §§9–21",
+                            "Findlay, Logical Investigations, vol. II",
+                            note_lib + " Same copyright warning as the Prolegomena sitting.",
+                            "https://search.worldcat.org/search?q=Logical+Investigations+Husserl+Findlay",
+                        ),
+                    ),
+                    A(
+                        "husserl-ideas-reduction",
+                        3,
+                        "bibliographic",
+                        "Ideas I: epoché, reduction, noesis–noema",
+                        "Edmund Husserl",
+                        "Ideas Pertaining to a Pure Phenomenology and to a Phenomenological Philosophy, First Book",
+                        "F. Kersten or D. O. Dahlstrom (licensed English). W. R. Boyce Gibson (1931) remains in copyright in the US until 2027 — not a free text.",
+                        "Ideas I §§27–32 (natural attitude and epoché), §§33–46 (phenomenological residuum), §§84–96 (noesis and noema)",
+                        "Hua III / Ideas I §§27–32, 33–46, 84–96. Use Kersten (Nijhoff/Springer) or Dahlstrom (Hackett) section numbers; they track the German.",
+                        70,
+                        "The natural attitude’s general thesis: the world is simply there. The epoché suspends that thesis without a skeptical denial that the world exists. "
+                        "Noesis is the act-side; noema is the intended as such — not a little object in the head. This is not Pyrrhonian epochē (quiet without a rebuild) "
+                        "and not Cartesian doubt as a hunt for a thinking substance. Obtain Kersten or Dahlstrom legally. Do not ingest Gibson.",
+                        [
+                            "The natural attitude as default thesis, not a theory you adopted",
+                            "What the epoché puts out of play — and what it does not conclude",
+                            "Noema as the object-as-meant, distinct from a mental picture",
+                        ],
+                        [
+                            "How does this epoché differ from Meditation I?",
+                            "If the noema is not in the head, what is it?",
+                        ],
+                        ["husserl-intentionality"],
+                        "The residual consciousness, and the door to Heidegger.",
+                        bib(
+                            "Ideas I §§27–32, 33–46, 84–96",
+                            "Kersten or Dahlstrom, Ideas I",
+                            note_lib
+                            + " Gibson 1931 is still in US copyright until 2027. Do not treat a Gibson scan as public-domain English.",
+                            "https://search.worldcat.org/search?q=Ideas+Pertaining+to+a+Pure+Phenomenology+Husserl+Kersten",
+                        ),
+                    ),
+                    A(
+                        "husserl-transcendental",
+                        4,
+                        "bibliographic",
+                        "Ideas I: residual consciousness, and the door to Heidegger",
+                        "Edmund Husserl",
+                        "Ideas I",
+                        "Kersten or Dahlstrom (in copyright)",
+                        "Ideas I §§49–50 (the ‘annihilation of the world’ and absolute consciousness as residue)",
+                        "Ideas I §§49–50. Same editions as the previous sitting.",
+                        45,
+                        "Husserl claims a residuum of consciousness even if the world’s existence is cancelled as a thesis — not that you should believe you are dreaming. "
+                        "Heidegger’s next sitting will refuse this starting point: Dasein is already in-the-world, not a leftover spectator. "
+                        "Read Husserl’s claim first so Being and Time’s Introduction is a disagreement, not a fog. You need not read the Crisis here (Carr’s English is in copyright; Lebenswelt is a later sitting).",
+                        [
+                            "What ‘absolute’ consciousness is being claimed in §§49–50",
+                            "What is not being claimed (that the world is a dream, or that physics is false)",
+                            "The hinge: transcendental ego as first vs being-in-the-world as first",
+                        ],
+                        [
+                            "Is this Descartes rebuilt with better vocabulary?",
+                            "What would have to change for being-in-the-world to be methodologically first?",
+                        ],
+                        ["husserl-ideas-reduction"],
+                        "Heidegger: the question of being, which Husserl’s residue does not yet ask as fundamental ontology.",
+                        bib(
+                            "Ideas I §§49–50",
+                            "Kersten or Dahlstrom, Ideas I",
+                            note_lib,
+                            "https://search.worldcat.org/search?q=Ideas+for+a+Pure+Phenomenology+Husserl+Dahlstrom",
+                        ),
+                    ),
+                ],
+            },
+            {
+                "id": "being-and-existence",
+                "order": 3,
+                "title": "Being and existence",
+                "professorNote": "Two in-copyright landmarks after Husserl. The quiz checks whether you found the assigned move, not whether you memorized a biography.",
+                "assignments": [
                     A(
                         "heidegger-being-time",
-                        2,
+                        1,
                         "bibliographic",
                         "Being and Time, Introduction §§1–4",
                         "Martin Heidegger",
@@ -712,18 +863,19 @@ def era_present():
                         "SZ Introduction §§1–4 (German 1927; English 1962 is in copyright)",
                         70,
                         "The question of being has been forgotten. The being who can ask it is Dasein — existence as ours, not a Cartesian subject with properties. "
+                        "You have just seen Husserl’s residual consciousness; this sitting refuses that starting point. "
                         "The German original’s US status is not a free pass to host an English translation: Macquarrie (1962) is in copyright, and URAA complications attend the German. "
                         "Obtain a legal copy. Read only the Introduction’s first four sections; that is the question, not the whole book.",
                         [
                             "Why ‘being’ is not a being among beings",
                             "Dasein as the entity that understands being",
-                            "What is being refused in the Cartesian starting point",
+                            "What is being refused in the Cartesian — and Husserlian spectator — starting point",
                         ],
                         [
                             "Is this a new method, or a new subject-matter?",
                             "How would Russell’s table look if the first question were being, not sense-data?",
                         ],
-                        ["wittgenstein-investigations"],
+                        ["husserl-transcendental"],
                         "Sartre: existence precedes essence, in public prose.",
                         bib(
                             "SZ Int. §§1–4",
@@ -734,7 +886,7 @@ def era_present():
                     ),
                     A(
                         "sartre-existentialism",
-                        3,
+                        2,
                         "bibliographic",
                         "Existentialism Is a Humanism",
                         "Jean-Paul Sartre",
@@ -756,7 +908,7 @@ def era_present():
                             "What would a materialist (Hobbes, Marx) say is missing from this freedom?",
                         ],
                         ["heidegger-being-time"],
-                        "Analytic mid-century: Quine against two dogmas; Anscombe against a certain modern moral philosophy.",
+                        "Popper: falsifiability as demarcation — then Quine’s web, then Kuhn’s paradigms. Dates overlap; read them in that order.",
                         bib(
                             "the lecture",
                             "Any licensed English of Existentialism Is a Humanism",
@@ -767,14 +919,52 @@ def era_present():
                 ],
             },
             {
-                "id": "mind-language-science",
-                "order": 2,
-                "title": "Analytic shocks: language, science, intention",
-                "professorNote": "Two essays that reorganized the field. Read them as assigned chapters, not as internet paraphrases.",
+                "id": "scientific-method",
+                "order": 4,
+                "title": "Scientific method after the empiricists",
+                "professorNote": (
+                    "Popper, Quine, Kuhn as one unit so the syllabus names the three. Dates overlap: Logik der Forschung 1934 / English LSD 1959; "
+                    "Quine 1951; Kuhn 1962. Pedagogy is demarcation (Popper) → web of belief (Quine) → paradigms (Kuhn), not a calendar. "
+                    "All three sittings are bibliographic. The classical setup (Descartes’ method, Hume’s custom, Kant’s Copernican turn) is already behind you; "
+                    "this unit is the 20th-century method thread. Quizzes check the assigned move, not biographies."
+                ),
                 "assignments": [
                     A(
-                        "quine-two-dogmas",
+                        "popper-lsd",
                         1,
+                        "bibliographic",
+                        "Popper: Logic of Scientific Discovery — demarcation and falsifiability",
+                        "Karl Popper",
+                        "The Logic of Scientific Discovery",
+                        "Popper’s own English (Hutchinson 1959 / Routledge reprints; in copyright)",
+                        "Preface to the First English Edition (1959); Chapter I, ‘A Survey of Some Fundamental Problems’ (induction, deduction, the problem of demarcation, falsifiability as criterion — commonly §§1–6 of that chapter); Chapter IV, ‘Falsifiability’",
+                        "LSD (Routledge/Hutchinson): 1959 Preface; Ch. I; Ch. IV. German Logik der Forschung (1934) is not a free-English pass.",
+                        70,
+                        "Verification cannot demarcate science: existential reports and metaphysics can both wait on confirming instances. "
+                        "Popper’s proposal is falsifiability: a scientific theory forbids something; a basic statement can clash with it. "
+                        "This is a criterion of demarcation, not a proof that scientists are saints of conjecture-and-refutation, and not Hume solved by a slogan. "
+                        "Hume’s problem of induction is restated, then refused as a demand for justification of the unjustifiable. Get a legal English copy.",
+                        [
+                            "The problem of demarcation — science vs metaphysics vs pseudo-science — as Popper poses it in Ch. I",
+                            "Why confirming instances do not do the work verificationism wanted",
+                            "Falsifiability in Ch. IV: what a theory must risk, and what ‘ad hoc’ immunization is",
+                        ],
+                        [
+                            "Does a falsifiability criterion describe how science proceeds, or how it ought to be marked off?",
+                            "What happens to Hume’s custom if science is conjecture and attempted refutation rather than justified induction?",
+                        ],
+                        ["sartre-existentialism"],
+                        "Quine: the analytic/synthetic cut and the web of belief (1951 — dated before English LSD, read after Popper for this unit).",
+                        bib(
+                            "LSD 1959 Preface; Ch. I; Ch. IV",
+                            "Popper, The Logic of Scientific Discovery (Routledge)",
+                            note_lib + " Do not host or download unauthorized scans of the English.",
+                            "https://search.worldcat.org/search?q=The+Logic+of+Scientific+Discovery+Popper",
+                        ),
+                    ),
+                    A(
+                        "quine-two-dogmas",
+                        2,
                         "bibliographic",
                         "Quine: Two Dogmas of Empiricism",
                         "W. V. O. Quine",
@@ -785,6 +975,7 @@ def era_present():
                         55,
                         "The analytic/synthetic distinction and reductionism are dogmas. Meaning holism: statements meet the tribunal of experience as a corporate body. "
                         "Empiricism after Hume and Carnap has to live without a sharp language/world split at the sentence level. "
+                        "Read after Popper in this unit so the contrast is live: Popper still needs a sharp clash with basic statements; Quine’s web makes revision strike anywhere, including logic. "
                         "Do not quote long stretches into notes you share; understand the two dogmas and the holism claim.",
                         [
                             "What the two dogmas are",
@@ -793,10 +984,10 @@ def era_present():
                         ],
                         [
                             "What happens to Kant’s synthetic a priori if there is no analytic/synthetic cut?",
-                            "Is holism a skepticism, or a picture of science?",
+                            "Is holism a skepticism, or a picture of science — and how does it sit with Popper’s demarcation?",
                         ],
-                        ["sartre-existentialism"],
-                        "Anscombe: intention, and modern moral philosophy’s vocabulary problem.",
+                        ["popper-lsd"],
+                        "Kuhn: paradigms, normal science, revolutions.",
                         bib(
                             "complete essay",
                             "Quine, ‘Two Dogmas of Empiricism’ (1951)",
@@ -805,8 +996,48 @@ def era_present():
                         ),
                     ),
                     A(
+                        "kuhn-ssr",
+                        3,
+                        "bibliographic",
+                        "Kuhn: Structure of Scientific Revolutions — paradigms and revolutions",
+                        "Thomas S. Kuhn",
+                        "The Structure of Scientific Revolutions",
+                        "n/a (English original, 1962; 1970 postscript if your copy has it, optional)",
+                        "Chapters I–III (A Role for History; The Route to Normal Science; The Nature of Normal Science) and Chapters IX–X (The Nature and Necessity of Scientific Revolutions; Revolutions as Changes of World View)",
+                        "SSR (Chicago): chs. I–III and IX–X. Anomaly and crisis are fuller in VI–VIII if you read on; this sitting is paradigm + revolution.",
+                        75,
+                        "Science as a historical community: a paradigm trains what counts as a puzzle; normal science is puzzle-solving, not perpetual falsification hunts. "
+                        "Revolutions are changes of world-view, not cumulative replacement of one true theory by a closer one. Incommensurability is the sting: rival paradigms may not share a neutral observation language. "
+                        "Popper’s demarcation and Quine’s web are both in the room. Get a legal Chicago copy. Do not paste chapters into the app.",
+                        [
+                            "Paradigm as exemplar and as disciplinary matrix — enough to see that it is not a synonym for ‘theory’",
+                            "Normal science as puzzle-solving under a paradigm, not a string of attempted revolutions",
+                            "What a revolution changes, on chs. IX–X, including the claim about progress",
+                        ],
+                        [
+                            "Is this compatible with Popper’s picture, or a rival description of the same history?",
+                            "If paradigms are incommensurable, what is the tribunal of experience Quine described?",
+                        ],
+                        ["quine-two-dogmas"],
+                        "Anscombe: intention, and modern moral philosophy’s vocabulary problem.",
+                        bib(
+                            "SSR chs. I–III, IX–X",
+                            "Kuhn, The Structure of Scientific Revolutions (University of Chicago Press)",
+                            note_lib + " Do not host unauthorized scans of the English.",
+                            "https://search.worldcat.org/search?q=The+Structure+of+Scientific+Revolutions+Kuhn",
+                        ),
+                    ),
+                ],
+            },
+            {
+                "id": "mind-language-science",
+                "order": 5,
+                "title": "Intention and ‘ought’",
+                "professorNote": "Anscombe after the science unit. The 1958 paper is the assignment; obtain it legally.",
+                "assignments": [
+                    A(
                         "anscombe-modern-moral",
-                        2,
+                        1,
                         "bibliographic",
                         "Anscombe: Modern Moral Philosophy (and a look at Intention §§1–5 if you have it)",
                         "G. E. M. Anscombe",
@@ -827,7 +1058,7 @@ def era_present():
                             "Does this refute Kant, or only a thin classroom Kant?",
                             "How would Aristotle’s hexis fit her demand for a psychology?",
                         ],
-                        ["quine-two-dogmas"],
+                        ["kuhn-ssr"],
                         "Justice, power, and the sovereignty of good — still bibliographic.",
                         bib(
                             "the 1958 paper",
@@ -840,7 +1071,7 @@ def era_present():
             },
             {
                 "id": "ethics-politics-power",
-                "order": 3,
+                "order": 6,
                 "title": "Justice, power, the good",
                 "professorNote": "Three different late-century ways of doing moral and political philosophy. None replaces the others.",
                 "assignments": [
@@ -944,7 +1175,7 @@ def era_present():
             },
             {
                 "id": "keep-going-maps",
-                "order": 4,
+                "order": 7,
                 "title": "Maps for the living debates",
                 "professorNote": "These are bibliographic assignments without a single book: they tell you how to continue. The quiz checks that you can place a problem in a family.",
                 "assignments": [
@@ -988,10 +1219,10 @@ def era_present():
                         "Various",
                         "A path, not one book",
                         "",
-                        "Place: phenomenology after Heidegger (Merleau-Ponty, Levinas); critical theory (Habermas); feminist philosophy; philosophy of race after Du Bois; bioethics / mind as public issues",
+                        "Place: phenomenology after Husserl (Merleau-Ponty, Levinas); critical theory (Habermas); feminist philosophy; philosophy of race after Du Bois; bioethics / mind as public issues",
                         "Library and SEP; no pirated books",
                         40,
-                        "The other half of ‘how to keep going’: phenomenology of the body; ethics of the other; discourse and democracy; feminist critiques of the ‘neutral’ subject you met from Descartes to Rawls; "
+                        "The other half of ‘how to keep going’: phenomenology of the body after Husserl; ethics of the other; discourse and democracy; feminist critiques of the ‘neutral’ subject you met from Descartes to Rawls; "
                         "philosophy of race as continuation of Du Bois, not an optional module. "
                         "Again: a one-page map, three legal starting points. You have finished the guided sequence when you can assign yourself the next sitting.",
                         [

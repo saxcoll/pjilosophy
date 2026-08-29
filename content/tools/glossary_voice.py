@@ -412,7 +412,7 @@ VOICE = {
     ),
     "phenomenon": (
         "Appearance as object of possible experience — what we can know, for Kant, as opposed to the thing in itself.",
-        "Knowledge is of phenomena. Schopenhauer calls this side the world as representation, then names Will as thing-in-itself. Later ‘phenomenology’ on the keep-going map is a different method. Keep the word tagged to the first Critique unless a later sitting says otherwise.",
+        "Knowledge is of phenomena. Schopenhauer calls this side the world as representation, then names Will as thing-in-itself. Husserl’s phenomenology (the unit before Heidegger) is a later method, not Kant’s pair. Keep the word tagged to the first Critique unless a later sitting says otherwise.",
     ),
     "noumenon": (
         "The thing in itself, thinkable as a limit — not knowable as an object given to us.",
@@ -574,6 +574,30 @@ VOICE = {
         "A warning against assuming one essence hidden behind all uses of a word — not a biological taxonomy of concepts.",
         "Overlapping similarities (games) replace a single Form of Game. Safer as a warning against theories of concepts than as a new theory of concepts. It is not a return to Plato’s eidos.",
     ),
+    "intentionality": (
+        "Consciousness as consciousness-of — directedness is primitive, not a sealed inner theatre that later gets related to objects.",
+        "An object can be intended even when it does not exist as a real thing. Aboutness is not a copy in the mind. Descartes’ cogito can look like a thinking substance first; this sitting makes of-ness first.",
+    ),
+    "natural-attitude": (
+        "The default general thesis that the world is simply there — not a theory you adopted.",
+        "Living in it is not a philosophical choice. The epoché suspends that thesis without a skeptical denial that the world exists. Distinct from Kant’s phenomenon and from Russell’s sense-data as a starting inventory.",
+    ),
+    "phenomenological-reduction": (
+        "Suspending the natural attitude’s general thesis — without Pyrrhonian quiet, and without Cartesian doubt as a hunt for a thinking substance.",
+        "The world is not denied; the thesis that it simply is is put out of play so the intended as such can be described. Not Sextus’s epochē, not Meditation I’s deceiver. Gibson 1931 is still in US copyright until 2027.",
+    ),
+    "noesis": (
+        "The act-side of intentional consciousness — intending as an act, correlative with a noema.",
+        "Not a little performance inside a box. If you split noesis and noema into two substances, you have missed the correlation. Distinct from Anaxagoras’s Nous as a cosmic arranger.",
+    ),
+    "noema": (
+        "The object-as-meant — the intended as such, not a little object in the head and not automatically a real thing in nature.",
+        "A psychologistic reading makes the noema a mental picture; Husserl refuses that. The tree as perceived is not a second tree in consciousness.",
+    ),
+    "eidetic": (
+        "The a priori grasp of essences — what phenomenology claims to be a science of, against psychologism’s empirical mental events.",
+        "Not a return to Plato’s separate Forms, and not Aristotle’s form-in-matter as a cause of change. The word names a method of seeing what must belong to an intentional act as such.",
+    ),
     "dasein": (
         "The entity we are, whose being is an issue for it — the one that understands being, not a Cartesian subject with properties first.",
         "The forgotten question is being; Dasein is the being that can ask it. Existence here is ours, not a list of attributes of a thing. Russell’s table would look different if the first question were being, not sense-data. The assigned move is the Introduction, not the whole book.",
@@ -596,7 +620,31 @@ VOICE = {
     ),
     "holism": (
         "Experience judges a corporate body of statements — revision can strike anywhere if we make enough adjustments.",
-        "Not ‘anything goes,’ and not a claim that science never revises. Contrast Aristotle’s demonstration from first principles and Hume’s sentence-level copy test. The question is whether this is skepticism or a picture of science.",
+        "Not ‘anything goes,’ and not a claim that science never revises. Contrast Aristotle’s demonstration from first principles, Hume’s sentence-level custom, and Popper’s sharp clash with basic statements. The question is whether this is skepticism or a picture of science.",
+    ),
+    "underdetermination": (
+        "Evidence does not pick out a unique theory — more than one adjustment of the web can save the appearances.",
+        "As Quine uses it: any statement can be held true if we make enough changes elsewhere. Not a proof that science is arbitrary, and not Popper’s isolated falsifying basic statement. Duhem is in the ancestry.",
+    ),
+    "falsification": (
+        "A theory is scientific only if it risks clash with some possible basic statement — it forbids something, rather than waiting on confirming instances.",
+        "Demarcation by falsifiability, not verification. Ad hoc immunization is a danger. Not Hume’s induction made certain, and not a hagiography of lab practice. Kuhn’s normal science will look unlike a daily hunt for refutations.",
+    ),
+    "demarcation": (
+        "How to mark science off from metaphysics and from merely confirming story-telling — not how to justify induction as Hume demanded.",
+        "Induction is restated, then refused as a demand for the unjustifiable. Falsifiability is the proposed criterion. Verification by accumulating positives is what is being replaced.",
+    ),
+    "paradigm": (
+        "The exemplary achievement that trains what counts as a puzzle — not a synonym for ‘theory,’ and not a mere list of propositions.",
+        "Normal science is puzzle-solving under it. Revolutions change world-views rather than cumulatively approaching one neutral language. Incommensurability is the sting. Read after Popper and Quine in this course.",
+    ),
+    "normal-science": (
+        "Puzzle-solving under a paradigm — not perpetual revolution, and not a daily hunt for falsifying instances as the whole business.",
+        "The community is trained into what counts as a solution. Contrast a naive Popperian calendar of conjecture-and-refutation. Anomaly is fuller in later chapters if you read on.",
+    ),
+    "incommensurability": (
+        "Rival paradigms may not share a fully neutral observation language — communication across a revolution is not a simple translation.",
+        "Not a claim that no argument is possible, and not a proof that science is fashion. It sits uneasily with Popper’s clash and with Quine’s one web facing one tribunal.",
     ),
     "ought": (
         "A law-sense leftover from a divine-law ethics, now without a lawgiver — incoherent as modern moral philosophy uses it.",

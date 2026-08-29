@@ -1,4 +1,5 @@
 const STORAGE_KEY = "pjilosophy.progress.v1";
+const ANNOTATION_KEY = "pjilosophy.annotations.v1";
 const STUDENT_NAME = "Samuel";
 
 const COURSE_URLS = ["./content/course.json", "./course.json"];
@@ -13,11 +14,14 @@ const navContinue = document.getElementById("nav-continue");
 const navSyllabus = document.getElementById("nav-syllabus");
 const navQuizzes = document.getElementById("nav-quizzes");
 const navTerms = document.getElementById("nav-terms");
+const navTracks = document.getElementById("nav-tracks");
 
 let course = null;
 let readings = [];
 let progress = loadProgress();
+let annotations = loadAnnotations();
 let noteTimer = null;
+let paraNoteTimer = null;
 let scrollTimer = null;
 let renderGen = 0;
 let quizSession = null;
@@ -72,6 +76,395 @@ function clearBookmark(assignmentId) {
 
 function bookmarkDomId(sectionId, paragraphIndex) {
   return `line-${sectionId}-${paragraphIndex}`;
+}
+
+function paraDomId(assignmentId, sectionId, paragraphIndex) {
+  return `p:${assignmentId}:${sectionId}:${paragraphIndex}`;
+}
+
+function loadAnnotations() {
+  try {
+    const raw = localStorage.getItem(ANNOTATION_KEY);
+    if (!raw) return { highlights: [], notes: [] };
+    const parsed = JSON.parse(raw);
+    return {
+      highlights: sanitizeHighlights(parsed.highlights),
+      notes: sanitizeNotes(parsed.notes),
+    };
+  } catch {
+    return { highlights: [], notes: [] };
+  }
+}
+
+function sanitizeHighlights(list) {
+  if (!Array.isArray(list)) return [];
+  const out = [];
+  const seen = new Set();
+  for (const item of list) {
+    if (!item || typeof item !== "object") continue;
+    const assignmentId = text(item.assignmentId);
+    const sectionId = text(item.sectionId);
+    const paragraphIndex = Number(item.paragraphIndex);
+    if (!assignmentId || !sectionId || !Number.isInteger(paragraphIndex) || paragraphIndex < 0) continue;
+    const id = text(item.id, paraDomId(assignmentId, sectionId, paragraphIndex));
+    if (seen.has(id)) continue;
+    seen.add(id);
+    out.push({
+      id,
+      assignmentId,
+      sectionId,
+      paragraphIndex,
+      createdAt: text(item.createdAt, new Date().toISOString()),
+    });
+  }
+  return out;
+}
+
+function sanitizeNotes(list) {
+  if (!Array.isArray(list)) return [];
+  const out = [];
+  const seen = new Set();
+  for (const item of list) {
+    if (!item || typeof item !== "object") continue;
+    const assignmentId = text(item.assignmentId);
+    const sectionId = text(item.sectionId);
+    const paragraphIndex = Number(item.paragraphIndex);
+    const body = text(item.text);
+    if (!assignmentId || !sectionId || !Number.isInteger(paragraphIndex) || paragraphIndex < 0 || !body) continue;
+    const id = text(item.id, paraDomId(assignmentId, sectionId, paragraphIndex));
+    if (seen.has(id)) continue;
+    seen.add(id);
+    out.push({
+      id,
+      assignmentId,
+      sectionId,
+      paragraphIndex,
+      text: body,
+      createdAt: text(item.createdAt, new Date().toISOString()),
+      updatedAt: text(item.updatedAt, text(item.createdAt, new Date().toISOString())),
+    });
+  }
+  return out;
+}
+
+function saveAnnotations() {
+  localStorage.setItem(ANNOTATION_KEY, JSON.stringify(annotations));
+}
+
+function coordsFromPara(para) {
+  if (!para) return null;
+  const assignmentId = text(para.getAttribute("data-assignment-id"));
+  const sectionId = text(para.getAttribute("data-section-id"));
+  const paragraphIndex = Number(para.getAttribute("data-para-index"));
+  if (!assignmentId || !sectionId || !Number.isInteger(paragraphIndex) || paragraphIndex < 0) return null;
+  return { assignmentId, sectionId, paragraphIndex };
+}
+
+function highlightAt(assignmentId, sectionId, paragraphIndex) {
+  const id = paraDomId(assignmentId, sectionId, paragraphIndex);
+  return (
+    annotations.highlights.find(
+      (h) =>
+        h.id === id ||
+        (h.assignmentId === assignmentId && h.sectionId === sectionId && h.paragraphIndex === paragraphIndex)
+    ) || null
+  );
+}
+
+function noteAt(assignmentId, sectionId, paragraphIndex) {
+  const id = paraDomId(assignmentId, sectionId, paragraphIndex);
+  return (
+    annotations.notes.find(
+      (n) =>
+        n.id === id ||
+        (n.assignmentId === assignmentId && n.sectionId === sectionId && n.paragraphIndex === paragraphIndex)
+    ) || null
+  );
+}
+
+function toggleHighlight(assignmentId, sectionId, paragraphIndex) {
+  const existing = highlightAt(assignmentId, sectionId, paragraphIndex);
+  if (existing) {
+    annotations.highlights = annotations.highlights.filter((h) => h.id !== existing.id);
+  } else {
+    annotations.highlights.push({
+      id: paraDomId(assignmentId, sectionId, paragraphIndex),
+      assignmentId,
+      sectionId,
+      paragraphIndex,
+      createdAt: new Date().toISOString(),
+    });
+  }
+  saveAnnotations();
+}
+
+function upsertParaNote(assignmentId, sectionId, paragraphIndex, value) {
+  const id = paraDomId(assignmentId, sectionId, paragraphIndex);
+  const body = text(value);
+  const existing = noteAt(assignmentId, sectionId, paragraphIndex);
+  if (!body) {
+    annotations.notes = annotations.notes.filter((n) => n.id !== (existing ? existing.id : id));
+    saveAnnotations();
+    return;
+  }
+  const now = new Date().toISOString();
+  if (existing) {
+    existing.text = body;
+    existing.updatedAt = now;
+  } else {
+    annotations.notes.push({
+      id,
+      assignmentId,
+      sectionId,
+      paragraphIndex,
+      text: body,
+      createdAt: now,
+      updatedAt: now,
+    });
+  }
+  saveAnnotations();
+}
+
+function notesForAssignment(assignmentId) {
+  return annotations.notes
+    .filter((n) => n.assignmentId === assignmentId)
+    .sort((a, b) => a.sectionId.localeCompare(b.sectionId) || a.paragraphIndex - b.paragraphIndex);
+}
+
+function sittingNotesListHtml(assignmentId) {
+  const notes = notesForAssignment(assignmentId);
+  if (!notes.length) return `<p class="muted">No notes in this sitting yet. Use ✎ on a paragraph.</p>`;
+  return `<ul class="sitting-note-list">${notes
+    .map((n) => {
+      const excerpt = n.text.length > 90 ? `${n.text.slice(0, 90)}…` : n.text;
+      return `<li><button type="button" class="sitting-note-jump" data-jump-para="${escapeHtml(n.id)}">${escapeHtml(excerpt)}</button></li>`;
+    })
+    .join("")}</ul>`;
+}
+
+function exportMenuHtml(where) {
+  return `<details class="export-menu" data-export-menu="${escapeHtml(where || "page")}">
+      <summary>Export notes</summary>
+      <div class="export-menu-panel" role="menu">
+        <button type="button" data-export="md">Markdown</button>
+        <button type="button" data-export="json">JSON</button>
+      </div>
+    </details>`;
+}
+
+function courseTracks() {
+  const list = course && Array.isArray(course.tracks) ? course.tracks : [];
+  return list.filter((t) => t && text(t.id));
+}
+
+function trackById(id) {
+  if (!id) return null;
+  return courseTracks().find((t) => t.id === id) || null;
+}
+
+function tracksForAssignment(assignment) {
+  if (!assignment) return [];
+  const explicit = new Set(listOf(assignment.trackIds));
+  return courseTracks().filter((t) => explicit.has(t.id) || listOf(t.assignmentIds).includes(assignment.id));
+}
+
+function trackBadgeHtml(assignment) {
+  const tracks = tracksForAssignment(assignment);
+  if (!tracks.length) return "";
+  return tracks
+    .map(
+      (t) =>
+        `<a class="track-badge" href="#/track/${encodeURIComponent(t.id)}">${escapeHtml(text(t.title, t.id))}</a>`
+    )
+    .join("");
+}
+
+function trackItems(track) {
+  const out = [];
+  const seen = new Set();
+  for (const id of listOf(track && track.assignmentIds)) {
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const found = readingById(id);
+    if (found) out.push(found);
+  }
+  return out;
+}
+
+function trackCardsHtml() {
+  const tracks = courseTracks();
+  if (!tracks.length) return "";
+  return `<section class="track-cards" aria-label="Reading tracks">
+      ${tracks
+        .map((t) => {
+          const items = trackItems(t);
+          const done = items.filter((item) => isComplete(item.assignment.id)).length;
+          return `<article class="track-card">
+            <p class="here-label">Track</p>
+            <h2><a href="#/track/${encodeURIComponent(t.id)}">${escapeHtml(text(t.title, t.id))}</a></h2>
+            ${text(t.subtitle) ? `<p class="meta-line">${escapeHtml(t.subtitle)}</p>` : ""}
+            <p class="muted">${done} of ${items.length} sittings in this thread</p>
+            <p class="actions"><a class="btn btn-secondary" href="#/track/${encodeURIComponent(t.id)}">Open the thread</a></p>
+          </article>`;
+        })
+        .join("")}
+    </section>`;
+}
+
+function assignmentExportMeta(assignmentId) {
+  const item = readingById(assignmentId);
+  if (!item) return { assignmentId, missing: true };
+  const a = item.assignment;
+  return {
+    assignmentId,
+    assignmentTitle: text(a.title, a.work),
+    author: text(a.author),
+    work: text(a.work),
+    locator: text(a.text && a.text.locator, text(a.pages, a.selection)),
+    thinker: formatThinkerNames(thinkersForAssignment(a, item.unit, item.era)),
+    eraTitle: text(item.era && item.era.title),
+  };
+}
+
+function resolveSection(sections, sectionId) {
+  for (let i = 0; i < sections.length; i++) {
+    const sid = text(sections[i] && sections[i].id) || `anon-${i}`;
+    if (sid === sectionId) return sections[i];
+  }
+  return null;
+}
+
+async function paragraphQuote(assignmentId, sectionId, paragraphIndex) {
+  const item = readingById(assignmentId);
+  if (!item || !hasInAppText(item.assignment)) return "";
+  try {
+    const doc = await loadTextDoc(item.assignment.text);
+    const sections = scopedSections(doc, item.assignment.text);
+    const sec = resolveSection(sections, sectionId);
+    const paras = listOf(sec && sec.paragraphs);
+    return text(paras[paragraphIndex]);
+  } catch {
+    return "";
+  }
+}
+
+function downloadFile(filename, mime, content) {
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function exportPayload() {
+  const highlights = [];
+  for (const h of annotations.highlights) {
+    highlights.push({
+      ...h,
+      paragraphId: paraDomId(h.assignmentId, h.sectionId, h.paragraphIndex),
+      ...assignmentExportMeta(h.assignmentId),
+    });
+  }
+  const notes = [];
+  for (const n of annotations.notes) {
+    notes.push({
+      ...n,
+      paragraphId: paraDomId(n.assignmentId, n.sectionId, n.paragraphIndex),
+      ...assignmentExportMeta(n.assignmentId),
+    });
+  }
+  return { exportedAt: new Date().toISOString(), highlights, notes };
+}
+
+async function exportMarkdown() {
+  const data = await exportPayload();
+  const byAssignment = new Map();
+  const add = (item, kind) => {
+    const id = item.assignmentId;
+    if (!byAssignment.has(id)) byAssignment.set(id, { meta: assignmentExportMeta(id), entries: new Map() });
+    const bucket = byAssignment.get(id);
+    const key = paraDomId(item.assignmentId, item.sectionId, item.paragraphIndex);
+    if (!bucket.entries.has(key)) {
+      bucket.entries.set(key, {
+        sectionId: item.sectionId,
+        paragraphIndex: item.paragraphIndex,
+        paragraphId: key,
+        highlight: false,
+        note: "",
+      });
+    }
+    const entry = bucket.entries.get(key);
+    if (kind === "highlight") entry.highlight = true;
+    if (kind === "note") entry.note = item.text;
+  };
+  for (const h of data.highlights) add(h, "highlight");
+  for (const n of data.notes) add(n, "note");
+
+  const order = readings.map((r) => r.assignment.id);
+  const ids = [...byAssignment.keys()].sort((a, b) => {
+    const ia = order.indexOf(a);
+    const ib = order.indexOf(b);
+    return (ia < 0 ? 9999 : ia) - (ib < 0 ? 9999 : ib);
+  });
+
+  const lines = [
+    "# pjilosophy notes",
+    "",
+    `Exported ${data.exportedAt}. Local study file — not synced.`,
+    "",
+  ];
+  if (!ids.length) {
+    lines.push("No highlights or paragraph notes yet.");
+    return `${lines.join("\n")}\n`;
+  }
+  for (const assignmentId of ids) {
+    const bucket = byAssignment.get(assignmentId);
+    const meta = bucket.meta;
+    const heading = meta.thinker || meta.author || "Unknown";
+    lines.push(`## ${heading} — ${meta.assignmentTitle || assignmentId}`);
+    const locBits = [meta.work, meta.locator, meta.eraTitle].filter(Boolean);
+    if (locBits.length) lines.push(`*${locBits.join(" · ")}*`);
+    lines.push("");
+    const entries = [...bucket.entries.values()].sort(
+      (a, b) => a.sectionId.localeCompare(b.sectionId) || a.paragraphIndex - b.paragraphIndex
+    );
+    for (const entry of entries) {
+      lines.push(`### ${entry.sectionId} · ¶ ${entry.paragraphIndex + 1}`);
+      lines.push("");
+      lines.push(`\`${entry.paragraphId}\``);
+      lines.push("");
+      const quote = await paragraphQuote(assignmentId, entry.sectionId, entry.paragraphIndex);
+      if (quote) {
+        for (const qline of quote.split("\n")) lines.push(`> ${qline}`);
+        lines.push("");
+      } else {
+        lines.push("*Passage is not in this edition (or is bibliographic).*");
+        lines.push("");
+      }
+      if (entry.note) {
+        lines.push(entry.note);
+        lines.push("");
+      } else if (entry.highlight) {
+        lines.push("*Highlighted.*");
+        lines.push("");
+      }
+    }
+  }
+  return `${lines.join("\n").trim()}\n`;
+}
+
+async function runExport(kind) {
+  if (kind === "json") {
+    const data = await exportPayload();
+    downloadFile("pjilosophy-notes.json", "application/json", `${JSON.stringify(data, null, 2)}\n`);
+    return;
+  }
+  const md = await exportMarkdown();
+  downloadFile("pjilosophy-notes.md", "text/markdown", md);
 }
 
 function saveProgress() {
@@ -195,6 +588,8 @@ function parseRoute() {
   const path = pathOnly.startsWith("/") ? pathOnly : `/${pathOnly}`;
   const parts = path.split("/").filter(Boolean);
   if (parts.length === 0) return { name: "home" };
+  if (parts[0] === "tracks") return { name: "tracks" };
+  if (parts[0] === "track" && parts[1]) return { name: "track", id: decodeURIComponent(parts[1]) };
   if (parts[0] === "syllabus") return { name: "syllabus" };
   if (parts[0] === "era" && parts[1]) return { name: "era", id: decodeURIComponent(parts[1]) };
   if (parts[0] === "read" && parts[1]) return { name: "read", id: decodeURIComponent(parts[1]) };
@@ -234,6 +629,13 @@ function setNav(routeName) {
       navTerms.removeAttribute("aria-current");
     }
   }
+  if (navTracks) {
+    if (routeName === "tracks" || routeName === "track") {
+      navTracks.setAttribute("aria-current", "page");
+    } else {
+      navTracks.removeAttribute("aria-current");
+    }
+  }
 }
 
 function updateProgressChrome() {
@@ -249,6 +651,45 @@ function kindLabel(kind) {
   if (kind === "secondary") return "Secondary";
   if (kind === "bibliographic") return "Bibliographic";
   return "Primary";
+}
+
+function difficultyInfo(assignment) {
+  const n = Number(assignment && assignment.difficulty);
+  if (n === 1) return { n: 1, label: "Accessible" };
+  if (n === 2) return { n: 2, label: "Intermediate" };
+  if (n === 3) return { n: 3, label: "Advanced" };
+  return null;
+}
+
+function wordCountLabel(assignment) {
+  const n = Number(assignment && assignment.wordCount);
+  if (!Number.isFinite(n) || n <= 0) return "";
+  const rounded = n >= 400 ? Math.round(n / 100) * 100 : Math.round(n);
+  return `~${rounded.toLocaleString("en-US")} words`;
+}
+
+function isPublicDomainSitting(assignment) {
+  if (!assignment) return false;
+  if (hasInAppText(assignment)) return true;
+  const source = assignment.source || {};
+  const license = text(source.license).toLowerCase().replace(/_/g, "-");
+  if (license.includes("public-domain") || license.includes("public domain") || license === "pd") return true;
+  return source.available === true;
+}
+
+function readingTagsHtml(assignment) {
+  const diff = difficultyInfo(assignment);
+  const words = wordCountLabel(assignment);
+  if (!diff && !words) return "";
+  const tagged = isPublicDomainSitting(assignment);
+  return `<span class="reading-tags${tagged ? " is-tagged" : ""}">
+      ${
+        diff
+          ? `<span class="diff-pill" data-diff="${diff.n}" aria-label="Difficulty ${diff.n} of 3: ${escapeHtml(diff.label)}"><span class="diff-n" aria-hidden="true">${diff.n}</span> ${escapeHtml(diff.label)}</span>`
+          : ""
+      }
+      ${words ? `<span class="word-count">${escapeHtml(words)}</span>` : ""}
+    </span>`;
 }
 
 function metaBits(assignment) {
@@ -1049,6 +1490,10 @@ async function render() {
     appEl.innerHTML = renderTermsIndex();
   } else if (route.name === "term") {
     appEl.innerHTML = renderTermEntry(route.id);
+  } else if (route.name === "tracks") {
+    appEl.innerHTML = renderTracksIndex();
+  } else if (route.name === "track") {
+    appEl.innerHTML = renderTrack(route.id);
   } else {
     appEl.innerHTML = renderHome();
   }
@@ -1084,9 +1529,11 @@ function renderHome() {
         <p class="muted">If a later version of the reading list appears, refresh. New unread items will show up here.</p>
         <p class="actions">
           <a class="btn" href="#/syllabus">Review the syllabus</a>
+          <a class="btn btn-secondary" href="#/tracks">Tracks</a>
           <a class="btn btn-secondary" href="#/quizzes">Quizzes</a>
         </p>
       </article>
+      ${trackCardsHtml()}
     `;
   }
 
@@ -1109,6 +1556,8 @@ function renderHome() {
           : `<h2>${escapeHtml(sittingTitle)}</h2>`
       }
       <p class="meta-line">${bits}</p>
+      ${readingTagsHtml(a)}
+      ${trackBadgeHtml(a)}
       ${why ? `<p class="why-excerpt">${escapeHtml(why)}</p>` : ""}
       ${
         usableQuiz(a.quiz) && !isQuizComplete(quizIdFor(a.quiz, `${a.id}-quiz`))
@@ -1126,6 +1575,7 @@ function renderHome() {
         <a class="btn-ghost btn" href="#/era/${encodeURIComponent(next.era.id)}">Era introduction</a>
       </p>
     </article>
+    ${trackCardsHtml()}
   `;
 }
 
@@ -1230,6 +1680,8 @@ function renderAssignment(id) {
           : `<h1>${escapeHtml(sittingTitle)}</h1>`
       }
       <p class="meta-line">${headBits}</p>
+      ${readingTagsHtml(a)}
+      ${trackBadgeHtml(a)}
     </header>
     <dl class="dl-meta">
       ${text(a.author) && !people.length ? `<dt>Author</dt><dd>${escapeHtml(a.author)}</dd>` : ""}
@@ -1238,6 +1690,8 @@ function renderAssignment(id) {
       ${text(a.selection) ? `<dt>Selection</dt><dd>${escapeHtml(a.selection)}</dd>` : ""}
       ${text(a.pages) ? `<dt>Pages</dt><dd>${escapeHtml(a.pages)}</dd>` : ""}
       ${minutesLabel(a.estimatedMinutes) ? `<dt>Time</dt><dd>${escapeHtml(minutesLabel(a.estimatedMinutes))}</dd>` : ""}
+      ${difficultyInfo(a) ? `<dt>Difficulty</dt><dd>${difficultyInfo(a).n} · ${escapeHtml(difficultyInfo(a).label)}</dd>` : ""}
+      ${wordCountLabel(a) ? `<dt>Length</dt><dd>${escapeHtml(wordCountLabel(a))}</dd>` : ""}
       ${edition ? `<dt>Edition</dt><dd>${escapeHtml(edition)}</dd>` : ""}
     </dl>
     ${prereqHtml}
@@ -1329,11 +1783,24 @@ async function renderReader(id) {
       const paraHtml = paras
         .map((paragraph, i) => {
           const isMarked = marked && marked.sectionId === sid && marked.paragraphIndex === i;
-          return `<p class="reader-para${isMarked ? " is-bookmarked" : ""}" id="${escapeHtml(bookmarkDomId(sid, i))}" data-section-id="${escapeHtml(sid)}" data-para-index="${i}">
-            <button type="button" class="para-mark" data-bookmark-para aria-pressed="${isMarked ? "true" : "false"}" aria-label="${isMarked ? "Clear your line" : "Bookmark this paragraph"}" title="${isMarked ? "Clear your line" : "Mark this as your line"}">¶</button>
+          const isHi = Boolean(highlightAt(a.id, sid, i));
+          const paraNote = noteAt(a.id, sid, i);
+          const pid = paraDomId(a.id, sid, i);
+          return `<div class="reader-para${isMarked ? " is-bookmarked" : ""}${isHi ? " is-highlighted" : ""}${paraNote ? " has-note" : ""}" id="${escapeHtml(pid)}" data-para-id="${escapeHtml(pid)}" data-assignment-id="${escapeHtml(a.id)}" data-section-id="${escapeHtml(sid)}" data-para-index="${i}">
+            <span class="para-gutter">
+              <button type="button" class="para-mark" data-bookmark-para aria-pressed="${isMarked ? "true" : "false"}" aria-label="${isMarked ? "Clear your line" : "Bookmark this paragraph"}">¶</button>
+              <button type="button" class="para-hi" data-highlight-para aria-pressed="${isHi ? "true" : "false"}" aria-label="${isHi ? "Remove highlight" : "Highlight this paragraph"}">†</button>
+              <button type="button" class="para-note-btn" data-open-note aria-expanded="false" aria-label="${paraNote ? "Edit note on this paragraph" : "Add a note on this paragraph"}">✎</button>
+            </span>
             ${isMarked ? `<span class="para-ribbon">Your line</span>` : ""}
-            ${escapeHtml(paragraph)}
-          </p>`;
+            <p class="para-body">${escapeHtml(paragraph)}</p>
+            <div class="para-note-wrap" hidden>
+              <label>
+                <span class="para-note-label">Note on this paragraph</span>
+                <textarea class="para-note" data-para-note rows="3">${paraNote ? escapeHtml(paraNote.text) : ""}</textarea>
+              </label>
+            </div>
+          </div>`;
         })
         .join("");
       return `
@@ -1376,10 +1843,12 @@ async function renderReader(id) {
       <div class="reader-main">
         <div class="reader-toolbar">
           <a class="btn btn-ghost" href="#/read/${encodeURIComponent(a.id)}">Assignment</a>
+          ${readingTagsHtml(a)}
           <p class="bookmark-status" id="bookmark-status" ${marked ? "" : "hidden"}>
             Your line is marked.
             <button type="button" class="btn btn-ghost" data-clear-bookmark>Clear</button>
           </p>
+          ${exportMenuHtml("reader")}
           <p class="actions">
             ${
               usableQuiz(a.quiz)
@@ -1421,13 +1890,19 @@ async function renderReader(id) {
           </footer>
         </article>
         <div class="pager reader-pager">${prev}${next}</div>
-        <p class="kbd-hint">The ¶ in the margin marks your line. Press b for the paragraph in view. j / k move to the next or previous assignment.</p>
+        <p class="kbd-hint">¶ marks where you stopped. † highlights a passage. ✎ opens a local note. Press b for your line, h to highlight the paragraph in view. j / k move assignments.</p>
       </div>
-      ${
-        guideBits.length
-          ? `<details class="reader-guide" open><summary>Keep these in view</summary>${guideBits.join("")}</details>`
-          : ""
-      }
+      <div class="reader-side">
+        ${
+          guideBits.length
+            ? `<details class="reader-guide" open><summary>Keep these in view</summary>${guideBits.join("")}</details>`
+            : ""
+        }
+        <aside class="sitting-notes-panel" aria-label="Notes in this sitting">
+          <h2>Notes in this sitting</h2>
+          <div id="sitting-notes">${sittingNotesListHtml(a.id)}</div>
+        </aside>
+      </div>
     </div>
   `;
 }
@@ -1463,8 +1938,8 @@ function syncBookmarkUi(assignmentId) {
       ribbon = document.createElement("span");
       ribbon.className = "para-ribbon";
       ribbon.textContent = "Your line";
-      const mark = para.querySelector(".para-mark");
-      if (mark && mark.nextSibling) para.insertBefore(ribbon, mark.nextSibling);
+      const body = para.querySelector(".para-body");
+      if (body) para.insertBefore(ribbon, body);
       else para.prepend(ribbon);
     } else if (!on && ribbon) {
       ribbon.remove();
@@ -1472,6 +1947,72 @@ function syncBookmarkUi(assignmentId) {
   });
   const status = document.getElementById("bookmark-status");
   if (status) status.hidden = !marked;
+}
+
+function syncAnnotUi(assignmentId) {
+  document.querySelectorAll(".reader-para").forEach((para) => {
+    const coords = coordsFromPara(para);
+    if (!coords) return;
+    const hi = Boolean(highlightAt(coords.assignmentId, coords.sectionId, coords.paragraphIndex));
+    const note = noteAt(coords.assignmentId, coords.sectionId, coords.paragraphIndex);
+    para.classList.toggle("is-highlighted", hi);
+    para.classList.toggle("has-note", Boolean(note));
+    const hiBtn = para.querySelector("[data-highlight-para]");
+    if (hiBtn) {
+      hiBtn.setAttribute("aria-pressed", hi ? "true" : "false");
+      hiBtn.setAttribute("aria-label", hi ? "Remove highlight" : "Highlight this paragraph");
+    }
+    const noteBtn = para.querySelector("[data-open-note]");
+    if (noteBtn) {
+      noteBtn.setAttribute("aria-label", note ? "Edit note on this paragraph" : "Add a note on this paragraph");
+    }
+    const area = para.querySelector("[data-para-note]");
+    if (area && document.activeElement !== area) area.value = note ? note.text : "";
+  });
+  const host = document.getElementById("sitting-notes");
+  if (host) host.innerHTML = sittingNotesListHtml(assignmentId);
+}
+
+function jumpToPara(paraId) {
+  const el = document.getElementById(paraId) || document.querySelector(`[data-para-id="${CSS.escape(paraId)}"]`);
+  if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - 96;
+  window.scrollTo(0, Math.max(0, y));
+  el.classList.add("just-restored");
+  window.setTimeout(() => el.classList.remove("just-restored"), 1600);
+  const wrap = el.querySelector(".para-note-wrap");
+  const btn = el.querySelector("[data-open-note]");
+  if (wrap && btn) {
+    closeParaNotes(wrap);
+    wrap.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    const area = wrap.querySelector("[data-para-note]");
+    if (area) area.focus();
+  }
+}
+
+function closeParaNotes(exceptWrap) {
+  document.querySelectorAll(".para-note-wrap").forEach((wrap) => {
+    if (exceptWrap && wrap === exceptWrap) return;
+    const area = wrap.querySelector("[data-para-note]");
+    if (area) commitParaNote(area);
+    wrap.hidden = true;
+    wrap.closest(".reader-para")?.querySelector("[data-open-note]")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+function commitParaNote(textarea) {
+  if (!textarea) return;
+  const para = textarea.closest(".reader-para");
+  const coords = coordsFromPara(para);
+  if (!coords) return;
+  upsertParaNote(coords.assignmentId, coords.sectionId, coords.paragraphIndex, textarea.value);
+  syncAnnotUi(coords.assignmentId);
+  if (!text(textarea.value)) {
+    const wrap = textarea.closest(".para-note-wrap");
+    if (wrap) wrap.hidden = true;
+    para?.querySelector("[data-open-note]")?.setAttribute("aria-expanded", "false");
+  }
 }
 
 function toggleBookmarkAt(assignmentId, sectionId, paragraphIndex) {
@@ -1508,6 +2049,7 @@ function restoreReaderPosition(assignmentId, opts = {}) {
   const marked = bookmarkFor(assignmentId);
   if (marked) {
     const el =
+      document.getElementById(paraDomId(assignmentId, marked.sectionId, marked.paragraphIndex)) ||
       document.getElementById(bookmarkDomId(marked.sectionId, marked.paragraphIndex)) ||
       document.querySelector(
         `.reader-para[data-section-id="${CSS.escape(marked.sectionId)}"][data-para-index="${marked.paragraphIndex}"]`
@@ -1576,10 +2118,11 @@ function renderSyllabus() {
                       ${who ? `<span class="asg-who">${escapeHtml(who)}</span>` : ""}
                       <span class="asg-title">${escapeHtml(text(a.title, text(a.work, "Untitled")))}</span>
                       <span class="kind-pill">${escapeHtml(kindLabel(a.kind))}</span>
+                      ${trackBadgeHtml(a)}
                       ${bookmarkFor(a.id) ? `<span class="line-mark" title="A line is marked">¶</span>` : ""}
                     </span>
                     <span class="asg-time">${escapeHtml(time)}</span>
-                    <span class="asg-sub">${bits}</span>
+                    <span class="asg-sub">${bits}${readingTagsHtml(a)}</span>
                   </a>
                 </li>`;
             })
@@ -1634,7 +2177,90 @@ function renderSyllabus() {
       <button type="button" class="btn btn-secondary" data-print>Print or save as PDF</button>
     </div>
     <p class="print-only">${escapeHtml(text(info.title))} — ${escapeHtml(STUDENT_NAME)}</p>
+    ${trackCardsHtml()}
     <div class="syllabus">${eraHtml}</div>
+  `;
+}
+
+function renderTracksIndex() {
+  const tracks = courseTracks();
+  if (!tracks.length) {
+    return `
+      <p class="kicker">Threads through the syllabus</p>
+      <h1 class="page-title">Tracks</h1>
+      <p class="lede">No tracks yet. When the syllabus names a thread — for example Philosophy of Science & Epistemology — it will appear here.</p>
+      <p class="actions"><a class="btn btn-secondary" href="#/syllabus">Syllabus</a></p>
+    `;
+  }
+  return `
+    <p class="kicker">Threads through the syllabus</p>
+    <h1 class="page-title">Tracks</h1>
+    <p class="lede">These cut across eras. Read the main sequence in order; use a track when you want one argument followed through.</p>
+    ${trackCardsHtml()}
+  `;
+}
+
+function renderTrack(id) {
+  const track = trackById(id);
+  if (!track) {
+    return `
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="#/tracks">Tracks</a>
+        <span class="crumb-sep">/</span>
+        <span>Missing</span>
+      </nav>
+      <h1 class="page-title">That track is not on the syllabus.</h1>
+      <p class="lede">${courseTracks().length ? "It may have been renamed. Return to Tracks." : "No tracks yet."}</p>
+      <p class="actions"><a class="btn" href="#/tracks">Tracks</a></p>
+    `;
+  }
+
+  const items = trackItems(track);
+  const done = items.filter((item) => isComplete(item.assignment.id)).length;
+  const rows = items
+    .map((item) => {
+      const a = item.assignment;
+      const who = formatThinkerNames(thinkersForAssignment(a, item.unit, item.era));
+      const bits = sittingMeta(a).slice(0, 3).map(escapeHtml).join(" · ");
+      const time = minutesLabel(a.estimatedMinutes);
+      const markedDone = isComplete(a.id);
+      return `
+        <li>
+          <a href="${assignmentHref(a)}">
+            <span class="mark ${markedDone ? "done" : ""}" aria-hidden="true">${markedDone ? "✓" : "○"}</span>
+            <span>
+              ${who ? `<span class="asg-who">${escapeHtml(who)}</span>` : ""}
+              <span class="asg-title">${escapeHtml(text(a.title, text(a.work, "Untitled")))}</span>
+              <span class="kind-pill">${escapeHtml(kindLabel(a.kind))}</span>
+              ${bookmarkFor(a.id) ? `<span class="line-mark" title="A line is marked">¶</span>` : ""}
+            </span>
+            <span class="asg-time">${escapeHtml(time)}</span>
+            <span class="asg-sub">${bits}${readingTagsHtml(a)}</span>
+          </a>
+        </li>`;
+    })
+    .join("");
+
+  return `
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="#/tracks">Tracks</a>
+      <span class="crumb-sep">/</span>
+      <span>${escapeHtml(text(track.title, track.id))}</span>
+    </nav>
+    <p class="kicker">Track</p>
+    <h1 class="page-title">${escapeHtml(text(track.title, track.id))}</h1>
+    ${text(track.subtitle) ? `<p class="lede">${escapeHtml(track.subtitle)}</p>` : ""}
+    <p class="muted">${done} of ${items.length} sittings complete</p>
+    <div class="panel">
+      <h2>Professor’s note</h2>
+      <p>${escapeHtml(text(track.intro, "No introduction was provided for this track."))}</p>
+    </div>
+    ${
+      items.length
+        ? `<ul class="assignment-list">${rows}</ul>`
+        : `<p class="muted">This track names no sittings that are on the current syllabus.</p>`
+    }
+    <p class="actions"><a class="btn btn-secondary" href="#/syllabus">Full syllabus</a></p>
   `;
 }
 
@@ -2039,12 +2665,47 @@ function onClick(event) {
   if (markBtn) {
     event.preventDefault();
     const para = markBtn.closest(".reader-para");
+    const coords = coordsFromPara(para);
     const route = parseRoute();
-    if (!para || route.name !== "text") return;
-    const sid = para.getAttribute("data-section-id");
-    const idx = Number(para.getAttribute("data-para-index"));
-    if (!sid || !Number.isInteger(idx)) return;
-    toggleBookmarkAt(route.id, sid, idx);
+    if (!coords || route.name !== "text") return;
+    toggleBookmarkAt(coords.assignmentId, coords.sectionId, coords.paragraphIndex);
+    return;
+  }
+
+  const hiBtn = event.target.closest("[data-highlight-para]");
+  if (hiBtn) {
+    event.preventDefault();
+    const para = hiBtn.closest(".reader-para");
+    const coords = coordsFromPara(para);
+    if (!coords) return;
+    toggleHighlight(coords.assignmentId, coords.sectionId, coords.paragraphIndex);
+    syncAnnotUi(coords.assignmentId);
+    return;
+  }
+
+  const noteBtn = event.target.closest("[data-open-note]");
+  if (noteBtn) {
+    event.preventDefault();
+    const para = noteBtn.closest(".reader-para");
+    const wrap = para && para.querySelector(".para-note-wrap");
+    if (!wrap) return;
+    const opening = wrap.hidden;
+    if (opening) closeParaNotes(wrap);
+    wrap.hidden = !opening;
+    noteBtn.setAttribute("aria-expanded", opening ? "true" : "false");
+    if (opening) {
+      const area = wrap.querySelector("[data-para-note]");
+      if (area) area.focus();
+    } else {
+      commitParaNote(wrap.querySelector("[data-para-note]"));
+    }
+    return;
+  }
+
+  const jumpBtn = event.target.closest("[data-jump-para]");
+  if (jumpBtn) {
+    event.preventDefault();
+    jumpToPara(jumpBtn.getAttribute("data-jump-para"));
     return;
   }
 
@@ -2166,11 +2827,22 @@ function onInput(event) {
     return;
   }
   const area = event.target.closest("[data-notes-for]");
-  if (!area) return;
-  const id = area.getAttribute("data-notes-for");
-  progress.notes[id] = area.value;
-  clearTimeout(noteTimer);
-  noteTimer = setTimeout(saveProgress, 200);
+  if (area) {
+    const id = area.getAttribute("data-notes-for");
+    progress.notes[id] = area.value;
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(saveProgress, 200);
+    return;
+  }
+  const paraNote = event.target.closest("[data-para-note]");
+  if (!paraNote) return;
+  const coords = coordsFromPara(paraNote.closest(".reader-para"));
+  if (!coords) return;
+  clearTimeout(paraNoteTimer);
+  paraNoteTimer = setTimeout(() => {
+    upsertParaNote(coords.assignmentId, coords.sectionId, coords.paragraphIndex, paraNote.value);
+    syncAnnotUi(coords.assignmentId);
+  }, 250);
 }
 
 function isTypingTarget(el) {
@@ -2186,11 +2858,18 @@ function onKeydown(event) {
   if (route.name === "text" && event.key.toLowerCase() === "b") {
     event.preventDefault();
     const para = nearestParagraphInView();
-    if (!para) return;
-    const sid = para.getAttribute("data-section-id");
-    const idx = Number(para.getAttribute("data-para-index"));
-    if (!sid || !Number.isInteger(idx)) return;
-    toggleBookmarkAt(route.id, sid, idx);
+    const coords = coordsFromPara(para);
+    if (!coords) return;
+    toggleBookmarkAt(coords.assignmentId, coords.sectionId, coords.paragraphIndex);
+    return;
+  }
+  if (route.name === "text" && event.key.toLowerCase() === "h") {
+    event.preventDefault();
+    const para = nearestParagraphInView();
+    const coords = coordsFromPara(para);
+    if (!coords) return;
+    toggleHighlight(coords.assignmentId, coords.sectionId, coords.paragraphIndex);
+    syncAnnotUi(coords.assignmentId);
     return;
   }
   if (route.name !== "read" && route.name !== "text") return;
@@ -2232,6 +2911,24 @@ async function start() {
 appEl.addEventListener("click", onClick);
 appEl.addEventListener("input", onInput);
 appEl.addEventListener("submit", onSubmit);
+appEl.addEventListener(
+  "focusout",
+  (event) => {
+    const wrap = event.target.closest(".para-note-wrap");
+    if (!wrap) return;
+    if (wrap.contains(event.relatedTarget)) return;
+    commitParaNote(wrap.querySelector("[data-para-note]"));
+  }
+);
+document.addEventListener("click", (event) => {
+  const exportBtn = event.target.closest("[data-export]");
+  if (!exportBtn) return;
+  event.preventDefault();
+  runExport(exportBtn.getAttribute("data-export"));
+  document.querySelectorAll("details.export-menu").forEach((el) => {
+    el.open = false;
+  });
+});
 appEl.addEventListener(
   "error",
   (event) => {

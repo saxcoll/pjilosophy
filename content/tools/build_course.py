@@ -22,6 +22,7 @@ from course_eras3 import (  # noqa: E402
 from course_eras4 import era_empiricism, era_enlightenment  # noqa: E402
 from course_eras5 import era_nineteenth, era_present, era_twentieth_pd  # noqa: E402
 from course_thinkers import apply_thinkers  # noqa: E402
+from assignment_meta import apply_assignment_meta  # noqa: E402
 from quizzes import all_quizzes, recap_quizzes  # noqa: E402
 
 
@@ -132,6 +133,32 @@ def validate_quizzes(course: dict) -> list[str]:
     return errors
 
 
+def apply_tracks(course: dict) -> list[str]:
+    errors: list[str] = []
+    tracks = (course.get("course") or {}).get("tracks") or []
+    index = {}
+    for era in course["eras"]:
+        for unit in era["units"]:
+            for a in unit.get("assignments") or []:
+                index[a["id"]] = a
+                a.pop("trackIds", None)
+    for track in tracks:
+        tid = track.get("id")
+        if not tid:
+            errors.append("track missing id")
+            continue
+        ids = track.get("assignmentIds") or []
+        if not ids:
+            errors.append(f"track {tid} has no assignmentIds")
+        for aid in ids:
+            a = index.get(aid)
+            if not a:
+                errors.append(f"track {tid}: unknown assignment {aid}")
+                continue
+            a.setdefault("trackIds", []).append(tid)
+    return errors
+
+
 def main() -> int:
     course = {
         "course": course_meta(),
@@ -151,6 +178,8 @@ def main() -> int:
     }
     report = attach(course)
     errors = apply_thinkers(course)
+    errors.extend(apply_assignment_meta(course))
+    errors.extend(apply_tracks(course))
     errors.extend(validate_quizzes(course))
     if report["missing_quiz"]:
         errors.append("assignments missing quiz: " + ", ".join(report["missing_quiz"]))
@@ -181,6 +210,9 @@ def main() -> int:
     n_recap = 0
     kinds = {"primary": 0, "secondary": 0, "bibliographic": 0}
     with_text = 0
+    n_wc = 0
+    n_diff = 0
+    n_track = 0
     for era in course["eras"]:
         for unit in era["units"]:
             if unit.get("recapQuiz"):
@@ -194,13 +226,23 @@ def main() -> int:
                     n_with += 1
                 else:
                     n_without += 1
+                if a.get("wordCount"):
+                    n_wc += 1
+                if a.get("difficulty"):
+                    n_diff += 1
+                if a.get("trackIds"):
+                    n_track += 1
 
     print(f"Wrote {out_content} and {out_root}")
     print(f"eras: {len(course['eras'])}")
     print(f"assignments: {n_assign} (with quiz: {n_with}, without: {n_without})")
     print(f"kinds: {kinds}")
     print(f"assignments with text pointer: {with_text}")
+    print(f"with wordCount: {n_wc}; with difficulty: {n_diff}; with trackIds: {n_track}")
     print(f"units with recapQuiz: {n_recap} — {', '.join(report['recap_applied'])}")
+    tracks = (course.get("course") or {}).get("tracks") or []
+    for t in tracks:
+        print(f"track {t.get('id')}: {', '.join(t.get('assignmentIds') or [])}")
     return 0
 
 
