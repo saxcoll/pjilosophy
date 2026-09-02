@@ -147,8 +147,50 @@ function sanitizeNotes(list) {
   return out;
 }
 
+let storageWarningEl = null;
+
+function isQuotaError(err) {
+  if (!err) return false;
+  if (err.name === "QuotaExceededError" || err.name === "NS_ERROR_DOM_QUOTA_REACHED") return true;
+  if (err.code === 22) return true;
+  return /quota/i.test(String(err.message || ""));
+}
+
+function showStorageWarning() {
+  if (storageWarningEl) {
+    storageWarningEl.hidden = false;
+    return;
+  }
+  storageWarningEl = document.createElement("aside");
+  storageWarningEl.id = "storage-warning";
+  storageWarningEl.className = "storage-warning";
+  storageWarningEl.setAttribute("role", "alert");
+  storageWarningEl.innerHTML = `<p class="storage-warning-text">Browser storage is full. Your notes and progress may not save until you free space or export them.</p>
+    <div class="storage-warning-actions">
+      <button type="button" class="btn btn-secondary" data-export="md">Export Markdown</button>
+      <button type="button" class="btn btn-secondary" data-export="json">Export JSON</button>
+      <button type="button" class="btn-ghost storage-warning-dismiss">Dismiss</button>
+    </div>`;
+  const header = document.querySelector(".site-header");
+  if (header) header.insertAdjacentElement("afterend", storageWarningEl);
+  else document.body.insertBefore(storageWarningEl, appEl);
+  storageWarningEl.querySelector(".storage-warning-dismiss")?.addEventListener("click", () => {
+    storageWarningEl.hidden = true;
+  });
+}
+
+function safeSetItem(key, value) {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (err) {
+    if (isQuotaError(err)) showStorageWarning();
+    return false;
+  }
+}
+
 function saveAnnotations() {
-  localStorage.setItem(ANNOTATION_KEY, JSON.stringify(annotations));
+  safeSetItem(ANNOTATION_KEY, JSON.stringify(annotations));
 }
 
 function coordsFromPara(para) {
@@ -233,7 +275,12 @@ function notesForAssignment(assignmentId) {
 
 function sittingNotesListHtml(assignmentId) {
   const notes = notesForAssignment(assignmentId);
-  if (!notes.length) return `<p class="muted">No notes in this sitting yet. Use ✎ on a paragraph.</p>`;
+  if (!notes.length) {
+    return `<div class="empty-state empty-state--compact">
+        <p class="empty-state-title">No notes yet</p>
+        <p class="empty-state-hint">Tap ✎ on any paragraph to jot a margin note. It stays in this browser.</p>
+      </div>`;
+  }
   return `<ul class="sitting-note-list">${notes
     .map((n) => {
       const excerpt = n.text.length > 90 ? `${n.text.slice(0, 90)}…` : n.text;
@@ -253,7 +300,8 @@ function exportMenuHtml(where) {
 }
 
 function courseTracks() {
-  const list = course && Array.isArray(course.tracks) ? course.tracks : [];
+  const raw = (course && course.tracks) || (course && course.course && course.course.tracks);
+  const list = Array.isArray(raw) ? raw : [];
   return list.filter((t) => t && text(t.id));
 }
 
@@ -299,10 +347,14 @@ function trackCardsHtml() {
         .map((t) => {
           const items = trackItems(t);
           const done = items.filter((item) => isComplete(item.assignment.id)).length;
+          const pct = items.length ? Math.round((done / items.length) * 100) : 0;
           return `<article class="track-card">
             <p class="here-label">Track</p>
             <h2><a href="#/track/${encodeURIComponent(t.id)}">${escapeHtml(text(t.title, t.id))}</a></h2>
             ${text(t.subtitle) ? `<p class="meta-line">${escapeHtml(t.subtitle)}</p>` : ""}
+            <div class="track-card-progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="${done} of ${items.length} sittings complete">
+              <span class="track-card-progress-fill" style="width:${pct}%"></span>
+            </div>
             <p class="muted">${done} of ${items.length} sittings in this thread</p>
             <p class="actions"><a class="btn btn-secondary" href="#/track/${encodeURIComponent(t.id)}">Open the thread</a></p>
           </article>`;
@@ -468,7 +520,7 @@ async function runExport(kind) {
 }
 
 function saveProgress() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  safeSetItem(STORAGE_KEY, JSON.stringify(progress));
 }
 
 function escapeHtml(value) {
@@ -565,6 +617,53 @@ function eraComplete(era) {
 
 function completedCount() {
   return readings.filter((item) => isComplete(item.assignment.id)).length;
+}
+
+function quizzesCompletedCount() {
+  return flattenQuizzes(course).filter((item) => isQuizComplete(item.quizId)).length;
+}
+
+function progressRingHtml(pct, label) {
+  const r = 42;
+  const circumference = 2 * Math.PI * r;
+  const offset = circumference * (1 - Math.min(100, Math.max(0, pct)) / 100);
+  return `<div class="progress-ring" role="img" aria-label="${escapeHtml(label)}">
+      <svg viewBox="0 0 96 96" aria-hidden="true">
+        <circle class="progress-ring-bg" cx="48" cy="48" r="${r}"/>
+        <circle class="progress-ring-fill" cx="48" cy="48" r="${r}" stroke-dasharray="${circumference.toFixed(2)}" stroke-dashoffset="${offset.toFixed(2)}"/>
+      </svg>
+      <span class="progress-ring-text"><strong>${pct}</strong><span class="progress-ring-unit">%</span></span>
+    </div>`;
+}
+
+function homeStatsHtml() {
+  const total = readings.length;
+  const done = completedCount();
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  const erasDone = erasCompletedCount();
+  const eraTotal = (course.eras || []).length;
+  const quizTotal = flattenQuizzes(course).length;
+  const quizzesDone = quizzesCompletedCount();
+  const hoursLeft = remainingMinutes() ? minutesLabel(remainingMinutes()) : "none listed";
+  return `<div class="dashboard-stats" aria-label="Course progress">
+      ${progressRingHtml(pct, `${done} of ${total} readings complete`)}
+      <dl class="stat-grid">
+        <div class="stat-item"><dt>Readings</dt><dd><strong>${done}</strong> of ${total}</dd></div>
+        <div class="stat-item"><dt>Eras</dt><dd><strong>${erasDone}</strong> of ${eraTotal}</dd></div>
+        <div class="stat-item"><dt>Quizzes</dt><dd><strong>${quizzesDone}</strong> of ${quizTotal}</dd></div>
+        <div class="stat-item"><dt>Time left</dt><dd>~<strong>${escapeHtml(hoursLeft)}</strong></dd></div>
+      </dl>
+    </div>`;
+}
+
+function bookmarkCalloutHtml(assignment) {
+  if (!assignment?.id || !bookmarkFor(assignment.id)) return "";
+  const href = `#/text/${encodeURIComponent(assignment.id)}`;
+  return `<aside class="bookmark-callout" aria-label="Resume reading">
+      <p class="bookmark-callout-label">Resume your line</p>
+      <p class="bookmark-callout-text">You marked a paragraph in this sitting. Pick up where you stopped.</p>
+      <p class="actions"><a class="btn" href="${href}">Continue from your line</a></p>
+    </aside>`;
 }
 
 function remainingMinutes() {
@@ -761,7 +860,7 @@ async function loadTextDoc(pointer) {
   let lastError = null;
   for (const url of textUrls(pointer)) {
     try {
-      const res = await fetch(url, { cache: "no-store" });
+      const res = await fetch(url);
       if (!res.ok) {
         lastError = new Error(`${url} → ${res.status}`);
         continue;
@@ -1099,7 +1198,7 @@ function looksLikeStub(data) {
 }
 
 async function fetchCourse(url) {
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`${url} → ${res.status}`);
   const data = await res.json();
   if (!data || !Array.isArray(data.eras)) {
@@ -1109,32 +1208,22 @@ async function fetchCourse(url) {
 }
 
 async function loadCourse() {
-  const loaded = [];
-  let lastError = null;
-  for (const url of COURSE_URLS) {
-    try {
-      loaded.push({ url, data: await fetchCourse(url) });
-    } catch (err) {
-      lastError = err;
-    }
+  let primaryError = null;
+  try {
+    const data = await fetchCourse(COURSE_URLS[0]);
+    if (!looksLikeStub(data)) return data;
+  } catch (err) {
+    primaryError = err;
   }
-  if (!loaded.length) throw lastError || new Error("Course file could not be loaded");
-  loaded.sort((a, b) => {
-    const stubDelta = Number(looksLikeStub(a.data)) - Number(looksLikeStub(b.data));
-    if (stubDelta) return stubDelta;
-    const nDelta = assignmentCount(b.data) - assignmentCount(a.data);
-    if (nDelta) return nDelta;
-    const quizA = quizTally(a.data);
-    const quizB = quizTally(b.data);
-    const qDelta = quizB.quizzes + quizB.recaps - (quizA.quizzes + quizA.recaps);
-    if (qDelta) return qDelta;
-    return COURSE_URLS.indexOf(a.url) - COURSE_URLS.indexOf(b.url);
-  });
-  return loaded[0].data;
+  try {
+    return await fetchCourse(COURSE_URLS[1]);
+  } catch (err) {
+    throw primaryError || err || new Error("Course file could not be loaded");
+  }
 }
 
 async function fetchGlossary(url) {
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`${url} → ${res.status}`);
   const data = await res.json();
   if (!data || !Array.isArray(data.terms)) {
@@ -1164,7 +1253,7 @@ async function loadGlossary() {
 async function loadThinkers() {
   for (const url of THINKER_URLS) {
     try {
-      const res = await fetch(url, { cache: "no-store" });
+      const res = await fetch(url);
       if (!res.ok) continue;
       const data = await res.json();
       const list = Array.isArray(data)
@@ -1320,17 +1409,29 @@ function portraitSrc(thinker) {
   return `./content/${cleaned}`;
 }
 
+function portraitInitials(name) {
+  const parts = text(name).split(/\s+/).filter(Boolean);
+  if (parts.length >= 2) {
+    return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+  }
+  const s = text(name);
+  if (s.length >= 2) return s.slice(0, 2).toUpperCase();
+  return s.charAt(0).toUpperCase() || "?";
+}
+
 function portraitHtml(thinker, size) {
   if (!thinker || !text(thinker.name, thinker.id)) return "";
   const src = portraitSrc(thinker);
   const credit = text(thinker.imageCredit);
   const label = text(thinker.name, thinker.id);
-  const letter = label.charAt(0).toUpperCase();
+  const initials = portraitInitials(label);
+  const tip = credit ? ` title="${escapeHtml(credit)}"` : "";
+  const loading = size === "lg" ? "eager" : "lazy";
   const img = src
-    ? `<img class="portrait-img" src="${escapeHtml(src)}" alt="" width="96" height="96" loading="lazy" decoding="async"${credit ? ` title="${escapeHtml(credit)}"` : ""}>`
+    ? `<img class="portrait-img" src="${escapeHtml(src)}" alt="" width="96" height="96" loading="${loading}" decoding="async"${tip}>`
     : "";
-  return `<span class="portrait portrait--${size || "md"}${src ? "" : " no-photo"}" role="img" aria-label="${escapeHtml(label)}">
-      <span class="portrait-fallback" aria-hidden="true">${escapeHtml(letter)}</span>
+  return `<span class="portrait portrait--${size || "md"}${src ? "" : " no-photo"}" role="img" aria-label="${escapeHtml(label)}"${tip}>
+      <span class="portrait-fallback" aria-hidden="true">${escapeHtml(initials)}</span>
       ${img}
     </span>`;
 }
@@ -1472,6 +1573,7 @@ async function render() {
     if (gen !== renderGen) return;
     appEl.innerHTML = html;
     restoreReaderPosition(route.id, { fromStart: route.fromStart });
+    appEl.focus({ preventScroll: true });
     return;
   }
 
@@ -1497,25 +1599,13 @@ async function render() {
   } else {
     appEl.innerHTML = renderHome();
   }
+  appEl.focus({ preventScroll: true });
 }
 
 function renderHome() {
   const info = course.course || {};
   const next = nextUnread();
-  const total = readings.length;
-  const done = completedCount();
-  const remaining = remainingMinutes();
-  const erasDone = erasCompletedCount();
-  const eraTotal = (course.eras || []).length;
-  const hoursLeft = remaining ? minutesLabel(remaining) : "none listed";
-
-  const stats = `
-    <div class="stats" aria-label="Progress">
-      <span><strong>${done}</strong> of ${total} readings</span>
-      <span><strong>${erasDone}</strong> of ${eraTotal} eras complete</span>
-      <span>~<strong>${escapeHtml(hoursLeft)}</strong> remaining</span>
-    </div>
-  `;
+  const stats = homeStatsHtml();
 
   if (!next) {
     return `
@@ -1542,14 +1632,16 @@ function renderHome() {
   const bits = (people.length ? sittingMeta(a) : metaBits(a)).map(escapeHtml).join(" · ");
   const why = text(a.why);
   const sittingTitle = text(a.title, text(a.work, "Untitled assignment"));
+  const hasBookmark = Boolean(bookmarkFor(a.id));
 
   return `
     <p class="kicker">${escapeHtml(text(info.subtitle, text(info.title)))}</p>
     <h1 class="page-title">${escapeHtml(greeting())} We pick up here.</h1>
     <p class="lede">${escapeHtml(text(info.method, "Read the assigned pages. Then go on."))}</p>
     ${stats}
-    <article class="next-card">
-      <p class="here-label">${bookmarkFor(a.id) ? "Your line" : "Next reading"}</p>
+    ${bookmarkCalloutHtml(a)}
+    <article class="next-card${hasBookmark ? " next-card--bookmarked" : ""}">
+      <p class="here-label">${hasBookmark ? "Your line" : "Next reading"}</p>
       ${
         people.length
           ? thinkerBannerHtml(people, { size: "lg", nameTag: "h2", subtitle: sittingTitle, subClass: "sitting-title" })
@@ -2128,30 +2220,36 @@ function renderSyllabus() {
             })
             .join("");
           const unitPeople = thinkersForUnit(unit, era);
+          const unitDone = assignments.filter((asg) => asg?.id && isComplete(asg.id)).length;
           return `
-            <div class="unit-block">
-              ${thinkerBannerHtml(unitPeople, {
-                size: "md",
-                nameTag: "p",
-                subtitle: text(unit.title, "Unit"),
-                subTag: "h3",
-                subClass: "unit-title",
-              })}
+            <details class="unit-accordion"${unitDone === assignments.length && assignments.length ? "" : " open"}>
+              <summary class="unit-summary">
+                ${thinkerBannerHtml(unitPeople, {
+                  size: "md",
+                  nameTag: "p",
+                  subtitle: text(unit.title, "Unit"),
+                  subTag: "h3",
+                  subClass: "unit-title",
+                })}
+                <span class="unit-progress">${unitDone}/${assignments.length}</span>
+              </summary>
               ${
                 usableQuiz(unit.recapQuiz)
                   ? `<p class="era-intro-link"><a href="${recapHref(unit)}">Unit recap quiz</a> · ${escapeHtml(quizStatusLabel(quizIdFor(unit.recapQuiz, `${unit.id}-recap`)))}</p>`
                   : ""
               }
               <ul class="assignment-list">${items}</ul>
-            </div>`;
+            </details>`;
         })
         .join("");
 
       const done = eraComplete(era);
       const eraPeople = thinkersForEra(era);
       const eraHref = `#/era/${encodeURIComponent(era.id)}`;
+      const eraAssignmentCount = units.reduce((n, u) => n + (u.assignments || []).filter((asg) => asg?.id).length, 0);
+      const eraDoneCount = readings.filter((r) => r.era.id === era.id && isComplete(r.assignment.id)).length;
       return `
-        <section class="era-block">
+        <section class="era-block${done ? " era-block--complete" : ""}">
           <div class="era-head">
             ${thinkerBannerHtml(eraPeople, {
               size: "md",
@@ -2161,7 +2259,10 @@ function renderSyllabus() {
               subClass: "era-title-sub",
               href: eraHref,
             })}
-            <span class="era-years">${escapeHtml(text(era.years))}${done ? " · complete" : ""}</span>
+            <div class="era-meta">
+              <span class="era-years">${escapeHtml(text(era.years))}</span>
+              <span class="era-progress-badge${done ? " is-complete" : ""}">${eraDoneCount}/${eraAssignmentCount}${done ? " · complete" : ""}</span>
+            </div>
           </div>
           <p class="era-intro-link"><a href="${eraHref}">Professor’s introduction</a></p>
           ${unitHtml}
@@ -2217,15 +2318,18 @@ function renderTrack(id) {
 
   const items = trackItems(track);
   const done = items.filter((item) => isComplete(item.assignment.id)).length;
+  const pct = items.length ? Math.round((done / items.length) * 100) : 0;
   const rows = items
-    .map((item) => {
+    .map((item, index) => {
       const a = item.assignment;
       const who = formatThinkerNames(thinkersForAssignment(a, item.unit, item.era));
       const bits = sittingMeta(a).slice(0, 3).map(escapeHtml).join(" · ");
       const time = minutesLabel(a.estimatedMinutes);
       const markedDone = isComplete(a.id);
+      const isLast = index === items.length - 1;
       return `
-        <li>
+        <li class="track-step${markedDone ? " is-done" : ""}${isLast ? " is-last" : ""}">
+          <span class="track-node" aria-hidden="true"></span>
           <a href="${assignmentHref(a)}">
             <span class="mark ${markedDone ? "done" : ""}" aria-hidden="true">${markedDone ? "✓" : "○"}</span>
             <span>
@@ -2250,15 +2354,20 @@ function renderTrack(id) {
     <p class="kicker">Track</p>
     <h1 class="page-title">${escapeHtml(text(track.title, track.id))}</h1>
     ${text(track.subtitle) ? `<p class="lede">${escapeHtml(track.subtitle)}</p>` : ""}
-    <p class="muted">${done} of ${items.length} sittings complete</p>
+    <div class="track-header-stats">
+      <div class="track-card-progress track-card-progress--wide" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="${done} of ${items.length} sittings complete">
+        <span class="track-card-progress-fill" style="width:${pct}%"></span>
+      </div>
+      <p class="muted">${done} of ${items.length} sittings complete</p>
+    </div>
     <div class="panel">
       <h2>Professor’s note</h2>
       <p>${escapeHtml(text(track.intro, "No introduction was provided for this track."))}</p>
     </div>
     ${
       items.length
-        ? `<ul class="assignment-list">${rows}</ul>`
-        : `<p class="muted">This track names no sittings that are on the current syllabus.</p>`
+        ? `<ol class="track-timeline assignment-list">${rows}</ol>`
+        : `<div class="empty-state"><p class="empty-state-title">No sittings linked</p><p class="empty-state-hint">This track names no readings on the current syllabus.</p></div>`
     }
     <p class="actions"><a class="btn btn-secondary" href="#/syllabus">Full syllabus</a></p>
   `;
@@ -2317,7 +2426,15 @@ function renderEra(id) {
 
 function renderTermIndexRows(terms) {
   if (!terms.length) {
-    return `<p class="muted">No terms match that filter.</p>`;
+    const hasFilter = Boolean(glossaryUi.query.trim() || glossaryUi.eraId);
+    return `<li class="empty-state">
+        <p class="empty-state-title">${hasFilter ? "No terms match" : "No terms yet"}</p>
+        <p class="empty-state-hint">${
+          hasFilter
+            ? "Try a shorter phrase, a different era, or clear the filters above."
+            : "The glossary will populate as terms are added to the course."
+        }</p>
+      </li>`;
   }
   let letter = "";
   const parts = [];
@@ -2397,15 +2514,15 @@ function renderTermEntry(id) {
   const people = thinkersForTerm(term);
 
   const seeHtml = see.length
-    ? `<p class="term-see">See also: ${see
+    ? `<div class="term-see"><span class="term-see-label">See also</span> ${see
         .map((sid) => {
           const found = termById(sid);
           const label = found ? text(found.term, sid) : sid;
           return found
-            ? `<a href="#/terms/${encodeURIComponent(sid)}">${escapeHtml(label)}</a>`
-            : escapeHtml(label);
+            ? `<a class="term-pill" href="#/terms/${encodeURIComponent(sid)}">${escapeHtml(label)}</a>`
+            : `<span class="term-pill term-pill--plain">${escapeHtml(label)}</span>`;
         })
-        .join("; ")}</p>`
+        .join("")}</div>`
     : "";
 
   const whereHtml = assignmentIds.length
@@ -2453,11 +2570,16 @@ function renderTermEntry(id) {
         </div>
       </div>
       ${
+        text(term.short)
+          ? `<p class="term-short">${escapeHtml(term.short)}</p>`
+          : ""
+      }
+      ${
         paras.length
-          ? paras.map((p) => `<p class="term-def">${escapeHtml(p)}</p>`).join("")
-          : text(term.short)
-            ? `<p class="term-def">${escapeHtml(term.short)}</p>`
-            : `<p class="muted">No definition was provided.</p>`
+          ? `<div class="term-def-block">${paras.map((p) => `<p class="term-def">${escapeHtml(p)}</p>`).join("")}</div>`
+          : !text(term.short)
+            ? `<div class="empty-state empty-state--compact"><p class="empty-state-title">No definition yet</p></div>`
+            : ""
       }
       ${seeHtml}
       ${eraHtml}
@@ -2477,6 +2599,7 @@ function renderQuizList() {
     `;
   }
 
+  const completed = items.filter((item) => isQuizComplete(item.quizId)).length;
   const rows = items
     .map((item) => {
       const status = quizStatusLabel(item.quizId);
@@ -2508,6 +2631,7 @@ function renderQuizList() {
     <p class="kicker">Checks on the reading</p>
     <h1 class="page-title">Quizzes</h1>
     <p class="lede">These follow the pages. They are a check, not a prize. You may open one before you have read; you should not.</p>
+    <p class="quiz-summary muted"><strong>${completed}</strong> of ${items.length} checks completed</p>
     <ul class="assignment-list quiz-list">${rows}</ul>
   `;
 }
@@ -2603,13 +2727,18 @@ function renderQuizView(kind, ownerId) {
       ? "#/quizzes"
       : `#/read/${encodeURIComponent(session.ownerId)}`;
 
+  const quizPct = Math.round((n / questions.length) * 100);
+
   return `
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="#/quizzes">Quizzes</a>
       <span class="crumb-sep">/</span>
       <span>${escapeHtml(crumbTitle)}</span>
     </nav>
-    <article class="quiz-card">
+    <article class="quiz-card panel">
+      <div class="quiz-progress" role="progressbar" aria-valuenow="${n}" aria-valuemin="0" aria-valuemax="${questions.length}" aria-label="Question ${n} of ${questions.length}">
+        <span class="quiz-progress-fill" style="width:${quizPct}%"></span>
+      </div>
       <p class="kicker">${escapeHtml(session.kind === "recap" ? "Unit recap" : "After the reading")} · ${n} of ${questions.length}</p>
       <h1 class="page-title">${escapeHtml(text(session.quiz.title, "Quiz"))}</h1>
       ${text(session.quiz.intro) && session.index === 0 && !submitted ? `<p class="lede">${escapeHtml(session.quiz.intro)}</p>` : ""}
@@ -2639,16 +2768,21 @@ function renderQuizResults(session) {
       ? "#/syllabus"
       : `#/read/${encodeURIComponent(session.ownerId)}`;
 
+  const resultClass =
+    ratio === 1 ? " quiz-results--perfect" : ratio >= 0.6 ? " quiz-results--good" : " quiz-results--review";
+
   return `
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="#/quizzes">Quizzes</a>
       <span class="crumb-sep">/</span>
       <span>Score</span>
     </nav>
-    <article class="quiz-card done-card">
-      <p class="here-label">Finished</p>
+    <article class="quiz-card quiz-results done-card${resultClass}">
+      <p class="here-label">${ratio === 1 ? "Perfect" : "Finished"}</p>
       <h1 class="page-title">${escapeHtml(text(session.quiz.title, "Quiz"))}</h1>
-      <p class="quiz-score"><strong>${score}</strong> / ${total}</p>
+      <div class="quiz-score-ring" aria-label="${score} out of ${total} correct">
+        <p class="quiz-score"><strong>${score}</strong><span class="quiz-score-denom"> / ${total}</span></p>
+      </div>
       <p class="lede">${escapeHtml(line)}</p>
       ${rec.bestScore != null && rec.bestScore !== score ? `<p class="muted">Best so far: ${rec.bestScore}/${rec.bestTotal}</p>` : ""}
       <p class="actions">
@@ -2929,6 +3063,16 @@ document.addEventListener("click", (event) => {
     el.open = false;
   });
 });
+appEl.addEventListener(
+  "load",
+  (event) => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement) || !img.classList.contains("portrait-img")) return;
+    const wrap = img.closest(".portrait");
+    if (wrap) wrap.classList.remove("no-photo");
+  },
+  true
+);
 appEl.addEventListener(
   "error",
   (event) => {
