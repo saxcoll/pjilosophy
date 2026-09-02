@@ -1,6 +1,5 @@
 const STORAGE_KEY = "pjilosophy.progress.v1";
 const ANNOTATION_KEY = "pjilosophy.annotations.v1";
-const STUDENT_NAME = "Samuel";
 
 const COURSE_URLS = ["./content/course.json", "./course.json"];
 const GLOSSARY_URLS = ["./content/glossary.json", "./glossary.json"];
@@ -560,13 +559,6 @@ function minutesLabel(minutes) {
   const hours = n / 60;
   const rounded = hours >= 10 ? Math.round(hours) : Math.round(hours * 10) / 10;
   return `${rounded} hr`;
-}
-
-function greeting() {
-  const hour = new Date().getHours();
-  if (hour < 12) return `Morning, ${STUDENT_NAME}.`;
-  if (hour < 17) return `Afternoon, ${STUDENT_NAME}.`;
-  return `Evening, ${STUDENT_NAME}.`;
 }
 
 function byOrder(a, b) {
@@ -1610,7 +1602,7 @@ function renderHome() {
   if (!next) {
     return `
       <p class="kicker">${escapeHtml(text(info.title, "Western philosophy"))}</p>
-      <h1 class="page-title">${escapeHtml(STUDENT_NAME)}, the sequence is finished.</h1>
+      <h1 class="page-title">The sequence is finished.</h1>
       <p class="lede">That is not the same as finishing philosophy. Re-read the texts that still resist you. The syllabus remains open.</p>
       ${stats}
       <article class="done-card">
@@ -1636,8 +1628,7 @@ function renderHome() {
 
   return `
     <p class="kicker">${escapeHtml(text(info.subtitle, text(info.title)))}</p>
-    <h1 class="page-title">${escapeHtml(greeting())} We pick up here.</h1>
-    <p class="lede">${escapeHtml(text(info.method, "Read the assigned pages. Then go on."))}</p>
+    <h1 class="page-title">We pick up here.</h1>
     ${stats}
     ${bookmarkCalloutHtml(a)}
     <article class="next-card${hasBookmark ? " next-card--bookmarked" : ""}">
@@ -2277,7 +2268,7 @@ function renderSyllabus() {
     <div class="toolbar">
       <button type="button" class="btn btn-secondary" data-print>Print or save as PDF</button>
     </div>
-    <p class="print-only">${escapeHtml(text(info.title))} — ${escapeHtml(STUDENT_NAME)}</p>
+    <p class="print-only">${escapeHtml(text(info.title))}</p>
     ${trackCardsHtml()}
     <div class="syllabus">${eraHtml}</div>
   `;
