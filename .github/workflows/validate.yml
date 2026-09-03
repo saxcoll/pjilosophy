@@ -1,0 +1,28 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate course schema
+        run: python3 scripts/validate-course.py
+
+      - name: Check course.json sync
+        run: |
+          if ! diff -q content/course.json course.json; then
+            echo "::error::content/course.json and course.json have drifted"
+            diff content/course.json course.json || true
+            exit 1
+          fi
