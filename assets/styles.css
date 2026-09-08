@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --paper: #f2ebe0;
   --paper-raised: #faf6ef;
   --paper-inset: #e8dfd0;
@@ -23,8 +24,15 @@
   --shadow: 0 1px 0 rgba(31, 26, 20, 0.06), 0 12px 32px rgba(31, 26, 20, 0.06);
 }
 
+/* Explicit light forces cream paper even when the OS prefers dark. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* OS dark when no explicit light theme is set. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --paper: #161310;
     --paper-raised: #1e1a16;
     --paper-inset: #12100d;
@@ -42,6 +50,27 @@
     --here: #3a3018;
     --shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.28);
   }
+}
+
+/* Explicit dark forces charcoal even when the OS prefers light. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #161310;
+  --paper-raised: #1e1a16;
+  --paper-inset: #12100d;
+  --rule: #3a332b;
+  --ink: #efe8dc;
+  --ink-muted: #b4a898;
+  --ink-faint: #8a8073;
+  --crimson: #d36b78;
+  --crimson-dark: #e8a0a8;
+  --crimson-soft: #3a2226;
+  --gold: #d4b06a;
+  --gold-soft: #3a3018;
+  --sage: #8fbfa4;
+  --sage-soft: #1c2a22;
+  --here: #3a3018;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
 *,
@@ -65,6 +94,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.22s ease, color 0.22s ease;
 }
 
 img {
@@ -728,6 +758,59 @@ a:hover {
   font-size: 0.88rem;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper-raised);
+  color: var(--ink-muted);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+  background: var(--paper-inset);
+  border-color: color-mix(in srgb, var(--rule) 70%, var(--ink-faint));
+}
+
+.theme-toggle-icon {
+  display: none;
+  font-size: 1.05rem;
+}
+
+/* Show the action you can take: moon in light → go dark; sun in dark → go light. */
+:root:not([data-theme="dark"]) .theme-toggle-moon {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle-sun {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle-moon {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle-sun {
+    display: block;
+  }
+}
+
 .export-menu summary {
   list-style: none;
   cursor: pointer;
@@ -1090,6 +1173,7 @@ a:hover {
   .skip-link,
   .toolbar,
   .btn,
+  .theme-toggle,
   .notes,
   .notes-label,
   .kbd-hint,
@@ -1595,6 +1679,10 @@ body.reader-mode #app {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
   }
 
   .progress-rail-fill {

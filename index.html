@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f2ebe0" />
+    <meta name="theme-color" content="#f2ebe0" id="meta-theme-color" />
     <meta
       name="description"
       content="A directed reading course in Western philosophy: the next assignment, the pages, and why they come now."
@@ -27,6 +27,16 @@
     <meta name="twitter:image" content="https://saxcoll.github.io/pjilosophy/assets/favicon.svg" />
     <title>pjilosophy — directed reading</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("pjilosophy.theme");
+          if (theme === "dark" || theme === "light") {
+            document.documentElement.setAttribute("data-theme", theme);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -53,13 +63,25 @@
           <a href="#/quizzes" data-nav id="nav-quizzes">Quizzes</a>
           <a href="#/terms" data-nav id="nav-terms">Terms</a>
         </nav>
-        <details class="export-menu" id="export-menu">
-          <summary>Export notes</summary>
-          <div class="export-menu-panel" role="menu">
-            <button type="button" data-export="md">Markdown</button>
-            <button type="button" data-export="json">JSON</button>
-          </div>
-        </details>
+        <div class="header-actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">☾</span>
+            <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀</span>
+          </button>
+          <details class="export-menu" id="export-menu">
+            <summary>Export notes</summary>
+            <div class="export-menu-panel" role="menu">
+              <button type="button" data-export="md">Markdown</button>
+              <button type="button" data-export="json">JSON</button>
+            </div>
+          </details>
+        </div>
       </div>
       <div
         class="progress-rail"

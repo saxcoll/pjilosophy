@@ -1,5 +1,6 @@
 const STORAGE_KEY = "pjilosophy.progress.v1";
 const ANNOTATION_KEY = "pjilosophy.annotations.v1";
+const THEME_KEY = "pjilosophy.theme";
 
 const COURSE_URLS = ["./content/course.json", "./course.json"];
 const GLOSSARY_URLS = ["./content/glossary.json", "./glossary.json"];
@@ -14,6 +15,8 @@ const navSyllabus = document.getElementById("nav-syllabus");
 const navQuizzes = document.getElementById("nav-quizzes");
 const navTerms = document.getElementById("nav-terms");
 const navTracks = document.getElementById("nav-tracks");
+const themeToggleEl = document.getElementById("theme-toggle");
+const themeColorMeta = document.getElementById("meta-theme-color");
 
 let course = null;
 let readings = [];
@@ -28,6 +31,78 @@ let glossary = { title: "Philosophical terms", intro: "", terms: [] };
 let glossaryUi = { query: "", eraId: "" };
 let thinkerIndex = [];
 const textCache = new Map();
+
+function getStoredTheme() {
+  try {
+    const value = localStorage.getItem(THEME_KEY);
+    if (value === "dark" || value === "light") return value;
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+function systemPrefersDark() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+function effectiveTheme() {
+  return getStoredTheme() || (systemPrefersDark() ? "dark" : "light");
+}
+
+function applyThemeAttribute(theme) {
+  if (theme === "dark" || theme === "light") {
+    document.documentElement.setAttribute("data-theme", theme);
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+}
+
+function syncThemeChrome() {
+  const theme = effectiveTheme();
+  const nextLabel = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  if (themeToggleEl) {
+    themeToggleEl.setAttribute("aria-label", nextLabel);
+    themeToggleEl.setAttribute("title", nextLabel);
+  }
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", theme === "dark" ? "#161310" : "#f2ebe0");
+  }
+}
+
+function setTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    /* ignore */
+  }
+  applyThemeAttribute(theme);
+  syncThemeChrome();
+}
+
+function toggleTheme() {
+  setTheme(effectiveTheme() === "dark" ? "light" : "dark");
+}
+
+function initTheme() {
+  const stored = getStoredTheme();
+  applyThemeAttribute(stored);
+  syncThemeChrome();
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const onSchemeChange = () => {
+    if (getStoredTheme()) return;
+    syncThemeChrome();
+  };
+  if (typeof mq.addEventListener === "function") {
+    mq.addEventListener("change", onSchemeChange);
+  } else if (typeof mq.addListener === "function") {
+    mq.addListener(onSchemeChange);
+  }
+  themeToggleEl?.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleTheme();
+  });
+}
 
 function loadProgress() {
   try {
@@ -3093,4 +3168,5 @@ window.addEventListener(
   { passive: true }
 );
 
+initTheme();
 start();
