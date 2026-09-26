@@ -253,6 +253,44 @@ function showStorageWarning() {
   });
 }
 
+let offlineNoticeEl = null;
+
+function syncOfflineNotice() {
+  const offline = navigator.onLine === false;
+  if (!offline) {
+    if (offlineNoticeEl) offlineNoticeEl.hidden = true;
+    return;
+  }
+  if (!offlineNoticeEl) {
+    offlineNoticeEl = document.createElement("aside");
+    offlineNoticeEl.id = "offline-notice";
+    offlineNoticeEl.className = "offline-notice";
+    offlineNoticeEl.setAttribute("role", "status");
+    offlineNoticeEl.innerHTML = `<p class="offline-notice-text">You’re offline. Readings you’ve opened before are still here; new ones will load when you reconnect.</p>`;
+    const header = document.querySelector(".site-header");
+    if (header) header.insertAdjacentElement("afterend", offlineNoticeEl);
+    else document.body.insertBefore(offlineNoticeEl, appEl);
+  }
+  offlineNoticeEl.hidden = false;
+}
+
+function initOffline() {
+  syncOfflineNotice();
+  window.addEventListener("online", () => {
+    syncOfflineNotice();
+    if (parseRoute().name === "text") render();
+  });
+  window.addEventListener("offline", syncOfflineNotice);
+  if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
+  const register = () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {
+      /* offline reading is optional */
+    });
+  };
+  if (document.readyState === "complete") register();
+  else window.addEventListener("load", register, { once: true });
+}
+
 function safeSetItem(key, value) {
   try {
     localStorage.setItem(key, value);
@@ -1903,6 +1941,16 @@ async function renderReader(id) {
   if (!doc) {
     const expected = text(a.text.path, a.text.id ? `texts/${a.text.id}.json` : "texts/…");
     const href = safeUrl(a.source && a.source.url);
+    if (navigator.onLine === false) {
+      return `
+      <div class="reader-error">
+        <h1 class="page-title">This reading isn’t saved for offline yet.</h1>
+        <p class="lede">Texts are kept on this device once you’ve opened them with a connection. Reconnect and this page will load; after that it will work offline too.</p>
+        <p class="actions">
+          <a class="btn" href="#/read/${encodeURIComponent(a.id)}">Open the assignment</a>
+        </p>
+      </div>`;
+    }
     return `
       <div class="reader-error">
         <h1 class="page-title">The text is not on the shelf yet.</h1>
@@ -3169,4 +3217,5 @@ window.addEventListener(
 );
 
 initTheme();
+initOffline();
 start();

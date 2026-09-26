@@ -180,6 +180,27 @@ a:hover {
   font-size: 0.88rem;
 }
 
+.offline-notice {
+  background: color-mix(in srgb, var(--gold-soft) 75%, var(--paper-raised));
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 30%, var(--rule));
+  padding: 0.55rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.92rem;
+}
+
+.offline-notice[hidden] {
+  display: none;
+}
+
+.offline-notice-text {
+  margin: 0;
+  font-family: var(--serif);
+  color: var(--ink);
+  max-width: 42rem;
+  text-align: center;
+}
+
 .header-inner {
   max-width: var(--wide);
   margin: 0 auto;
@@ -1174,6 +1195,8 @@ a:hover {
   .toolbar,
   .btn,
   .theme-toggle,
+  .offline-notice,
+  .storage-warning,
   .notes,
   .notes-label,
   .kbd-hint,
